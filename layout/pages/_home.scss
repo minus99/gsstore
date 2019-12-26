@@ -1,0 +1,102 @@
+.ems-page-home {
+    padding-bottom: 40px;
+}
+
+.top-notification {
+    background: $color4;
+
+    .swiper-container {
+        height: 50px;
+        overflow: hidden;
+    }
+    .swiper-wrapper {
+        align-items: center;
+    }
+}
+
+.homepage-slider {
+    background: $color0;
+}
+
+.primary-categories {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    
+    $pt: 15px;
+    $pl: 15px;
+    .swiper-inner {
+        margin-left: #{-$pl};
+        margin-top: #{-$pt};
+    }
+    .swiper-slide {
+        padding-left: #{$pl};
+        padding-top: #{$pt};
+        width: calc(100% / 2);
+    }
+}
+
+.historical-moments {
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+    $pl: 20px;
+    .swiper-inner {
+        margin-left: #{-$p};
+    }
+    .swiper-slide {
+        padding-left: #{$p};
+        width: calc(100% / 1.25);
+    }
+}
+
+.collections {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    $pt: 25px;
+    .swiper-inner {
+        margin-top: #{-$pt};
+    }
+    .swiper-slide {
+        padding-top: #{$pt};
+    }
+}
+
+.campaigns {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    $pt: 15px;
+    .swiper-inner {
+        margin-top: #{-$pt};
+    }
+    .swiper-slide {
+        padding-top: #{$pt};
+    }
+}
+
+.social-feed {
+    background: $color0;
+    color: $color255;
+    padding-top: 100px;
+    padding-bottom: 160px;
+
+    .ems-section-title {
+        margin-bottom: 75px;
+        .ems-link {
+            text-decoration: none;
+        }
+        svg {
+            font-size: 25px;
+        }
+    }
+
+    $pl:20px;
+    .swiper-inner {
+        margin-left: #{-$pl};
+    }
+    .swiper-slide {
+        padding-left: #{$pl};
+        width: calc(100% / 3.5);
+    }
+}

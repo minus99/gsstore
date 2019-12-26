@@ -1,0 +1,14 @@
+.banner {
+    &:hover {
+        .d-btn-primary {
+            @extend %d-btn-primary:hover;
+        }
+    }
+
+    //banner type04 *campaigns
+    &04 {
+        .prm-link {
+            margin-top: 70px;
+        }
+    }
+}

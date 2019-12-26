@@ -1,0 +1,13 @@
+%d-btn {
+    &-primary {
+        background: $color255;
+        color: $color0;
+        &:hover {
+            background: $color3;
+        }
+    }
+}
+
+.d-btn-primary {
+    @extend %d-btn-primary;
+}

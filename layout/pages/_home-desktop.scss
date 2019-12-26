@@ -1,0 +1,84 @@
+.ems-page-home {
+    padding-bottom: 0;
+}
+
+.homepage-slider {
+    .prm-media {
+        img {
+            @include setHeight(3840, 1678, 99.1vw);
+        }
+    }
+}
+
+.primary-categories {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    .ems-section-title {
+        display: none;
+    }
+    
+    $pt: 0;
+    $pl: 20px;
+    .swiper-inner {
+        margin-top: #{-$pt};
+        margin-left: #{-$pl};
+    }
+    .swiper-slide {
+        padding-top: #{$pt};
+        padding-left: #{$pl};
+        width: calc(100% / 4);
+    }
+}
+
+.historical-moments {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .swiper-slide {
+        width: calc(100% / 3.25);
+    }
+}
+
+.collections {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &-grid {
+        grid-template-columns: minmax(auto, 690px) 1fr;
+        grid-template-rows: 720px;
+        grid-template-areas: "ga1 ga2";
+        @include setGridArea(1,2);
+        > .ga1 {
+            font-size: 100px;
+        }
+    }
+
+    $pt: 0;
+    $pl: 20px;
+    .swiper-inner {
+        margin-top: #{-$pt};
+        margin-left: #{-$pl};
+    }
+    .swiper-slide {
+        padding-top: #{$pt};
+        padding-left: #{$pl};
+        width: calc(100% / 2.25);
+    }
+}
+
+.campaigns {
+    padding-top: 125px;
+    padding-bottom: 125px;
+
+    $pt: 0;
+    $pl: 20px;
+    .swiper-inner {
+        margin-top: #{-$pt};
+        margin-left: #{-$pl};
+    }
+    .swiper-slide {
+        padding-top: #{$pt};
+        padding-left: #{$pl};
+    }
+}

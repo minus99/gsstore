@@ -1,0 +1,21 @@
+//https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#Common_weight_name_mapping
+//100   Thin (Hairline)
+//200	Extra Light (Ultra Light)
+//300	Light
+//400	Normal (Regular)
+//500	Medium
+//600	Semi Bold (Demi Bold)
+//700	Bold
+//800	Extra Bold (Ultra Bold)
+//900	Black (Heavy)
+//950	Extra Black (Ultra Black)
+
+//GILROY
+@include fontFace('gilroy', '/styles/fonts/gilroy/Gilroy-Bold', 700, normal);
+@include fontFace('gilroy', '/styles/fonts/gilroy/Gilroy-SemiBold', 600, normal);
+@include fontFace('gilroy', '/styles/fonts/gilroy/Gilroy-Medium', 500, normal);
+@include fontFace('gilroy', '/styles/fonts/gilroy/Gilroy-Regular', 400, normal);
+
+//AKTIV GROTESK
+@include fontFace('aktiv-grotesk', '/styles/fonts/aktiv-grotesk/AktivGroteskTrial-Regular', 400, normal);
+@include fontFace('aktiv-grotesk', '/styles/fonts/aktiv-grotesk/AktivGroteskTrial-Light', 300, normal);

@@ -1,0 +1,347 @@
+@mixin banner-body {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    padding: 20px;
+}
+@mixin banner-body-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    > div + div {
+        margin-top: auto;
+    }
+}
+@mixin banner-body-middle {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+}
+@mixin banner-body-bottom {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+}
+@mixin banner-body-static {
+    position: static;
+    transform: none;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    .prm-media {
+        position: relative;
+        display: block;
+        img,
+        video {
+            width: 100%;
+        }
+        video {
+            &[poster] {
+                object-fit: cover;
+                object-position: center;
+            }
+            //lazy-video-banner
+            &.is-scrolling {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .btn-transparent {
+        border-color: transparent;
+    }
+    .btn + .btn {
+        margin-left: 20px;
+    }
+    .btn-full {
+        z-index: 10;
+    }
+    .prm-desc {
+        font-family: $font2;
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &-body {
+        @include banner-body();
+
+        &.banner-body-cover {
+            @include banner-body-cover();
+        }
+        &.banner-body-middle {
+            @include banner-body-middle();
+        }
+        &.banner-body-bottom {
+            @include banner-body-bottom();
+        }
+
+        &:empty {
+            display: none !important;
+        }
+    }
+
+    &:hover {
+        .prm-marker {
+            transform: translateY(-50%) scale(1);
+            opacity: 1;
+        }
+        .btn {
+            @extend %btn:hover;
+        }
+        .btn-primary {
+            @extend %btn-primary:hover;
+        }
+        .btn-secondary {
+            @extend %btn-secondary:hover;
+        }
+        .btn-transparent {
+            @extend %btn-transparent:hover;
+        }
+    }
+
+    //banner type01 *primary categories
+    &01 {
+        border: 1px solid $color4;
+        .prm-link {
+            display: block;
+            color: $color3;
+            border-color: currentColor;
+        }
+        .banner-body {
+            padding: 34px 34px 30px;
+        }
+        .prm-title {
+            font-size: 16px;
+        }
+        .prm-desc {
+            font-size: 13px;
+        }
+    }
+
+    //banner type02 *--
+    &02 {}
+
+    //banner type03 *historical moment & collections
+    &03 {
+        .prm-title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+
+    //banner type04 *campaigns
+    &04 {
+        .banner-body {
+            padding: 25px;
+        }
+        .prm-title {
+            font-size: 24px;
+        }
+        .prm-desc {
+            margin-top: 10px;
+        }
+        .prm-link {
+            margin-top: 25px;
+        }
+    }
+
+    //banner type05 *type02 menu
+    &05 {}
+
+    //banner type06 *instagram first content
+    &06 {
+        height: 100%;
+        .banner-body {
+            @include banner-body-static();
+            height: 100%;
+            padding: 30px 20px 70px;
+        }
+        .prm-desc {
+            font-size: 15px;
+        }
+    }
+
+    //banner type07 *home slider
+    &07 {
+        text-align: center;
+        .banner-body {
+            position: absolute;
+            @include banner-body-bottom();
+        }
+        .prm-title {
+            i {
+                font-style: normal;
+                letter-spacing: .75em;
+            }
+            b {
+                letter-spacing: 1.5px;
+            }
+        }
+        .prm-link {
+            margin-top: 10px;
+        }
+        .prm-content {
+            margin-top: 30px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 4;
+            width: 100%;
+            height: 340px;
+            background-image: linear-gradient(0, rgba($color: $color0, $alpha: .75), transparent);
+        }
+
+        &.v2 {
+            .prm-media-custom {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                transform-origin: center top;
+                img {
+                    height: 100%;
+                    background: none;
+                }
+            }
+            .banner-body {
+                opacity: 0;
+            }
+
+            .swiper-slide-active & {
+                .prm-media {
+                    animation: animation-06 7s ease;
+                }
+                .prm-media-custom {
+                    animation: animation-07 7s ease forwards;
+                }
+                .banner-body {
+                    animation: animation-04 .7s ease forwards;
+                }
+            }
+        }
+    }
+
+    //banner type08 *login
+    &08 {}
+
+    //banner type09 *primary box
+    &09 {}
+
+    //banner type10 *cart promotion
+    &10 {
+        border: 1px solid $color5;
+        background: $color255;
+        color: $color0;
+        .banner-body {
+            @include banner-body-static();
+            padding: 20px;
+        }
+        .prm-title {
+            font-size: 14px;
+            color: $color1;
+            font-weight: 700;
+        }
+        .prm-desc {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+
+    //banner type11 *primary video
+    &11 {}
+
+    //banner type12 *seo content
+    &12 {
+        color: $color6;
+        .banner-body {
+            @include banner-body-static();
+            padding: 0;
+        }
+        .prm-content {
+            font-family: $font2;
+            font-size: 16px;
+        }
+    }
+
+    //banner type13 *top notification
+    &13 {
+        height: 100%;
+        .banner-body {
+            @include banner-body-static();
+            height: 100%;
+            padding: 10px;
+        }
+        .prm-title {
+            font-size: 13px;
+            flex: 1;
+            margin: 0 4vw;
+            text-align: center;
+        }
+        .prm-link {
+            text-decoration: underline;
+            padding: 0;
+            margin-left: 0 !important;
+        }
+        .countdown {
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+
+    //banner type14 *lp zebra content
+    &14 {
+        .banner-body {
+            @include banner-body-static();
+        }
+        .prm-desc {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .prm-link {
+            margin-top: 30px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+//options
+.theme-light {
+    .banner {
+        color: $color0;
+    }
+}
+
+.theme-dark {
+    .banner {
+        color: $color255;
+    }
+}
+
+.align-left {
+    .banner {
+        text-align: left;
+    }
+}
+
+.align-right {
+    .banner {
+        text-align: right;
+    }
+}

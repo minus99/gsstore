@@ -1,0 +1,81 @@
+$subGapL: 330px;
+.site-header {
+    &-grid {
+        position: relative;
+        grid-template-columns: #{$subGapL} 1fr auto auto 120px 120px 100px;
+        grid-template-areas: "ga1 ga6 ga2 ga3 ga4 ga5 ga9" "ga1 ga7 ga7 ga7 ga8 ga8 ga10";
+        @include setGridArea(1,10);
+        > .ga2,
+        > .ga3,
+        > .ga4,
+        > .ga5,
+        > .ga6,
+        > .ga9 {
+            line-height: 40px;
+            border-bottom: 1px solid $color4;
+        }
+        > .ga7,
+        > .ga8 {
+            line-height: 69px;
+        }
+    
+        > .ga1 {
+            line-height: 110px;
+            border-right: 1px solid $color4;
+            text-align: center;
+        }
+        
+        > .ga8 {
+            align-self: center;
+        }
+    }
+}
+
+//header mods extend obj
+%header-mods-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+%header-mods-sub {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: auto;
+    bottom: auto;
+    z-index: 10;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: $color255;
+    color: $color3;
+    line-height: normal;
+    user-select: none;
+    
+    pointer-events: none;
+    transform: translateX(200px);
+    transform-origin: center left;
+    opacity: 0;
+    transition: all .12s cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+}
+%header-mods-sub-ready {
+    display: flex;
+}
+%header-mods-animate {
+    position: initial;
+}
+%header-mods-sub-animate {
+    pointer-events: auto;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all .3s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+}
+%header-mods-sub-overlay {
+    display: block;
+}

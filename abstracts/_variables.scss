@@ -1,0 +1,37 @@
+//GLOBAL
+$baseHref: '';
+
+//COLORS
+$color0: #000;
+$color1: #A90534;
+$color2: #FFAB00;
+$color3: #252525;
+$color4: #EFEFEF;
+$color5: #17181A;
+$color6: #EBEBEB;
+$color7: #888;
+$color8: #999;
+$color28: #004ca5; //dropdown default color
+$color29: #CC0303; //error color
+$color30: #2E9A32; //success color
+$color255: #FFF;
+
+//FONTS
+$font-size: 14px;
+$font-weight: 500;
+$line-height: 1.3;
+$font0: arial, sans-serif;
+$font1: gilroy, $font0;
+$font2: aktiv-grotesk, $font0;
+
+//CONTAINER
+$container-gap: 20px;
+$container-large: #{1240px + $container-gap * 2};
+$container-medium: #{900px + $container-gap * 2};
+$container-small: #{600px + $container-gap * 2};
+
+//BREAKPOINTS
+$breakpoint-small: 640px !default;
+$breakpoint-medium: 1025px !default;
+$breakpoint-large: 1350px !default;
+$breakpoint-xlarge: 1600px !default;

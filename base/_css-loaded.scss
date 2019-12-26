@@ -1,0 +1,8 @@
+//APP SHELL REMOVE
+.site-main {
+    background: none;
+    animation: none;
+    > div {
+        display: inherit;
+    }
+}

@@ -1,0 +1,81 @@
+.kutuKategori {
+    position: relative;
+    display: none;
+    margin-bottom: 25px;
+}
+.kutuHeaderKategori,
+.kutuFooterKategori {
+    display: none;
+}
+
+ul.menuKategori {
+    ul {
+        padding-left: 15px;
+    }
+    a {
+        position: relative;
+        display: inline-block;
+        font-family: $font2;
+        font-size: 13px;
+        padding: 7px 10px;
+        letter-spacing: .3px;
+    }
+    li {
+        &.sel {
+            > a {
+                font-weight: 700;
+            }
+        }
+
+        &.s1 {
+            + li {
+                margin-top: 15px;
+            }
+        }
+
+        &.s2 {
+            ul {
+                display: none;
+            }
+            &.sel {
+                > ul {
+                    display: block;
+                }
+            }
+        }
+    }
+    b {
+        display: none;
+    }
+}
+
+.categories-append {
+    min-height: 40px;
+    .swiper-container {
+        background: $color255;
+    }
+    .swiper-slide {
+        flex-shrink: 0;
+        > ul {
+            display: none;
+        }
+    }
+    a {
+        display: block;
+        padding: 0 20px;
+        line-height: 38px;
+        border: 1px solid $color4;
+        margin-left: -1px;
+        font-family: $font2;
+        font-size: 13px;
+        &.active {
+            background: $color0;
+            font-weight: 700;
+            color: $color255;
+        }
+    }
+
+    b {
+        display: none;
+    }
+}
