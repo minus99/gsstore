@@ -48,9 +48,8 @@
     }
 
     &-animate {
-        position: fixed;
         .ems-sort {
-            display: block;
+            display: flex;
         }
     }
 }

@@ -1,17 +1,21 @@
 .urunPaging {
-    margin-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 110px;
     width: auto;
+    font-size: 13px;
 }
+
 .urunPaging_pageNavigation {
-    border: none;
     [id$="lblPaging"] {
         margin-left: auto;
         margin-right: 0;
         a.paging {
-            &:not(:last-child) {
+            &:not(.knk) {
                 display: inline-block;
             }
             &:last-child {
+                pointer-events: all;
                 &::before {
                     display: none;
                 }
@@ -19,21 +23,15 @@
         }
     }
     .paging {
-        border: 1px solid $color5;
-        min-width: 48px;
+        min-width: 25px;
         margin: 0 5px;
-        font-size: 16px;
-        &[id$="lnkPrev"] {
-            margin-left: auto;
-            + [id$="lblPaging"] {
-                margin-left: 0;
-            }
+        &[id$="lnkPrev"],
+        &[id$="lnkNext"] {
+            display: none;
         }
     }
     span.paging {
-        background: $color0;
-        color: $color255;
-        border-color: transparent;
+        color: $color8;
     }
     .tumunuGoster {
         display: block !important;

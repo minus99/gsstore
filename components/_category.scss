@@ -51,9 +51,10 @@ ul.menuKategori {
 
 .categories-append {
     min-height: 40px;
-    .swiper-container {
-        background: $color255;
-    }
+    background: $color9;
+    font-family: $font2;
+    font-size: 12px;
+    line-height: 38px;
     .swiper-slide {
         flex-shrink: 0;
         > ul {
@@ -63,15 +64,10 @@ ul.menuKategori {
     a {
         display: block;
         padding: 0 20px;
-        line-height: 38px;
-        border: 1px solid $color4;
+        border: 1px solid $color6;
         margin-left: -1px;
-        font-family: $font2;
-        font-size: 13px;
         &.active {
-            background: $color0;
-            font-weight: 700;
-            color: $color255;
+            background: $color2;
         }
     }
 

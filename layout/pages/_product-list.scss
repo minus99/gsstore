@@ -1,4 +1,6 @@
 .ems-page-product-list {
+    padding-bottom: 45px;
+
     &.no-result {
         .navigasyon,
         .categories-append,
@@ -14,18 +16,29 @@
 
 .ems-prd-list-count {
     margin-top: 20px;
-    padding: 0 20px;
+    padding: 0 $container-gap;
     font-family: $font2;
     font-size: 15px;
 }
 
 .top-buttons {
-    margin-top: 20px;
-    padding: 0 20px;
-    a {
-        border: none;
-        line-height: normal;
+    margin: 20px 0 0;
+    > div {
         padding: 0;
+    }
+    a {
+        $border: $color9;
+        border-color: $border;
+        border-left: none;
+        border-right: none;
+        line-height: 58px;
+        padding: 0;
+        &.btn-filter-popup {
+            border-right: 1px solid $border;
+        }
+    }
+    svg {
+        font-size: 36px;
     }
 }
 
@@ -48,31 +61,46 @@ ul.product-list-grid {
     }
 }
 
-$prd-body-bg: $color4;
-$prd-pd-t: 13px;
-$prd-pd-r: 20px;
-$prd-pd-b: 15px;
-$prd-pd-l: 20px;
+$prd-body-bg: $color255;
+$prd-pd-x: 0;
+$prd-pd-y: 18px;
 .ems-prd {
     &-inner {
         position: relative;
+        font-weight: 400;
     }
     &-body {
-        background: $prd-body-bg;
-        color: $color0;
-        padding: $prd-pd-t $prd-pd-r $prd-pd-b $prd-pd-l;
+        //background: $prd-body-bg;
+        //color: $color0;
+        padding: $prd-pd-y $prd-pd-x;
     }
     &-image {
+        border: 1px solid $color9;
+        padding: 40px 25px 30px;
         > a {
-            display: block;
+            @extend .ems-responsive-item;
+            @include aspect-ratio(450, 600);
         }
-        img {
-            width: 100%;
+    }
+    &-cat {
+        font-family: $font2;
+        font-size: 12px;
+        color: $color10;
+        font-weight: 300;
+        > span {
+            display: block !important;
+        }
+        i {
+            display: none !important;
+        }
+        a {
+            &:not(:last-child) {
+                display: none;
+            }
         }
     }
     &-name {
-        font-family: $font2;
-        font-size: 16px;
+        margin-top: 3px;
         > a {
             display: block;
             white-space: nowrap;
@@ -81,23 +109,19 @@ $prd-pd-l: 20px;
         }
     }
     &-price {
-        margin-top: 4px;
-        font-size: 18px;
-        font-weight: 700;
+        margin-top: 8px;
     }
     &-badge {
-        font-family: $font2;
         font-size: 13px;
-        margin-top: 10px;
-        min-height: 19px;
         > div {
             display: none;
             position: absolute;
-            left: 0;
-            top: auto;
-            width: 100%;
+            left: 1px;
+            top: 1px;
+            width: calc(100% - 2px);
             background: $prd-body-bg;
-            padding: 0 $prd-pd-r;
+            padding: 20px 20px 0;
+            text-align: right;
             > span {
                 display: block;
             }
@@ -118,19 +142,19 @@ $prd-pd-l: 20px;
 .indirimli {
     .urunListe_pnlIndirimOran {
         display: block !important;
-        color: $color4;
+        color: $color1;
     }
 }
 .yeniUrun {
     .urunListe_yeniUrun {
         display: block !important;
-        color: $color28;
+        color: $color11;
     }
 }
 .tukendi {
     .urunListe_urunStokUyari {
         display: block !important;
-        color: $color6;
+        color: $color3;
     }
 }
 .urunListe_promosyonListe {

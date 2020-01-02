@@ -88,13 +88,11 @@ $p: 20px;
 //MODULE SUB
 .sub {
     &-close {
+        @extend %btn-close;
         position: absolute;
         right: 65px;
         top: 40px;
         z-index: 1;
-        .icon-close {
-            font-size: 24px;
-        }
     }
     
     &-header {

@@ -31,14 +31,16 @@ ul.menu-mini-lang {
         }
     }
 
-    $p: 40px;
+    $pt: 190px;
+    $px: 65px;
+    $pb: 65px;
     &-sub {
         @extend %header-mods-sub;
         max-width: 410px;
-        padding: $p;
+        padding: $pt $px $pb;
     }
     .sub-header {
-        margin: #{-$p} #{-$p} #{$p};
+        margin-top: 0;
     }
 
     &-ready {

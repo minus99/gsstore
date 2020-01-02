@@ -11,7 +11,11 @@ $color5: #17181A;
 $color6: #EBEBEB;
 $color7: #888;
 $color8: #999;
-$color28: #004ca5; //dropdown default color
+$color9: #f3f3f3;
+$color10: #666;
+$color11: #AE9013;
+$color27: #C9C9C9; //form elements disabled color
+$color28: #004CA5; //dropdown list elements hover color
 $color29: #CC0303; //error color
 $color30: #2E9A32; //success color
 $color255: #FFF;
@@ -35,3 +39,6 @@ $breakpoint-small: 640px !default;
 $breakpoint-medium: 1025px !default;
 $breakpoint-large: 1350px !default;
 $breakpoint-xlarge: 1600px !default;
+
+//MISC
+$bg-loading: url(/images/frontend/loading.gif) center center/80px no-repeat #f9f9f9;

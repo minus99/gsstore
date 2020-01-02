@@ -68,9 +68,7 @@
 
 //aspect ratio
 @mixin aspect-ratio($w, $h) {
-    .prm-media {
-        &::before {
-            padding-top: percentage($h / $w);
-        }
+    &::before {
+        padding-top: percentage($h / $w);
     }
 }

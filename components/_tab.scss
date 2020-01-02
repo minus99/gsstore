@@ -34,7 +34,7 @@
     &.ajx-loading {
         > .ems-tab-content {
             > *:not(.ajx-loaded) {
-                background: url(/images/frontend/loading.gif) center center / 120px no-repeat;
+                background: $bg-loading;
             }
         }
     }

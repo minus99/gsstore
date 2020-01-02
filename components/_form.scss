@@ -1,40 +1,45 @@
-$form-element-height: 44px;
+$form-element-font-family: $font2;
+$form-element-font-size: 12px;
+$form-element-background: $color255;
+$form-element-color: $color0;
+$form-element-font-weight: 300;
+$form-element-letter-spacing: .5px;
+$form-element-height: 50px;
+$form-element-padding: 0 15px;
+$form-element-border: 1px solid $color4;
+$form-element-border-radius: 0;
 input:not([type=checkbox]):not([type=radio]),
 select, .sStylerWrp_select, .dropdown-header,
 textarea,
 .f-input {
-    font-family: $font2;
-    font-size: 15px;
-    background: $color255;
-    color: $color0;
-    font-weight: 500;
-    letter-spacing: .7px;
+    font-family: $form-element-font-family;
+    font-size: $form-element-font-size;
+    background: $form-element-background;
+    color: $form-element-color;
+    font-weight: $form-element-font-weight;
+    letter-spacing: $form-element-letter-spacing;
     width: 100%;
-    line-height: $line-height;
     height: $form-element-height;
-    padding: 0 15px;
-    border: 1px solid $color5;
-    border-radius: 0;
+    padding: $form-element-padding;
+    border: $form-element-border;
+    border-radius: $form-element-border-radius;
     outline: none;
     box-shadow: none;
     appearance: none;
 }
 
-input:disabled,
-input:read-only {
-    background: $color3 !important;
-}
-
+input[type=checkbox],
 input[type=radio] {
     margin: 0;
     outline: 0;
 }
 
 textarea {
-    height: 100px;
+    line-height: 1.5;
+    min-height: 100px;
     padding-top: 10px;
     padding-bottom: 10px;
-    resize: none;
+    resize: vertical;
 }
 
 [id$="UYE_CEPTELEFONALAN"] {
@@ -44,10 +49,6 @@ textarea {
 }
 [id$="UYE_CEPTELEFON"] {
     width: calc(100% - 70px) !important;
-}
-.geneltelefon,
-.site_textarea {
-    width: 100% !important;
 }
 
 .f-input {
@@ -63,7 +64,6 @@ textarea {
     display: inline-block;
     vertical-align: -0.1em;
     margin-right: 7px;
-    user-select: none;
     > span {
         display: block;
         svg {
@@ -87,7 +87,7 @@ textarea {
     }
 }
 .sStylerWrp_select {
-    display: inline-block;
+    display: block;
     vertical-align: middle;
     line-height: $form-element-height;
     padding-right: 40px;
@@ -97,9 +97,8 @@ textarea {
         left: 0;
         top: 0;
         width: 100% !important;
-        height: 100%;
+        height: 100% !important;
         opacity: 0;
-        appearance: none;
     }
     svg {
         position: absolute;
@@ -151,21 +150,21 @@ textarea {
         max-height: 140px;
         overflow: auto;
         margin: -1px 0 0 0;
-        background: $color255;
-        border: 1px solid $color5;
+        background: $form-element-background;
+        border: $form-element-border;
         > li {
             > a {
                 display: flex;
                 align-items: center;
                 white-space: nowrap;
                 overflow: auto;
-                padding: 0 10px !important;
-                line-height: $form-element-height;
-                font-family: $font2;
-                font-size: 15px;
-                color: $color0;
-                font-weight: 500;
-                letter-spacing: .7px;
+                padding: $form-element-padding;
+                line-height: $form-element-font-size * 3;
+                font-family: $form-element-font-family;
+                font-size: $form-element-font-size;
+                color: $form-element-color;
+                font-weight: $form-element-font-weight;
+                letter-spacing: $form-element-letter-spacing;
                 cursor: default;
                 &::-webkit-scrollbar {
                     display:none;
@@ -190,7 +189,7 @@ textarea {
 .zorunluFont {
     &::before {
         content: "*";
-        color: $color4;
+        color: $color29;
         margin-right: 3px;
     }
 }
@@ -210,17 +209,17 @@ textarea {
             }
             &-comment {
                 padding-top: 20px;
-                border-top: 1px solid $color5;
+                border-top: $form-element-border;
             }
         }
     }
     &-label {
         position: relative;
-        font-family: $font2;
+        font-family: $form-element-font-family;
         font-size: 13px;
-        color: $color6;
-        font-weight: 600;
-        margin-bottom: 5px;
+        color: $color3;
+        font-weight: 400;
+        margin-bottom: 8px;
         &:empty {
             display: none;
         }
@@ -233,8 +232,8 @@ textarea {
         > span,
         > label,
         #lnkSifremiUnuttum {
-            font-family: $font2;
-            font-size: 15px;
+            font-family: $form-element-font-family;
+            font-size: $form-element-font-size;
         }
         &.chk-padding {
             padding-left: 20px;
@@ -265,8 +264,9 @@ textarea {
 //captcha
 [id$="divCaptcha"] {
     position: relative;
+    max-width: 330px;
     br {
-        display: none;
+        display: none !important;
     }
     [id$="lbfUYE_KONTROLKODU"] {
         @extend .ems-form-label;
@@ -275,15 +275,18 @@ textarea {
     #imgCaptcha {
         position: absolute;
         left: 1px;
-        top: 23px;
-        height: 41px;
-        border-right: 1px solid $color5;
-        border-radius: 0 5px 5px 0;
+        bottom: 1px;
+        height: $form-element-height - 2px;
+        border-right: $form-element-border;
+        border-radius: 0 7px 7px 0;
+        max-width: 55%;
     }
     input[id$="txtUYE_KONTROLKODU"] {
-        padding-left: 190px;
+        padding-left: 60%;
         text-align: center;
-        letter-spacing: 2.5px;
+        font-family: Consolas, monospace;
+        font-size: 16px;
+        letter-spacing: 7px;
     }
     .captchaYenile {
         display: inline-flex;
@@ -291,7 +294,7 @@ textarea {
         right: 0;
         top: 0;
         padding: 4px;
-        font-family: fira;
+        font-family: $form-element-font-family;
         font-size: 11px;
     }
 }

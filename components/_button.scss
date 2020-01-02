@@ -52,23 +52,52 @@ $btn-cursor: 10px;
         }
     }
 
+    &-icon {
+        padding-left: 0;
+        padding-right: 0;
+        .icon-arrow1 {
+            margin-left: 0 !important;
+        }
+    }
+
+    &-close {
+        line-height: 1;
+        .icon-close {
+            font-size: 24px;
+        }
+    }
+
     &-full {
         @include ems-cover;
     }
 
     &-reset {
-            padding: unset;
+        padding: unset;
+        background: unset;
+        border: unset;
+        font-family: unset;
+        font-size: unset;
+        color: unset;
+        font-weight: unset;
+        line-height: unset;
+        letter-spacing: unset;
+        &:hover {
             background: unset;
-            border: unset;
-            font-family: unset;
-            font-size: unset;
-            color: unset;
-            font-weight: unset;
-            line-height: unset;
-            letter-spacing: unset;
-            &:hover {
-                background: unset;
+        }
+    }
+
+    &-group {
+        $p: 5px;
+        display: flex;
+        margin-left: #{-$p};
+        margin-right: #{-$p};
+        > * {
+            flex: 1;
+            padding: 0 5px;
+            > a {
+                width: 100%;
             }
+        }
     }
 }
 
@@ -92,6 +121,14 @@ a.btnDefault {
     @extend %btn-transparent;
 }
 
+.btn-icon {
+    @extend %btn-icon;
+}
+
+.btn-close {
+    @extend %btn-close;
+}
+
 .btn-full {
     @extend %btn-full;
 }
@@ -100,25 +137,6 @@ a.btnDefault {
     @extend %btn-reset;
 }
 
-%btn-icon,
-.btn-icon {
-    padding-left: 0;
-    padding-right: 0;
-    .icon-arrow-r {
-        margin-left: 0;
-    }
-}
-
 .btn-group {
-    $p: 5px;
-    display: flex;
-    margin-left: #{-$p};
-    margin-right: #{-$p};
-    > * {
-        flex: 1;
-        padding: 0 5px;
-        > a {
-            width: 100%;
-        }
-    }
+    @extend %btn-group;
 }

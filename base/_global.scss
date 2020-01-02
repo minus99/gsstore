@@ -345,6 +345,29 @@ iframe {
             @include turn-mirror;
         }
     }
+
+    //ASPECT RATIO - https://getbootstrap.com/docs/4.0/utilities/embed/#example
+    &-responsive-item {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+        &::before {
+            content: "";
+            display: block;
+            background: $bg-loading;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
 }
 
 //unneeded objects
@@ -370,7 +393,7 @@ iframe {
     opacity: 1;
 }
 .lazy-picture ~ img {
-    background: url(/images/frontend/loading.gif) center center / 125px no-repeat;
+    background: $bg-loading;
 }
 
 //banner align fixer
@@ -384,10 +407,27 @@ a.emos_selected:hover {
     color: inherit;
 }
 
+//form elements fixer
+input,
+select,
+textarea {
+    &:disabled {
+        background: $color27 !important;
+    }
+    
+    &[style*="width"] {
+        width: 100% !important;
+    }
+}
+
 //table fixer
 .sayfaDisDiv table {
     border-collapse: collapse;
+    border-spacing: 0;
     width: 100%;
+    th, td {
+        padding: 0;
+    }
 }
 table[style*="inline"] {
     display: table !important;
@@ -463,10 +503,10 @@ table[style*="inline"] {
 .gridSepetListe_gercekFiyat {
     &:not(:empty) {
         text-decoration: line-through;
-        color: $color6;
+        color: $color3;
         + * {
-            color: $color4;
-            margin-left: 10px;
+            color: $color1;
+            margin-left: 12px;
         }
     }
 }
