@@ -58,9 +58,6 @@
             }
         }
     }
-    .btn-transparent {
-        border-color: transparent;
-    }
     .btn + .btn {
         margin-left: 20px;
     }
@@ -113,7 +110,6 @@
 
     //banner type01 *primary categories
     &01 {
-        border: 1px solid $color4;
         .prm-link {
             display: block;
             color: $color3;

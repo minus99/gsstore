@@ -13,6 +13,9 @@
         max-width: 475px;
         padding: $p;
     }
+    .sub-header {
+        margin-bottom: 15px;
+    }
 
 
     .ems-obj-login {
@@ -40,18 +43,21 @@
             }
         }
     }
+}
 
-    .block1 {
-        margin-top: 148px;
-    }
+#lnkSifremiUnuttum {
+    color: $color7;
 }
 
 .uyeGirisFacebookConnectKutu {
-    max-width: 214px;
-    margin: 20px auto 0;
+    margin: 0;
 }
 a.btnFacebookLoginKutu {
     @extend %btn-transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #c7daff;
+    color: #4368b2;
 }
 
 .kutuUyeGiris_profilFoto {
@@ -63,11 +69,7 @@ a.btnFacebookLoginKutu {
     }
 }
 a.btnKutuLogout {
-    @extend %btn-reset;
-    font-size: 14px;
-    font-weight: 300;
-    display: table;
-    margin-top: 5px;
+    @extend %btn-transparent;
 }
 .mini-user-links {
     font-family: $font2;

@@ -1,3 +1,11 @@
+.btn {
+    &-page-top {
+        right: 100px;
+        bottom: auto;
+        top: 90px;
+    }
+}
+
 %d-btn {
     &-primary {
         background: $color255;

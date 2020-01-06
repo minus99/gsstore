@@ -1,32 +1,27 @@
 .ems-page-product-detail {
-    padding-bottom: 40px;
+    padding-bottom: 45px;
 }
 
 .ems-prdd {
     &-grid {
+        font-family: $font2;
+        font-weight: 300;
         > .ga1 {
-            @include padding-h();
-        }
-        > .ga3 {
-            @include padding-h();
+            @include padding-x();
         }
     }
     
-    &-brand {
-        font-family: $font2;
-        font-size: 16px;
+    &-code {
+        color: $color1;
     }
     &-name {
-        font-size: 16px;
-        font-weight: 700;
-        letter-spacing: .5px;
-    }
-    &-block1 {
-        margin-top: 7px;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 5px;
     }
     &-price {
-        font-size: 16px;
-        font-weight: 700;
+        font-size: 20px;
+        margin-top: 15px;
         [id*="KDVDAHILSATIS"] {
             display: none;
         }
@@ -35,7 +30,6 @@
         position: relative;
         padding-left: 40px;
         overflow: hidden;
-        font-family: $font2;
         font-size: 13px;
         > div {
             display: none;
@@ -55,36 +49,40 @@
         }
     }
     &-gallery {
-        margin-top: 20px;
-        .swiper-slide {
-            text-align: center;
-        }
-        .swiper-pagination {
-            padding-bottom: 0;
-        }
+        margin-bottom: 30px;
     }
     &-size {
         margin-top: 15px;
-        font-family: $font2;
-        font-size: 13px;
     }
     &-add-to-cart {
-        margin-top: 20px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
     }
     &-block2 {
-        margin-top: 10px;
+        margin-top: 35px;
         > span {
-            flex: 1;
-            padding: 0 5px;
+            display: flex;
+            + span {
+                margin-top: 13px;
+            }
         }
         a.btnDefault {
-            @extend .btn-transparent;
-            padding-left: 3px;
-            padding-right: 3px;
+            @extend %btn-transparent;
+            @extend %btn-transparent-border;
+            @extend %btn-icon;
+            font-family: $font2;
         }
-    }
-    &-block3 {
-        position: relative;
+        svg {
+            font-size: 42px;
+            color: $color1;
+            border: 1px solid currentColor;
+            padding: 9px;
+            margin-right: 10px;
+            border-radius: 100%;
+        }
     }
 }
 
@@ -124,7 +122,7 @@
 
 //other colors
 .UrunListeGrup_listeUrunDetayGrup {
-    margin-top: 20px;
+    margin-top: 30px;
     .listeUrunDetayGrup_listeBaslik,
     .URN_AD {
         display: none;
@@ -160,9 +158,10 @@ $m: 5px;
         min-width: calc(25% - 10px);
         padding-left: 5px;
         padding-right: 5px;
-        line-height: 44px;
-        border: 1px solid $color5;
-        font-size: 13px;
+        line-height: 48px;
+        border: 1px solid $color4;
+        font-size: 15px;
+        color: $color0;
         text-align: center;
         margin: $m;
         &.selectedOption {
@@ -170,7 +169,7 @@ $m: 5px;
             color: $color255;
         }
         &.stokYok {
-            opacity: .5;
+            color: $color4;
             pointer-events: none;
         }
     }
@@ -185,9 +184,21 @@ $m: 5px;
 }
 
 //add to cart
+.pnlSepetGrup {
+    display: flex;
+    align-items: center;
+}
 .urunDetay_urunAdet {
+    flex-basis: 125px;
     .sStylerWrp_select {
-        background: $color3;
+        background-color: $color1;
+        line-height: 60px;
+        height: 60px;
+        border: none;
+        color: $color255;
+        .icon-select {
+            --color1: $color255;
+        }
     }
     [id$="txtURN_ADET"],
     [id$="lblURN_ADET"] {
@@ -195,10 +206,12 @@ $m: 5px;
     }
 }
 .urunDetay_btnSepeteAt {
-    margin-top: 20px;
+    flex: 1;
 }
 a.btnsepeteAt {
     width: 100%;
+    @extend %btn-primary;
+    @extend %btn-large;
 }
 a.btnStokHaberci {
     width: 100%;
@@ -472,21 +485,7 @@ a.btnStokHaberci {
     }
 }
 
-//mini desc
-.mini-desc {
-    font-family: $font2;
-    font-size: 15px;
-    img {
-        width: 30px;
-    }
-    .ci1 {
-        img {
-            width: 83px;
-        }
-    }
-}
-
 //featured prds
 .featured-prds {
-    padding-top: 40px;
+    padding-top: 60px;
 }

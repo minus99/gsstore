@@ -24,7 +24,6 @@ $fcg: 100px;
 .footer-menu {
     font-size: 14px;
     > ul {
-        margin-top: 90px;
         column-count: 2;
         padding-right: 140px;
     }
@@ -49,11 +48,6 @@ $fcg: 100px;
 //bulletin
 .mini-bulletin {
     margin-top: 80px;
-    input[id$="txtUYE_EMAIL"] {
-        line-height: 70px;
-        height: 70px;
-        padding-left: 30px;
-    }
 }
 
 //copyright

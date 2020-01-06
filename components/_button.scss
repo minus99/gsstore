@@ -4,14 +4,14 @@ $btn-cursor: 10px;
     position: relative;
     display: inline-block;
     padding: 0 20px;
-    background: $color0;
+    background: $color1;
     border: 1px solid transparent;
     font-family: $font1;
-    font-size: 16px;
+    font-size: 14px;
     color: $color255;
     font-weight: 500;
-    line-height: 42px;
-    letter-spacing: 1px;
+    line-height: 38px;
+    letter-spacing: 0.5px;
     transition: all .32s ease;
     outline: none;
     cursor: pointer;
@@ -23,33 +23,36 @@ $btn-cursor: 10px;
     }
     
     &:hover {
-        background: $color6;
+        background: $color2;
     }
 
     &-primary {
-        background: $color255;
-        color: $color0;
+        background: $color2;
         &:hover {
-            background: $color3;
+            background: $color1;
         }
     }
 
     &-secondary {
-        background: $color3;
-        color: $color0;
+        background: $color9;
+        color: $color3;
         &:hover {
-            background: $color4;
-            color: $color255;
+            background: $color6;
+            color: $color3;
         }
     }
 
     &-transparent {
         background: transparent;
         color: inherit;
-        border-color: $color5;
+        border-color: $color9;
         &:hover {
             background: transparent;
         }
+    }
+
+    &-transparent-border {
+        border-color: transparent;
     }
 
     &-icon {
@@ -62,9 +65,14 @@ $btn-cursor: 10px;
 
     &-close {
         line-height: 1;
-        .icon-close {
-            font-size: 24px;
-        }
+    }
+
+    &-medium {
+        line-height: 48px;
+    }
+
+    &-large {
+        line-height: 58px;
     }
 
     &-full {
@@ -99,6 +107,18 @@ $btn-cursor: 10px;
             }
         }
     }
+
+    &-page-top {
+        position: absolute;
+        right: 20px;
+        bottom: 0;
+        svg {
+            font-size: 53px;
+            padding: 14.5px;
+            border: 1px solid lighten($color: $color3, $amount: 8);
+            border-radius: 100%;
+        }
+    }
 }
 
 .btn,
@@ -121,12 +141,24 @@ a.btnDefault {
     @extend %btn-transparent;
 }
 
+.btn-transparent-border {
+    @extend %btn-transparent-border;
+}
+
 .btn-icon {
     @extend %btn-icon;
 }
 
 .btn-close {
     @extend %btn-close;
+}
+
+.btn-medium {
+    @extend %btn-medium;
+}
+
+.btn-large {
+    @extend %btn-large;
 }
 
 .btn-full {
@@ -139,4 +171,8 @@ a.btnDefault {
 
 .btn-group {
     @extend %btn-group;
+}
+
+.btn-page-top {
+    @extend %btn-page-top;
 }

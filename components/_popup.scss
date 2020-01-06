@@ -112,3 +112,8 @@ $p: 20px;
         margin-top: auto;
     }
 }
+[class$="-sub"] {
+    a.btnDefault {
+        @extend %btn-medium;
+    }
+}

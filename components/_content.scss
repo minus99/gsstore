@@ -150,19 +150,6 @@
     margin-bottom: 50px;
 }
 
-//PAGE TOP
-.btn-page-top {
-    position: absolute;
-    right: 20px;
-    bottom: 0;
-    border: 1px solid currentColor;
-    border-radius: 100%;
-    padding: 10px;
-    svg {
-        font-size: 28px;
-    }
-}
-
 //SECTION BG
 .section-bg {
     &01 {
@@ -302,11 +289,11 @@
 }
 
 //LANDING PAGE
-@mixin padding-h {
+@mixin padding-x {
     padding-left: 20px;
     padding-right: 20px;
 }
-@mixin padding-h-remove {
+@mixin padding-x-remove {
     margin-left: -20px;
     margin-right: -20px;
 }
@@ -343,7 +330,7 @@
     background: $color0;
     color: $color255;
     text-align: center;
-    @include padding-h;
+    @include padding-x;
     padding-top: .1px;
     padding-bottom: 40px;
     margin-top: 40px;
@@ -368,7 +355,7 @@
     }
     &-media {
         margin-top: 40px;
-        @include padding-h-remove;
+        @include padding-x-remove;
     }
     &-bg-stadium {
         background: url(/UPLOAD/banner/urun-aciklama/static/stadium.png) center top / 150% no-repeat;

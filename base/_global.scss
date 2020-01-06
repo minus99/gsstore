@@ -180,7 +180,7 @@ iframe {
         }
         &-error {
             background: $color255;
-            color: $color4;
+            color: $color29;
             border-color: currentColor;
         }
         &-success {
@@ -193,16 +193,17 @@ iframe {
         }
 
         &-horizontal {
-            flex-direction: row;
+            font-family: $font2;
+            font-size: 14px;
+            color: $color3;
+            display: flex;
             align-items: center;
-            justify-content: flex-start;
-            min-height: auto;
             > svg {
-                font-size: 32px;
-                margin: 0 5px 0 -10px;
+                flex: none;
+                animation: animation-03 .5s ease;
             }
             > p {
-                flex: 1;
+                margin: 0;
             }
         }
     }
@@ -322,8 +323,15 @@ iframe {
 
     //PUSH
     &-push {
+        margin: auto !important;
         &-top {
             margin-top: auto !important;
+        }
+        &-right {
+            margin-right: auto !important;
+        }
+        &-bottom {
+            margin-bottom: auto !important;
         }
         &-left {
             margin-left: auto !important;

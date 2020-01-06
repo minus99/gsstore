@@ -24,6 +24,13 @@ $mr: 20px;
         top: 26px;
     }
 
+    .f-input {
+        font-family: $font1;
+        font-weight: 500;
+        height: 40px;
+        padding: 0 15px;
+    }
+
     .search-input > input {
         padding-right: 50px;
         color: $color6;
