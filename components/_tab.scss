@@ -64,7 +64,8 @@
         .ems-tab-content {
             > * {
                 display: block;
-                border-bottom: 1px solid $color4;
+                border-top: 1px solid $color6;
+                border-bottom: 1px solid $color6;
             }
         }
         @at-root {
@@ -77,6 +78,7 @@
                 background-size: 32px;
                 transition: background-image .25s ease;
                 font-weight: 700;
+                text-align: left;
                 user-select: none;
                 cursor: pointer;
             }

@@ -482,11 +482,6 @@ iframe {
   display: none;
 }
 
-.ems-link {
-  display: inline;
-  text-decoration: underline;
-}
-
 .ems-overlay {
   display: none;
   position: fixed;
@@ -789,6 +784,15 @@ iframe {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.ems-link {
+  display: inline;
+  text-decoration: underline;
+}
+
+.ems-list {
+  padding-left: 20px;
 }
 
 .lazy-load {
@@ -1102,6 +1106,7 @@ a.btnSipIptal:hover, .selected-action .remove-selected > a:hover, a.lnkSatinAl:h
 }
 
 .btn-large, a.btnsepeteAt {
+  font-size: 15px;
   line-height: 58px;
 }
 
@@ -2338,7 +2343,7 @@ button.swiper-pagination-bullet {
   padding-left: 45px;
 }
 
-.swiper-product .swiper-slide {
+.swiper-product li.ems-prd {
   padding-left: 20px;
   width: 265px;
 }
@@ -2463,7 +2468,8 @@ button.swiper-pagination-bullet {
 
 .ems-tab-vertical .ems-tab-content > * {
   display: block;
-  border-bottom: 1px solid #EFEFEF;
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
 }
 
 .ems-tab-inner-header {
@@ -2472,6 +2478,7 @@ button.swiper-pagination-bullet {
   background-size: 32px;
   transition: background-image .25s ease;
   font-weight: 700;
+  text-align: left;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2528,6 +2535,7 @@ button.swiper-pagination-bullet {
 
 .banner .prm-desc {
   font-family: aktiv-grotesk, arial, sans-serif;
+  font-weight: 300;
 }
 
 .banner .prm-desc a {
@@ -2793,6 +2801,31 @@ button.swiper-pagination-bullet {
   margin-top: 30px;
   padding-left: 0;
   padding-right: 0;
+}
+
+.banner15 {
+  padding: 40px 25px;
+  border: 1px solid #EBEBEB;
+  align-items: center;
+}
+
+.banner15 .prm-media svg {
+  font-size: 62px;
+  padding: 11px;
+  border: 1px solid #EBEBEB;
+  border-radius: 100%;
+}
+
+.banner15 .banner-body {
+  padding: 0 0 0 15px;
+}
+
+.banner15 .prm-title {
+  font-weight: 600;
+}
+
+.banner15 .prm-desc {
+  margin-top: 5px;
 }
 
 .theme-light .banner {
@@ -4596,7 +4629,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
 }
 
 .gradient01 {
-  height: 10px;
+  min-height: 10px;
   background: linear-gradient(90deg, #ffab00 50%, #a90534 50%);
 }
 
@@ -4634,15 +4667,44 @@ tr + tr #dvUrunKiyaslamaOzellik {
   margin-top: 70px;
 }
 
+.fd {
+  position: relative;
+  z-index: 1;
+  background: #f3f3f3;
+  padding: 60px 0;
+  margin-top: 60px;
+}
+
+.fd-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.fd-text {
+  font-family: aktiv-grotesk, arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.fd .prop-group {
+  margin-top: 45px;
+}
+
+.fd .banner15 {
+  margin-top: -1px;
+}
+
+.fd .ems-tab {
+  margin-top: 50px;
+}
+
 .lp-container {
   display: none;
   background: #000;
   color: #FFF;
   padding-bottom: 40px;
-}
-
-.lp-container .fd {
-  padding-bottom: .1px;
 }
 
 .lp-container-active .lp-container {
@@ -4659,98 +4721,6 @@ tr + tr #dvUrunKiyaslamaOzellik {
 
 .lp-products {
   padding-top: 60px;
-}
-
-.fd {
-  background: #000;
-  color: #FFF;
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: .1px;
-  padding-bottom: 40px;
-  margin-top: 40px;
-}
-
-.fd > * {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.fd > *:first-child {
-  margin-top: 0;
-}
-
-.fd-title {
-  margin-top: 40px;
-  font-size: 24px;
-}
-
-.fd-title b {
-  font-weight: 700;
-}
-
-.fd-text {
-  margin-top: 20px;
-  font-size: 16px;
-}
-
-.fd-media {
-  margin-top: 40px;
-  margin-left: -20px;
-  margin-right: -20px;
-}
-
-.fd-bg-stadium {
-  background: url(/UPLOAD/banner/urun-aciklama/static/stadium.png) center top/150% no-repeat;
-  padding-top: 40%;
-  margin-top: 0 !important;
-}
-
-.fd-wing {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  max-width: 870px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.fd-wing-l, .fd-wing-r {
-  position: absolute;
-  top: 30%;
-  transition: all .32s ease;
-  max-width: 50%;
-}
-
-.fd-wing-l {
-  left: 0;
-  -webkit-transform: rotate(-20deg);
-  transform: rotate(-20deg);
-  -webkit-transform-origin: right center;
-  transform-origin: right center;
-}
-
-.fd-wing-r {
-  right: 0;
-  -webkit-transform: rotate(20deg);
-  transform: rotate(20deg);
-  -webkit-transform-origin: left center;
-  transform-origin: left center;
-}
-
-.fd-wing-c {
-  position: relative;
-  max-width: 50%;
-}
-
-.fd-block-media .fd-media + .fd-media {
-  margin-top: 20px;
-}
-
-.fd .btn + .btn {
-  margin-left: 20px;
 }
 
 .lp-z-content {
@@ -4787,6 +4757,16 @@ tr + tr #dvUrunKiyaslamaOzellik {
 
 .lp-video {
   margin-top: 80px;
+}
+
+.more-content {
+  padding: 13px;
+  font-family: aktiv-grotesk, arial, sans-serif;
+  font-size: 12px;
+}
+
+.more-content svg {
+  color: #FFF;
 }
 
 .site-header {
@@ -6197,7 +6177,7 @@ ul.product-list-grid:empty {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 7;
   width: 100%;
 }
 
@@ -6210,7 +6190,7 @@ ul.product-list-grid:empty {
 }
 
 .ems-prdd-block2 > span + span {
-  margin-top: 13px;
+  margin-top: 15px;
 }
 
 .ems-prdd-block2 a.btnDefault {
@@ -6288,22 +6268,21 @@ ul.product-list-grid:empty {
 
 .dropdown-options {
   display: block !important;
-  margin-left: -5px;
-  margin-right: -5px;
+  margin: 0 -5px -5px;
   font-size: 0;
 }
 
 .dropdown-options > a {
   display: inline-block;
-  min-width: calc(25% - 10px);
+  min-width: calc((100% / 4) - 10px);
   padding-left: 5px;
   padding-right: 5px;
   line-height: 48px;
   border: 1px solid #EFEFEF;
+  margin: 5px;
   font-size: 15px;
   color: #000;
   text-align: center;
-  margin: 5px;
 }
 
 .dropdown-options > a.selectedOption {
@@ -6322,7 +6301,7 @@ ul.product-list-grid:empty {
 
 .open-size-guide {
   display: none;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .pnlSepetGrup {
@@ -6331,19 +6310,19 @@ ul.product-list-grid:empty {
 }
 
 .urunDetay_urunAdet {
-  flex-basis: 125px;
+  flex: .5;
+  height: 60px;
+  background-color: #A90534;
 }
 
 .urunDetay_urunAdet .sStylerWrp_select {
+  font-family: gilroy, arial, sans-serif;
+  font-size: 15px;
+  color: #FFF;
   background-color: #A90534;
   line-height: 60px;
-  height: 60px;
+  height: 100%;
   border: none;
-  color: #FFF;
-}
-
-.urunDetay_urunAdet .sStylerWrp_select .icon-select {
-  --color1: $color255;
 }
 
 .urunDetay_urunAdet [id$="txtURN_ADET"],
@@ -8312,7 +8291,7 @@ ul.giftCardList li.selected > a {
       padding-left: 0;
       margin-left: -30px;
     }
-    .swiper-product .swiper-slide {
+    .swiper-product li.ems-prd {
       padding-left: 30px;
       width: calc(100% / 3);
     }
@@ -8670,10 +8649,17 @@ ul.giftCardList li.selected > a {
       width: 340px;
     }
     .gradient01 {
-      height: 5px;
+      min-height: 5px;
     }
     .primary-image .prm-media img {
       height: calc(99.1vw / (3840 / 1678));
+    }
+    .fd-title {
+      font-size: 24px;
+    }
+    .fd .banner15 {
+      margin-left: -1px;
+      flex: 1 0 50%;
     }
     .lp-container {
       padding-bottom: 80px;
@@ -8682,41 +8668,6 @@ ul.giftCardList li.selected > a {
     .lp-slider .prm-media img,
     .lp-slider .prm-media video {
       height: calc(99.1vw / (2880 / 1260));
-    }
-    .fd > .fd-title,
-    .fd > .fd-text {
-      padding-left: 75px;
-      padding-right: 75px;
-    }
-    .fd-title {
-      margin-top: 80px;
-      font-size: 40px;
-    }
-    .fd-text {
-      margin-top: 30px;
-    }
-    .fd-media {
-      margin-top: 80px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .fd-bg-stadium {
-      background-size: 75%;
-      padding-top: 12%;
-    }
-    .fd-wing-l, .fd-wing-r {
-      top: 0;
-    }
-    .fd-wing-c {
-      max-width: 240px;
-    }
-    .fd-block-media .fd-media + .fd-media {
-      margin-top: auto;
-      margin-left: 40px;
-    }
-    .fd-block-media-content .fd-media + .fd-content {
-      padding-left: 40px;
-      text-align: left;
     }
     .site-header-grid {
       position: relative;
@@ -9304,10 +9255,10 @@ ul.giftCardList li.selected > a {
     }
     .ems-prdd-grid {
       position: relative;
-      grid-template-columns: 1fr minmax(auto, 770px) 40px 370px 1fr;
+      grid-template-columns: minmax(auto, 675px) 93px 375px minmax(20px, 1fr);
       grid-template-rows: -webkit-max-content 1fr;
       grid-template-rows: max-content 1fr;
-      grid-template-areas: ". ga2 . ga1 ." ". ga2 . ga3 .";
+      grid-template-areas: "ga2 . ga1 .";
     }
     .ems-prdd-grid > .ga1 {
       grid-area: ga1;
@@ -9315,32 +9266,36 @@ ul.giftCardList li.selected > a {
     .ems-prdd-grid > .ga2 {
       grid-area: ga2;
     }
-    .ems-prdd-grid > .ga3 {
-      grid-area: ga3;
-    }
     .ems-prdd-grid > .ga1 {
-      padding: 0;
-    }
-    .ems-prdd-grid > .ga3 {
-      padding: 0;
+      padding: 40px 0;
     }
     .ems-prdd-name {
-      margin-top: 10px;
-      font-size: 20px;
+      margin-top: 20px;
+      font-size: 24px;
     }
     .ems-prdd-price {
-      font-size: 26px;
+      font-size: 18px;
     }
     .ems-prdd-badge {
       font-size: 16px;
     }
     .ems-prdd-gallery {
-      margin-top: 0;
+      margin-bottom: 0;
     }
-    .ems-prdd-gallery .swiper-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 10px;
+    .ems-prdd-add-to-cart {
+      position: static;
+      margin-top: 35px;
+    }
+    .ems-prdd-block2 {
+      margin-top: 60px;
+    }
+    .ems-prdd-block2 a.btnDefault {
+      font-size: 13px;
+      line-height: 1;
+    }
+    .ems-prdd-block2 svg {
+      font-size: 24px;
+      padding: 3px;
     }
     .UrunListeGrup_listeUrunDetayGrup ul {
       justify-content: flex-start;
@@ -9350,20 +9305,16 @@ ul.giftCardList li.selected > a {
       height: 45px;
     }
     .urunDetay_urunSecenek {
-      min-height: 88px;
-      padding-right: 150px;
+      min-height: 46px;
     }
     .dropdown-options > a {
-      line-height: 32px;
-    }
-    .urunDetay_urunAdet {
-      position: absolute;
-      right: 0;
-      top: 5px;
-    }
-    .urunDetay_urunAdet .sStylerWrp_select {
+      min-width: calc((100% / 7) - 10px);
       line-height: 34px;
-      height: 34px;
+      font-size: 12px;
+    }
+    .open-size-guide {
+      font-size: 12px;
+      margin-top: 12px;
     }
     .mini-product-info-sub {
       max-width: 600px;

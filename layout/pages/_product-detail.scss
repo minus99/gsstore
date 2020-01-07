@@ -7,7 +7,7 @@
         font-family: $font2;
         font-weight: 300;
         > .ga1 {
-            @include padding-x();
+            @include padding-x;
         }
     }
     
@@ -58,7 +58,7 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        z-index: 2;
+        z-index: 7;
         width: 100%;
     }
     &-block2 {
@@ -66,7 +66,7 @@
         > span {
             display: flex;
             + span {
-                margin-top: 13px;
+                margin-top: 15px;
             }
         }
         a.btnDefault {
@@ -150,20 +150,19 @@
 $m: 5px;
 .dropdown-options {
     display: block !important;
-    margin-left: -$m;
-    margin-right: -$m;
+    margin: 0 #{-$m} #{-$m};
     font-size: 0;
     > a {
         display: inline-block;
-        min-width: calc(25% - 10px);
+        min-width: calc((100% / 4) - 10px);
         padding-left: 5px;
         padding-right: 5px;
         line-height: 48px;
         border: 1px solid $color4;
+        margin: #{$m};
         font-size: 15px;
         color: $color0;
         text-align: center;
-        margin: $m;
         &.selectedOption {
             background: $color0;
             color: $color255;
@@ -180,7 +179,7 @@ $m: 5px;
 
 .open-size-guide {
     display: none;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 //add to cart
@@ -189,16 +188,17 @@ $m: 5px;
     align-items: center;
 }
 .urunDetay_urunAdet {
-    flex-basis: 125px;
+    flex: .5;
+    height: 60px;
+    background-color: $color1;
     .sStylerWrp_select {
+        font-family: $font1;
+        font-size: 15px;
+        color: $color255;
         background-color: $color1;
         line-height: 60px;
-        height: 60px;
+        height: 100%;
         border: none;
-        color: $color255;
-        .icon-select {
-            --color1: $color255;
-        }
     }
     [id$="txtURN_ADET"],
     [id$="lblURN_ADET"] {

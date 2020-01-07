@@ -66,6 +66,7 @@
     }
     .prm-desc {
         font-family: $font2;
+        font-weight: 300;
         a {
             text-decoration: underline;
         }
@@ -313,6 +314,30 @@
             margin-top: 30px;
             padding-left: 0;
             padding-right: 0;
+        }
+    }
+
+    //banner type15 *prdd property
+    &15 {
+        padding: 40px 25px;
+        border: 1px solid $color6;
+        align-items: center;
+        .prm-media {
+            svg {
+                font-size: 62px;
+                padding: 11px;
+                border: 1px solid $color6;
+                border-radius: 100%;
+            }
+        }
+        .banner-body {
+            padding: 0 0 0 15px;
+        }
+        .prm-title {
+            font-weight: 600;
+        }
+        .prm-desc {
+            margin-top: 5px;
         }
     }
 }

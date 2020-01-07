@@ -242,7 +242,7 @@
 //GRADIENT
 .gradient {
     &01 {
-        height: 10px;
+        min-height: 10px;
         background: linear-gradient(90deg, rgba(255,171,0,1) 50%, rgba(169,5,52,1) 50%);
     }
 }
@@ -297,14 +297,39 @@
     margin-left: -20px;
     margin-right: -20px;
 }
+//full desc
+.fd {
+    position: relative;
+    z-index: 1;
+    background: $color9;
+    padding: 60px 0;
+    margin-top: 60px;
+    &-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    &-text {
+        font-family: $font2;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    .prop-group {
+        margin-top: 45px;
+    }
+    .banner15 {
+        margin-top: -1px;
+    }
+    .ems-tab {
+        margin-top: 50px;
+    }
+}
 .lp-container {
     display: none;
     background: $color0;
     color: $color255;
     padding-bottom: 40px;
-    .fd {
-        padding-bottom: .1px;
-    }
 
     &-active & {
         display: block;
@@ -324,86 +349,6 @@
 }
 .lp-products {
     padding-top: 60px;
-}
-//full desc
-.fd {
-    background: $color0;
-    color: $color255;
-    text-align: center;
-    @include padding-x;
-    padding-top: .1px;
-    padding-bottom: 40px;
-    margin-top: 40px;
-    > * {
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
-        &:first-child {
-            margin-top: 0;
-        }
-    }
-    &-title {
-        margin-top: 40px;
-        font-size: 24px;
-        b {
-            font-weight: 700;
-        }
-    }
-    &-text {
-        margin-top: 20px;
-        font-size: 16px;
-    }
-    &-media {
-        margin-top: 40px;
-        @include padding-x-remove;
-    }
-    &-bg-stadium {
-        background: url(/UPLOAD/banner/urun-aciklama/static/stadium.png) center top / 150% no-repeat;
-        padding-top: 40%;
-        margin-top: 0 !important;
-    }
-    &-wing {
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-        max-width: 870px;
-        margin-left: auto;
-        margin-right: auto;
-        &-l,
-        &-r {
-            position: absolute;
-            top: 30%;
-            transition: all .32s ease;
-            max-width: 50%;
-        }
-        &-l {
-            left: 0;
-            transform: rotate(-20deg);
-            transform-origin: right center;
-        }
-        &-r {
-            right: 0;
-            transform: rotate(20deg);
-            transform-origin: left center;
-        }
-        &-c {
-            position: relative;
-            max-width: 50%;
-        }
-    }
-
-    &-block {
-        //media block
-        &-media {
-            .fd-media + .fd-media {
-                margin-top: 20px;
-            }
-        }
-    }
-
-    .btn + .btn {
-        margin-left: 20px;
-    }
 }
 //zebra content
 .lp-z-content {
@@ -436,4 +381,14 @@
 //video
 .lp-video {
     margin-top: 80px;
+}
+
+//MISC
+.more-content {
+    padding: 13px;
+    font-family: $font2;
+    font-size: 12px;
+    svg {
+        color: $color255;
+    }
 }
