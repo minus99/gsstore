@@ -22,12 +22,18 @@ $subGapL: 330px;
         > .ga1 {
             line-height: 110px;
             border-right: 1px solid $color4;
-            text-align: center;
         }
         
         > .ga8 {
             align-self: center;
         }
+    }
+}
+
+//logo
+.logo {
+    > a {
+        padding-left: $d-container-gap;
     }
 }
 

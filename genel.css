@@ -1669,10 +1669,6 @@ a.btnXMLFORM {
 }
 
 .swiper-container-vertical > .swiper-inner > .swiper-wrapper {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -1681,16 +1677,10 @@ a.btnXMLFORM {
   width: 100%;
   height: 100%;
   z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -1701,28 +1691,20 @@ a.btnXMLFORM {
 }
 
 .swiper-container-multirow > .swiper-inner > .swiper-wrapper {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .swiper-container-free-mode > .swiper-inner > .swiper-wrapper {
-  -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   margin: 0 auto;
 }
 
 .swiper-slide {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100%;
   height: 100%;
   position: relative;
-  -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
 }
@@ -1738,13 +1720,8 @@ a.btnXMLFORM {
 }
 
 .swiper-container-autoheight .swiper-inner > .swiper-wrapper {
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-transition-property: height, -webkit-transform;
   transition-property: height, -webkit-transform;
-  -o-transition-property: transform, height;
   transition-property: transform, height;
   transition-property: transform, height, -webkit-transform;
 }
@@ -1780,43 +1757,29 @@ a.btnXMLFORM {
 }
 
 .swiper-container-3d .swiper-slide-shadow-left {
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-right {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-top {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-bottom {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 /* IE10 Windows Phone 8 Fixes */
 .swiper-container-wp8-horizontal,
 .swiper-container-wp8-horizontal > .swiper-inner > .swiper-wrapper {
-  -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
 
 .swiper-container-wp8-vertical,
 .swiper-container-wp8-vertical > .swiper-inner > .swiper-wrapper {
-  -ms-touch-action: pan-x;
   touch-action: pan-x;
 }
 
@@ -1889,8 +1852,6 @@ a.btnXMLFORM {
   font-size: 0;
   min-height: 47px;
   text-align: center;
-  -webkit-transition: 300ms opacity;
-  -o-transition: 300ms opacity;
   transition: 300ms opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -1918,44 +1879,37 @@ a.btnXMLFORM {
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transform: scale(0.33);
-  -ms-transform: scale(0.33);
   transform: scale(0.33);
   position: relative;
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
   -webkit-transform: scale(1);
-  -ms-transform: scale(1);
   transform: scale(1);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
   -webkit-transform: scale(1);
-  -ms-transform: scale(1);
   transform: scale(1);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
   -webkit-transform: scale(0.66);
-  -ms-transform: scale(0.66);
   transform: scale(0.66);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
   -webkit-transform: scale(0.33);
-  -ms-transform: scale(0.33);
   transform: scale(0.33);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
   -webkit-transform: scale(0.66);
-  -ms-transform: scale(0.66);
   transform: scale(0.66);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
   -webkit-transform: scale(0.33);
-  -ms-transform: scale(0.33);
   transform: scale(0.33);
 }
 
@@ -1973,7 +1927,6 @@ button.swiper-pagination-bullet {
   border: none;
   margin: 0;
   padding: 0;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2003,16 +1956,13 @@ button.swiper-pagination-bullet {
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 8px;
 }
 
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
-  -webkit-transition: 200ms top, 200ms -webkit-transform;
   transition: 200ms top, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms top;
   transition: 200ms transform, 200ms top;
   transition: 200ms transform, 200ms top, 200ms -webkit-transform;
 }
@@ -2024,23 +1974,18 @@ button.swiper-pagination-bullet {
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 50%;
   -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   white-space: nowrap;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transition: 200ms left, 200ms -webkit-transform;
   transition: 200ms left, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms left;
   transition: 200ms transform, 200ms left;
   transition: 200ms transform, 200ms left, 200ms -webkit-transform;
 }
 
 .swiper-container-horizontal.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transition: 200ms right, 200ms -webkit-transform;
   transition: 200ms right, 200ms -webkit-transform;
-  -o-transition: 200ms transform, 200ms right;
   transition: 200ms transform, 200ms right;
   transition: 200ms transform, 200ms right, 200ms -webkit-transform;
 }
@@ -2059,16 +2004,13 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
   -webkit-transform: scale(0);
-  -ms-transform: scale(0);
   transform: scale(0);
   -webkit-transform-origin: left top;
-  -ms-transform-origin: left top;
   transform-origin: left top;
 }
 
 .swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   -webkit-transform-origin: right top;
-  -ms-transform-origin: right top;
   transform-origin: right top;
 }
 
@@ -2163,17 +2105,8 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: center;
 }
@@ -2218,15 +2151,11 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-fade.swiper-container-free-mode .swiper-slide {
-  -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
 .swiper-container-fade .swiper-slide {
   pointer-events: none;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -2250,7 +2179,6 @@ button.swiper-pagination-bullet {
   z-index: 1;
   visibility: hidden;
   -webkit-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
   transform-origin: 0 0;
   width: 100%;
   height: 100%;
@@ -2262,7 +2190,6 @@ button.swiper-pagination-bullet {
 
 .swiper-container-cube.swiper-container-rtl .swiper-slide {
   -webkit-transform-origin: 100% 0;
-  -ms-transform-origin: 100% 0;
   transform-origin: 100% 0;
 }
 
@@ -2335,17 +2262,13 @@ button.swiper-pagination-bullet {
   -ms-perspective: 1200px;
 }
 
-.swiper-product {
-  min-height: 445px;
-}
-
 .swiper-product .swiper-inner {
-  padding-left: 45px;
+  margin-left: -15px;
 }
 
-.swiper-product li.ems-prd {
-  padding-left: 20px;
-  width: 265px;
+.swiper-product .ems-prd {
+  padding-left: 15px;
+  width: calc(100% / 2);
 }
 
 .swiper-product-horizontal > .swiper-inner > .swiper-wrapper {
@@ -3674,7 +3597,6 @@ button.toast-close-button {
 
 .navigasyon {
   position: relative;
-  padding: 0 20px;
   min-height: 50px;
   line-height: 50px;
   font-family: aktiv-grotesk, arial, sans-serif;
@@ -3683,18 +3605,25 @@ button.toast-close-button {
   background: #f3f3f3;
 }
 
+.navigasyon > [id$="lblNavigation"] {
+  display: block;
+  padding: 0 20px;
+}
+
 .navigasyon ol {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .navigasyon ol li {
   list-style: none;
 }
 
-.navigasyon ol .nav-sep {
-  margin: 0 2px;
+.navigasyon ol li + li::before {
+  content: "/";
+  margin: 0 5px;
 }
 
 .navigation-full-path {
@@ -4840,16 +4769,16 @@ tr + tr #dvUrunKiyaslamaOzellik {
   display: none;
   flex-direction: column;
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   width: 85vw;
   height: 100%;
-  max-width: 300px;
+  max-width: 315px;
   background: #FFF;
-  color: #000;
+  color: #252525;
   opacity: 0;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translateX(200px);
+  transform: translateX(200px);
   transition: all 0.12s cubic-bezier(0.95, 0.05, 0.795, 0.035);
   /* easeInExpo */
 }
@@ -4862,7 +4791,6 @@ tr + tr #dvUrunKiyaslamaOzellik {
   margin: 0 10px;
   font-weight: 700;
   line-height: 49px;
-  border-bottom: 1px solid #252525;
   transition: all .2s ease;
 }
 
@@ -4896,7 +4824,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
   position: sticky;
   top: 0;
   z-index: 1;
-  background: #252525;
+  background: #FFAB00;
   margin-left: 0;
   margin-right: 0;
   padding-left: 45px;
@@ -4944,7 +4872,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
 .menu .btn-menu-title {
   border-color: transparent;
   font-size: 15px;
-  background: #252525;
+  background: #FFAB00;
   margin-left: 0;
   margin-right: 0;
 }
@@ -4995,10 +4923,6 @@ tr + tr #dvUrunKiyaslamaOzellik {
   display: flex;
 }
 
-.menu-animate {
-  position: fixed;
-}
-
 .menu-animate .menu-overlay {
   display: block;
 }
@@ -5025,7 +4949,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
   margin-right: 0;
   padding-left: 20px;
   padding-right: 20px;
-  background: #252525;
+  background: #FFAB00;
 }
 
 .top-menu-append li > a::after {
@@ -5931,7 +5855,7 @@ ul.product-list-grid:empty {
 
 .ems-prd-image {
   border: 1px solid #f3f3f3;
-  padding: 40px 25px 30px;
+  padding: 25px 15px 10px;
 }
 
 .ems-prd-image > a::before {
@@ -6142,7 +6066,6 @@ ul.product-list-grid:empty {
   position: relative;
   padding-left: 40px;
   overflow: hidden;
-  font-size: 13px;
 }
 
 .ems-prdd-badge > div {
@@ -6208,17 +6131,17 @@ ul.product-list-grid:empty {
 
 .indirimli #plhKazancOran {
   display: block !important;
-  color: #EFEFEF;
+  color: #A90534;
 }
 
 .yeniUrun #plhYeniUrunBtn {
   display: block !important;
-  color: #004CA5;
+  color: #AE9013;
 }
 
 .tukendi #plhStokUyari {
   display: block !important;
-  color: #EBEBEB;
+  color: #252525;
 }
 
 .urunDetay_promosyonListe {
@@ -6248,14 +6171,18 @@ ul.product-list-grid:empty {
 .UrunListeGrup_listeUrunDetayGrup ul {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .UrunListeGrup_listeUrunDetayGrup ul > li {
-  width: 70px;
-  height: 70px;
+  width: 25px;
+  height: 25px;
   overflow: hidden;
+  border-radius: 100%;
   cursor: pointer;
+}
+
+.UrunListeGrup_listeUrunDetayGrup ul > li.selected {
+  border: 2px solid #999;
 }
 
 .UrunListeGrup_listeUrunDetayGrup ul > li + li {
@@ -6263,13 +6190,17 @@ ul.product-list-grid:empty {
 }
 
 .UrunListeGrup_listeUrunDetayGrup .URN_RESIM {
-  margin-top: -7px;
+  margin-top: -25%;
 }
 
 .dropdown-options {
   display: block !important;
   margin: 0 -5px -5px;
   font-size: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .dropdown-options > a {
@@ -6305,7 +6236,7 @@ ul.product-list-grid:empty {
 }
 
 .pnlSepetGrup {
-  display: flex;
+  display: flex !important;
   align-items: center;
 }
 
@@ -6319,7 +6250,7 @@ ul.product-list-grid:empty {
   font-family: gilroy, arial, sans-serif;
   font-size: 15px;
   color: #FFF;
-  background-color: #A90534;
+  background-color: inherit;
   line-height: 60px;
   height: 100%;
   border: none;
@@ -8284,16 +8215,12 @@ ul.giftCardList li.selected > a {
     .ems-form-horizontal .ems-field-push {
       margin-right: 50%;
     }
-    .swiper-product {
-      min-height: 490px;
-    }
     .swiper-product .swiper-inner {
-      padding-left: 0;
-      margin-left: -30px;
+      margin-left: -20px;
     }
-    .swiper-product li.ems-prd {
-      padding-left: 30px;
-      width: calc(100% / 3);
+    .swiper-product .ems-prd {
+      padding-left: 20px;
+      width: calc(100% / 4);
     }
     .slider-navigation .swiper-button-prev,
     .slider-navigation .swiper-button-next {
@@ -8406,46 +8333,16 @@ ul.giftCardList li.selected > a {
       margin-bottom: 0;
     }
     .navigasyon {
-      font-family: aktiv-grotesk, arial, sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      padding-left: 40px;
-      padding-right: 40px;
-      width: auto;
-      min-height: auto;
+      background-color: transparent;
     }
-    .navigasyon ol {
-      color: #000;
-      position: static;
-      opacity: 1;
-      pointer-events: auto;
-      transition: none;
+    .navigasyon > [id$="lblNavigation"] {
+      padding: 0 100px;
     }
     .navigasyon ol li {
-      display: inline-block;
-      line-height: 24px;
-    }
-    .navigasyon ol li:not(.navigasyonSeviye1) {
-      margin-left: 5px;
-    }
-    .navigasyon ol li:not(.navigasyonSeviye1)::before {
-      content: "/";
-      margin-right: 5px;
-    }
-    .navigasyon ol li:nth-of-type(1) {
-      opacity: .25;
-    }
-    .navigasyon ol li:nth-of-type(2) {
-      opacity: .50;
-    }
-    .navigasyon ol li:nth-of-type(3) {
       opacity: .75;
     }
     .navigasyon ol li:last-child {
       opacity: 1;
-    }
-    .navigasyon ol .icon-breadcrumb {
-      display: none;
     }
     .nav-type2 .navigasyon {
       position: absolute;
@@ -8654,12 +8551,32 @@ ul.giftCardList li.selected > a {
     .primary-image .prm-media img {
       height: calc(99.1vw / (3840 / 1678));
     }
+    .fd {
+      margin-top: 0;
+      padding: 100px 0;
+      background: #FFF;
+    }
     .fd-title {
       font-size: 24px;
+    }
+    .fd-text {
+      margin-top: 30px;
+      font-size: 13px;
+    }
+    .fd .block1 > .ga1 {
+      padding-right: 130px;
+      flex-basis: 36%;
+      flex-shrink: 0;
     }
     .fd .banner15 {
       margin-left: -1px;
       flex: 1 0 50%;
+    }
+    .fd .prop-group {
+      margin-top: 0;
+    }
+    .fd .ems-tab {
+      margin-top: 120px;
     }
     .lp-container {
       padding-bottom: 80px;
@@ -8720,10 +8637,12 @@ ul.giftCardList li.selected > a {
     .site-header-grid > .ga1 {
       line-height: 110px;
       border-right: 1px solid #EFEFEF;
-      text-align: center;
     }
     .site-header-grid > .ga8 {
       align-self: center;
+    }
+    .logo > a {
+      padding-left: 100px;
     }
     .mini-lang-info > span, .mini-user-info > span, .mini-cart-info > span, .mini-search-info > span {
       display: flex;
@@ -9237,6 +9156,9 @@ ul.giftCardList li.selected > a {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 42px 25px;
     }
+    .ems-prd-image {
+      padding: 40px 25px 30px;
+    }
     .swiper-product-horizontal .ems-prd-inner {
       padding: 10px;
     }
@@ -9251,7 +9173,7 @@ ul.giftCardList li.selected > a {
       flex: 1;
     }
     .ems-page-product-detail {
-      padding-bottom: 80px;
+      padding-bottom: 140px;
     }
     .ems-prdd-grid {
       position: relative;
@@ -9269,6 +9191,9 @@ ul.giftCardList li.selected > a {
     .ems-prdd-grid > .ga1 {
       padding: 40px 0;
     }
+    .ems-prdd-code {
+      font-size: 13px;
+    }
     .ems-prdd-name {
       margin-top: 20px;
       font-size: 24px;
@@ -9277,7 +9202,7 @@ ul.giftCardList li.selected > a {
       font-size: 18px;
     }
     .ems-prdd-badge {
-      font-size: 16px;
+      font-size: 13px;
     }
     .ems-prdd-gallery {
       margin-bottom: 0;
@@ -9297,12 +9222,9 @@ ul.giftCardList li.selected > a {
       font-size: 24px;
       padding: 3px;
     }
-    .UrunListeGrup_listeUrunDetayGrup ul {
-      justify-content: flex-start;
-    }
     .UrunListeGrup_listeUrunDetayGrup ul > li {
-      width: 45px;
-      height: 45px;
+      width: 18px;
+      height: 18px;
     }
     .urunDetay_urunSecenek {
       min-height: 46px;
@@ -9315,6 +9237,9 @@ ul.giftCardList li.selected > a {
     .open-size-guide {
       font-size: 12px;
       margin-top: 12px;
+    }
+    .urunDetay_urunAdet {
+      margin-right: 20px;
     }
     .mini-product-info-sub {
       max-width: 600px;

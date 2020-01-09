@@ -1,15 +1,13 @@
 //CUSTOM CFG
 //product widget
 .swiper-product {
-    $p: 30px;
-    min-height: 490px;
+    $p: 20px;
     .swiper-inner {
-        padding-left: 0;
         margin-left: #{-$p};
     }
-    li.ems-prd {
+    .ems-prd {
         padding-left: #{$p};
-        width: calc(100% / 3);
+        width: calc(100% / 4);
     }
 }
 

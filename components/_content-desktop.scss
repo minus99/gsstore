@@ -61,12 +61,32 @@
 //LANDING PAGE
 //full desc
 .fd {
+    margin-top: 0;
+    padding: 100px 0;
+    background: $color255;
     &-title {
         font-size: 24px;
+    }
+    &-text {
+        margin-top: 30px;
+        font-size: 13px;
+    }
+    .block1 {
+        > .ga1 {
+            padding-right: 130px;
+            flex-basis: 36%;
+            flex-shrink: 0;
+        }
     }
     .banner15 {
         margin-left: -1px;
         flex: 1 0 50%;
+    }
+    .prop-group {
+        margin-top: 0;
+    }
+    .ems-tab {
+        margin-top: 120px;
     }
 }
 .lp-container {

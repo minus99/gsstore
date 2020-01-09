@@ -1,5 +1,6 @@
+$menu-header-bg: $color2;
 .open-menu {
-    background: $color2;
+    background: $menu-header-bg;
     color: $color255;
 }
 
@@ -7,16 +8,16 @@
     display: none;
     flex-direction: column;
     position: fixed;
-    left: 0;
+    right: 0;
     top: 0;
     width: 85vw;
     height: 100%;
-    max-width: 300px;
+    max-width: 315px;
     background: $color255;
-    color: $color0;
+    color: $color3;
     
     opacity: 0;
-    transform: translateX(-50%);
+    transform: translateX(200px);
     transition: all .12s cubic-bezier(0.950, 0.050, 0.795, 0.035); /* easeInExpo */
     li {
         > a {
@@ -27,7 +28,6 @@
             margin: 0 10px;
             font-weight: 700;
             line-height: 49px;
-            border-bottom: 1px solid $color3;
             transition: all .2s ease;
             > img,
             > svg {
@@ -56,7 +56,7 @@
                 position: sticky;
                 top: 0;
                 z-index: 1;
-                background: $color3;
+                background: $menu-header-bg;
                 margin-left: 0;
                 margin-right: 0;
                 padding-left: 45px;
@@ -108,7 +108,7 @@
     .btn-menu-title {
         border-color: transparent;
         font-size: 15px;
-        background: $color3;
+        background: $menu-header-bg;
         margin-left: 0;
         margin-right: 0;
         &::after {
@@ -167,8 +167,6 @@
     }
 
     &-animate {
-        position: fixed;
-
         .menu-overlay {
             display: block;
         }

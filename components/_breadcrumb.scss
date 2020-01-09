@@ -1,22 +1,29 @@
 .navigasyon {
     $h: 50px;
     position: relative;
-    padding: 0 $container-gap;
     min-height: $h;
     line-height: $h;
     font-family: $font2;
     font-size: 12px;
     font-weight: 300;
     background: $color9;
+    > [id$="lblNavigation"] {
+        display: block;
+        padding: 0 $container-gap;
+    }
     ol {
         margin: 0;
         padding: 0;
         display: flex;
+        flex-wrap: wrap;
         li {
             list-style: none;
-        }
-        .nav-sep {
-            margin: 0 2px;
+            + li {
+                &::before {
+                    content: "/";
+                    margin: 0 5px;
+                }
+            }
         }
     }
 }

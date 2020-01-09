@@ -1,5 +1,5 @@
 .ems-page-product-detail {
-    padding-bottom: 80px;
+    padding-bottom: 140px;
 }
 
 .ems-prdd {
@@ -14,7 +14,10 @@
             padding: 40px 0;
         }
     }
-    
+
+    &-code {
+        font-size: 13px;
+    }    
     &-name {
         margin-top: 20px;
         font-size: 24px;
@@ -23,7 +26,7 @@
         font-size: 18px;
     }
     &-badge {
-        font-size: 16px;
+        font-size: 13px;
     }
     &-gallery {
         margin-bottom: 0;
@@ -48,10 +51,9 @@
 //other colors
 .UrunListeGrup_listeUrunDetayGrup {
     ul {
-        justify-content: flex-start;
         > li {
-            width: 45px;
-            height: 45px;
+            width: 18px;
+            height: 18px;
         }
     }
 }
@@ -71,6 +73,11 @@
 .open-size-guide {
     font-size: 12px;
     margin-top: 12px;
+}
+
+//add to cart
+.urunDetay_urunAdet {
+    margin-right: 20px;
 }
 
 //added to cart

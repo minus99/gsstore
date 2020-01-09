@@ -30,6 +30,7 @@ $font2: aktiv-grotesk, $font0;
 
 //CONTAINER
 $container-gap: 20px;
+$d-container-gap: 100px;
 $container-large: #{1240px + $container-gap * 2};
 $container-medium: #{900px + $container-gap * 2};
 $container-small: #{600px + $container-gap * 2};
