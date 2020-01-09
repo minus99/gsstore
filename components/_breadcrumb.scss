@@ -2,14 +2,14 @@
     $h: 50px;
     position: relative;
     min-height: $h;
-    line-height: $h;
+    line-height: 1.7;
     font-family: $font2;
     font-size: 12px;
     font-weight: 300;
     background: $color9;
     > [id$="lblNavigation"] {
         display: block;
-        padding: 0 $container-gap;
+        padding: 15px $container-gap;
     }
     ol {
         margin: 0;

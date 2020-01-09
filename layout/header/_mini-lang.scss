@@ -1,16 +1,25 @@
 ul.menu-mini-lang {
     margin-top: auto;
+    > li {
+        > a {
+            background: $color6;
+            line-height: 60px;
+            padding: 0 20px;
+            > b {
+                margin-right: 3px;
+            }
+        }
+    }
     .mini-lang {
         display: block !important;
         &-sub {
-            padding: 10px 20px;
-        }
-        .ems-form {
-            margin-top: 0;
+            padding: 35px;
         }
     }
-    .sub-header {
-        display: none;
+    .sub-close,
+    .sub-header,
+    .sub-footer {
+        display: none !important;
     }
 }
 

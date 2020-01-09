@@ -167,7 +167,7 @@ iframe {
         > svg {
             font-size: 86px;
             margin-bottom: 6px;
-            animation: animation-03 .5s ease;
+            animation: message .5s ease;
         }
         > p {
             margin: 0;
@@ -194,7 +194,7 @@ iframe {
             align-items: center;
             > svg {
                 flex: none;
-                animation: animation-03 .5s ease;
+                animation: message .5s ease;
             }
             > p {
                 margin: 0;
@@ -339,6 +339,9 @@ iframe {
         }
         &-right {
             @include setTurn(-90);
+        }
+        &-bottom {
+            @include setTurn(0);
         }
         &-left {
             @include setTurn(90);

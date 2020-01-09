@@ -1,9 +1,39 @@
-$menu-header-bg: $color2;
 .open-menu {
-    background: $menu-header-bg;
+    background: $color2;
     color: $color255;
 }
 
+%menu-header {
+    position: relative;
+    font-family: $font1;
+    font-size: 18px;
+    color: $color255;
+    font-weight: 500;
+    line-height: 60px;
+    background: $color2;
+    padding: 0 20px 0 70px;
+    &::before {
+        @extend .base64;
+        $fs: 37px;
+        $mr: 10px;
+        content: "";
+        width: $fs;
+        height: $fs;
+        background-size: 24px;
+        background-position: center;
+        margin-right: $mr;
+        border: 1px solid #eb9d00;
+        border-radius: 100%;
+        margin-left: -#{$fs + $mr};
+        @include setTurn(0);
+        transition: all .2s ease;
+    }
+    .selected & {
+        &::before {
+            @include setTurn(90);
+        }
+    }
+}
 .menu {
     display: none;
     flex-direction: column;
@@ -14,7 +44,9 @@ $menu-header-bg: $color2;
     height: 100%;
     max-width: 315px;
     background: $color255;
+    font-family: $font2;
     color: $color3;
+    font-weight: 400;
     
     opacity: 0;
     transform: translateX(200px);
@@ -24,27 +56,11 @@ $menu-header-bg: $color2;
             position: relative;
             display: flex;
             align-items: center;
-            padding: 0 10px;
-            margin: 0 10px;
-            font-weight: 700;
-            line-height: 49px;
-            transition: all .2s ease;
-            > img,
-            > svg {
-                margin-right: 5px;
-                max-width: 32px;
-            }
-            &::after {
-                @extend %triangle;
-                @extend %triangle-r;
-                position: absolute;
-                right: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-            }
+            font-weight: 400;
+            line-height: 40px;
         }
         &.selected {
-            position: absolute;
+            position: fixed;
             left: 0;
             top: 0;
             z-index: 2;
@@ -53,25 +69,19 @@ $menu-header-bg: $color2;
             background: $color255;
             overflow: auto;
             > a {
+                @extend %menu-header;
                 position: sticky;
                 top: 0;
                 z-index: 1;
-                background: $menu-header-bg;
-                margin-left: 0;
-                margin-right: 0;
-                padding-left: 45px;
-                font-size: 15px;
-                &::after {
-                    @extend %triangle-l;
-                    right: auto;
-                    left: 20px;
+                &::before {
+                    @extend .base64-arrow1;
                 }
             }
             > .sub,
             > ul,
             .lvl-2 {
                 display: block;
-                animation: show .5s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+                animation: animation-01 .2s ease;
             }
         }
         ul {
@@ -81,6 +91,7 @@ $menu-header-bg: $color2;
 
     .lvl-1 {
         overflow: auto;
+        border-bottom: 1px solid $color6;
     }
 
     .sub {
@@ -106,31 +117,21 @@ $menu-header-bg: $color2;
     }
 
     .btn-menu-title {
-        border-color: transparent;
-        font-size: 15px;
-        background: $menu-header-bg;
-        margin-left: 0;
-        margin-right: 0;
-        &::after {
-            right: 25px;
-        }
-        .icon-user {
-            --color2: #fff;
+        @extend %menu-header;
+        &::before {
+            @extend .base64-user;
         }
     }
     .selected > .btn-menu-title {
-        svg {
-            display: none;
+        &::before {
+            @extend .base64-arrow1;
         }
     }
 
     .dropdown {
         li {
             &.selected {
-                position: static;
-                > a {
-                    background: $color255;
-                }
+                display: none;
             }
         }
         a {
@@ -140,10 +141,18 @@ $menu-header-bg: $color2;
             font-weight: unset;
             border-bottom: unset;
             transition: unset;
-            &::after {
+            &::before {
                 display: none;
             }
         }
+    }
+
+    .lvl-1,
+    .top-menu-append,
+    .lvl-2,
+    .lvl-3 {
+        padding: 35px 0 35px 35px;
+        margin: 0 35px;
     }
 
     &-user-info {
@@ -152,7 +161,7 @@ $menu-header-bg: $color2;
                 > a {
                     padding-left: 0;
                     svg {
-                        --color2: #fff;
+                        --color1: #A90534;
                         margin-right: 8px !important;
                     }
                 }
@@ -167,6 +176,7 @@ $menu-header-bg: $color2;
     }
 
     &-animate {
+        overflow: hidden;
         .menu-overlay {
             display: block;
         }
