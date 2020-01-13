@@ -21,24 +21,33 @@ $btn-cursor: 10px;
         align-items: center;
         justify-content: center;
     }
+    &-hover {
+        background: $color2;
+    }
     
     &:hover {
-        background: $color2;
+        @extend %btn-hover;
     }
 
     &-primary {
         background: $color2;
-        &:hover {
+        &-hover {
             background: $color1;
+        }
+        &:hover {
+            @extend %btn-primary-hover;
         }
     }
 
     &-secondary {
         background: $color9;
         color: $color3;
-        &:hover {
+        &-hover {
             background: $color6;
             color: $color3;
+        }
+        &:hover {
+            @extend %btn-secondary-hover;
         }
     }
 
@@ -46,8 +55,11 @@ $btn-cursor: 10px;
         background: transparent;
         color: inherit;
         border-color: $color9;
-        &:hover {
+        &-hover {
             background: transparent;
+        }
+        &:hover {
+            @extend %btn-transparent-hover;
         }
     }
 

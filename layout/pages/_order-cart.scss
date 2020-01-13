@@ -3,7 +3,7 @@
     .ems-order-cart {}
     .ems-grid-table-cart {
         > .ems-grid-row {
-            grid-template-columns: 75px 1fr;
+            grid-template-columns: 65px 1fr;
         }
     }
 }
@@ -12,10 +12,13 @@
     margin-top: 20px;
     margin-bottom: 10px;
 
-    $p: 10px;
+    $pl: 10px;
+    .swiper-inner {
+        margin-left: #{-$p};
+    }
     .swiper-slide {
         padding-left: #{$p};
-        width: calc(100% - (20px + #{$p}));
+        width: calc(100% / 1.25);
         height: auto;
     }
     .banner {

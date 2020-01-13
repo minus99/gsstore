@@ -575,10 +575,10 @@ button.swiper-pagination-bullet {
 
   .swiper-pagination {
       &-bullet {
-          background: $color5;
+          background: #5b5b5b;
           
           &-active {
-              background: $color0;
+              background: #000;
           }
       }
   }

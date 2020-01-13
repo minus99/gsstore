@@ -227,6 +227,10 @@ $prd-pd-y: 18px;
     }
     .urunListe_adet {
         width: 120px;
+        .sStylerWrp_select {
+            height: 40px;
+            line-height: 40px;
+        }
     }
     .urunListe_sepet {
         flex: 1;

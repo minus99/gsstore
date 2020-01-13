@@ -1,7 +1,7 @@
 .tabloTabBtnAdim {
-    background: $color3;
+    position: relative;
     svg {
-        --color2: #fff;
+        font-size: 32px;
     }
     td {
         display: flex;
@@ -10,26 +10,30 @@
             flex: 1;
             text-align: center;
             a {
-                display: inline-block;
-                background: $color255;
-                padding-right: 10px;
-                line-height: 50px;
-                font-weight: 700;
-                border-bottom: 3px solid transparent;
+                padding: 5px;
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    border: 2px solid transparent;
+                    border-radius: 100%;
+                    background: transparent;
+                }
                 > span {
                     display: flex;
                     align-items: center;
+                    flex-direction: column;
                 }
             }
             &.tabBtnSelectedDefault {
                 a {
-                    background: $color3;
-                    border-color: $color0;
+                    &::after {
+                        border-color: $color1;
+                    }
                 }
             }
             &.btnDisable {
                 a {
-                    background: $color3;
+                    color: rgba($color: $color3, $alpha: .4)
                 }
             }
         }

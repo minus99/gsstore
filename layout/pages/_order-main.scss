@@ -1,8 +1,16 @@
 .ems-page-order {
+    background: $color9;
+    height: calc(100vh - #{$site-header-height});
+    .block1 {
+        background: $color255;
+        padding: $container-gap;
+        margin-top: 30px;
+    }
+
     .block2 {
-        background: $color3;
-        padding: 10px 20px;
-        margin-top: 60px;
+        background: $color255;
+        padding: $container-gap;
+        margin-top: 30px;
         .block2 {
             background: unset;
             padding: unset;

@@ -96,16 +96,16 @@
             opacity: 1;
         }
         .btn {
-            @extend %btn:hover;
+            @extend %btn-hover;
         }
         .btn-primary {
-            @extend %btn-primary:hover;
+            @extend %btn-primary-hover;
         }
         .btn-secondary {
-            @extend %btn-secondary:hover;
+            @extend %btn-secondary-hover;
         }
         .btn-transparent {
-            @extend %btn-transparent:hover;
+            @extend %btn-transparent-hover;
         }
     }
 
@@ -242,7 +242,6 @@
 
     //banner type10 *cart promotion
     &10 {
-        border: 1px solid $color5;
         background: $color255;
         color: $color0;
         .banner-body {

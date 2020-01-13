@@ -2,23 +2,23 @@
     display: block;
     position: relative;
     z-index: 1;
-    max-width: none;
     width: 100%;
-    padding: 0 50px;
+    max-width: none;
+    padding: 0 20px;
     background: transparent;
-    opacity: 1;
-    transform: translateX(0);
-    transition: none !important;
+    font-family: $font1;
+    font-size: 13px;
+    color: $color0;
+    font-weight: 500;
 
+    opacity: 1;
+    transform: none !important;
+    transition: none !important;
     li {
         > a {
             padding: 0;
             margin: 0;
             line-height: inherit;
-            border-bottom: none;
-            &:after {
-                display: none;
-            }
         }
         &.selected {
             position: static;
@@ -27,11 +27,16 @@
             background: none;
             overflow: visible;
             > a {
-                position: relative;
-                background: none;
-                margin: 0;
-                padding: 0;
+                font-family: inherit;
                 font-size: inherit;
+                color: inherit;
+                font-weight: inherit;
+                line-height: inherit;
+                background: none;
+                padding: 0;
+                &::before {
+                    display: none;
+                }
             }
             > .sub,
             > ul {
@@ -47,33 +52,15 @@
         display: flex;
         justify-content: center;
         overflow: initial;
+        padding: 0;
+        margin: 0;
         > li {
             > a {
                 margin: 0 5px;
                 padding: 0 5px;
-                &::after {
-                    display: block;
-                    content: "";
-                    transform: none;
-                    right: auto;
-                    left: 0;
-                    top: auto;
-                    bottom: 0;
-                    width: 0;
-                    border-width: 2px;
-                    border-color: currentColor;
-                    transition: all .32s ease;
-                    opacity: 0;
-                }
             }
-            &.selected {
-                > a {
-                    background: none;
-                    &::after {
-                        opacity: 1;
-                        width: 100%;
-                    }
-                }
+            &.selected,
+            &.type2 {
                 .sub {
                     display: flex;
                 }
@@ -98,13 +85,7 @@
             overflow: hidden;
         }
         .r1 {
-            flex-basis: $subGapL;
-            @include setCurve(15, 48);
-            z-index: 1;
-            background: $color3;
-            > img {
-                @include setCurve(-15, 0);
-            }
+            flex-basis: #{$subGapL + 30px};
             + .r2 {
                 flex: 1;
             }
@@ -115,43 +96,12 @@
         }
     }
 
-    .skew-object {
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 2;
-        width: 400px;
-        height: 100%;
-        background: rgba(215, 0, 10, 0.6);
-        @include setCurve(15, -52);
-    }
-
-    $iw: 300px;
-    .img1, .img2 {
-        position: absolute;
-        top: 0;
-        width: $iw;
-        height: 100%;
-        padding-top: 20px;
-    }
-    .img1 {
-        right: -$iw/2;
-        animation: animation-01 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
-    }
-    .img2 {
-        left: -102px;
-        animation: animation-02 .32s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
-        + .lvl-2 {
-            padding-left: $iw/2 + 100px;
-            max-width: 1300px;
-        }
-    }
-
     .lvl-2 {
         column-count: 1;
         column-gap: 50px;
         height: 100%;
         padding: 30px;
+        margin: 0;
         animation: animation-02 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000) !important; /* easeOutCubic */
         > li {
             break-inside: avoid;
@@ -167,6 +117,8 @@
     }
 
     .lvl-3 {
+        padding: 0;
+        margin: 0;
         > li {
             > a {
                 font-weight: 500;

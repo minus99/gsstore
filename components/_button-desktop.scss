@@ -10,8 +10,11 @@
     &-primary {
         background: $color255;
         color: $color0;
-        &:hover {
+        &-hover {
             background: $color3;
+        }
+        &:hover {
+            @extend %d-btn-primary-hover;
         }
     }
 }

@@ -1,7 +1,8 @@
 .navigasyon {
     background-color: transparent;
     > [id$="lblNavigation"] {
-        padding: 0 $d-container-gap;
+        padding-left: $d-container-gap;
+        padding-right: $d-container-gap;
     }
     ol {
         li {

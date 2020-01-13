@@ -1,7 +1,7 @@
 .banner {
     &:hover {
         .d-btn-primary {
-            @extend %d-btn-primary:hover;
+            @extend %d-btn-primary-hover;
         }
     }
 
