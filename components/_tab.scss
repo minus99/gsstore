@@ -42,15 +42,18 @@
     //checkbox
     &-checkbox {
         &-header {
-            background: $color9;
+            background: $color2;
             padding: 20px;
             font-family: $font2;
-            font-size: 16px;
+            font-size: 14px;
+            color: $color255;
             user-select: none;
         }
         &-content {
             display: none;
-            border: 1px solid $color3;
+            border: 1px solid $color6;
+            background: $color255;
+            color: $color0;
         }
         &.opened {
             .ems-tab-checkbox-content {

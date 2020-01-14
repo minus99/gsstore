@@ -1,6 +1,6 @@
 .ems-page-order {
     background: $color9;
-    height: calc(100vh - #{$site-header-height});
+    min-height: calc(100vh - #{$site-header-height});
     .block1 {
         background: $color255;
         padding: $container-gap;
@@ -8,22 +8,29 @@
     }
 
     .block2 {
-        background: $color255;
-        padding: $container-gap;
         margin-top: 30px;
-        .block2 {
-            background: unset;
-            padding: unset;
-            margin-top: unset;
-            border-top: unset;
+        padding: 20px $container-gap 5px;
+        background: $color255;
+        > .page-top-title {
+            margin-bottom: 15px;
         }
     }
 }
 
 .bottom-step {
-    margin-top: 15px;
+    background: $color255;
+    padding: 5px;
     a {
-        display: block;
-        margin-top: 5px;
+        width: 100%;
+        @extend %btn-medium;
+        ~ a {
+            margin-top: 5px;
+        }
+    }
+
+    .ems-step0 & {
+        padding: 0;
+        background: none;
+        margin-top: 20px;
     }
 }

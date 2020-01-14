@@ -101,6 +101,17 @@
 }
 
 //CONTENT UTILITY
+.page-top-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.page-top-desc {
+    font-weight: 500;
+    margin-top: 20px;
+}
+
 .ff2 {
     font-family: $font2;
 }
@@ -148,13 +159,6 @@
 }
 .mb5 {
     margin-bottom: 50px;
-}
-
-//TOP TITLE
-.page-top-title {
-    font-size: 20px;
-    color: $color3;
-    font-weight: 500;
 }
 
 //SECTION BG

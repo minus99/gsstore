@@ -7,6 +7,7 @@
         display: flex;
         justify-content: center;
         > span {
+            position: relative;
             flex: 1;
             text-align: center;
             a {
@@ -34,6 +35,21 @@
             &.btnDisable {
                 a {
                     color: rgba($color: $color3, $alpha: .4)
+                }
+            }
+            + span {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 20px;
+                    left: -17%;
+                    border-top: 4px dotted rgba($color: $color1, $alpha: .4);
+                    width: 34%;
+                }
+                &.btnDisable {
+                    &::before {
+                        border-color: rgba($color: $color3, $alpha: .4);
+                    }
                 }
             }
         }
