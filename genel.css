@@ -1015,7 +1015,7 @@ a.btnSipIptal:hover, .selected-action .remove-selected > a:hover, a.lnkSatinAl:h
   display: none;
 }
 
-.btn-reset, .ems-grid-address-buttons > a, .ems-grid-address-select a, .mini-search a[id$="btnArama"], .ems-cart-button a.btnDefault, a.btnHediyeCekiIptal, a.btnAdresEkle, .siparisOnaySozlesmeMetin > span a.btnDefault,
+.btn-reset, .ems-grid-address-buttons > a, .ems-grid-address-select a, .mini-search a[id$="btnArama"], .order-module-buttons a.btnDefault, a.btnHediyeCekiIptal, .siparisOnaySozlesmeMetin > span a.btnDefault,
 .onBilgilendirmeFormMetin > span a.btnDefault, a.btnSipariseDon, .coupon-tab a {
   padding: unset;
   background: unset;
@@ -1028,7 +1028,7 @@ a.btnSipIptal:hover, .selected-action .remove-selected > a:hover, a.lnkSatinAl:h
   letter-spacing: unset;
 }
 
-.btn-reset:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, .mini-search a:hover[id$="btnArama"], .ems-cart-button a.btnDefault:hover, a.btnHediyeCekiIptal:hover, a.btnAdresEkle:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
+.btn-reset:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, .mini-search a:hover[id$="btnArama"], .order-module-buttons a.btnDefault:hover, a.btnHediyeCekiIptal:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
 .onBilgilendirmeFormMetin > span a.btnDefault:hover, a.btnSipariseDon:hover, .coupon-tab a:hover {
   background: unset;
 }
@@ -3993,7 +3993,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
   position: absolute;
   top: 20px;
   left: -17%;
-  border-top: 4px dotted rgba(169, 5, 52, 0.4);
+  border-top: 4px dotted #A90534;
   width: 34%;
 }
 
@@ -4040,7 +4040,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
 }
 
 .ems-grid-name {
-  padding-right: 45px;
+  padding-right: 50%;
   font-weight: 600;
 }
 
@@ -4110,41 +4110,49 @@ tr + tr #dvUrunKiyaslamaOzellik {
 }
 
 .ems-grid-address-name {
-  font-weight: 700;
-  padding-right: 130px;
+  font-weight: 500;
+  padding-right: 120px;
 }
 
 .ems-grid-address-name > span {
-  display: none;
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .ems-grid-address {
   line-height: 1.7;
+  font-weight: 400;
 }
 
 .ems-grid-address-buttons {
   position: absolute;
-  right: 20px;
+  right: 0;
   top: 20px;
 }
 
 .ems-grid-address-buttons > a {
-  color: #EBEBEB;
-  text-decoration: underline;
+  font-family: aktiv-grotesk, arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
 }
 
 .ems-grid-address-buttons > a + a {
-  margin-left: 30px;
+  margin-left: 20px;
+}
+
+.ems-grid-address-select a {
+  font-weight: 600;
 }
 
 .ems-grid-address-select a svg {
-  font-size: 18px;
   --check: none;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .ems-grid-address-select a.emos_selected {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .ems-grid-address-select a.emos_selected svg {
@@ -4324,6 +4332,17 @@ tr + tr #dvUrunKiyaslamaOzellik {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
+}
+
+.page-top-title-compact {
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.page-top-title-compact > * {
+  background: #FFF;
+  padding: 12px 20px;
 }
 
 .page-top-desc {
@@ -6703,6 +6722,10 @@ a.btnStokHaberci {
   min-height: calc(100vh - 60px);
 }
 
+.ems-page-order-grid {
+  padding-top: 20px;
+}
+
 .ems-page-order .block1 {
   background: #FFF;
   padding: 20px;
@@ -6717,6 +6740,18 @@ a.btnStokHaberci {
 
 .ems-page-order .block2 > .page-top-title {
   margin-bottom: 15px;
+}
+
+.order-module-buttons {
+  background: #FFF;
+  padding: 0 20px 25px;
+  font-weight: 400;
+}
+
+.order-module-buttons .icon-triangle-b {
+  --color1: #000;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .bottom-step {
@@ -6743,11 +6778,6 @@ a.btnStokHaberci {
   grid-template-columns: 65px 1fr;
 }
 
-.cart-promotion-info {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
 .cart-promotion-info .swiper-inner {
   margin-left: -20px;
 }
@@ -6763,22 +6793,7 @@ a.btnStokHaberci {
 }
 
 .odemeCeki .baslik {
-  color: #000;
-}
-
-.ems-cart-button {
-  background: #FFF;
-  padding: 0 20px 25px;
-}
-
-.ems-cart-button a.btnDefault {
-  font-weight: 400;
-}
-
-.ems-cart-button .icon-triangle-b {
-  --color1: #000;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  color: #A90534;
 }
 
 .pnlDipToplamTable {
@@ -6903,71 +6918,91 @@ a.btnStokHaberci {
   display: none;
 }
 
-.ems-grid-table-address .ems-grid-row {
-  grid-template-columns: 1fr;
-  font-size: 15px;
+.ems-order-delivery .order-module-buttons {
+  background: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-a.btnAdresEkle,
-.dvFarkliFatAdrSec,
+.ems-grid-table-address {
+  background: #FFF;
+  padding: 0 20px;
+}
+
+.ems-grid-table-address .ems-grid-row {
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+
+.dvFarkliFatAdrSec {
+  display: flex;
+  align-items: center;
+}
+
 .delivery-gift-select {
-  padding: 20px;
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 16px;
+  padding: 20px 20px;
+  font-weight: 400;
+  border-radius: 4px;
 }
 
 .ems-delivery-tab {
   position: relative;
-  width: calc(100% - 40px);
-  margin: 0 auto;
+  padding: 0 20px;
   overflow: hidden;
 }
 
 .ems-gift-tab {
-  background: #252525;
+  margin-top: 10px;
 }
 
-.ems-gift-tab::before {
+.ems-gift-tab .ems-delivery-tab-hdr {
+  position: relative;
+  background: #ffe0e6;
+}
+
+.ems-gift-tab .ems-delivery-tab-hdr::before {
   content: "";
   position: absolute;
   right: 20px;
-  top: 11px;
+  top: 12px;
   width: 80px;
   height: 49px;
   background: url(/images/frontend/gift-pack.svg) center top no-repeat;
+  transition: top 0.2s cubic-bezier(0.18, -0.54, 1, 0.74);
 }
 
 .ems-gift-tab .ems-delivery-tab-wrp {
+  background: #ffe0e6;
   padding: 40px 20px 20px;
   display: none;
+}
+
+.ems-gift-tab-opened .ems-delivery-tab-hdr::before {
+  top: -12px;
+  height: 127px;
+  background-position: center bottom;
 }
 
 .ems-gift-tab-opened .ems-delivery-tab-wrp {
   display: block;
 }
 
-.ems-gift-tab-opened::before {
-  height: 127px;
-  background-position: center bottom;
-  transition: all .2s ease;
-}
-
-.divTeslimatKargo {
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 15px;
+.ems-cargo-tab {
   margin-top: 30px;
+  background: #FFF;
+  padding: 20px 20px;
 }
 
 .divTeslimatKargo li {
   position: relative;
-  padding: 20px 20px 20px 85px;
-  border: 1px solid #17181A;
+  padding: 20px 20px 20px 129px;
+  border: 1px solid #A90534;
   display: flex;
   flex-wrap: wrap;
 }
 
 .divTeslimatKargo li + li {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .divTeslimatKargo img {
@@ -6977,7 +7012,7 @@ a.btnAdresEkle,
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  max-width: 44px;
+  max-width: 89px;
 }
 
 .divTeslimatKargo .kargoAdi {
@@ -6998,6 +7033,9 @@ a.btnAdresEkle,
   order: 4;
   margin-top: 5px;
   flex-basis: 100%;
+  font-family: aktiv-grotesk, arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
 }
 
 .divTeslimatKargo .kargoAdi,
@@ -7013,6 +7051,7 @@ a.btnAdresEkle,
   height: 100%;
   background: none;
   border: none;
+  margin: 0;
 }
 
 .divTeslimatKargo .sStylerWrp_radio > * {
@@ -7065,19 +7104,8 @@ a.btnAdresEkle,
   display: none;
 }
 
-.ems-order-payment-grid > .ga1 > div {
-  padding-left: 20px;
-  padding-right: 20px;
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 15px;
-}
-
 .ems-order-payment .ems-order-cart-grid > .ga1 {
   display: none;
-}
-
-.ems-pay-type {
-  margin-top: 20px;
 }
 
 .ems-pay-type-list ul {
@@ -7105,7 +7133,8 @@ a.btnAdresEkle,
 
 .ems-pay-type-content {
   position: relative;
-  margin-top: 30px;
+  background: #FFF;
+  padding: 20px 20px;
 }
 
 [id$="pnlPesinDiger"] {
@@ -7264,6 +7293,7 @@ a.btnAdresEkle,
 }
 
 .tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID > span {
+  display: inline-block;
   text-align: center;
 }
 
@@ -9430,10 +9460,6 @@ ul.giftCardList li.selected > a {
     }
     .ems-order-payment-grid > .ga2 {
       grid-area: ga2;
-    }
-    .ems-order-payment-grid > .ga1 > .ems-pay-type {
-      padding-left: 0;
-      padding-right: 0;
     }
     .ems-order-payment .ems-order-cart-grid > .ga1 {
       position: relative;

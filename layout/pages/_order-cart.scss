@@ -9,9 +9,6 @@
 }
 
 .cart-promotion-info {
-    margin-top: 20px;
-    margin-bottom: 10px;
-
     $pl: 10px;
     .swiper-inner {
         margin-left: #{-$p};
@@ -28,20 +25,7 @@
 
 .odemeCeki {
     .baslik {
-        color: $color0;
-    }
-}
-
-.ems-cart-button {
-    background: $color255;
-    padding: 0 $container-gap 25px;
-    a.btnDefault {
-        @extend %btn-reset;
-        font-weight: 400;
-    }
-    .icon-triangle-b {
-        --color1: #000;
-        @include setTurn(90);
+        color: $color1;
     }
 }
 

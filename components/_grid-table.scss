@@ -33,7 +33,7 @@
         align-self: flex-start;
     }
     &-name {
-        padding-right: 45px;
+        padding-right: 50%;
         font-weight: 600;
         .prdItem {
             display: block;
@@ -92,38 +92,43 @@
         }
     }
     &-address-name {
-        font-weight: 700;
-        padding-right: 130px;
+        font-weight: 500;
+        padding-right: 120px;
         > span {
-            display: none;
+            display: block;
+            margin-top: 5px;
+            font-size: 12px;
+            font-weight: 400;
         }
     }
     &-address {
         line-height: 1.7;
+        font-weight: 400;
     }
     &-address-buttons {
         position: absolute;
-        right: 20px;
+        right: 0;
         top: 20px;
         > a {
             @extend %btn-reset;
-            color: $color6;
-            text-decoration: underline;
+            font-family: $font2;
+            font-size: 11px;
+            font-weight: 500;
             + a {
-                margin-left: 30px;
+                margin-left: 20px;
             }
         }
     }
     &-address-select {
         a {
             @extend %btn-reset;
+            font-weight: 600;
             svg {
-                font-size: 18px;
                 --check: none;
-                margin-right: 10px;
+                margin-right: 5px;
             }
             &.emos_selected {
-                font-weight: 600;
+                font-weight: 700;
                 svg {
                     --check: block;
                 }

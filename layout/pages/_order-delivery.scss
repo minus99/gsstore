@@ -4,74 +4,93 @@
             display: none;
         }
     }
-}
-
-.ems-grid-table-address {
-    .ems-grid-row {
-        grid-template-columns: 1fr;
-        font-size: 15px;
+    .order-module-buttons {
+        background: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
 
-a.btnAdresEkle,
-.dvFarkliFatAdrSec,
-.delivery-gift-select {
-    padding: 20px;
-    font-family: $font2;
-    font-size: 16px;
+.ems-grid-table-address {
+    background: $color255;
+    padding: 0 $container-gap;
+    .ems-grid-row {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
 }
 
-a.btnAdresEkle {
-    @extend %btn-reset;
+.dvFarkliFatAdrSec {
+    display: flex;
+    align-items: center;
+}
+
+.delivery-gift-select {
+    padding: 20px $container-gap;
+    font-weight: 400;
+    border-radius: 4px;
 }
 
 .ems-delivery-tab {
     position: relative;
-    width: calc(100% - 40px);
-    margin: 0 auto;
+    padding: 0 $container-gap;
     overflow: hidden;
 }
 .ems-gift-tab {
-    background: $color3;
-    &::before {
-        content: "";
-        position: absolute;
-        right: 20px;
-        top: 11px;
-        width: 80px;
-        height: 49px;
-        background: url(/images/frontend/gift-pack.svg) center top no-repeat;
-    }
-    .ems-delivery-tab-wrp {
-        padding: 40px 20px 20px;
-        display: none;
-    }
-    &-opened {
-        .ems-delivery-tab-wrp {
-            display: block;
+    $bg: #ffe0e6;
+    margin-top: 10px;
+    .ems-delivery-tab {
+        &-hdr {
+            position: relative;
+            background: $bg;
+            &::before {
+                content: "";
+                position: absolute;
+                right: 20px;
+                top: 12px;
+                width: 80px;
+                height: 49px;
+                background: url(/images/frontend/gift-pack.svg) center top no-repeat;
+                transition: top 0.2s cubic-bezier(0.18, -0.54, 1, 0.74);
+            }
         }
-        &::before {
-            height: 127px;
-            background-position: center bottom;
-            transition: all .2s ease;
+        &-wrp {
+            background: $bg;
+            padding: 40px 20px 20px;
+            display: none;
+        }
+    }
+
+    &-opened {
+        .ems-delivery-tab {
+            &-hdr {
+                &::before {
+                    top: -12px;
+                    height: 127px;
+                    background-position: center bottom;
+                }
+            }
+            &-wrp {
+                display: block;
+            }
         }
     }
 }
 .ems-cargo-tab {
-
+    margin-top: 30px;
+    background: $color255;
+    padding: 20px $container-gap;
 }
 .divTeslimatKargo {
-    font-family: $font2;
-    font-size: 15px;
-    margin-top: 30px;
+    $cargoImgW: 89px;
     li {
         position: relative;
-        padding: 20px 20px 20px 85px;
-        border: 1px solid $color5;
+        padding: 20px 20px 20px #{$cargoImgW + 40px};
+        border: 1px solid $color1;
         display: flex;
         flex-wrap: wrap;
         + li {
-            margin-top: 20px;
+            margin-top: 15px;
         }
     }
     img {
@@ -80,7 +99,7 @@ a.btnAdresEkle {
         left: 20px;
         top: 50%;
         transform: translateY(-50%);
-        max-width: 44px;
+        max-width: $cargoImgW;
     }
     .kargoAdi {
         order: 2;
@@ -97,6 +116,9 @@ a.btnAdresEkle {
         order: 4;
         margin-top: 5px;
         flex-basis: 100%;
+        font-family: $font2;
+        font-size: 11px;
+        line-height: 1.5;
     }
 
     .kargoAdi,
@@ -106,6 +128,7 @@ a.btnAdresEkle {
 
     .sStylerWrp_radio {
         @include ems-cover;
+        margin: 0;
     }
     .radioButton {
         display: block !important;

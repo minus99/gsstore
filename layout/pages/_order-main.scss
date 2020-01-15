@@ -1,6 +1,11 @@
 .ems-page-order {
     background: $color9;
     min-height: calc(100vh - #{$site-header-height});
+
+    &-grid {
+        padding-top: 20px;
+    }
+
     .block1 {
         background: $color255;
         padding: $container-gap;
@@ -14,6 +19,19 @@
         > .page-top-title {
             margin-bottom: 15px;
         }
+    }
+}
+
+.order-module-buttons {
+    background: $color255;
+    padding: 0 $container-gap 25px;
+    font-weight: 400;
+    a.btnDefault {
+        @extend %btn-reset;
+    }
+    .icon-triangle-b {
+        --color1: #000;
+        @include setTurn(90);
     }
 }
 

@@ -43,7 +43,7 @@
                     position: absolute;
                     top: 20px;
                     left: -17%;
-                    border-top: 4px dotted rgba($color: $color1, $alpha: .4);
+                    border-top: 4px dotted $color1;
                     width: 34%;
                 }
                 &.btnDisable {

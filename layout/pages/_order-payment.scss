@@ -1,15 +1,4 @@
 .ems-order-payment {
-    &-grid {
-        > .ga1 {
-            > div {
-                padding-left: 20px;
-                padding-right: 20px;
-                font-family: $font2;
-                font-size: 15px;
-            }
-        }
-    }
-
     .ems-order-cart-grid {
         > .ga1 {
             display: none;
@@ -18,7 +7,6 @@
 }
 
 .ems-pay-type {
-    margin-top: 20px;
     &-list {
         $l: 5px;
         ul {
@@ -43,7 +31,8 @@
     }
     &-content {
         position: relative;
-        margin-top: 30px;
+        background: $color255;
+        padding: 20px $container-gap;
     }
 }
 [id$="pnlPesinDiger"] {
@@ -187,6 +176,7 @@
     td {
         &.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID {
             > span {
+                display: inline-block;
                 text-align: center;
                 &:nth-child(1) {
                     width: 85px;
