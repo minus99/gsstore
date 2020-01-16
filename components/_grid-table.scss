@@ -33,7 +33,7 @@
         align-self: flex-start;
     }
     &-name {
-        padding-right: 50%;
+        padding-right: 50px;
         font-weight: 600;
         .prdItem {
             display: block;
@@ -92,8 +92,8 @@
         }
     }
     &-address-name {
+        padding-right: 50%;
         font-weight: 500;
-        padding-right: 120px;
         > span {
             display: block;
             margin-top: 5px;

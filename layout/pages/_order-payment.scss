@@ -1,31 +1,71 @@
 .ems-order-payment {
-    .ems-order-cart-grid {
-        > .ga1 {
-            display: none;
+    .block1 {
+        &::after {
+            content: "";
+            background: linear-gradient(0deg, white, transparent);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            z-index: 1;
+        }
+    }
+    .ems-grid-table-cart {
+        max-height: 300px;
+        overflow-y: auto;
+        padding-right: 10px;
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #d8d8d8;
+            border-radius: 2px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #000;
+            border-radius: 2px;
+        }
+        > .ems-grid-row {
+            grid-template-columns: 75px 1fr;
+            border-color: transparent;
+            padding: 10px 10px 10px 0;
+            grid-row-gap: 0;
+        }
+        .ems-grid-name {
+            [id$="lblProm"] {
+                display: none;
+            }
+        }
+        .qty-wrapper {
+            width: auto;
+            text-align: center;
+        }
+        .ems-grid-price {
+            .price-wrapper {
+                justify-content: flex-end;
+            }
+            .dvSepetKazancOran:not(:empty) {
+                text-align: right;
+            }
         }
     }
 }
 
 .ems-pay-type {
     &-list {
-        $l: 5px;
         ul {
             display: flex;
             flex-wrap: wrap;
-            margin-left: -$l;
-        }
-        li {
-            margin-left: $l;
+            background: $color27;
         }
         a {
             display: block;
-            padding: 12px 20px;
-            border: 1px solid transparent;
-            font-family: $font2;
-            font-weight: 700;
-            letter-spacing: 1px;
+            background: $color27;
+            padding: 12px 14px;
+            font-size: 12px;
+            font-weight: 500;
             &.emos_selected {
-                border-color: $color5;
+                background: $color255;
             }
         }
     }
@@ -166,9 +206,6 @@
         &:nth-child(3) {
             flex-basis: 28%;
         }
-        &:nth-child(5) {
-            display: none;
-        }
     }
     th {
         @extend .ems-form-label;
@@ -211,7 +248,7 @@
         text-align: right;
         color: #fff;
         > a {
-            width: 110px;
+            min-width: 150px;
         }
     }
 }
@@ -225,6 +262,9 @@
     font-size: 14px;
 }
 
+.lnkOdemeTaksit {
+    display: block;
+}
 .pageOdemeBilgi_odemeTaksit {
     margin-top: 20px;
     #imgBANKALOGO {
@@ -246,36 +286,55 @@
     @extend .ems-form-label;
 }
 
-.ems-pay-address,
-.ems-pay-agreement {
-    margin-top: 20px;
-    border-top: 1px solid $color5;
+.ems-pay-address {
+    background: $color255;
+    padding: 20px $container-gap 0;
+    margin-top: 30px;
+    .page-top-title {
+        margin-bottom: 0;
+    }
+    .ems-wrapper {
+        > div {
+            padding: 20px 0;
+            + div {
+                border-top: 1px solid $color1;
+            }
+        }
+    }
+    &-label {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &-obj {
+        font-family: $font2;
+        font-size: 12px;
+        line-height: 1.5;
+    }
 }
-.ems-pay-address-label,
+
 .tableTitleSiparisOnaySatisSozlesme,
 .tableTitleSiparisOnBilgilendirmeForm {
     padding: 10px 0;
     font-weight: 700;
     line-height: 32px;
     cursor: pointer;
+    display: none;
 }
-.ems-pay-address-obj,
+.pageSiparisOnay_lbfSatisSozlesme,
+.pageSiparisOnay_lbfOnBilgilendirmeForm {
+    background: $color255;
+    padding: 0 $container-gap;
+}
 .pageSiparisOnay_chkSatisSozlesme,
 .pageSiparisOnay_chkOnBilgilendirmeForm {
-    margin-top: -5px;
+    padding: 20px 0;
     a {
         text-decoration: underline;
     }
 }
-.ems-billing-address,
-.siparisOnaySozlesmeHolder {
-    margin-top: 15px;
+.pageSiparisOnay_chkSatisSozlesme {
+    border-top: 1px solid $color1;
 }
-
-.ems-pay-address-obj {
-    line-height: 1.7;
-}
-
 .pageSiparisOnay_btnSatisSozlesmeOnizle,
 .pageSiparisOnay_btnOnBilgilendirmeFormOnizle {
     display: none;

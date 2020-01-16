@@ -42,12 +42,12 @@ textarea {
     resize: vertical;
 }
 
-[id$="UYE_CEPTELEFONALAN"] {
+input[id$="UYE_CEPTELEFONALAN"] {
     width: 65px !important;
     margin-right: 5px;
     text-align: center;
 }
-[id$="UYE_CEPTELEFON"] {
+input[id$="UYE_CEPTELEFON"] {
     width: calc(100% - 70px) !important;
 }
 

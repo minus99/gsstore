@@ -2,6 +2,12 @@
     .site-header {
         position: relative;
         z-index: auto;
+        &-grid {
+            > .ga1,
+            > .ga8 {
+                line-height: $d-order-site-header-height;
+            }
+        }
     }
     .mini-search-info {
         > span {
@@ -31,12 +37,6 @@
     &-grid {
         padding-top: 40px;
         padding-bottom: 100px;
-    }
-    .block2 {
-        background: none;
-        margin-top: 0;
-        padding: 20px 30px;
-        border-top: 1px solid $color5;
     }
 }
 

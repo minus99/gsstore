@@ -5,21 +5,6 @@
     &-grid {
         padding-top: 20px;
     }
-
-    .block1 {
-        background: $color255;
-        padding: $container-gap;
-        margin-top: 30px;
-    }
-
-    .block2 {
-        margin-top: 30px;
-        padding: 20px $container-gap 5px;
-        background: $color255;
-        > .page-top-title {
-            margin-bottom: 15px;
-        }
-    }
 }
 
 .order-module-buttons {

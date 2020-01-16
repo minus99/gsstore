@@ -71,27 +71,22 @@ a.lnkSatinAl {
 //GIFT CARD UYGULA
 .pageOdemeBilgi_odemeCekiGiris {
     display: block !important;
-    margin-top: 20px;
+    background: $color255;
+    padding: 0 $container-gap;
 }
 .odemeCekiKullanim,
 .odemeCekiKullanimOzet > div {
-    border-top: 1px solid $color5;
-    padding: 20px 0;
-}
-
-.odemeCekiKullanim {
     position: relative;
-    
+    border-top: 1px solid $color1;
+    padding: 20px 0;
 }
 .odemeCekiEkleBtn {
     position: absolute;
-    right: 8px;
-    top: calc(50% + 11px);
-    transform: translateY(-50%);
-    font-size: 0;
+    right: 0;
+    bottom: 20px;
 }
 a.btnOdemeCekiEkle {
-    @extend %btn-icon;
+    @extend %btn-medium;
 }
 
 .odemeCekiKullanimOzet {

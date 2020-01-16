@@ -1,13 +1,5 @@
 .tabloTabBtnAdim {
-    position: relative;
     z-index: 2;
-    margin-top: -70px;
+    margin-top: -80px;
     max-width: 50%;
-    td {
-        > span {
-            a {
-                line-height: 67px;
-            }
-        }
-    }
 }
