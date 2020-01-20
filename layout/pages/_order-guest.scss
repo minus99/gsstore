@@ -8,5 +8,5 @@
     margin-bottom: 50px;
 }
 a.btnGuestCheckoutSave {
-    @extend .btnUyeBilgi;
+    @extend %btn-small;
 }

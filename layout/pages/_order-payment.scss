@@ -53,10 +53,9 @@
 
 .ems-pay-type {
     &-list {
-        ul {
+        > ul {
             display: flex;
             flex-wrap: wrap;
-            background: $color27;
         }
         a {
             display: block;

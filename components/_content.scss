@@ -1,4 +1,4 @@
-//HIERARCHY MENU
+//HIERARCHY MENU - DROPDOWN
 .mobi-dropdown {
     position: relative;
     &-header {
@@ -78,6 +78,21 @@
         }
         > ul {
             display: block;
+        }
+    }
+}
+//HIERARCHY MENU - SLIDE
+.mobi-slide {
+    .swiper-slide {
+        width: auto;
+        > a {
+            padding: 12px 15px;
+            border-bottom: 2px solid $color27;            
+        }
+        &.selected {
+            > a {
+                border-color: $color1;
+            }
         }
     }
 }

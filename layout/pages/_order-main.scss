@@ -1,5 +1,6 @@
+$order-pages-bg: $color9;
 .ems-page-order {
-    background: $color9;
+    background: $order-pages-bg;
     min-height: calc(100vh - #{$site-header-height});
 
     &-grid {
@@ -8,15 +9,19 @@
 }
 
 .order-module-buttons {
-    background: $color255;
-    padding: 0 $container-gap 25px;
+    padding: 15px $container-gap;
     font-weight: 400;
     a.btnDefault {
         @extend %btn-reset;
     }
     .icon-triangle-b {
         --color1: #000;
-        @include setTurn(90);
+        @extend .ems-rotate-left;
+    }
+    .ems-step0 & {
+        background: $color255;
+        padding-top: 0;
+        padding-bottom: 25px;
     }
 }
 

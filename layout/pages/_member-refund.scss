@@ -63,5 +63,5 @@ ul.rtnPrdInf {
 
 a.btnIptalEt,
 a.btnIadeEt {
-    @extend .btnUyeBilgi;
+    @extend %btn-small;
 }

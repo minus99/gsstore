@@ -4,7 +4,9 @@
 }
 
 %menu-header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     font-family: $font1;
     font-size: 18px;
     color: $color255;
@@ -25,12 +27,12 @@
         border: 1px solid #eb9d00;
         border-radius: 100%;
         margin-left: -#{$fs + $mr};
-        @include setTurn(0);
+        @extend .ems-rotate-bottom;
         transition: all .2s ease;
     }
     .selected & {
         &::before {
-            @include setTurn(90);
+            @extend .ems-rotate-left;
         }
     }
 }
@@ -70,9 +72,6 @@
             overflow: auto;
             > a {
                 @extend %menu-header;
-                position: sticky;
-                top: 0;
-                z-index: 1;
                 &::before {
                     @extend .base64-arrow1;
                 }
@@ -114,6 +113,9 @@
                 display: none;
             }
         }
+    }
+    .lvl-link {
+        font-weight: 700;
     }
 
     .btn-menu-title {

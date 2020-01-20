@@ -42,3 +42,12 @@
         }
     }
 }
+
+//vertical content layout
+.d-swiper-layout-v {
+    > .swiper-inner {
+        > .swiper-wrapper {
+            flex-direction: column;
+        }
+    }
+}

@@ -64,10 +64,10 @@
     font-size: 0;
 }
 #lbfPagingPrev {
-    @include setTurn(90);
+    @extend .ems-rotate-left;
 }
 #lbfPagingNext {
-    @include setTurn(-90);
+    @extend .ems-rotate-right;
 }
 
 .ems-pagination-hide {

@@ -79,6 +79,10 @@ $btn-cursor: 10px;
         line-height: 1;
     }
 
+    &-small {
+        min-width: 170px;
+    }
+
     &-medium {
         line-height: 48px;
     }
@@ -164,6 +168,10 @@ a.btnDefault {
 
 .btn-close {
     @extend %btn-close;
+}
+
+.btn-small {
+    @extend %btn-small;
 }
 
 .btn-medium {

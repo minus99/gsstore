@@ -441,6 +441,7 @@ iframe {
   position: relative;
   background: #FFF;
   font-size: 16px;
+  color: #252525;
   min-height: 212px;
   padding: 40px;
   border: 1px solid transparent;
@@ -451,8 +452,9 @@ iframe {
 }
 
 .ems-message > svg {
+  flex: none;
   font-size: 100px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   -webkit-animation: message .5s ease;
   animation: message .5s ease;
 }
@@ -480,19 +482,15 @@ iframe {
 .ems-message-horizontal {
   font-family: aktiv-grotesk, arial, sans-serif;
   font-size: 14px;
-  color: #252525;
-  display: flex;
-  align-items: center;
+  min-height: auto;
+  padding: 20px;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .ems-message-horizontal > svg {
-  flex: none;
-  -webkit-animation: message .5s ease;
-  animation: message .5s ease;
-}
-
-.ems-message-horizontal > p {
-  margin: 0;
+  font-size: 32px;
+  margin: 0 10px 0 0;
 }
 
 .ems-video-player {
@@ -633,17 +631,18 @@ iframe {
   transform: rotate(180deg);
 }
 
-.ems-rotate-right {
+.ems-rotate-right,
+#lbfPagingNext {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
-.ems-rotate-bottom {
+.ems-rotate-bottom, .menu li.selected > a::before, .menu .btn-menu-title::before {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
 }
 
-.ems-rotate-left {
+.ems-rotate-left, #lbfPagingPrev, .menu li.selected > a::before, .selected .menu .btn-menu-title::before, .menu .selected .btn-menu-title::before, .order-module-buttons .icon-triangle-b, a.btnSipariseDon .icon-triangle-b {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
@@ -812,7 +811,6 @@ table[style*="inline"] {
 .urunDetay_brutFiyat:not(:empty),
 .gridSepetListe_gercekFiyat:not(:empty) {
   text-decoration: line-through;
-  color: #252525;
 }
 
 .ems-price.first:not(:empty) + *,
@@ -993,6 +991,12 @@ a.btnSipIptal:hover, .selected-action .remove-selected > a:hover, a.lnkSatinAl:h
   line-height: 1;
 }
 
+.btn-small, .ems-field-submit a.btnDefault, a.btnGuestCheckoutSave, a.btnIptalEt,
+a.btnIadeEt, a.btnSifreGuncelle, a.btnUyeSifreGonder,
+a.btnSifreResetGuncelle {
+  min-width: 170px;
+}
+
 .btn-medium, [class$="-sub"] a.btnDefault, .bottom-step a, a.btnHediyeCekiKullan, a.btnOdemeCekiEkle {
   line-height: 48px;
 }
@@ -1017,7 +1021,7 @@ a.btnSipIptal:hover, .selected-action .remove-selected > a:hover, a.lnkSatinAl:h
 }
 
 .btn-reset, .ems-grid-address-buttons > a, .ems-grid-address-select a, .mini-search a[id$="btnArama"], .order-module-buttons a.btnDefault, a.btnHediyeCekiIptal, .siparisOnaySozlesmeMetin > span a.btnDefault,
-.onBilgilendirmeFormMetin > span a.btnDefault, a.btnSipariseDon, .coupon-tab a {
+.onBilgilendirmeFormMetin > span a.btnDefault, a.btnSipariseDon {
   padding: unset;
   background: unset;
   border: unset;
@@ -1030,7 +1034,7 @@ a.btnSipIptal:hover, .selected-action .remove-selected > a:hover, a.lnkSatinAl:h
 }
 
 .btn-reset:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, .mini-search a:hover[id$="btnArama"], .order-module-buttons a.btnDefault:hover, a.btnHediyeCekiIptal:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
-.onBilgilendirmeFormMetin > span a.btnDefault:hover, a.btnSipariseDon:hover, .coupon-tab a:hover {
+.onBilgilendirmeFormMetin > span a.btnDefault:hover, a.btnSipariseDon:hover {
   background: unset;
 }
 
@@ -1117,6 +1121,14 @@ input[id$="UYE_CEPTELEFON"] {
   display: flex;
   align-items: center;
   line-height: normal;
+}
+
+.dvFarkliFatAdrSec,
+#plhHediyePktSecim,
+#plhUyelikBultenChk,
+#plhUyelikSmsChk {
+  display: flex;
+  align-items: center;
 }
 
 .sStylerMainWrp {
@@ -1286,10 +1298,6 @@ input[id$="UYE_CEPTELEFON"] {
   margin-top: 30px;
 }
 
-.ems-field-submit a.btnDefault {
-  min-width: 170px;
-}
-
 .ems-field-first {
   margin-top: 0;
 }
@@ -1308,7 +1316,6 @@ input[id$="UYE_CEPTELEFON"] {
   position: relative;
   font-family: aktiv-grotesk, arial, sans-serif;
   font-size: 13px;
-  color: #252525;
   margin-bottom: 8px;
 }
 
@@ -3926,16 +3933,6 @@ tr + tr #dvUrunKiyaslamaOzellik {
   font-size: 0;
 }
 
-#lbfPagingPrev {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-#lbfPagingNext {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-}
-
 .ems-pagination-hide .urunPaging {
   display: none;
 }
@@ -4313,6 +4310,19 @@ tr + tr #dvUrunKiyaslamaOzellik {
 
 .mobi-dropdown.opened > ul {
   display: block;
+}
+
+.mobi-slide .swiper-slide {
+  width: auto;
+}
+
+.mobi-slide .swiper-slide > a {
+  padding: 12px 15px;
+  border-bottom: 2px solid #C9C9C9;
+}
+
+.mobi-slide .swiper-slide.selected > a {
+  border-color: #A90534;
 }
 
 .kutuSolMenuTree .mobi-dropdown > a {
@@ -4717,7 +4727,10 @@ tr + tr #dvUrunKiyaslamaOzellik {
 }
 
 .menu li.selected > a, .menu .btn-menu-title {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   font-family: gilroy, arial, sans-serif;
   font-size: 18px;
   color: #FFF;
@@ -4737,14 +4750,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
   border: 1px solid #eb9d00;
   border-radius: 100%;
   margin-left: -47px;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
   transition: all .2s ease;
-}
-
-.menu li.selected > a::before, .selected .menu .btn-menu-title::before, .menu .selected .btn-menu-title::before {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
 }
 
 .menu {
@@ -4786,13 +4792,6 @@ tr + tr #dvUrunKiyaslamaOzellik {
   overflow: auto;
 }
 
-.menu li.selected > a {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
 .menu li.selected > .sub,
 .menu li.selected > ul,
 .menu li.selected .lvl-2 {
@@ -4824,6 +4823,10 @@ tr + tr #dvUrunKiyaslamaOzellik {
 
 .menu .cursor0 > a::after {
   display: none;
+}
+
+.menu .lvl-link {
+  font-weight: 700;
 }
 
 .menu .dropdown li.selected {
@@ -6728,15 +6731,18 @@ a.btnStokHaberci {
 }
 
 .order-module-buttons {
-  background: #FFF;
-  padding: 0 20px 25px;
+  padding: 15px 20px;
   font-weight: 400;
 }
 
 .order-module-buttons .icon-triangle-b {
   --color1: #000;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+}
+
+.ems-step0 .order-module-buttons {
+  background: #FFF;
+  padding-top: 0;
+  padding-bottom: 25px;
 }
 
 .bottom-step {
@@ -6830,7 +6836,6 @@ a.btnStokHaberci {
 }
 
 .pnlDipToplamTable .pnlDipToplam_sipToplam th, .pnlDipToplamTable .pnlDipToplam_sipToplam td {
-  color: #000;
   font-weight: 700;
   padding-top: 15px;
 }
@@ -6920,12 +6925,6 @@ a.btnStokHaberci {
   display: none;
 }
 
-.ems-order-delivery .order-module-buttons {
-  background: none;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
 .ems-grid-table-address {
   background: #FFF;
   padding: 0 20px;
@@ -6934,11 +6933,6 @@ a.btnStokHaberci {
 .ems-grid-table-address .ems-grid-row {
   grid-template-columns: 1fr;
   row-gap: 10px;
-}
-
-.dvFarkliFatAdrSec {
-  display: flex;
-  align-items: center;
 }
 
 .delivery-gift-select {
@@ -7160,10 +7154,9 @@ a.btnStokHaberci {
   text-align: right;
 }
 
-.ems-pay-type-list ul {
+.ems-pay-type-list > ul {
   display: flex;
   flex-wrap: wrap;
-  background: #C9C9C9;
 }
 
 .ems-pay-type-list a {
@@ -7620,23 +7613,33 @@ a.btnStokHaberci {
   margin-bottom: 50px;
 }
 
+.ems-page-member {
+  background: #f3f3f3;
+  min-height: calc(100vh - 60px);
+}
+
 .ems-page-member-grid > .ga1 {
-  background: #000;
-  color: #FFF;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 50px;
-  z-index: 1;
+  background: #FFF;
 }
 
 .ems-page-member-grid > .ga2 {
-  padding-bottom: 100px;
+  background: #FFF;
+  margin-top: 30px;
+  padding: 20px 20px 40px;
+}
+
+.ems-page-member .ems-grid-table-address {
+  padding: 0;
+  margin-top: -20px;
+}
+
+.ems-page-member .order-module-buttons {
+  margin: 0 -20px -40px;
+  background: #f3f3f3;
 }
 
 .member-top-info {
-  background: url(/images/frontend/member-top-info-bg.jpg) center top/contain no-repeat;
-  text-align: center;
-  padding: 40px 18px 18px;
+  padding: 25px 20px;
 }
 
 .member-top-info-media > img {
@@ -7645,13 +7648,13 @@ a.btnStokHaberci {
 }
 
 .member-top-info-title {
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .member-top-info-logout {
-  color: #EBEBEB;
-  margin-top: 5px;
+  color: #A90534;
+  margin-top: 10px;
 }
 
 .pageUyeBasarili {
@@ -7763,11 +7766,6 @@ a.btnSipariseDon {
   margin: 20px 0;
 }
 
-a.btnSipariseDon .icon-triangle-b {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
 .ems-member-refund.no-result {
   padding-top: 0;
 }
@@ -7827,18 +7825,6 @@ ul.rtnPrdInf {
   z-index: 1;
 }
 
-.ems-member-info {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-a.btnUyeBilgi, a.btnGuestCheckoutSave, a.btnIptalEt,
-a.btnIadeEt, a.btnSifreGuncelle, a.btnUyeSifreGonder,
-a.btnSifreResetGuncelle {
-  width: auto !important;
-  min-width: 180px;
-}
-
 .ems-member-address.no-result .ems-message-address {
   display: flex;
 }
@@ -7891,21 +7877,21 @@ form[action*="sifreReset"] .ems-page-member-grid > .ga1 {
 }
 
 .coupon-tab {
-  margin: 15px 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -20px -20px;
 }
 
 .coupon-tab a {
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  border: 1px solid transparent;
-  padding: 10px;
-  margin-left: 10px;
-  margin-top: 10px;
+  background: #C9C9C9 !important;
+  padding: 0 14px;
+  font-size: 12px;
+  color: #000;
+  line-height: 35px;
 }
 
 .coupon-tab a.selected {
-  border-color: #17181A;
+  background: #FFF !important;
 }
 
 .ems-grid-table-coupon {
@@ -8250,7 +8236,7 @@ ul.giftCardList li.selected > a {
     .d-btn-primary:hover, .banner:hover .d-btn-primary {
       background: #252525;
     }
-    .ems-form-horizontal {
+    .ems-form-horizontal .ems-form-inner {
       margin-left: -10px;
     }
     .ems-form-horizontal .ems-field, .ems-form-horizontal .xmlForm #dvSehirBilgi, .xmlForm .ems-form-horizontal #dvSehirBilgi {
@@ -8286,6 +8272,9 @@ ul.giftCardList li.selected > a {
     }
     .d-swiper-layout-r > .swiper-inner > .swiper-wrapper {
       flex-direction: row;
+    }
+    .d-swiper-layout-v > .swiper-inner > .swiper-wrapper {
+      flex-direction: column;
     }
     .banner01 {
       border: 1px solid #EFEFEF;
@@ -8636,7 +8625,7 @@ ul.giftCardList li.selected > a {
     }
     .site-header-grid {
       position: relative;
-      grid-template-columns: 330px 1fr auto auto 105px 105px 100px;
+      grid-template-columns: 330px 1fr auto auto 115px 115px 100px;
       grid-template-areas: "ga1 ga6 ga2 ga3 ga4 ga5 ga9" "ga1 ga7 ga7 ga7 ga8 ga8 ga10";
     }
     .site-header-grid > .ga1 {
@@ -8753,8 +8742,8 @@ ul.giftCardList li.selected > a {
       z-index: 1;
       width: 100%;
       max-width: none;
-      padding: 0 20px;
-      background: transparent;
+      padding: 0 30px;
+      background: none;
       font-family: gilroy, arial, sans-serif;
       font-size: 13px;
       color: #000;
@@ -8772,24 +8761,37 @@ ul.giftCardList li.selected > a {
     .menu li.selected {
       position: static;
       width: auto;
-      height: auto;
-      background: none;
-      overflow: visible;
     }
     .menu li.selected > a {
+      position: relative;
       font-family: inherit;
       font-size: inherit;
       color: inherit;
       font-weight: inherit;
       line-height: inherit;
-      background: none;
-      padding: 0;
+      background: inherit;
+      padding: inherit;
     }
     .menu li.selected > a::before {
-      display: none;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      background: none;
+      border-width: 1px 0 0 0;
+      border-color: currentColor;
+      border-radius: 0;
+      margin: 0;
+      -webkit-transform: none;
+      transform: none;
+      -webkit-animation: animation-02 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation: animation-02 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+      /* easeOutCubic */
     }
     .menu li.selected > .sub,
-    .menu li.selected > ul {
+    .menu li.selected > ul,
+    .menu li.selected .lvl-2 {
       -webkit-animation: none;
       animation: none;
     }
@@ -8802,12 +8804,13 @@ ul.giftCardList li.selected > a {
       overflow: initial;
       padding: 0;
       margin: 0;
+      border: none;
     }
     .menu .lvl-1 > li > a {
       margin: 0 5px;
       padding: 0 5px;
     }
-    .menu .lvl-1 > li.selected .sub, .menu .lvl-1 > li.type2 .sub {
+    .menu .lvl-1 > li.selected .sub {
       display: flex;
     }
     .menu .sub {
@@ -8817,8 +8820,8 @@ ul.giftCardList li.selected > a {
       top: 100%;
       z-index: 2;
       width: calc(100% + 660px);
-      height: 360px;
-      background: #252525;
+      height: 305px;
+      background: #fdfdfd;
       font-family: aktiv-grotesk, arial, sans-serif;
       line-height: 1.8;
     }
@@ -8831,11 +8834,18 @@ ul.giftCardList li.selected > a {
       flex-basis: 360px;
     }
     .menu .sub .r1 + .r2 {
-      flex: 1;
+      flex: none;
+      margin-left: 0;
     }
     .menu .sub .r2 {
+      flex: 1;
       margin-left: auto;
       margin-right: auto;
+    }
+    .menu .img1 {
+      -webkit-animation: animation-01 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation: animation-01 0.32s cubic-bezier(0.215, 0.61, 0.355, 1);
+      /* easeOutCubic */
     }
     .menu .lvl-2 {
       -webkit-column-count: 1;
@@ -8843,10 +8853,10 @@ ul.giftCardList li.selected > a {
       -webkit-column-gap: 50px;
       column-gap: 50px;
       height: 100%;
-      padding: 30px;
+      padding: 75px 100px;
       margin: 0;
-      -webkit-animation: animation-02 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
-      animation: animation-02 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+      -webkit-animation: animation-02 0.32s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+      animation: animation-02 0.32s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
       /* easeOutCubic */
     }
     .menu .lvl-2 > li {
@@ -8856,7 +8866,6 @@ ul.giftCardList li.selected > a {
     .menu .lvl-2 > li a,
     .menu .lvl-2 > li .prm-title {
       display: inline-flex;
-      line-height: 1.4;
     }
     .menu .lvl-2 > li.ems-sub-menu {
       height: 100%;
@@ -8888,6 +8897,9 @@ ul.giftCardList li.selected > a {
       -webkit-column-count: 6;
       column-count: 6;
     }
+    .menu .col-skip {
+      margin-bottom: 100%;
+    }
     .menu .type02 .sub {
       height: auto;
     }
@@ -8902,14 +8914,13 @@ ul.giftCardList li.selected > a {
       display: block;
     }
     .menu-animate {
-      position: initial;
       overflow: initial;
     }
     .menu-animate .menu-overlay {
       top: 110px;
     }
     .top-menu {
-      padding: 0 60px 0 15px;
+      padding: 0 50px 0 20px;
       font-size: 12px;
       font-weight: 400;
     }

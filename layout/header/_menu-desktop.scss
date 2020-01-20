@@ -4,8 +4,8 @@
     z-index: 1;
     width: 100%;
     max-width: none;
-    padding: 0 20px;
-    background: transparent;
+    padding: 0 30px;
+    background: none;
     font-family: $font1;
     font-size: 13px;
     color: $color0;
@@ -14,6 +14,7 @@
     opacity: 1;
     transform: none !important;
     transition: none !important;
+    
     li {
         > a {
             padding: 0;
@@ -23,23 +24,33 @@
         &.selected {
             position: static;
             width: auto;
-            height: auto;
-            background: none;
-            overflow: visible;
             > a {
+                position: relative;
                 font-family: inherit;
                 font-size: inherit;
                 color: inherit;
                 font-weight: inherit;
                 line-height: inherit;
-                background: none;
-                padding: 0;
+                background: inherit;
+                padding: inherit;
                 &::before {
-                    display: none;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: auto;
+                    background: none;
+                    border-width: 1px 0 0 0;
+                    border-color: currentColor;
+                    border-radius: 0;
+                    margin: 0;
+                    transform: none;
+                    animation: animation-02 .32s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
                 }
             }
             > .sub,
-            > ul {
+            > ul,
+            .lvl-2 {
                 animation: none;
             }
         }
@@ -54,13 +65,13 @@
         overflow: initial;
         padding: 0;
         margin: 0;
+        border: none;
         > li {
             > a {
                 margin: 0 5px;
                 padding: 0 5px;
             }
-            &.selected,
-            &.type2 {
+            &.selected {
                 .sub {
                     display: flex;
                 }
@@ -75,8 +86,8 @@
         top: 100%;
         z-index: 2;
         width: calc(100% + #{$subGapL * 2});
-        height: 360px;
-        background: $color3;
+        height: 305px;
+        background: #fdfdfd;
         font-family: $font2;
         line-height: $line-height + .5;
         .r1,
@@ -87,28 +98,33 @@
         .r1 {
             flex-basis: #{$subGapL + 30px};
             + .r2 {
-                flex: 1;
+                flex: none;
+                margin-left: 0;
             }
         }
         .r2 {
+            flex: 1;
             margin-left: auto;
             margin-right: auto;
         }
+    }
+
+    .img1 {
+        animation: animation-01 .32s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
     }
 
     .lvl-2 {
         column-count: 1;
         column-gap: 50px;
         height: 100%;
-        padding: 30px;
+        padding: 75px 100px;
         margin: 0;
-        animation: animation-02 .5s cubic-bezier(0.215, 0.610, 0.355, 1.000) !important; /* easeOutCubic */
+        animation: animation-02 .32s cubic-bezier(0.215, 0.610, 0.355, 1.000) !important; /* easeOutCubic */
         > li {
             break-inside: avoid;
             a,
             .prm-title {
                 display: inline-flex;
-                line-height: 1.4;
             }
             &.ems-sub-menu {
                 height: 100%;
@@ -152,6 +168,9 @@
                 column-count: 6;
             }
         }
+        &-skip {
+            margin-bottom: 100%;
+        }
     }
 
 
@@ -174,7 +193,6 @@
     }
 
     &-animate {
-        position: initial;
         overflow: initial;
         .menu-overlay {
             top: $d-site-header-height;
