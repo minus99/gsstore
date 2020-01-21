@@ -141,8 +141,11 @@ $btn-cursor: 10px;
 .btn,
 a.btnDefault {
     @extend %btn;
-    .icon-arrow-r {
+    .icon-arrow1 {
         margin-left: #{$btn-cursor};
+    }
+    > span.emos_invisible {
+        display: none;
     }
 }
 

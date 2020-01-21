@@ -6,10 +6,15 @@
     }
 }
 
-.coupon-tab {
+.coupon-tab,
+.kutuBodyMesaj {
     display: flex;
-    flex-wrap: wrap;
-    margin: #{-$member-pages-pt} #{-$container-gap};
+    overflow: auto;
+    margin: #{-$member-pages-pt} #{-$container-gap} 20px;
+    background: #{$member-pages-bg};
+    > * {
+        flex-shrink: 0;
+    }
     a {
         background: $color27 !important;
         padding: 0 14px;
@@ -24,13 +29,8 @@
 
 
 .ems-grid-table-coupon {
-    margin-top: 30px;
     > .ems-grid-row {
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-    }
-    .ems-grid-label {
-        display: block;
-        font-weight: 700;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
     }
 }

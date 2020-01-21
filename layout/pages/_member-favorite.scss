@@ -1,10 +1,14 @@
 .ems-member-favorite {
+    .page-top-title {
+        margin-bottom: 0;
+    }
+
     &.no-result {
         padding-top: 0;
         .ems-message-favorite {
             display: flex;
         }
-        .selected-action {
+        .order-module-buttons {
             display: none;
         }
     }
@@ -12,8 +16,16 @@
 
 .ems-grid-table-favorite {
     > .ems-grid-row {
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 90px 1fr;
+        padding-left: 40px;
     }
+}
+
+a.btnFavoriListeSil {
+    @extend %btn-reset;
+}
+a.btnSepeteAtFavori {
+    width: 100%;
 }
 
 .urunListe_secenek1 {
@@ -29,28 +41,12 @@
         z-index: 1;
         width: 100%;
         margin: -1px 0 0 0;
-        background: $color255;
-        border: 1px solid $color5;
+        background: $form-element-background-color;
+        border: $form-element-border;
     }
     &.opened {
         .dropdown-options {
             display: block !important;
-        }
-    }
-}
-
-.selected-action {
-    margin-top: 20px;
-    a {
-        min-width: 200px;
-        > span.emos_invisible {
-            display: none;
-        }
-    }
-    .remove-selected {
-        margin-top: 20px;
-        > a {
-            @extend %btn-secondary;
         }
     }
 }

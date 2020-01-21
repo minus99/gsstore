@@ -17,8 +17,13 @@
     }
     &-remove {
         position: relative;
-        top: 0;
         right: 0;
+        top: 0;
+    }
+    &-select {
+        position: relative;
+        left: 0;
+        top: 0;
     }
     &-address-name {
         grid-column: span 2;
