@@ -1,4 +1,8 @@
 .ems-member-order {
+    .page-top-title {
+        margin-bottom: 0;
+    }
+
     &.no-result {
         padding-top: 0;
         .ems-message-order {
@@ -9,43 +13,62 @@
 
 .ems-grid-table-order {
     > .ems-grid-row {
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-        padding-right: 80px;
+        grid-template-columns: 1fr auto;
+        grid-gap: 15px;
     }
 }
 
 //order-detail
+a.btnSipariseDon {
+    @extend %btn-reset;
+    margin-bottom: 20px;
+    .icon-triangle-b {
+        @extend .ems-rotate-left;
+    }
+}
+
 .order-detail-info {
-    $ml: 20px;
-    font-family: $font2;
-    font-size: 14px;
-    margin-top: 5px;
-    .text {
-        font-weight: 600;
+    $px: 5px;
+    margin-left: #{-$px};
+    margin-right: #{-$px};
+    .value {
+        font-weight: 400;
     }
     > div {
         display: flex;
         align-items: center;
         > div {
             flex: 1;
-            padding: 10px $ml;
+            padding: $px;
+        }
+    }
+    .no {
+        font-size: 20px;
+        margin-bottom: 20px;
+        > div {
+            flex: none;
+        }
+        .text {
+            font-weight: 400;
+        }
+        .value {
+            font-weight: 600;
         }
     }
 }
 
 .act-btns {
-    margin-top: 20px;
-    > * + *:not(:empty) {
-        margin-top: 10px;
+    margin: 20px 0;
+    border-top: 1px solid $color9;
+    padding-top: 20px;
+    a {
+        @extend %btn;
+        @extend %btn-transparent;
+        border-color: transparent;
     }
 }
 
 #plhSipTekrarla {
-    a.lnkSipTekrarla {
-        @extend %btn;
-        text-transform: uppercase;
-    }
     .st-list {
         display: none;
     }
@@ -54,9 +77,8 @@
     }
 }
 
-a.btnSipIade,
-a.btnSipIptal {
-    @extend %btn-secondary;
+#plhSipDetayBaslik {
+    margin-top: 20px;
 }
 
 .order-address {
@@ -65,15 +87,12 @@ a.btnSipIptal {
     font-size: 15px;
     line-height: 1.7;
     .text {
-        font-weight: 700;
-    }
-    > div {
-        padding: 2px 20px;
+        font-weight: 600;
     }
 }
 
 .ems-grid-table-order-products {
-    margin-top: -1px;
+    margin-top: 20px;
     .ems-grid-name {
         font-size: 0;
         a {
@@ -90,14 +109,5 @@ a.btnSipIptal {
 
 .order-detail-info-payment {
     max-width: 320px;
-}
-
-a.btnSipariseDon {
-    @extend %btn-reset;
-    font-family: $font2;
-    font-size: 16px;
-    margin: 20px 0;
-    .icon-triangle-b {
-        @extend .ems-rotate-left;
-    }
+    margin-top: 20px;
 }

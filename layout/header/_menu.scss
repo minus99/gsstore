@@ -102,11 +102,6 @@
             color: $color1;
         }
     }
-    .color03 {
-        > a {
-            color: $color6;
-        }
-    }
     .cursor0 {
         > a {
             &::after {
@@ -161,13 +156,15 @@
         .sub {
             li {
                 > a {
-                    padding-left: 0;
                     svg {
                         --color1: #A90534;
                         margin-right: 8px !important;
                     }
                 }
             }
+        }
+        &-logout {
+            margin-top: 20px;
         }
     }
 

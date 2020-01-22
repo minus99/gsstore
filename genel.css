@@ -914,7 +914,7 @@ table[style*="inline"] {
 
 .btn,
 a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, .cart-prd-page-url .lnkSepet, a#lnkGuestCheckout, .validateOtp,
-.btnResendOtp, #plhSipTekrarla a.lnkSipTekrarla, a.lnkSorgula, a.lnkSatinAl {
+.btnResendOtp, .act-btns a, a.lnkSorgula, a.lnkSatinAl {
   position: relative;
   display: inline-block;
   padding: 0 20px;
@@ -925,13 +925,13 @@ a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, .cart-prd-page-url .lnkSepe
   color: #FFF;
   font-weight: 500;
   line-height: 38px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1px;
   transition: all .32s ease;
   outline: none;
   cursor: pointer;
 }
 
-.btn > span, a.btnDefault > span, .urunKiyaslamaOzellik_tumunuTemizle a > span, .cart-prd-page-url .lnkSepet > span, a#lnkGuestCheckout > span, .validateOtp > span, .btnResendOtp > span, #plhSipTekrarla a.lnkSipTekrarla > span, a.lnkSorgula > span, a.lnkSatinAl > span {
+.btn > span, a.btnDefault > span, .urunKiyaslamaOzellik_tumunuTemizle a > span, .cart-prd-page-url .lnkSepet > span, a#lnkGuestCheckout > span, .validateOtp > span, .btnResendOtp > span, .act-btns a > span, a.lnkSorgula > span, a.lnkSatinAl > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -940,7 +940,7 @@ a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, .cart-prd-page-url .lnkSepe
 
 .btn:hover,
 a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-url .lnkSepet:hover, a#lnkGuestCheckout:hover, .validateOtp:hover,
-.btnResendOtp:hover, #plhSipTekrarla a.lnkSipTekrarla:hover, a.lnkSorgula:hover, a.lnkSatinAl:hover, .banner:hover .btn {
+.btnResendOtp:hover, .act-btns a:hover, a.lnkSorgula:hover, a.lnkSatinAl:hover, .banner:hover .btn {
   background: #FFAB00;
 }
 
@@ -952,25 +952,23 @@ a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-
   background: #A90534;
 }
 
-.btn-secondary, .ems-new-address a.btnAdresIptal, a.btnSipIade,
-a.btnSipIptal, a.lnkSatinAl {
+.btn-secondary, .ems-new-address a.btnAdresIptal, a.lnkSatinAl {
   background: #f3f3f3;
   color: #252525;
 }
 
-.btn-secondary:hover, .ems-new-address a.btnAdresIptal:hover, a.btnSipIade:hover,
-a.btnSipIptal:hover, a.lnkSatinAl:hover, .banner:hover .btn-secondary {
+.btn-secondary:hover, .ems-new-address a.btnAdresIptal:hover, a.lnkSatinAl:hover, .banner:hover .btn-secondary {
   background: #EBEBEB;
   color: #252525;
 }
 
-.btn-transparent, .urunKiyaslamaOzellik_tumunuTemizle a, a.btnFacebookLoginKutu, a.btnFacebookLogin, a.btnKutuLogout, .swiper-product-horizontal a.btnSepeteAt, .ems-prdd-block2 a.btnDefault {
+.btn-transparent, .urunKiyaslamaOzellik_tumunuTemizle a, a.btnFacebookLoginKutu, a.btnFacebookLogin, a.btnKutuLogout, .swiper-product-horizontal a.btnSepeteAt, .ems-prdd-block2 a.btnDefault, .act-btns a {
   background: transparent;
   color: inherit;
   border-color: #f3f3f3;
 }
 
-.btn-transparent:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a.btnFacebookLoginKutu:hover, a.btnFacebookLogin:hover, a.btnKutuLogout:hover, .swiper-product-horizontal a.btnSepeteAt:hover, .ems-prdd-block2 a.btnDefault:hover, .banner:hover .btn-transparent {
+.btn-transparent:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a.btnFacebookLoginKutu:hover, a.btnFacebookLogin:hover, a.btnKutuLogout:hover, .swiper-product-horizontal a.btnSepeteAt:hover, .ems-prdd-block2 a.btnDefault:hover, .act-btns a:hover, .banner:hover .btn-transparent {
   background: transparent;
 }
 
@@ -4172,22 +4170,31 @@ tr + tr #dvUrunKiyaslamaOzellik {
   grid-column: span 2;
 }
 
-.ems-grid-order-no a {
-  text-decoration: underline;
+.ems-grid-order-no > .ems-grid-label {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 5px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.ems-grid-order-no > a {
+  font-weight: 600;
+}
+
+.ems-grid-order-no .ems-grid-date {
+  margin-top: 4px;
+  color: #666;
+}
+
+.ems-grid-total {
+  font-size: 16px;
+  font-weight: 600;
+  align-self: flex-start;
 }
 
 .ems-grid-add-to-cart a {
-  font-size: 15px;
-  color: #EBEBEB;
   text-decoration: underline;
-}
-
-.ems-grid-detail {
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .ems-grid-coupon-no {
@@ -4836,10 +4843,6 @@ tr + tr #dvUrunKiyaslamaOzellik {
   color: #A90534;
 }
 
-.menu .color03 > a {
-  color: #EBEBEB;
-}
-
 .menu .cursor0 > a::after {
   display: none;
 }
@@ -4873,13 +4876,13 @@ tr + tr #dvUrunKiyaslamaOzellik {
   margin: 0 35px;
 }
 
-.menu-user-info .sub li > a {
-  padding-left: 0;
-}
-
 .menu-user-info .sub li > a svg {
   --color1: #A90534;
   margin-right: 8px !important;
+}
+
+.menu-user-info-logout {
+  margin-top: 20px;
 }
 
 .menu-ready .menu {
@@ -4988,16 +4991,14 @@ ul.menu-mini-lang .sub-footer {
   margin-bottom: 15px;
 }
 
-.mini-user .ems-obj-login .sub-header {
-  background: #A90534;
+.mini-user .ems-obj-login .mini-user-sub {
+  background-image: url(/images/frontend/bg-mini-user.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
 
 #lnkSifremiUnuttum {
   color: #888;
-}
-
-.uyeGirisFacebookConnectKutu, .kutuUyeGirisFacebookConnect {
-  margin: 0;
 }
 
 a.btnFacebookLoginKutu, a.btnFacebookLogin {
@@ -5007,25 +5008,13 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   color: #4368b2;
 }
 
-.kutuUyeGiris_profilFoto {
-  display: inline-block !important;
-  padding-right: 15px;
-}
-
-.kutuUyeGiris_profilFoto img {
-  border-radius: 100%;
-  max-width: 60px;
-}
-
 .mini-user-links {
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 18px;
   max-height: calc(100vh - 250px);
   overflow: auto;
 }
 
 .mini-user-links a {
-  line-height: 35px;
+  line-height: 2;
 }
 
 .kutuUyeGiris_lbfUyeMesajSayi {
@@ -7657,6 +7646,16 @@ a.btnStokHaberci {
   background: #f3f3f3;
 }
 
+.ems-page-member [class*="spacer"] {
+  margin-left: -20px;
+  margin-right: -20px;
+  background: #f3f3f3;
+}
+
+.ems-page-member .spacer-30 {
+  min-height: 30px;
+}
+
 .member-top-info {
   padding: 25px 20px;
 }
@@ -7686,6 +7685,10 @@ a.btnStokHaberci {
   display: none;
 }
 
+.ems-member-order .page-top-title {
+  margin-bottom: 0;
+}
+
 .ems-member-order.no-result {
   padding-top: 0;
 }
@@ -7695,19 +7698,21 @@ a.btnStokHaberci {
 }
 
 .ems-grid-table-order > .ems-grid-row {
-  grid-template-columns: 1fr;
-  grid-gap: 10px;
-  padding-right: 80px;
+  grid-template-columns: 1fr auto;
+  grid-gap: 15px;
+}
+
+a.btnSipariseDon {
+  margin-bottom: 20px;
 }
 
 .order-detail-info {
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 14px;
-  margin-top: 5px;
+  margin-left: -5px;
+  margin-right: -5px;
 }
 
-.order-detail-info .text {
-  font-weight: 600;
+.order-detail-info .value {
+  font-weight: 400;
 }
 
 .order-detail-info > div {
@@ -7717,19 +7722,34 @@ a.btnStokHaberci {
 
 .order-detail-info > div > div {
   flex: 1;
-  padding: 10px 20px;
+  padding: 5px;
+}
+
+.order-detail-info .no {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.order-detail-info .no > div {
+  flex: none;
+}
+
+.order-detail-info .no .text {
+  font-weight: 400;
+}
+
+.order-detail-info .no .value {
+  font-weight: 600;
 }
 
 .act-btns {
-  margin-top: 20px;
+  margin: 20px 0;
+  border-top: 1px solid #f3f3f3;
+  padding-top: 20px;
 }
 
-.act-btns > * + *:not(:empty) {
-  margin-top: 10px;
-}
-
-#plhSipTekrarla a.lnkSipTekrarla {
-  text-transform: uppercase;
+.act-btns a {
+  border-color: transparent;
 }
 
 #plhSipTekrarla .st-list {
@@ -7740,6 +7760,10 @@ a.btnStokHaberci {
   display: inline;
 }
 
+#plhSipDetayBaslik {
+  margin-top: 20px;
+}
+
 .order-address {
   margin-top: 20px;
   font-family: aktiv-grotesk, arial, sans-serif;
@@ -7748,15 +7772,11 @@ a.btnStokHaberci {
 }
 
 .order-address .text {
-  font-weight: 700;
-}
-
-.order-address > div {
-  padding: 2px 20px;
+  font-weight: 600;
 }
 
 .ems-grid-table-order-products {
-  margin-top: -1px;
+  margin-top: 20px;
 }
 
 .ems-grid-table-order-products .ems-grid-name {
@@ -7777,12 +7797,7 @@ a.btnStokHaberci {
 
 .order-detail-info-payment {
   max-width: 320px;
-}
-
-a.btnSipariseDon {
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 16px;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
 .ems-member-refund.no-result {
@@ -8675,7 +8690,7 @@ ul.giftCardList li.selected > a {
       margin: 0;
       width: 100%;
       height: 100%;
-      background: #FFF;
+      background-color: #FFF;
       color: #252525;
       line-height: normal;
       -webkit-user-select: none;

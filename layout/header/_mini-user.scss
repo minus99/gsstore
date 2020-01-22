@@ -19,8 +19,12 @@
 
 
     .ems-obj-login {
-        .sub-header {
-            background: $color1;
+        .mini-user {
+            &-sub {
+                background-image: url(/images/frontend/bg-mini-user.png);
+                background-position: right bottom;
+                background-repeat: no-repeat;
+            }
         }
     }
 
@@ -49,9 +53,6 @@
     color: $color7;
 }
 
-.uyeGirisFacebookConnectKutu {
-    margin: 0;
-}
 a.btnFacebookLoginKutu {
     @extend %btn-transparent;
     padding-left: 10px;
@@ -60,24 +61,14 @@ a.btnFacebookLoginKutu {
     color: #4368b2;
 }
 
-.kutuUyeGiris_profilFoto {
-    display: inline-block !important;
-    padding-right: 15px;
-    img {
-        border-radius: 100%;
-        max-width: 60px;
-    }
-}
 a.btnKutuLogout {
     @extend %btn-transparent;
 }
 .mini-user-links {
-    font-family: $font2;
-    font-size: 18px;
     max-height: calc(100vh - 250px);
     overflow: auto;
     a {
-        line-height: 35px;
+        line-height: 2;
     }
     @at-root {
         .kutuUyeGiris_lbfUyeMesajSayi {

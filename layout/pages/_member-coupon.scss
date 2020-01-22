@@ -11,7 +11,7 @@
     display: flex;
     overflow: auto;
     margin: #{-$member-pages-pt} #{-$container-gap} 20px;
-    background: #{$member-pages-bg};
+    background: #{$member-pages-body-bg};
     > * {
         flex-shrink: 0;
     }

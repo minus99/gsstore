@@ -144,22 +144,30 @@
         grid-column: span 2;
     }
     &-order-no {
-        a {
-            text-decoration: underline;
+        > .ems-grid-label {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-right: 5px;
+            font-size: $font-size;
+            line-height: $line-height;
         }
+        > a {
+            font-weight: 600;
+        }
+        .ems-grid-date {
+            margin-top: 4px;
+            color: $color10;
+        }
+    }
+    &-total {
+        font-size: 16px;
+        font-weight: 600;
+        align-self: flex-start;
     }
     &-add-to-cart {
         a {
-            font-size: 15px;
-            color: $color6;
             text-decoration: underline;
         }
-    }
-    &-detail {
-        position: absolute;
-        right: 30px;
-        top: 50%;
-        transform: translateY(-50%);
     }
     &-coupon-no {
         word-break: break-all;

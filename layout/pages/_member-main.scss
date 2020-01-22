@@ -1,18 +1,20 @@
-$member-pages-bg: $color9;
+$member-pages-body-bg: $color9;
+$member-pages-module-bg: $color255;
 $member-pages-pt: 20px;
 $member-pages-pb: 40px;
+$member-pages-mt: 30px;
 .ems-page-member {
-    background: $member-pages-bg;
+    background: $member-pages-body-bg;
     min-height: calc(100vh - #{$site-header-height});
 
     &-grid {
         > .ga1 {
-            background: $color255;
+            background: $member-pages-module-bg;
         }
         > .ga2 {
-            background: $color255;
-            margin-top: 30px;
-            padding: 20px #{$container-gap} #{$member-pages-pb};
+            background: $member-pages-module-bg;
+            margin-top: $member-pages-mt;
+            padding: #{$member-pages-pt} #{$container-gap} #{$member-pages-pb};
         }
     }
     
@@ -22,7 +24,16 @@ $member-pages-pb: 40px;
     }
     .order-module-buttons {
         margin: 0 #{-$container-gap} #{-$member-pages-pb};
-        background: $member-pages-bg;
+        background: $member-pages-body-bg;
+    }
+    
+    [class*="spacer"] {
+        margin-left: #{-$container-gap};
+        margin-right: #{-$container-gap};
+        background: $member-pages-body-bg;
+    }
+    .spacer-30 {
+        min-height: 30px;
     }
 }
 
