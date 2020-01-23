@@ -11,20 +11,9 @@
         }
     }
     .ems-grid-table-cart {
+        @extend .ems-scrollbar;
         max-height: 300px;
-        overflow-y: auto;
-        padding-right: 10px;
-        &::-webkit-scrollbar {
-            width: 4px;
-        }
-        &::-webkit-scrollbar-track {
-            background: #d8d8d8;
-            border-radius: 2px;
-        }
-        &::-webkit-scrollbar-thumb {
-            background: #000;
-            border-radius: 2px;
-        }
+
         > .ems-grid-row {
             grid-template-columns: 75px 1fr;
             border-color: transparent;

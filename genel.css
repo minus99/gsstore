@@ -676,6 +676,30 @@ iframe {
   border: 0;
 }
 
+.ems-scrollbar, .kutuSepet_icerik, .ems-order-payment .ems-grid-table-cart {
+  overflow: auto;
+  max-height: 100vh;
+  padding-right: 10px;
+}
+
+.ems-scrollbar::-webkit-scrollbar, .kutuSepet_icerik::-webkit-scrollbar, .ems-order-payment .ems-grid-table-cart::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ems-scrollbar::-webkit-scrollbar-track, .kutuSepet_icerik::-webkit-scrollbar-track, .ems-order-payment .ems-grid-table-cart::-webkit-scrollbar-track {
+  background: #d8d8d8;
+  border-radius: 2px;
+}
+
+.ems-scrollbar::-webkit-scrollbar-thumb, .kutuSepet_icerik::-webkit-scrollbar-thumb, .ems-order-payment .ems-grid-table-cart::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 2px;
+}
+
+.ems-scrollbar-hide::-webkit-scrollbar, .dropdown-header > ::-webkit-scrollbar, .dropdown > ul > li > a::-webkit-scrollbar, .ems-tab-header::-webkit-scrollbar {
+  display: none;
+}
+
 .ems-link {
   display: inline;
   text-decoration: underline;
@@ -787,22 +811,11 @@ table[style*="inline"] {
   display: inline-flex !important;
 }
 
-.ems-price [class^="pb"],
-.urunListe_brutFiyat [class^="pb"],
-.urunListe_satisFiyat [class^="pb"],
-.urunDetay_brutFiyat [class^="pb"],
-.urunDetay_satisFiyat [class^="pb"],
-#lblUrunTutari [class^="pb"],
-.suggest_urnprice [class^="pb"],
-.satBrFiyatVrg [class^="pb"],
-.brFiyatVrg [class^="pb"],
-.pnlDipToplamTable td > span [class^="pb"],
-.odemeCekiTutar [class^="pb"],
-#plhIadeTutar > a [class^="pb"] {
+span[class^="pb"] {
   order: -1;
 }
 
-.ems-price-h-d .d {
+.ems-price-d-h .d {
   display: none;
 }
 
@@ -913,7 +926,8 @@ table[style*="inline"] {
 }
 
 .btn,
-a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, .cart-prd-page-url .lnkSepet, a#lnkGuestCheckout, .validateOtp,
+a.btnDefault,
+span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle a, a#lnkGuestCheckout, .validateOtp,
 .btnResendOtp, .act-btns a, a.lnkSorgula, a.lnkSatinAl {
   position: relative;
   display: inline-block;
@@ -931,7 +945,7 @@ a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, .cart-prd-page-url .lnkSepe
   cursor: pointer;
 }
 
-.btn > span, a.btnDefault > span, .urunKiyaslamaOzellik_tumunuTemizle a > span, .cart-prd-page-url .lnkSepet > span, a#lnkGuestCheckout > span, .validateOtp > span, .btnResendOtp > span, .act-btns a > span, a.lnkSorgula > span, a.lnkSatinAl > span {
+.btn > span, a.btnDefault > span, span.lnkDefault > span, .urunKiyaslamaOzellik_tumunuTemizle a > span, a#lnkGuestCheckout > span, .validateOtp > span, .btnResendOtp > span, .act-btns a > span, a.lnkSorgula > span, a.lnkSatinAl > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -939,7 +953,8 @@ a.btnDefault, .urunKiyaslamaOzellik_tumunuTemizle a, .cart-prd-page-url .lnkSepe
 }
 
 .btn:hover,
-a.btnDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, .cart-prd-page-url .lnkSepet:hover, a#lnkGuestCheckout:hover, .validateOtp:hover,
+a.btnDefault:hover,
+span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a#lnkGuestCheckout:hover, .validateOtp:hover,
 .btnResendOtp:hover, .act-btns a:hover, a.lnkSorgula:hover, a.lnkSatinAl:hover, .banner:hover .btn {
   background: #FFAB00;
 }
@@ -995,7 +1010,8 @@ a.btnSifreResetGuncelle {
   min-width: 170px;
 }
 
-.btn-medium, [class$="-sub"] a.btnDefault, .bottom-step a, a.btnHediyeCekiKullan, a.btnOdemeCekiEkle {
+.btn-medium, [class$="-sub"] a.btnDefault,
+[class$="-sub"] span.lnkDefault, .bottom-step a, a.btnHediyeCekiKullan, a.btnOdemeCekiEkle {
   line-height: 48px;
 }
 
@@ -1018,7 +1034,7 @@ a.btnSifreResetGuncelle {
   display: none;
 }
 
-.btn-reset, .ems-grid-address-buttons > a, .ems-grid-address-select a, .mini-search a[id$="btnArama"], .order-module-buttons a.btnDefault, a.btnHediyeCekiIptal, .siparisOnaySozlesmeMetin > span a.btnDefault,
+.btn-reset, .ems-grid-address-buttons > a, .ems-grid-address-select a, #lnkSifremiUnuttum span.lnkSifremiUnuttum, .mini-search a[id$="btnArama"], .order-module-buttons a.btnDefault, a.btnHediyeCekiIptal, .siparisOnaySozlesmeMetin > span a.btnDefault,
 .onBilgilendirmeFormMetin > span a.btnDefault, a.btnSipariseDon, a.btnFavoriListeSil {
   padding: unset;
   background: unset;
@@ -1031,7 +1047,7 @@ a.btnSifreResetGuncelle {
   letter-spacing: unset;
 }
 
-.btn-reset:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, .mini-search a:hover[id$="btnArama"], .order-module-buttons a.btnDefault:hover, a.btnHediyeCekiIptal:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
+.btn-reset:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, #lnkSifremiUnuttum span.lnkSifremiUnuttum:hover, .mini-search a:hover[id$="btnArama"], .order-module-buttons a.btnDefault:hover, a.btnHediyeCekiIptal:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
 .onBilgilendirmeFormMetin > span a.btnDefault:hover, a.btnSipariseDon:hover, a.btnFavoriListeSil:hover {
   background: unset;
 }
@@ -1065,12 +1081,14 @@ a.btnSifreResetGuncelle {
 }
 
 .btn .icon-arrow1,
-a.btnDefault .icon-arrow1 {
+a.btnDefault .icon-arrow1,
+span.lnkDefault .icon-arrow1 {
   margin-left: 10px;
 }
 
 .btn > span.emos_invisible,
-a.btnDefault > span.emos_invisible {
+a.btnDefault > span.emos_invisible,
+span.lnkDefault > span.emos_invisible {
   display: none;
 }
 
@@ -1229,10 +1247,6 @@ input[id$="UYE_CEPTELEFON"] {
   cursor: default;
 }
 
-.dropdown-header > *::-webkit-scrollbar {
-  display: none;
-}
-
 .dropdown-header > * > img {
   margin-right: 7px;
 }
@@ -1264,10 +1278,6 @@ input[id$="UYE_CEPTELEFON"] {
   font-weight: 300;
   letter-spacing: 0.5px;
   cursor: default;
-}
-
-.dropdown > ul > li > a::-webkit-scrollbar {
-  display: none;
 }
 
 .dropdown > ul > li > a > img {
@@ -1565,7 +1575,6 @@ a.btnXMLFORM {
   height: 100%;
   position: relative;
   overflow: initial;
-  /* Fix of Webkit flickering */
   z-index: 1;
 }
 
@@ -1623,7 +1632,6 @@ a.btnXMLFORM {
   visibility: hidden;
 }
 
-/* Auto Height */
 .swiper-container-autoheight,
 .swiper-container-autoheight .swiper-slide {
   height: auto;
@@ -1636,7 +1644,6 @@ a.btnXMLFORM {
   transition-property: transform, height, -webkit-transform;
 }
 
-/* 3D Effects */
 .swiper-container-3d {
   -webkit-perspective: 1200px;
   perspective: 1200px;
@@ -1682,7 +1689,6 @@ a.btnXMLFORM {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
-/* IE10 Windows Phone 8 Fixes */
 .swiper-container-wp8-horizontal,
 .swiper-container-wp8-horizontal > .swiper-inner > .swiper-wrapper {
   touch-action: pan-y;
@@ -1772,7 +1778,6 @@ a.btnXMLFORM {
   opacity: 0;
 }
 
-/* Common Styles */
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
@@ -1781,7 +1786,6 @@ a.btnXMLFORM {
   width: 100%;
 }
 
-/* Bullets */
 .swiper-pagination-bullets-dynamic {
   overflow: hidden;
   font-size: 0;
@@ -1900,7 +1904,6 @@ button.swiper-pagination-bullet {
   transition: 200ms transform, 200ms right, 200ms -webkit-transform;
 }
 
-/* Progress */
 .swiper-pagination-progressbar {
   background: rgba(0, 0, 0, 0.25);
   position: absolute;
@@ -1968,7 +1971,6 @@ button.swiper-pagination-bullet {
   display: none;
 }
 
-/* Scrollbar */
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
@@ -2039,7 +2041,6 @@ button.swiper-pagination-bullet {
   cursor: move;
 }
 
-/* Preloader */
 .swiper-lazy-preloader {
   position: absolute;
   left: 0;
@@ -2050,7 +2051,6 @@ button.swiper-pagination-bullet {
   background: url(/images/frontend/loading.gif) center center/80px no-repeat #f9f9f9;
 }
 
-/* a11y */
 .swiper-container .swiper-notification {
   position: absolute;
   left: 0;
@@ -2168,7 +2168,6 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-coverflow .swiper-inner > .swiper-wrapper {
-  /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px;
 }
 
@@ -2261,10 +2260,6 @@ button.swiper-pagination-bullet {
 
 .ems-tab-header > *.selected, .ems-tab-header > *.emos_selected {
   border-color: #17181A;
-}
-
-.ems-tab-header::-webkit-scrollbar {
-  display: none;
 }
 
 .ems-tab-content > * {
@@ -4014,7 +4009,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
   grid-gap: 5px 10px;
   align-items: center;
   padding: 20px 0;
-  border-bottom: 1px solid #A90534;
+  border-bottom: 1px solid #EFEFEF;
   font-size: 14px;
   font-weight: 400;
 }
@@ -4882,7 +4877,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
 }
 
 .menu-user-info-logout {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .menu-ready .menu {
@@ -4997,7 +4992,7 @@ ul.menu-mini-lang .sub-footer {
   background-repeat: no-repeat;
 }
 
-#lnkSifremiUnuttum {
+#lnkSifremiUnuttum span.lnkSifremiUnuttum {
   color: #888;
 }
 
@@ -5081,19 +5076,21 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 }
 
 .kutuSepet_icerik {
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 16px;
   margin-top: 10px;
   max-height: calc(100vh - 400px);
-  overflow: auto;
 }
 
 .kutuSepet_icerik .ems-grid-row {
   grid-template-columns: 100px 1fr 32px;
-  border: none;
   grid-gap: 0 15px;
-  padding: 10px 0;
+  padding: 20px 0;
+  font-family: aktiv-grotesk, arial, sans-serif;
   font-size: 11px;
+  font-weight: 300;
+}
+
+.kutuSepet_icerik .ems-grid-name {
+  font-weight: inherit;
 }
 
 .kutuSepet_icerik .ems-grid-remove {
@@ -5105,6 +5102,10 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   font-size: 12px;
 }
 
+.cart-prd-code {
+  color: #A90534;
+}
+
 .cart-prd-size {
   color: #999;
 }
@@ -5114,13 +5115,14 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 }
 
 .cart-prd-price {
-  margin-top: 5px;
+  margin-top: 20px;
   font-family: gilroy, arial, sans-serif;
+  font-size: 14px;
 }
 
 .cart-prd-discount {
   display: none;
-  color: #EFEFEF;
+  color: #A90534;
   margin-top: 5px;
 }
 
@@ -5142,10 +5144,6 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   display: block;
 }
 
-.cart-prd-remove svg {
-  font-size: 20px;
-}
-
 .cart-prd-url {
   position: absolute;
   left: 0;
@@ -5160,24 +5158,12 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   display: none;
 }
 
-.cart-prd-total {
-  border-top: 1px solid #252525;
-  margin-top: 15px;
-  padding-top: 20px;
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 18px;
-}
-
-.cart-prd-page-url {
-  margin-top: 20px;
-}
-
 .cart-prd-page-url > a {
-  display: block;
+  width: 100%;
 }
 
-.cart-prd-page-url .lnkSepet {
-  display: block;
+.cart-prd-page-url > a > span {
+  width: 100%;
 }
 
 .mini-search-sub {
@@ -7120,22 +7106,6 @@ a.btnStokHaberci {
 
 .ems-order-payment .ems-grid-table-cart {
   max-height: 300px;
-  overflow-y: auto;
-  padding-right: 10px;
-}
-
-.ems-order-payment .ems-grid-table-cart::-webkit-scrollbar {
-  width: 4px;
-}
-
-.ems-order-payment .ems-grid-table-cart::-webkit-scrollbar-track {
-  background: #d8d8d8;
-  border-radius: 2px;
-}
-
-.ems-order-payment .ems-grid-table-cart::-webkit-scrollbar-thumb {
-  background: #000;
-  border-radius: 2px;
 }
 
 .ems-order-payment .ems-grid-table-cart > .ems-grid-row {

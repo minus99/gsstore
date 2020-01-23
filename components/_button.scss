@@ -139,7 +139,8 @@ $btn-cursor: 10px;
 }
 
 .btn,
-a.btnDefault {
+a.btnDefault,
+span.lnkDefault {
     @extend %btn;
     .icon-arrow1 {
         margin-left: #{$btn-cursor};

@@ -136,9 +136,7 @@ input[id$="UYE_CEPTELEFON"] {
             white-space: nowrap;
             overflow: auto;
             cursor: default;
-            &::-webkit-scrollbar {
-                display:none;
-            }
+            @extend .ems-scrollbar-hide;
             > img {
                 margin-right: 7px;
             }
@@ -170,9 +168,7 @@ input[id$="UYE_CEPTELEFON"] {
                 font-weight: $form-element-font-weight;
                 letter-spacing: $form-element-letter-spacing;
                 cursor: default;
-                &::-webkit-scrollbar {
-                    display:none;
-                }
+                @extend .ems-scrollbar-hide;
                 > img {
                     margin-right: 7px;
                 }
