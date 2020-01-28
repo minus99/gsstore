@@ -201,7 +201,7 @@ input[id$="UYE_CEPTELEFON"] {
             &-submit {
                 margin-top: 30px;
                 a.btnDefault {
-                    @extend %btn-small;
+                    @extend %btn-size01;
                 }
             }
             &-first {
@@ -209,6 +209,9 @@ input[id$="UYE_CEPTELEFON"] {
             }
             &-small {
                 margin-top: 10px;
+            }
+            &-mini {
+                max-width: 50%;
             }
             &-comment {
                 padding-top: 20px;

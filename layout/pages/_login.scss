@@ -1,33 +1,25 @@
-.ems-page-login {
-    overflow: hidden;
-    &-grid {
-        position: relative;
-        background: $color0;
-        color: $color255;
-    }
-}
-
-.login-video {
-    .swiper-slide {
-        width: 100%;
-    }
-}
+.ems-page-login {}
 
 .ems-member-login {
-    position: relative;
-    width: calc(100% - 20px);
-    max-width: 410px;
-    background: $color255;
-    color: $color0;
-    margin: 10px auto;
-    padding: 30px 15px;
+    padding: 40px $container-gap;
 }
 
+a.btnLogin,
+a.btnYeniUyeKaydet {
+    width: 100%;
+    @extend %btn-medium;
+}
+
+.kutuUyeGirisFacebookConnect {
+    margin-top: 10px;
+}
 a.btnFacebookLogin {
     @extend .btnFacebookLoginKutu;
+    @extend %btn-medium;
 }
 
-a#lnkGuestCheckout {
-    @extend %btn;
-    display: block;
+.login-media {
+    .prm-media {
+        @include aspect-ratio(375, 270);
+    }
 }

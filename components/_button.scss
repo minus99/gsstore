@@ -79,7 +79,7 @@ $btn-cursor: 10px;
         line-height: 1;
     }
 
-    &-small {
+    &-size01 {
         min-width: 170px;
     }
 
@@ -174,8 +174,8 @@ span.lnkDefault {
     @extend %btn-close;
 }
 
-.btn-small {
-    @extend %btn-small;
+.btn-size01 {
+    @extend %btn-size01;
 }
 
 .btn-medium {

@@ -11,7 +11,8 @@
             padding-left: #{$pl};
             padding-right: #{$pl};
             width: #{$f};
-            &-single {
+            &-single,
+            &-submit {
                 width: 100%;
             }
             &-push {

@@ -1,22 +1,36 @@
 .ems-page-login {
     &-grid {
-        min-height: 1250px;
+        grid-template-columns: minmax(20px, $d-container-gap) 1fr minmax(50px, 90px) minmax(auto, 603px);
+        grid-template-areas: ". ga2 . ga1";
+        @include setGridArea(1,2);
         > .ga1 {
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 0;
-            width: 100%;
-            height: 100%;
-            * {
+            position: relative;
+            .gradient01 {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                width: 10px;
                 height: 100%;
+                background: linear-gradient(45deg, rgba(255,171,0,1) 50%, rgba(169,5,52,1) 50%);
             }
         }
     }
 }
 
 .ems-member-login {
-    padding: 40px;
-    margin: 70px;
-    background: rgba($color: $color2, $alpha: .95);
+    padding: 55px 0;
+}
+.ems-signin {
+    max-width: 350px;
+}
+a.btnLogin,
+a.btnYeniUyeKaydet {
+    width: auto;
+}
+
+.login-media {
+    .prm-media {
+        @include aspect-ratio(603, 800);
+    }
 }

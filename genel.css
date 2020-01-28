@@ -742,6 +742,10 @@ textarea[style*="width"] {
   width: 100% !important;
 }
 
+.site_textarea {
+  width: 100% !important;
+}
+
 .sayfaDisDiv table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -927,7 +931,7 @@ span[class^="pb"] {
 
 .btn,
 a.btnDefault,
-span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, a#lnkGuestCheckout, .validateOtp,
+span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, .validateOtp,
 .btnResendOtp, .act-btns a, a.lnkSorgula, a.lnkSatinAl {
   position: relative;
   display: inline-block;
@@ -945,7 +949,7 @@ span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, a#lnkGuestCheckout, .v
   cursor: pointer;
 }
 
-.btn > span, a.btnDefault > span, span.lnkDefault > span, .urunKiyaslamaOzellik_tumunuTemizle > a > span, a#lnkGuestCheckout > span, .validateOtp > span, .btnResendOtp > span, .act-btns a > span, a.lnkSorgula > span, a.lnkSatinAl > span {
+.btn > span, a.btnDefault > span, span.lnkDefault > span, .urunKiyaslamaOzellik_tumunuTemizle > a > span, .validateOtp > span, .btnResendOtp > span, .act-btns a > span, a.lnkSorgula > span, a.lnkSatinAl > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -954,7 +958,7 @@ span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, a#lnkGuestCheckout, .v
 
 .btn:hover,
 a.btnDefault:hover,
-span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, a#lnkGuestCheckout:hover, .validateOtp:hover,
+span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, .validateOtp:hover,
 .btnResendOtp:hover, .act-btns a:hover, a.lnkSorgula:hover, a.lnkSatinAl:hover, .banner:hover .btn {
   background: #FFAB00;
 }
@@ -1004,14 +1008,15 @@ span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, a#lnkGuest
   line-height: 1;
 }
 
-.btn-small, .ems-field-submit a.btnDefault, a.btnGuestCheckoutSave, a.btnIptalEt,
+.btn-size01, .ems-field-submit a.btnDefault, a.btnGuestCheckoutSave, a.btnIptalEt,
 a.btnIadeEt, a.btnSifreGuncelle, a.btnUyeSifreGonder,
 a.btnSifreResetGuncelle {
   min-width: 170px;
 }
 
 .btn-medium, [class$="-sub"] a.btnDefault,
-[class$="-sub"] span.lnkDefault, .bottom-step a, a.btnHediyeCekiKullan, a.btnOdemeCekiEkle {
+[class$="-sub"] span.lnkDefault, a.btnLogin,
+a.btnYeniUyeKaydet, a.btnFacebookLogin, .bottom-step a, a.btnHediyeCekiKullan, a.btnOdemeCekiEkle {
   line-height: 48px;
 }
 
@@ -1317,6 +1322,10 @@ input[id$="UYE_CEPTELEFON"] {
 
 .ems-field-small {
   margin-top: 10px;
+}
+
+.ems-field-mini {
+  max-width: 50%;
 }
 
 .ems-field-comment {
@@ -2241,25 +2250,26 @@ button.swiper-pagination-bullet {
 
 .ems-tab-header {
   display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+  margin: 0 0 40px -20px;
   overflow: auto;
 }
 
 .ems-tab-header > * {
-  font-weight: 700;
-  letter-spacing: .9px;
-  padding: 10px 20px;
+  font-size: 21px;
+  color: #d1d1d1;
+  font-weight: 600;
+  letter-spacing: .1px;
   border: 1px solid transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  margin-left: 20px;
   cursor: pointer;
 }
 
 .ems-tab-header > *.selected, .ems-tab-header > *.emos_selected {
-  border-color: #17181A;
+  color: #000;
 }
 
 .ems-tab-content > * {
@@ -5689,32 +5699,21 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   width: calc(100% / 3.5);
 }
 
-.ems-page-login {
-  overflow: hidden;
+.ems-member-login {
+  padding: 40px 20px;
 }
 
-.ems-page-login-grid {
-  position: relative;
-  background: #000;
-  color: #FFF;
-}
-
-.login-video .swiper-slide {
+a.btnLogin,
+a.btnYeniUyeKaydet {
   width: 100%;
 }
 
-.ems-member-login {
-  position: relative;
-  width: calc(100% - 20px);
-  max-width: 410px;
-  background: #FFF;
-  color: #000;
-  margin: 10px auto;
-  padding: 30px 15px;
+.kutuUyeGirisFacebookConnect {
+  margin-top: 10px;
 }
 
-a#lnkGuestCheckout {
-  display: block;
+.login-media .prm-media::before {
+  padding-top: 72%;
 }
 
 .ems-page-product-list {
@@ -8206,7 +8205,7 @@ ul.giftCardList li.selected > a {
       padding-right: 10px;
       width: 50%;
     }
-    .ems-form-horizontal .ems-field-single {
+    .ems-form-horizontal .ems-field-single, .ems-form-horizontal .ems-field-submit {
       width: 100%;
     }
     .ems-form-horizontal .ems-field-push {
@@ -9082,23 +9081,39 @@ ul.giftCardList li.selected > a {
       padding-left: 20px;
     }
     .ems-page-login-grid {
-      min-height: 1250px;
+      grid-template-columns: minmax(20px, 100px) 1fr minmax(50px, 90px) minmax(auto, 603px);
+      grid-template-areas: ". ga2 . ga1";
     }
     .ems-page-login-grid > .ga1 {
+      grid-area: ga1;
+    }
+    .ems-page-login-grid > .ga2 {
+      grid-area: ga2;
+    }
+    .ems-page-login-grid > .ga1 {
+      position: relative;
+    }
+    .ems-page-login-grid > .ga1 .gradient01 {
       position: absolute;
       left: 0;
       top: 0;
-      z-index: 0;
-      width: 100%;
+      z-index: 1;
+      width: 10px;
       height: 100%;
-    }
-    .ems-page-login-grid > .ga1 * {
-      height: 100%;
+      background: linear-gradient(45deg, #ffab00 50%, #a90534 50%);
     }
     .ems-member-login {
-      padding: 40px;
-      margin: 70px;
-      background: rgba(255, 171, 0, 0.95);
+      padding: 55px 0;
+    }
+    .ems-signin {
+      max-width: 350px;
+    }
+    a.btnLogin,
+    a.btnYeniUyeKaydet {
+      width: auto;
+    }
+    .login-media .prm-media::before {
+      padding-top: 132.66998%;
     }
     .ems-page-product-list {
       padding-bottom: 130px;
