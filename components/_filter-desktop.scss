@@ -1,5 +1,4 @@
 .kutuOzellikFiltre {
-    display: flex;
     position: static;
     background-color: transparent;
     color: inherit;
@@ -41,7 +40,6 @@
     border: none;
 }
 .urunKiyaslamaOzellik_ozellikIcerik {
-    display: block !important;
     padding: 0;
 }
 .kutuFooterOzellikFiltre {
@@ -71,4 +69,8 @@
 //seçili filtreler
 .pnlUrunKiyasSecim {
     display: block;
+}
+
+.ems-filter-animate {
+    overflow: initial;
 }

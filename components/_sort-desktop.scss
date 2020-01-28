@@ -1,5 +1,7 @@
 .ems-sort {
     display: block;
+    padding: 0;
+    border: none;
     #dvUrunKiyaslamaOzellik{
         margin: 0 !important;
         padding: 0 !important;
@@ -29,7 +31,8 @@
             }
         }
     }
-    .urunKiyaslamaOzellik_ozellikIcerik {
-        padding: 0;
+
+    &-animate {
+        overflow: initial;
     }
 }

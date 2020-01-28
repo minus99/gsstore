@@ -3,7 +3,7 @@
     
     &-grid {
         position: relative;
-        grid-template-columns: minmax(20px, $d-container-gap) 210px minmax(50px, $d-container-gap) minmax(700px, 1fr) minmax(20px, $d-container-gap);
+        grid-template-columns: minmax(20px, $d-container-gap) 210px minmax(50px, 105px) minmax(700px, 1fr) minmax(20px, $d-container-gap);
         grid-template-areas: "ga1 ga1 ga1 ga1 ga1" ". ga2 . ga3 .";
         @include setGridArea(1,3);
     }
@@ -19,11 +19,10 @@
 }
 
 ul.product-list-grid {
-    margin-top: 30px;
-
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 7px 20px;
-
+    padding: 30px 0;
+    
     .view-2 & {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 42px 25px;
@@ -33,6 +32,11 @@ ul.product-list-grid {
 .ems-prd {
     &-image {
         padding: 40px 25px 30px;
+    }
+    &-badge {
+        > div {
+            padding: 20px 20px 0;
+        }
     }
 }
 

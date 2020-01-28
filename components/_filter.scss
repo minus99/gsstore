@@ -81,9 +81,8 @@ $filter-border: $color6;
 }
 .urunKiyaslamaOzellik_tumunuTemizle {
     display: block !important;
-    a {
+    > a {
         @extend %btn;
-        @extend %btn-transparent;
     }
     &:empty {
         display: none !important;
@@ -213,6 +212,8 @@ $filter-border: $color6;
     
 }
 .ems-filter-animate {
+    overflow: hidden;
+
     #pnlSecimiDarat {
         display: flex;
     }

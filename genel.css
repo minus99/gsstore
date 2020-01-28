@@ -927,7 +927,7 @@ span[class^="pb"] {
 
 .btn,
 a.btnDefault,
-span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle a, a#lnkGuestCheckout, .validateOtp,
+span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, a#lnkGuestCheckout, .validateOtp,
 .btnResendOtp, .act-btns a, a.lnkSorgula, a.lnkSatinAl {
   position: relative;
   display: inline-block;
@@ -945,7 +945,7 @@ span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle a, a#lnkGuestCheckout, .val
   cursor: pointer;
 }
 
-.btn > span, a.btnDefault > span, span.lnkDefault > span, .urunKiyaslamaOzellik_tumunuTemizle a > span, a#lnkGuestCheckout > span, .validateOtp > span, .btnResendOtp > span, .act-btns a > span, a.lnkSorgula > span, a.lnkSatinAl > span {
+.btn > span, a.btnDefault > span, span.lnkDefault > span, .urunKiyaslamaOzellik_tumunuTemizle > a > span, a#lnkGuestCheckout > span, .validateOtp > span, .btnResendOtp > span, .act-btns a > span, a.lnkSorgula > span, a.lnkSatinAl > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -954,7 +954,7 @@ span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle a, a#lnkGuestCheckout, .val
 
 .btn:hover,
 a.btnDefault:hover,
-span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a#lnkGuestCheckout:hover, .validateOtp:hover,
+span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, a#lnkGuestCheckout:hover, .validateOtp:hover,
 .btnResendOtp:hover, .act-btns a:hover, a.lnkSorgula:hover, a.lnkSatinAl:hover, .banner:hover .btn {
   background: #FFAB00;
 }
@@ -977,13 +977,13 @@ span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a#lnkGuestCh
   color: #252525;
 }
 
-.btn-transparent, .urunKiyaslamaOzellik_tumunuTemizle a, a.btnFacebookLoginKutu, a.btnFacebookLogin, a.btnKutuLogout, .swiper-product-horizontal a.btnSepeteAt, .ems-prdd-block2 a.btnDefault, .act-btns a {
+.btn-transparent, a.btnFacebookLoginKutu, a.btnFacebookLogin, a.btnKutuLogout, .swiper-product-horizontal a.btnSepeteAt, .ems-prdd-block2 a.btnDefault, .act-btns a {
   background: transparent;
   color: inherit;
   border-color: #f3f3f3;
 }
 
-.btn-transparent:hover, .urunKiyaslamaOzellik_tumunuTemizle a:hover, a.btnFacebookLoginKutu:hover, a.btnFacebookLogin:hover, a.btnKutuLogout:hover, .swiper-product-horizontal a.btnSepeteAt:hover, .ems-prdd-block2 a.btnDefault:hover, .act-btns a:hover, .banner:hover .btn-transparent {
+.btn-transparent:hover, a.btnFacebookLoginKutu:hover, a.btnFacebookLogin:hover, a.btnKutuLogout:hover, .swiper-product-horizontal a.btnSepeteAt:hover, .ems-prdd-block2 a.btnDefault:hover, .act-btns a:hover, .banner:hover .btn-transparent {
   background: transparent;
 }
 
@@ -3814,6 +3814,10 @@ tr + tr #dvUrunKiyaslamaOzellik {
   color: #FFF;
 }
 
+.ems-filter-animate {
+  overflow: hidden;
+}
+
 .ems-filter-animate #pnlSecimiDarat {
   display: flex;
 }
@@ -3829,23 +3833,17 @@ tr + tr #dvUrunKiyaslamaOzellik {
 .ems-sort #dvUrunKiyaslamaOzellik.counts .urunKiyaslamaOzellik {
   background: none;
   padding: 0;
-  font-size: 14px;
-  color: #EBEBEB;
-}
-
-.ems-sort #dvUrunKiyaslamaOzellik.sorts {
-  margin-top: 15px;
+  font-size: 12px;
 }
 
 .ems-sort #dvUrunKiyaslamaOzellik.sorts .urunKiyaslamaOzellik {
   padding-left: 30px;
-  font-weight: 700;
 }
 
 .ems-sort #dvUrunKiyaslamaOzellik.views .urunKiyaslamaOzellik {
   background: none;
   padding: 0;
-  color: #EBEBEB;
+  color: #C9C9C9;
   display: flex;
   align-items: center;
 }
@@ -3856,6 +3854,14 @@ tr + tr #dvUrunKiyaslamaOzellik {
 
 .ems-sort #dvUrunKiyaslamaOzellik.views .urunKiyaslamaOzellik svg {
   margin-right: 5px;
+}
+
+.ems-sort #dvUrunKiyaslamaOzellik + #dvUrunKiyaslamaOzellik {
+  margin-top: -1px;
+}
+
+.ems-sort-animate {
+  overflow: hidden;
 }
 
 .ems-sort-animate .ems-sort {
@@ -5746,7 +5752,7 @@ a#lnkGuestCheckout {
   border-left: none;
   border-right: none;
   line-height: 58px;
-  padding: 0;
+  padding: 0 10px;
 }
 
 .top-buttons a.btn-filter-popup {
@@ -5758,11 +5764,11 @@ a#lnkGuestCheckout {
 }
 
 ul.product-list-grid {
-  margin-top: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 18px 15px;
+  padding: 20px;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   /* easeOutExpo */
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1px;
 }
 
 ul.product-list-grid > li {
@@ -5771,7 +5777,7 @@ ul.product-list-grid > li {
 
 .view-1 ul.product-list-grid {
   grid-template-columns: 1fr;
-  grid-gap: 0;
+  grid-gap: 30px 0;
 }
 
 ul.product-list-grid:empty {
@@ -5817,13 +5823,14 @@ ul.product-list-grid:empty {
 
 .ems-prd-name {
   margin-top: 3px;
+  font-weight: 500;
 }
 
 .ems-prd-name > a {
   display: block;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ems-prd-price {
@@ -5831,7 +5838,8 @@ ul.product-list-grid:empty {
 }
 
 .ems-prd-badge {
-  font-size: 13px;
+  font-family: aktiv-grotesk, arial, sans-serif;
+  font-size: 11px;
 }
 
 .ems-prd-badge > div {
@@ -5841,7 +5849,7 @@ ul.product-list-grid:empty {
   top: 1px;
   width: calc(100% - 2px);
   background: #FFF;
-  padding: 20px 20px 0;
+  padding: 10px 10px 0;
   text-align: right;
 }
 
@@ -5874,14 +5882,13 @@ ul.product-list-grid:empty {
 }
 
 .urunListe_promosyonListe {
-  position: relative !important;
-  padding: 0 !important;
-  display: flex !important;
-  color: #EFEFEF;
+  position: absolute !important;
+  display: block !important;
+  color: #A90534;
 }
 
-.urunListe_promosyonListe > div + div::before {
-  content: ", ";
+.urunListe_promosyonListe:empty {
+  display: none !important;
 }
 
 .swiper-product-horizontal .ems-prd {
@@ -8352,7 +8359,6 @@ ul.giftCardList li.selected > a {
       display: block;
     }
     .kutuOzellikFiltre {
-      display: flex;
       position: static;
       background-color: transparent;
       color: inherit;
@@ -8390,7 +8396,6 @@ ul.giftCardList li.selected > a {
       border: none;
     }
     .urunKiyaslamaOzellik_ozellikIcerik {
-      display: block !important;
       padding: 0;
     }
     .kutuFooterOzellikFiltre {
@@ -8415,8 +8420,13 @@ ul.giftCardList li.selected > a {
     .pnlUrunKiyasSecim {
       display: block;
     }
+    .ems-filter-animate {
+      overflow: initial;
+    }
     .ems-sort {
       display: block;
+      padding: 0;
+      border: none;
     }
     .ems-sort #dvUrunKiyaslamaOzellik {
       margin: 0 !important;
@@ -8441,8 +8451,8 @@ ul.giftCardList li.selected > a {
     .ems-sort #dvUrunKiyaslamaOzellik.views .urunKiyaslamaOzellik {
       margin-left: 15px;
     }
-    .ems-sort .urunKiyaslamaOzellik_ozellikIcerik {
-      padding: 0;
+    .ems-sort-animate {
+      overflow: initial;
     }
     .urunPaging {
       padding-left: 0;
@@ -9095,7 +9105,7 @@ ul.giftCardList li.selected > a {
     }
     .ems-page-product-list-grid {
       position: relative;
-      grid-template-columns: minmax(20px, 100px) 210px minmax(50px, 100px) minmax(700px, 1fr) minmax(20px, 100px);
+      grid-template-columns: minmax(20px, 100px) 210px minmax(50px, 105px) minmax(700px, 1fr) minmax(20px, 100px);
       grid-template-areas: "ga1 ga1 ga1 ga1 ga1" ". ga2 . ga3 .";
     }
     .ems-page-product-list-grid > .ga1 {
@@ -9115,9 +9125,9 @@ ul.giftCardList li.selected > a {
       padding: 0;
     }
     ul.product-list-grid {
-      margin-top: 30px;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 7px 20px;
+      padding: 30px 0;
     }
     .view-2 ul.product-list-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -9125,6 +9135,9 @@ ul.giftCardList li.selected > a {
     }
     .ems-prd-image {
       padding: 40px 25px 30px;
+    }
+    .ems-prd-badge > div {
+      padding: 20px 20px 0;
     }
     .swiper-product-horizontal .ems-prd-inner {
       padding: 10px;
