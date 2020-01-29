@@ -19,7 +19,7 @@ a.btnFacebookLogin {
 }
 
 .login-media {
-    .prm-media {
+    .ems-responsive-item {
         @include aspect-ratio(375, 270);
     }
 }

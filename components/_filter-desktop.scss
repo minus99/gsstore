@@ -5,11 +5,13 @@
     padding: 30px 60px;
     border: 1px solid $color9;
     height: auto;
+    margin-top: 30px;
 }
 .kutuHeaderOzellikFiltre {
     display: none;
 }
 .kutuBodyOzellikFiltre {
+    height: auto;
     overflow: visible;
     margin-top: 0;
     font-size: 12px;
@@ -54,15 +56,18 @@
 }
 .urunKiyaslamaOzellik_tumunuTemizle {
     > a {
-        border: transparent;
+        border: transparent !important;
+        background: none !important;
+        color: inherit !important;
         text-decoration: underline;
     }
 }
 .filter-apply {
     > a {
-        border-color: $color9;
-        background: transparent;
-        color: $color3;
+        border-color: $color9 !important;
+        background: transparent !important;
+        color: inherit !important;
+        min-width: 120px;
     }
 }
 

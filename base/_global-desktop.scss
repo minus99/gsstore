@@ -13,6 +13,22 @@
     }
 }
 .d-ems {
+    //CONTAINER
+    &-container {
+        &-full {
+            &-right {
+                padding-right: 0;
+                margin-right: 0;
+                max-width: calc(#{$container-large} + ((100% - #{$container-large}) / 2));
+            }
+            &-left {
+                padding-left: 0;
+                margin-left: 0;
+                max-width: calc(#{$container-large} + ((100% - #{$container-large}) / 2));
+            }
+        }
+    }
+
     //FLEX
     &-flex {
         display: flex;

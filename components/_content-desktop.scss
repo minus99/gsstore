@@ -52,9 +52,7 @@
 //COVER IMAGE
 .primary-image {
     .prm-media {
-        img {
-            @include setHeight(3840, 1678, 99.1vw);
-        }
+        @include aspect-ratio(3840, 1678);
     }
 }
 
@@ -95,9 +93,6 @@
 }
 .lp-slider {
     .prm-media {
-        img,
-        video {
-            @include setHeight(2880, 1260, 99.1vw);
-        }
+        @include aspect-ratio(2880, 1260);
     }
 }

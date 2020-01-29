@@ -154,8 +154,15 @@
         }
     }
 
-    //banner type05 *--
-    &05 {}
+    //banner type05 *category top banner
+    &05 {
+        .banner-body {
+            @include banner-body-bottom();
+        }
+        .prm-title {
+            font-size: 16px;
+        }
+    }
 
     //banner type06 *instagram first content
     &06 {
@@ -174,7 +181,6 @@
     &07 {
         text-align: center;
         .banner-body {
-            position: absolute;
             @include banner-body-bottom();
         }
         .prm-title {
@@ -342,26 +348,36 @@
 }
 
 //CUSTOM CFG
-.theme-light {
-    .banner {
-        color: $color0;
+.theme {
+    &-light {
+        .banner {
+            color: $color0;
+        }
+    }
+
+    &-dark {
+        .banner {
+            color: $color255;
+        }
     }
 }
 
-.theme-dark {
-    .banner {
-        color: $color255;
+.align {
+    &-left {
+        .banner {
+            text-align: left;
+        }
     }
-}
 
-.align-left {
-    .banner {
-        text-align: left;
+    &-center {
+        .banner {
+            text-align: center;
+        }
     }
-}
 
-.align-right {
-    .banner {
-        text-align: right;
+    &-right {
+        .banner {
+            text-align: right;
+        }
     }
 }

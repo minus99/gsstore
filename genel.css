@@ -101,7 +101,7 @@
 }
 
 .base64-dropdown, .dropdown-header {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' d='M7.1 9.3l5.008 5 4.992-5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' d='M8 10l4.006 4L16 10'/%3E%3C/svg%3E");
 }
 
 .base64-check, .urunKiyaslamaOzellik {
@@ -652,30 +652,6 @@ iframe {
   transform: scale(-1);
 }
 
-.ems-responsive-item, .ems-prd-image > a {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 0;
-  overflow: hidden;
-}
-
-.ems-responsive-item::before, .ems-prd-image > a::before {
-  content: "";
-  display: block;
-  background: url(/images/frontend/loading.gif) center center/80px no-repeat #f9f9f9;
-}
-
-.ems-responsive-item img, .ems-prd-image > a img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
 .ems-scrollbar, .kutuSepet_icerik, .ems-order-payment .ems-grid-table-cart {
   overflow: auto;
   max-height: 100vh;
@@ -707,6 +683,31 @@ iframe {
 
 .ems-list {
   padding-left: 20px;
+}
+
+.ems-responsive-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.ems-responsive-item::before {
+  content: "";
+  display: block;
+  background: url(/images/frontend/loading.gif) center center/80px no-repeat #f9f9f9;
+  padding-top: 100%;
+}
+
+.ems-responsive-item img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .lazy-load {
@@ -1214,6 +1215,9 @@ input[id$="UYE_CEPTELEFON"] {
   width: 100% !important;
   height: 100% !important;
   opacity: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .sStylerWrp_select svg {
@@ -1237,9 +1241,9 @@ input[id$="UYE_CEPTELEFON"] {
 }
 
 .dropdown-header {
-  padding-right: 55px;
+  padding-right: 40px;
   line-height: 48px;
-  background-position: right 22px center;
+  background-position: right 10px center;
   background-size: 24px;
   cursor: default;
 }
@@ -2468,6 +2472,16 @@ button.swiper-pagination-bullet {
   margin-top: 25px;
 }
 
+.banner05 .banner-body {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+}
+
+.banner05 .prm-title {
+  font-size: 16px;
+}
+
 .banner06 {
   height: 100%;
 }
@@ -2489,7 +2503,6 @@ button.swiper-pagination-bullet {
 }
 
 .banner07 .banner-body {
-  position: absolute;
   position: absolute;
   top: auto;
   bottom: 0;
@@ -2678,6 +2691,10 @@ button.swiper-pagination-bullet {
 
 .align-left .banner {
   text-align: left;
+}
+
+.align-center .banner {
+  text-align: center;
 }
 
 .align-right .banner {
@@ -3524,7 +3541,7 @@ button.toast-close-button {
 
 .navigasyon > [id$="lblNavigation"] {
   display: block;
-  padding: 15px 20px;
+  padding: 20px 20px;
 }
 
 .navigasyon ol {
@@ -3716,6 +3733,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
 
 .pnlUrunKiyasSecim {
   display: none;
+  padding-top: 15px;
   padding-bottom: 25px;
   border-bottom: 1px solid #f3f3f3;
 }
@@ -3862,8 +3880,8 @@ tr + tr #dvUrunKiyaslamaOzellik {
   color: #000;
 }
 
-.ems-sort #dvUrunKiyaslamaOzellik.views .urunKiyaslamaOzellik svg {
-  margin-right: 5px;
+.ems-sort #dvUrunKiyaslamaOzellik.views .urunKiyaslamaOzellik > span {
+  margin-left: 5px;
 }
 
 .ems-sort #dvUrunKiyaslamaOzellik + #dvUrunKiyaslamaOzellik {
@@ -3876,6 +3894,10 @@ tr + tr #dvUrunKiyaslamaOzellik {
 
 .ems-sort-animate .ems-sort {
   display: flex;
+}
+
+.ems-prd-list-sort-append .ems-prd-list-sort {
+  display: block;
 }
 
 .urunPaging {
@@ -4638,8 +4660,8 @@ tr + tr #dvUrunKiyaslamaOzellik {
   display: block;
 }
 
-.lp-slider .prm-media video {
-  height: calc(100vw / (750 / 900));
+.lp-slider .prm-media::before {
+  padding-top: 120%;
 }
 
 .lp-content .swiper-slide {
@@ -5615,6 +5637,10 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   background: #000;
 }
 
+.homepage-slider .ems-responsive-item::before {
+  padding-top: 133.33333%;
+}
+
 .primary-categories {
   padding-top: 30px;
   padding-bottom: 50px;
@@ -5645,6 +5671,10 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   width: calc(100% / 1.25);
 }
 
+.historical-moments .ems-responsive-item::before {
+  padding-top: 125%;
+}
+
 .collections {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -5658,6 +5688,10 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   padding-top: 25px;
 }
 
+.collections .ems-responsive-item::before {
+  padding-top: 100%;
+}
+
 .campaigns {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -5669,6 +5703,10 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 
 .campaigns .swiper-slide {
   padding-top: 15px;
+}
+
+.campaigns .ems-responsive-item::before {
+  padding-top: 100%;
 }
 
 .social-feed {
@@ -5712,7 +5750,7 @@ a.btnYeniUyeKaydet {
   margin-top: 10px;
 }
 
-.login-media .prm-media::before {
+.login-media .ems-responsive-item::before {
   padding-top: 72%;
 }
 
@@ -5729,6 +5767,14 @@ a.btnYeniUyeKaydet {
 
 .ems-page-product-list.no-result .ems-message-product-list {
   margin-top: 30px;
+}
+
+.category-top-banner {
+  margin-bottom: 40px;
+}
+
+.category-top-banner .ems-responsive-item::before {
+  padding-top: 21.18056%;
 }
 
 .ems-prd-list-count {
@@ -5797,7 +5843,7 @@ ul.product-list-grid:empty {
   padding: 25px 15px 10px;
 }
 
-.ems-prd-image > a::before {
+.ems-prd-image.ems-responsive-item::before {
   padding-top: 133.33333%;
 }
 
@@ -8117,6 +8163,16 @@ ul.giftCardList li.selected > a {
     .ems-section-title {
       font-size: 24px;
     }
+    .d-ems-container-full-right {
+      padding-right: 0;
+      margin-right: 0;
+      max-width: calc(1280px + ((100% - 1280px) / 2));
+    }
+    .d-ems-container-full-left {
+      padding-left: 0;
+      margin-left: 0;
+      max-width: calc(1280px + ((100% - 1280px) / 2));
+    }
     .d-ems-flex {
       display: flex;
     }
@@ -8349,10 +8405,6 @@ ul.giftCardList li.selected > a {
       left: 0;
       top: 0;
       z-index: 2;
-      padding: 40px;
-    }
-    .nav-type2 .navigasyon ol {
-      color: #FFF;
     }
     .kutuKategori {
       display: block;
@@ -8364,11 +8416,13 @@ ul.giftCardList li.selected > a {
       padding: 30px 60px;
       border: 1px solid #f3f3f3;
       height: auto;
+      margin-top: 30px;
     }
     .kutuHeaderOzellikFiltre {
       display: none;
     }
     .kutuBodyOzellikFiltre {
+      height: auto;
       overflow: visible;
       margin-top: 0;
       font-size: 12px;
@@ -8408,13 +8462,16 @@ ul.giftCardList li.selected > a {
       font-size: 11px;
     }
     .urunKiyaslamaOzellik_tumunuTemizle > a {
-      border: transparent;
+      border: transparent !important;
+      background: none !important;
+      color: inherit !important;
       text-decoration: underline;
     }
     .filter-apply > a {
-      border-color: #f3f3f3;
-      background: transparent;
-      color: #252525;
+      border-color: #f3f3f3 !important;
+      background: transparent !important;
+      color: inherit !important;
+      min-width: 120px;
     }
     .pnlUrunKiyasSecim {
       display: block;
@@ -8424,13 +8481,22 @@ ul.giftCardList li.selected > a {
     }
     .ems-sort {
       display: block;
+      margin: 0;
       padding: 0;
       border: none;
     }
     .ems-sort #dvUrunKiyaslamaOzellik {
-      margin: 0 !important;
-      padding: 0 !important;
-      border: none !important;
+      margin-left: 20px;
+    }
+    .ems-sort #dvUrunKiyaslamaOzellik.filters {
+      margin-left: 0;
+      min-width: 160px;
+    }
+    .ems-sort #dvUrunKiyaslamaOzellik.counts {
+      margin-right: auto;
+    }
+    .ems-sort #dvUrunKiyaslamaOzellik.sorts {
+      min-width: 160px;
     }
     .ems-sort #dvUrunKiyaslamaOzellik.sorts .urunKiyaslamaOzellik {
       background-image: none !important;
@@ -8445,10 +8511,13 @@ ul.giftCardList li.selected > a {
       border-color: #17181A;
     }
     .ems-sort #dvUrunKiyaslamaOzellik.views .urunKiyaslamaOzellik_ozellikIcerik {
-      margin-left: -15px;
+      margin-left: -5px;
     }
     .ems-sort #dvUrunKiyaslamaOzellik.views .urunKiyaslamaOzellik {
-      margin-left: 15px;
+      margin-left: 5px;
+    }
+    .ems-sort #dvUrunKiyaslamaOzellik + #dvUrunKiyaslamaOzellik {
+      margin-top: 0;
     }
     .ems-sort-animate {
       overflow: initial;
@@ -8552,8 +8621,8 @@ ul.giftCardList li.selected > a {
     .gradient01 {
       min-height: 5px;
     }
-    .primary-image .prm-media img {
-      height: calc(99.1vw / (3840 / 1678));
+    .primary-image .prm-media::before {
+      padding-top: 43.69792%;
     }
     .fd {
       margin-top: 0;
@@ -8586,9 +8655,8 @@ ul.giftCardList li.selected > a {
       padding-bottom: 80px;
       margin-bottom: 70px;
     }
-    .lp-slider .prm-media img,
-    .lp-slider .prm-media video {
-      height: calc(99.1vw / (2880 / 1260));
+    .lp-slider .prm-media::before {
+      padding-top: 43.75%;
     }
     .site-header-grid {
       position: relative;
@@ -9015,8 +9083,8 @@ ul.giftCardList li.selected > a {
     .ems-page-home {
       padding-bottom: 0;
     }
-    .homepage-slider .prm-media img {
-      height: calc(99.1vw / (3840 / 1678));
+    .homepage-slider .ems-responsive-item::before {
+      padding-top: 47.91667%;
     }
     .primary-categories {
       padding-top: 70px;
@@ -9033,6 +9101,9 @@ ul.giftCardList li.selected > a {
       padding-top: 0;
       padding-left: 20px;
       width: calc(100% / 4);
+    }
+    .primary-categories .ems-responsive-item::before {
+      padding-top: 133.89831%;
     }
     .historical-moments {
       padding-top: 100px;
@@ -9068,6 +9139,9 @@ ul.giftCardList li.selected > a {
       padding-left: 20px;
       width: calc(100% / 2.25);
     }
+    .collections .ems-responsive-item::before {
+      padding-top: 125%;
+    }
     .campaigns {
       padding-top: 125px;
       padding-bottom: 125px;
@@ -9077,8 +9151,12 @@ ul.giftCardList li.selected > a {
       margin-left: -20px;
     }
     .campaigns .swiper-slide {
+      width: 100%;
       padding-top: 0;
       padding-left: 20px;
+    }
+    .campaigns .ems-responsive-item::before {
+      padding-top: 57.37705%;
     }
     .ems-page-login-grid {
       grid-template-columns: minmax(20px, 100px) 1fr minmax(50px, 90px) minmax(auto, 603px);
@@ -9112,7 +9190,7 @@ ul.giftCardList li.selected > a {
     a.btnYeniUyeKaydet {
       width: auto;
     }
-    .login-media .prm-media::before {
+    .login-media .ems-responsive-item::before {
       padding-top: 132.66998%;
     }
     .ems-page-product-list {
@@ -9131,9 +9209,6 @@ ul.giftCardList li.selected > a {
     }
     .ems-page-product-list-grid > .ga3 {
       grid-area: ga3;
-    }
-    .category-top-banner {
-      margin-bottom: 40px;
     }
     .ems-prd-list-count {
       margin-top: 40px;

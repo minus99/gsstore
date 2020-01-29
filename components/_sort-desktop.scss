@@ -1,12 +1,23 @@
 .ems-sort {
+    $drp-width: 160px;
     display: block;
+    margin: 0;
     padding: 0;
     border: none;
     #dvUrunKiyaslamaOzellik{
-        margin: 0 !important;
-        padding: 0 !important;
-        border: none !important;
+        margin-left: 20px;
+        
+        &.filters {
+            margin-left: 0;
+            min-width: $drp-width;
+        }
+
+        &.counts {
+            margin-right: auto;
+        }
+
         &.sorts {
+            min-width: $drp-width;
             .urunKiyaslamaOzellik {
                 background-image: none !important;
                 padding: 0 20px;
@@ -22,13 +33,17 @@
         }
         
         &.views {
-            $marginl: 15px;
+            $marginl: 5px;
             .urunKiyaslamaOzellik_ozellikIcerik {
                 margin-left: -$marginl;
             }
             .urunKiyaslamaOzellik {
                 margin-left: $marginl;
             }
+        }
+
+        + #dvUrunKiyaslamaOzellik {
+            margin-top: 0;
         }
     }
 

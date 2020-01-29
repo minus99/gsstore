@@ -16,6 +16,9 @@
 
 .homepage-slider {
     background: $color0;
+    .ems-responsive-item {
+        @include aspect-ratio(375, 500);
+    }
 }
 
 .primary-categories {
@@ -47,6 +50,10 @@
         padding-left: #{$p};
         width: calc(100% / 1.25);
     }
+
+    .ems-responsive-item {
+        @include aspect-ratio(300, 375);
+    }
 }
 
 .collections {
@@ -60,6 +67,10 @@
     .swiper-slide {
         padding-top: #{$pt};
     }
+
+    .ems-responsive-item {
+        @include aspect-ratio(335, 335);
+    }
 }
 
 .campaigns {
@@ -72,6 +83,10 @@
     }
     .swiper-slide {
         padding-top: #{$pt};
+    }
+
+    .ems-responsive-item {
+        @include aspect-ratio(335, 335);
     }
 }
 

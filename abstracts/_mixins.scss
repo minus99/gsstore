@@ -61,11 +61,6 @@
     transform: scale(-1);
 }
 
-//height
-@mixin setHeight($imgW, $imgH, $container) {
-    height: calc(#{$container} / (#{$imgW} / #{$imgH}));
-}
-
 //aspect ratio
 @mixin aspect-ratio($w, $h) {
     &::before {

@@ -3,10 +3,8 @@
 }
 
 .homepage-slider {
-    .prm-media {
-        img {
-            @include setHeight(3840, 1678, 99.1vw);
-        }
+    .ems-responsive-item {
+        @include aspect-ratio(1440, 690);
     }
 }
 
@@ -28,6 +26,10 @@
         padding-top: #{$pt};
         padding-left: #{$pl};
         width: calc(100% / 4);
+    }
+
+    .ems-responsive-item {
+        @include aspect-ratio(295, 395);
     }
 }
 
@@ -65,6 +67,10 @@
         padding-left: #{$pl};
         width: calc(100% / 2.25);
     }
+
+    .ems-responsive-item {
+        @include aspect-ratio(300, 375);
+    }
 }
 
 .campaigns {
@@ -78,7 +84,12 @@
         margin-left: #{-$pl};
     }
     .swiper-slide {
+        width: 100%;
         padding-top: #{$pt};
         padding-left: #{$pl};
+    }
+
+    .ems-responsive-item {
+        @include aspect-ratio(610, 350);
     }
 }

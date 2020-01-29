@@ -373,9 +373,7 @@
 }
 .lp-slider {
     .prm-media {
-        video {
-            @include setHeight(750, 900, 100vw);
-        }
+        @include aspect-ratio(750, 900);
     }
 }
 .lp-content {
