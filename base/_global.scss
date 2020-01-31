@@ -146,7 +146,7 @@ iframe {
         }
         &-wrapper {
             &:empty {
-                display: none !important;
+                @extend .ems-none;
             }
         }
     }

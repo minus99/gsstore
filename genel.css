@@ -350,7 +350,7 @@ iframe {
   visibility: hidden;
 }
 
-.ems-none, .ayiracDefault,
+.ems-none, .ems-section-wrapper:empty, .ayiracDefault,
 .kutuBosluk,
 .icerikTemplateListeEtiket,
 .brFiyat,
@@ -361,7 +361,18 @@ iframe {
 .ems-logoff .ems-obj-login,
 .ems-step0 .ems-obj-step1,
 .ems-step1 .ems-obj-step0,
-.en-US .ems-obj-tr-TR {
+.en-US .ems-obj-tr-TR, .sStylerWrp_checkbox input,
+.sStylerWrp_radio input, [id$="divCaptcha"] br, .no-controls .swiper-pagination,
+.no-controls .swiper-button-prev,
+.no-controls .swiper-button-next, .banner-body:empty, .urunKiyaslamaOzellik_tumunuTemizle:empty, ul.menu-mini-lang .sub-close,
+ul.menu-mini-lang .sub-header,
+ul.menu-mini-lang .sub-footer, .ems-page-product-list.no-result .navigasyon,
+.ems-page-product-list.no-result .categories-append,
+.ems-page-product-list.no-result .top-buttons,
+.ems-page-product-list.no-result .ems-sort, .ems-prd-cat i, .urunListe_promosyonListe:empty, .urunDetay_urunAdet [id$="txtURN_ADET"],
+.urunDetay_urunAdet [id$="lblURN_ADET"], .order-module-buttons:empty, .pnlDipToplam_bankaKomisyon, form[action*="adr=0"] #plhAdresBilgiHeader,
+form[action*="adr=0"] #plhAciklama, .tableOdemeBilgiKrediKarti .div-cc-carttype,
+.tableOdemeBilgiKrediKarti [id$="CVC_NEDIR"] {
   display: none !important;
 }
 
@@ -380,7 +391,7 @@ iframe {
   background: rgba(0, 0, 0, 0.52);
 }
 
-.ems-container, .urunPaging, .ems-page-hierarchy-grid > .ga2, .ems-page-hierarchy-grid-col1 > .ga1 {
+.ems-container, .urunPaging, .ems-page-hierarchy-grid > .ga2, .ems-page-hierarchy-grid-col1 > .ga1, .ems-page-order .ems-new-address {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -431,10 +442,6 @@ iframe {
   font-family: aktiv-grotesk, arial, sans-serif;
   font-size: 14px;
   font-weight: 300;
-}
-
-.ems-section-wrapper:empty {
-  display: none !important;
 }
 
 .ems-message {
@@ -642,7 +649,7 @@ iframe {
   transform: rotate(0deg);
 }
 
-.ems-rotate-left, #lbfPagingPrev, .menu li.selected > a::before, .selected .menu .btn-menu-title::before, .menu .selected .btn-menu-title::before, .order-module-buttons .icon-triangle-b, a.btnSipariseDon .icon-triangle-b {
+.ems-rotate-left, #lbfPagingPrev, .menu li.selected > a::before, .selected .menu .btn-menu-title::before, .menu .selected .btn-menu-title::before, a.btnSipariseDon .icon-triangle-b, .order-module-buttons .icon-triangle-b {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
@@ -932,8 +939,8 @@ span[class^="pb"] {
 
 .btn,
 a.btnDefault,
-span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, .validateOtp,
-.btnResendOtp, .act-btns a, a.lnkSorgula, a.lnkSatinAl {
+span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, .act-btns a, a.lnkSorgula, a.lnkSatinAl, .validateOtp,
+.btnResendOtp {
   position: relative;
   display: inline-block;
   padding: 0 20px;
@@ -950,7 +957,7 @@ span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, .validateOtp,
   cursor: pointer;
 }
 
-.btn > span, a.btnDefault > span, span.lnkDefault > span, .urunKiyaslamaOzellik_tumunuTemizle > a > span, .validateOtp > span, .btnResendOtp > span, .act-btns a > span, a.lnkSorgula > span, a.lnkSatinAl > span {
+.btn > span, a.btnDefault > span, span.lnkDefault > span, .urunKiyaslamaOzellik_tumunuTemizle > a > span, .act-btns a > span, a.lnkSorgula > span, a.lnkSatinAl > span, .validateOtp > span, .btnResendOtp > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -959,8 +966,8 @@ span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, .validateOtp,
 
 .btn:hover,
 a.btnDefault:hover,
-span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, .validateOtp:hover,
-.btnResendOtp:hover, .act-btns a:hover, a.lnkSorgula:hover, a.lnkSatinAl:hover, .banner:hover .btn {
+span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, .act-btns a:hover, a.lnkSorgula:hover, a.lnkSatinAl:hover, .validateOtp:hover,
+.btnResendOtp:hover, .banner:hover .btn {
   background: #FFAB00;
 }
 
@@ -972,12 +979,12 @@ span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, .validateO
   background: #A90534;
 }
 
-.btn-secondary, .ems-new-address a.btnAdresIptal, a.lnkSatinAl {
+.btn-secondary, a.lnkSatinAl, .ems-new-address a.btnAdresIptal {
   background: #f3f3f3;
   color: #252525;
 }
 
-.btn-secondary:hover, .ems-new-address a.btnAdresIptal:hover, a.lnkSatinAl:hover, .banner:hover .btn-secondary {
+.btn-secondary:hover, a.lnkSatinAl:hover, .ems-new-address a.btnAdresIptal:hover, .banner:hover .btn-secondary {
   background: #EBEBEB;
   color: #252525;
 }
@@ -1009,15 +1016,15 @@ span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, .validateO
   line-height: 1;
 }
 
-.btn-size01, .ems-field-submit a.btnDefault, a.btnGuestCheckoutSave, a.btnIptalEt,
+.btn-size01, .ems-field-submit a.btnDefault, a.btnIptalEt,
 a.btnIadeEt, a.btnSifreGuncelle, a.btnUyeSifreGonder,
-a.btnSifreResetGuncelle {
+a.btnSifreResetGuncelle, a.btnGuestCheckoutSave {
   min-width: 170px;
 }
 
 .btn-medium, [class$="-sub"] a.btnDefault,
 [class$="-sub"] span.lnkDefault, a.btnLogin,
-a.btnYeniUyeKaydet, a.btnFacebookLogin, .bottom-step a, a.btnHediyeCekiKullan, a.btnOdemeCekiEkle {
+a.btnYeniUyeKaydet, a.btnFacebookLogin, a.btnOdemeCekiEkle, .bottom-step a, a.btnHediyeCekiKullan {
   line-height: 48px;
 }
 
@@ -1026,7 +1033,7 @@ a.btnYeniUyeKaydet, a.btnFacebookLogin, .bottom-step a, a.btnHediyeCekiKullan, a
   line-height: 58px;
 }
 
-.btn-full {
+.btn-full, .cart-prd-url, .divServisListe_Koordinat a[rel], .divTeslimatKargo .sStylerWrp_radio {
   position: absolute;
   left: 0;
   top: 0;
@@ -1034,14 +1041,16 @@ a.btnYeniUyeKaydet, a.btnFacebookLogin, .bottom-step a, a.btnHediyeCekiKullan, a
   height: 100%;
   background: none;
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
-.btn-full > * {
+.btn-full > *, .cart-prd-url > *, .divServisListe_Koordinat a[rel] > *, .divTeslimatKargo .sStylerWrp_radio > * {
   display: none;
 }
 
-.btn-reset, .ems-grid-address-buttons > a, .ems-grid-address-select a, #lnkSifremiUnuttum span.lnkSifremiUnuttum, .mini-search a[id$="btnArama"], .order-module-buttons a.btnDefault, a.btnHediyeCekiIptal, .siparisOnaySozlesmeMetin > span a.btnDefault,
-.onBilgilendirmeFormMetin > span a.btnDefault, a.btnSipariseDon, a.btnFavoriListeSil {
+.btn-reset, .ems-grid-address-buttons > a, .ems-grid-address-select a, #lnkSifremiUnuttum span.lnkSifremiUnuttum, .mini-search a[id$="btnArama"], a.btnSipariseDon, a.btnFavoriListeSil, .order-module-buttons a.btnDefault, a.btnHediyeCekiIptal, .siparisOnaySozlesmeMetin > span a.btnDefault,
+.onBilgilendirmeFormMetin > span a.btnDefault {
   padding: unset;
   background: unset;
   border: unset;
@@ -1053,8 +1062,8 @@ a.btnYeniUyeKaydet, a.btnFacebookLogin, .bottom-step a, a.btnHediyeCekiKullan, a
   letter-spacing: unset;
 }
 
-.btn-reset:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, #lnkSifremiUnuttum span.lnkSifremiUnuttum:hover, .mini-search a:hover[id$="btnArama"], .order-module-buttons a.btnDefault:hover, a.btnHediyeCekiIptal:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
-.onBilgilendirmeFormMetin > span a.btnDefault:hover, a.btnSipariseDon:hover, a.btnFavoriListeSil:hover {
+.btn-reset:hover, .ems-grid-address-buttons > a:hover, .ems-grid-address-select a:hover, #lnkSifremiUnuttum span.lnkSifremiUnuttum:hover, .mini-search a:hover[id$="btnArama"], a.btnSipariseDon:hover, a.btnFavoriListeSil:hover, .order-module-buttons a.btnDefault:hover, a.btnHediyeCekiIptal:hover, .siparisOnaySozlesmeMetin > span a.btnDefault:hover,
+.onBilgilendirmeFormMetin > span a.btnDefault:hover {
   background: unset;
 }
 
@@ -1071,6 +1080,7 @@ a.btnYeniUyeKaydet, a.btnFacebookLogin, .bottom-step a, a.btnHediyeCekiKullan, a
 
 .btn-group > * > a, .kutuFooterOzellikFiltre > * > a {
   width: 100%;
+  min-width: auto !important;
 }
 
 .btn-page-top {
@@ -1195,11 +1205,6 @@ input[id$="UYE_CEPTELEFON"] {
   display: block;
 }
 
-.sStylerWrp_checkbox input,
-.sStylerWrp_radio input {
-  display: none !important;
-}
-
 .sStylerWrp_select {
   display: block;
   vertical-align: middle;
@@ -1310,6 +1315,7 @@ input[id$="UYE_CEPTELEFON"] {
 
 .ems-form {
   position: relative;
+  max-width: 400px;
 }
 
 .ems-field, .xmlForm #dvSehirBilgi {
@@ -1328,17 +1334,13 @@ input[id$="UYE_CEPTELEFON"] {
   margin-top: 10px;
 }
 
-.ems-field-mini {
-  max-width: 50%;
-}
-
 .ems-field-comment {
   padding-top: 20px;
   border-top: 1px solid #EFEFEF;
 }
 
-.ems-form-label, [id$="divCaptcha"] [id$="lbfUYE_KONTROLKODU"], .prmSehir, .tableOdemeBilgiKrediKarti th, .tableTitleOdemeTaksit td, .kutuUyelikOneri_sifre > span, .tableSifremiUnuttum th,
-.tableUyeSifreReset th {
+.ems-form-label, [id$="divCaptcha"] [id$="lbfUYE_KONTROLKODU"], .prmSehir, .tableSifremiUnuttum th,
+.tableUyeSifreReset th, .tableOdemeBilgiKrediKarti th, .tableTitleOdemeTaksit td, .kutuUyelikOneri_sifre > span {
   position: relative;
   font-family: aktiv-grotesk, arial, sans-serif;
   font-size: 13px;
@@ -1346,8 +1348,8 @@ input[id$="UYE_CEPTELEFON"] {
   margin-bottom: 8px;
 }
 
-.ems-form-label:empty, [id$="divCaptcha"] :empty[id$="lbfUYE_KONTROLKODU"], .prmSehir:empty, .tableOdemeBilgiKrediKarti th:empty, .tableTitleOdemeTaksit td:empty, .kutuUyelikOneri_sifre > span:empty, .tableSifremiUnuttum th:empty,
-.tableUyeSifreReset th:empty {
+.ems-form-label:empty, [id$="divCaptcha"] :empty[id$="lbfUYE_KONTROLKODU"], .prmSehir:empty, .tableSifremiUnuttum th:empty,
+.tableUyeSifreReset th:empty, .tableOdemeBilgiKrediKarti th:empty, .tableTitleOdemeTaksit td:empty, .kutuUyelikOneri_sifre > span:empty {
   display: none;
 }
 
@@ -1394,11 +1396,7 @@ input[id$="UYE_CEPTELEFON"] {
 
 [id$="divCaptcha"] {
   position: relative;
-  max-width: 330px;
-}
-
-[id$="divCaptcha"] br {
-  display: none !important;
+  max-width: 400px;
 }
 
 [id$="divCaptcha"] [id$="lbfUYE_KONTROLKODU"] {
@@ -2201,12 +2199,6 @@ button.swiper-pagination-bullet {
   display: block;
 }
 
-.no-controls .swiper-pagination,
-.no-controls .swiper-button-prev,
-.no-controls .swiper-button-next {
-  display: none !important;
-}
-
 .swiper-layout-v > .swiper-inner > .swiper-wrapper {
   flex-direction: column;
 }
@@ -2421,10 +2413,6 @@ button.swiper-pagination-bullet {
   position: absolute;
   top: auto;
   bottom: 0;
-}
-
-.banner-body:empty {
-  display: none !important;
 }
 
 .banner:hover .prm-marker {
@@ -3727,10 +3715,6 @@ tr + tr #dvUrunKiyaslamaOzellik {
   display: block !important;
 }
 
-.urunKiyaslamaOzellik_tumunuTemizle:empty {
-  display: none !important;
-}
-
 .pnlUrunKiyasSecim {
   display: none;
   padding-top: 15px;
@@ -4294,7 +4278,8 @@ tr + tr #dvUrunKiyaslamaOzellik {
 
 .mobi-dropdown-header {
   position: relative;
-  border-top: 1px solid #EBEBEB;
+  background: #000;
+  border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   padding: 15px 30px 15px 10px;
   margin-left: 10px;
@@ -4482,6 +4467,18 @@ tr + tr #dvUrunKiyaslamaOzellik {
 
 .mb5 {
   margin-bottom: 50px;
+}
+
+.lh-1_5 {
+  line-height: 1.5;
+}
+
+.lh-1_8 {
+  line-height: 1.8;
+}
+
+.lh-2 {
+  line-height: 2;
 }
 
 .section-bg01 {
@@ -4965,12 +4962,6 @@ ul.menu-mini-lang .mini-lang-sub {
   padding: 35px;
 }
 
-ul.menu-mini-lang .sub-close,
-ul.menu-mini-lang .sub-header,
-ul.menu-mini-lang .sub-footer {
-  display: none !important;
-}
-
 .mini-lang-info {
   position: relative;
 }
@@ -5066,8 +5057,9 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 .mini-cart-info #lblUrunAdet {
   order: 2;
   margin-left: 5px;
-  min-width: 17px;
-  text-align: center;
+  min-width: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .mini-cart-info #lblUrunAdet::before {
@@ -5180,20 +5172,6 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 
 .cart-prd-remove a {
   display: block;
-}
-
-.cart-prd-url {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: none;
-  border: none;
-}
-
-.cart-prd-url > * {
-  display: none;
 }
 
 .cart-prd-page-url > a {
@@ -5758,13 +5736,6 @@ a.btnYeniUyeKaydet {
   padding-bottom: 45px;
 }
 
-.ems-page-product-list.no-result .navigasyon,
-.ems-page-product-list.no-result .categories-append,
-.ems-page-product-list.no-result .top-buttons,
-.ems-page-product-list.no-result .ems-sort {
-  display: none !important;
-}
-
 .ems-page-product-list.no-result .ems-message-product-list {
   margin-top: 30px;
 }
@@ -5843,7 +5814,7 @@ ul.product-list-grid:empty {
   padding: 25px 15px 10px;
 }
 
-.ems-prd-image.ems-responsive-item::before {
+.ems-prd-image .ems-responsive-item::before {
   padding-top: 133.33333%;
 }
 
@@ -5856,10 +5827,6 @@ ul.product-list-grid:empty {
 
 .ems-prd-cat > span {
   display: block !important;
-}
-
-.ems-prd-cat i {
-  display: none !important;
 }
 
 .ems-prd-cat a:not(:last-child) {
@@ -5930,10 +5897,6 @@ ul.product-list-grid:empty {
   position: absolute !important;
   display: block !important;
   color: #A90534;
-}
-
-.urunListe_promosyonListe:empty {
-  display: none !important;
 }
 
 .swiper-product-horizontal .ems-prd {
@@ -6247,11 +6210,6 @@ ul.product-list-grid:empty {
   border: none;
 }
 
-.urunDetay_urunAdet [id$="txtURN_ADET"],
-.urunDetay_urunAdet [id$="lblURN_ADET"] {
-  display: none !important;
-}
-
 .urunDetay_btnSepeteAt {
   flex: 1;
 }
@@ -6520,16 +6478,11 @@ a.btnStokHaberci {
 
 .ems-page-dealer .or {
   font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 13px;
-  color: #EBEBEB;
-}
-
-.dealer-form .ems-field-css {
-  width: calc(50% - 5px);
 }
 
 .dealer-stock-information {
   margin-top: 50px;
+  background: #EFEFEF;
 }
 
 .servisIcerik:empty {
@@ -6539,7 +6492,7 @@ a.btnStokHaberci {
 .servis_bilgi {
   font-family: aktiv-grotesk, arial, sans-serif;
   font-size: 15px;
-  margin-top: 25px;
+  margin-top: 30px;
   margin-bottom: 15px;
 }
 
@@ -6549,18 +6502,26 @@ a.btnStokHaberci {
 
 .pServisListe {
   position: relative;
-  border-top: 1px solid #EBEBEB;
-  padding: 15px 10px;
+  padding: 20px;
+  background: #f3f3f3;
   font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 300;
 }
 
 .pServisListe > * {
   display: none;
 }
 
+.pServisListe + .pServisListe {
+  margin-top: 20px;
+}
+
 .divServisListe_FirmaAdi {
   display: block;
+  font-family: gilroy, arial, sans-serif;
+  font-size: 16px;
+  color: #A90534;
   font-weight: 600;
 }
 
@@ -6572,24 +6533,19 @@ a.btnStokHaberci {
 .divServisListe_Telefon {
   display: block;
   margin-top: 15px;
-  color: #EBEBEB;
+}
+
+.divServisListe_Koordinat {
+  display: block;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.divServisListe_Koordinat > a {
+  text-decoration: underline;
 }
 
 .divServisListe_Koordinat a[rel] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: none;
-  border: none;
-}
-
-.divServisListe_Koordinat a[rel] > * {
-  display: none;
-}
-
-.show-map-btn {
   display: none;
 }
 
@@ -6640,7 +6596,7 @@ a.btnStokHaberci {
   color: #FFF;
   position: -webkit-sticky;
   position: sticky;
-  top: 50px;
+  top: 60px;
   z-index: 1;
 }
 
@@ -6678,6 +6634,10 @@ a.btnStokHaberci {
 
 .ems-page-hierarchy .page-top-title + .html-content {
   margin-top: 30px;
+}
+
+.ems-page-hierarchy .html-content {
+  line-height: 1.5;
 }
 
 .page-dark-theme {
@@ -6765,882 +6725,6 @@ a.btnStokHaberci {
   max-width: 160px;
   -webkit-animation: message .5s ease;
   animation: message .5s ease;
-}
-
-.ems-page-order {
-  background: #f3f3f3;
-  min-height: calc(100vh - 60px);
-}
-
-.ems-page-order-grid {
-  padding-top: 20px;
-}
-
-.order-module-buttons {
-  padding: 15px 20px;
-  font-weight: 400;
-}
-
-.order-module-buttons .icon-triangle-b {
-  --color1: #000;
-}
-
-.ems-step0 .order-module-buttons {
-  background: #FFF;
-  padding-top: 0;
-  padding-bottom: 25px;
-}
-
-.bottom-step {
-  background: #FFF;
-  padding: 5px;
-}
-
-.bottom-step a {
-  width: 100%;
-}
-
-.bottom-step a ~ a {
-  margin-top: 5px;
-}
-
-.ems-step0 .bottom-step {
-  padding: 0;
-  background: none;
-  margin-top: 20px;
-}
-
-.ems-step0 .ems-grid-table-cart > .ems-grid-row,
-.guestCheckout .ems-grid-table-cart > .ems-grid-row {
-  grid-template-columns: 65px 1fr;
-}
-
-.ems-order-cart-grid .block1 {
-  position: relative;
-  background: #FFF;
-  padding: 20px;
-  margin-top: 30px;
-}
-
-.ems-order-cart-grid .block2 {
-  margin-top: 30px;
-  padding: 20px 20px 5px;
-  background: #FFF;
-}
-
-.ems-order-cart-grid .block2 > .page-top-title {
-  margin-bottom: 15px;
-}
-
-.cart-promotion-info .swiper-inner {
-  margin-left: -20px;
-}
-
-.cart-promotion-info .swiper-slide {
-  padding-left: 20px;
-  width: calc(100% / 1.25);
-  height: auto;
-}
-
-.cart-promotion-info .banner {
-  height: 100%;
-}
-
-.odemeCeki .baslik {
-  color: #A90534;
-}
-
-.pnlDipToplamTable {
-  font-weight: 400;
-}
-
-.pnlDipToplamTable tr th, .pnlDipToplamTable tr td {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.pnlDipToplamTable tr th {
-  font-weight: 500;
-  text-align: left;
-}
-
-.pnlDipToplamTable tr td {
-  width: 80px;
-  font-weight: 600;
-}
-
-.pnlDipToplamTable tr td > span {
-  justify-content: flex-end;
-}
-
-.pnlDipToplamTable tr td > span .d {
-  display: inline;
-}
-
-.pnlDipToplamTable .pnlDipToplam_indirimToplam th, .pnlDipToplamTable .pnlDipToplam_indirimToplam td {
-  color: #A90534;
-}
-
-.pnlDipToplamTable .pnlDipToplam_sipToplam th, .pnlDipToplamTable .pnlDipToplam_sipToplam td {
-  font-weight: 700;
-  padding-top: 15px;
-}
-
-.pnlDipToplam_bankaKomisyon {
-  display: none !important;
-}
-
-.ems-cart-coupon {
-  position: relative;
-}
-
-[id$="lblHCK_HATA"]:not(:empty) {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.ems-cart-coupon-info {
-  position: relative;
-}
-
-[id$="lblKuponKodBilgi"]:not(:empty) {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.customer-support {
-  display: none;
-}
-
-.customer-support-b1 {
-  padding: 20px 0;
-}
-
-.customer-support-b1 li {
-  width: 50%;
-  padding: 10px;
-  text-align: center;
-}
-
-.customer-support-b1 li svg {
-  display: block;
-  margin: 0 auto 5px;
-  font-size: 32px;
-}
-
-.customer-support-b1 li b {
-  font-weight: 400;
-}
-
-.customer-support .ems-section-title {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.customer-support .swiper-inner {
-  margin-top: 10px;
-  padding: 20px;
-  border: 1px solid #666;
-  color: #666;
-}
-
-.customer-support .swiper-slide + .swiper-slide {
-  margin-top: 5px;
-}
-
-.customer-support-append .customer-support {
-  display: block;
-}
-
-.ems-extra-product {
-  display: none;
-  margin-top: 20px;
-  padding: 20px;
-}
-
-.ems-extra-product-append .ems-extra-product {
-  display: block;
-}
-
-.basket-empty .ems-step0 .ems-order-cart-grid {
-  display: none;
-}
-
-.ems-order-delivery .ems-order-cart-grid > .ga1 {
-  display: none;
-}
-
-.ems-grid-table-address {
-  background: #FFF;
-  padding: 0 20px;
-}
-
-.ems-grid-table-address .ems-grid-row {
-  grid-template-columns: 1fr;
-  row-gap: 10px;
-}
-
-.delivery-gift-select {
-  padding: 20px 20px;
-  font-weight: 400;
-  border-radius: 4px;
-}
-
-.ems-delivery-tab {
-  position: relative;
-  padding: 0 20px;
-  overflow: hidden;
-}
-
-.ems-gift-tab {
-  margin-top: 10px;
-}
-
-.ems-gift-tab .ems-delivery-tab-hdr {
-  position: relative;
-  background: #ffe0e6;
-}
-
-.ems-gift-tab .ems-delivery-tab-hdr::before {
-  content: "";
-  position: absolute;
-  right: 20px;
-  top: 12px;
-  width: 80px;
-  height: 49px;
-  background: url(/images/frontend/gift-pack.svg) center top no-repeat;
-  transition: top 0.2s cubic-bezier(0.18, -0.54, 1, 0.74);
-}
-
-.ems-gift-tab .ems-delivery-tab-wrp {
-  background: #ffe0e6;
-  padding: 40px 20px 20px;
-  display: none;
-}
-
-.ems-gift-tab-opened .ems-delivery-tab-hdr::before {
-  top: -12px;
-  height: 127px;
-  background-position: center bottom;
-}
-
-.ems-gift-tab-opened .ems-delivery-tab-wrp {
-  display: block;
-}
-
-.ems-cargo-tab {
-  margin-top: 30px;
-  background: #FFF;
-  padding: 20px 20px;
-}
-
-.divTeslimatKargo li {
-  position: relative;
-  padding: 20px 20px 20px 129px;
-  border: 1px solid #A90534;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.divTeslimatKargo li + li {
-  margin-top: 15px;
-}
-
-.divTeslimatKargo img {
-  order: 1;
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  max-width: 89px;
-}
-
-.divTeslimatKargo .kargoAdi {
-  order: 2;
-}
-
-.divTeslimatKargo .fiyat {
-  order: 3;
-}
-
-.divTeslimatKargo .fiyat::before {
-  content: "-";
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.divTeslimatKargo .kargoBilgi {
-  order: 4;
-  margin-top: 5px;
-  flex-basis: 100%;
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 11px;
-  line-height: 1.5;
-}
-
-.divTeslimatKargo .kargoAdi,
-.divTeslimatKargo .fiyat {
-  font-weight: 700;
-}
-
-.divTeslimatKargo .sStylerWrp_radio {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: none;
-  border: none;
-  margin: 0;
-}
-
-.divTeslimatKargo .sStylerWrp_radio > * {
-  display: none;
-}
-
-.divTeslimatKargo .radioButton {
-  display: block !important;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.ems-new-address {
-  padding-bottom: 30px;
-}
-
-.ems-new-address .page-top-title {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 15px;
-  border-bottom: none !important;
-  padding: 0 !important;
-}
-
-.ems-new-address .ems-message {
-  margin-top: 30px;
-}
-
-.ems-new-address .ems-form {
-  margin-top: 30px;
-}
-
-.ems-new-address #plhAdresTipi {
-  justify-content: flex-start;
-}
-
-.ems-new-address #plhTcDegilLabel {
-  margin-bottom: -1px;
-}
-
-.bireysel .vergNoCheck,
-.bireysel .vergCheck {
-  display: none;
-}
-
-.kurumsal .tcCheck,
-.kurumsal .tcCheck-2 {
-  display: none;
-}
-
-.ems-order-payment .block1::after {
-  content: "";
-  background: linear-gradient(0deg, white, transparent);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  z-index: 1;
-}
-
-.ems-order-payment .ems-grid-table-cart {
-  max-height: 300px;
-}
-
-.ems-order-payment .ems-grid-table-cart > .ems-grid-row {
-  grid-template-columns: 75px 1fr;
-  border-color: transparent;
-  padding: 10px 10px 10px 0;
-  grid-row-gap: 0;
-}
-
-.ems-order-payment .ems-grid-table-cart .ems-grid-name [id$="lblProm"] {
-  display: none;
-}
-
-.ems-order-payment .ems-grid-table-cart .qty-wrapper {
-  width: auto;
-  text-align: center;
-}
-
-.ems-order-payment .ems-grid-table-cart .ems-grid-price .price-wrapper {
-  justify-content: flex-end;
-}
-
-.ems-order-payment .ems-grid-table-cart .ems-grid-price .dvSepetKazancOran:not(:empty) {
-  text-align: right;
-}
-
-.ems-pay-type-list > ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.ems-pay-type-list a {
-  display: block;
-  background: #C9C9C9;
-  padding: 12px 14px;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.ems-pay-type-list a.emos_selected {
-  background: #FFF;
-}
-
-.ems-pay-type-content {
-  position: relative;
-  background: #FFF;
-  padding: 20px 20px;
-}
-
-[id$="pnlPesinDiger"] {
-  display: none;
-}
-
-.masterpassContent {
-  display: block !important;
-  margin-top: 15px;
-}
-
-.imgMasterpassLogo {
-  width: auto !important;
-}
-
-.masterPassForms {
-  position: relative;
-  margin-top: 20px;
-}
-
-.masterPassForms > div + div {
-  margin-top: 10px;
-}
-
-.masterpassAciklama {
-  font-size: 13px;
-}
-
-.dvAddCreditCard {
-  display: flex;
-}
-
-.dvMpCardAliasName {
-  flex: 1;
-  padding-right: 5px;
-}
-
-.masterpass_cardAddedSuccess {
-  margin-bottom: 30px;
-}
-
-.masterpass_linkCard {
-  margin-bottom: 30px;
-}
-
-.masterpass_cardList {
-  margin-bottom: 30px;
-}
-
-.masterpassLogo_cardList {
-  display: none;
-}
-
-.mpCreditCardSet {
-  font-size: 14px;
-  color: #FFF;
-  background: #EBEBEB;
-  border-radius: 5px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 15px 1fr -webkit-max-content;
-  grid-template-columns: 15px 1fr max-content;
-  grid-gap: 0 10px;
-  align-items: center;
-}
-
-.mpCreditCardSet + .mpCreditCardSet {
-  margin-top: 15px;
-}
-
-.lnkDeleteMasterPassCard {
-  text-decoration: underline;
-}
-
-.mpNewCreditCard {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.mpNewCreditCard input[type="radio"] {
-  margin-right: 7px;
-}
-
-.dvOtpForm > * {
-  margin-top: 10px;
-}
-
-.mpInfoText {
-  padding: 0 !important;
-}
-
-.resendCodePlace > * {
-  margin-top: 10px;
-}
-
-.validateOtp,
-.btnResendOtp {
-  cursor: pointer;
-}
-
-.pageOdemeBilgi_chkKrediKartiBonusPara {
-  margin-top: 20px;
-}
-
-[id$="ODM_ACIKLAMA"]:not(:empty) {
-  display: block;
-  margin-top: 20px;
-}
-
-.ems-card-wrapper {
-  display: none;
-  position: absolute;
-  right: 70px;
-  top: 0;
-  z-index: -1;
-}
-
-.tableTitleOdemeBilgiKrediKarti,
-.tableTitleOdemeBilgiHavale {
-  display: none;
-}
-
-.tableOdemeBilgiKrediKarti input {
-  width: 100% !important;
-  text-transform: uppercase;
-}
-
-.tableOdemeBilgiKrediKarti tbody {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.tableOdemeBilgiKrediKarti tr {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  flex-basis: 100%;
-}
-
-.tableOdemeBilgiKrediKarti tr + tr {
-  margin-top: 20px;
-}
-
-.tableOdemeBilgiKrediKarti tr:nth-child(2) {
-  flex-basis: 70%;
-}
-
-.tableOdemeBilgiKrediKarti tr:nth-child(3) {
-  flex-basis: 28%;
-}
-
-.tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID > span {
-  display: inline-block;
-  text-align: center;
-}
-
-.tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID > span:nth-child(1) {
-  width: 85px;
-  margin-right: 5px;
-}
-
-.tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID > span:nth-child(2) {
-  width: calc(100% - 90px);
-}
-
-.tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tdtxtKKARTCVCNO {
-  font-size: 0;
-}
-
-.tableOdemeBilgiKrediKarti .div-cc-carttype,
-.tableOdemeBilgiKrediKarti [id$="CVC_NEDIR"] {
-  display: none !important;
-}
-
-.tableOdemeBilgiHavale .tableOdemeBilgiHavale_thlbfBNK_AD_HV {
-  display: none;
-}
-
-.tableOdemeBilgiHavale table {
-  margin-top: -10px;
-}
-
-.tableOdemeBilgiHavale table td {
-  padding: 10px 0;
-}
-
-.tableOdemeBilgiHavale .link {
-  text-align: right;
-  color: #fff;
-}
-
-.tableOdemeBilgiHavale .link > a {
-  min-width: 150px;
-}
-
-.pageDecOdemeBilgi {
-  margin-top: 10px;
-}
-
-.pageOdemeBilgi_chkBankaBonus {
-  margin-top: 20px;
-  font-size: 14px;
-}
-
-.lnkOdemeTaksit {
-  display: block;
-}
-
-.pageOdemeBilgi_odemeTaksit {
-  margin-top: 20px;
-}
-
-.pageOdemeBilgi_odemeTaksit #imgBANKALOGO {
-  display: none;
-}
-
-.tableOdemeTaksit {
-  table-layout: fixed;
-}
-
-.tableOdemeTaksit td {
-  border: 1px solid #17181A;
-  padding: 10px 5px;
-  text-align: center;
-}
-
-.tableOdemeTaksit td:nth-child(1) {
-  width: 40px;
-}
-
-.ems-pay-address {
-  background: #FFF;
-  padding: 20px 20px 0;
-  margin-top: 30px;
-}
-
-.ems-pay-address .page-top-title {
-  margin-bottom: 0;
-}
-
-.ems-pay-address .ems-wrapper > div {
-  padding: 20px 0;
-}
-
-.ems-pay-address .ems-wrapper > div + div {
-  border-top: 1px solid #A90534;
-}
-
-.ems-pay-address-label {
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.ems-pay-address-obj {
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.tableTitleSiparisOnaySatisSozlesme,
-.tableTitleSiparisOnBilgilendirmeForm {
-  padding: 10px 0;
-  font-weight: 700;
-  line-height: 32px;
-  cursor: pointer;
-  display: none;
-}
-
-.pageSiparisOnay_lbfSatisSozlesme,
-.pageSiparisOnay_lbfOnBilgilendirmeForm {
-  background: #FFF;
-  padding: 0 20px;
-}
-
-.pageSiparisOnay_chkSatisSozlesme,
-.pageSiparisOnay_chkOnBilgilendirmeForm {
-  padding: 20px 0;
-}
-
-.pageSiparisOnay_chkSatisSozlesme a,
-.pageSiparisOnay_chkOnBilgilendirmeForm a {
-  text-decoration: underline;
-}
-
-.pageSiparisOnay_chkSatisSozlesme {
-  border-top: 1px solid #A90534;
-}
-
-.pageSiparisOnay_btnSatisSozlesmeOnizle,
-.pageSiparisOnay_btnOnBilgilendirmeFormOnizle {
-  display: none;
-}
-
-.siparisOnaySozlesmeMetin,
-.onBilgilendirmeFormMetin {
-  display: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 10;
-  width: 100%;
-  height: calc(100vh - 100px);
-  max-width: 910px;
-  background: #FFF;
-}
-
-.siparisOnaySozlesmeMetin > span,
-.onBilgilendirmeFormMetin > span {
-  height: inherit !important;
-  padding: 0 20px;
-  overflow-x: hidden !important;
-}
-
-.siparisOnaySozlesmeMetin .a1,
-.onBilgilendirmeFormMetin .a1 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  margin: 0 -20px;
-}
-
-.ems-form1-animate .agreement-overlay,
-.ems-form1-animate .onBilgilendirmeFormMetin {
-  display: block;
-}
-
-.ems-form2-animate .agreement-overlay,
-.ems-form2-animate .siparisOnaySozlesmeMetin {
-  display: block;
-}
-
-.ems-order-result {
-  padding: 30px 20px;
-  background: #000 url(/images/frontend/order-result-mobile.jpg) center top/cover no-repeat;
-  color: #FFF;
-}
-
-.ems-order-result br {
-  display: none;
-}
-
-.result-content .rlogo {
-  width: 50px;
-}
-
-.result-content .ricon {
-  margin-top: 80px;
-  font-size: 70px;
-  color: #000;
-  background: #FFF;
-}
-
-.result-content .icon-error {
-  color: #FFF;
-  background: #EFEFEF;
-}
-
-.result-content .rtitle {
-  font-size: 22px;
-  font-weight: 700;
-  margin-top: 20px;
-}
-
-.result-content .rdesc {
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 16px;
-  color: #EBEBEB;
-  margin-top: 10px;
-}
-
-.result-content .rbtns {
-  margin-top: 50px;
-  width: calc(100% - 40px);
-  max-width: 330px;
-}
-
-.result-content .rbtns > a {
-  display: block;
-  margin-top: 10px;
-  font-size: 18px;
-}
-
-[id$="lblSIP_BELIRLIERROR"]:not(:empty) {
-  display: block;
-  margin-top: 40px;
-  text-align: center;
-}
-
-.kutuDefault.kutuUyelikOneri {
-  display: none;
-  margin-top: 30px;
-  text-align: left;
-  background: #252525;
-  color: #000;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.kutuUyelikOneri-append .kutuDefault.kutuUyelikOneri {
-  display: block;
-}
-
-.kutuHeaderUyelikOneri {
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 15px;
-}
-
-.kutuBodyUyelikOneri {
-  margin-top: 10px;
-}
-
-.kutuUyelikOneri_sifre > span {
-  display: block;
-}
-
-.kutuUyelikOneri_onay {
-  margin-top: 10px;
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 13px;
-}
-
-.kutuUyelikOneri_btnSend {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.guestCheckout .divTeslimatKargo {
-  margin-top: 0;
-}
-
-.guest-checkout-form {
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 .ems-page-member {
@@ -8011,8 +7095,8 @@ a.btnSepeteAtFavori {
   display: block !important;
 }
 
-#mesajGonder .ems-form {
-  max-width: 330px;
+#mesajGonder {
+  position: relative;
 }
 
 .kutuMesaj {
@@ -8033,21 +7117,21 @@ a.btnSepeteAtFavori {
   grid-gap: 10px;
 }
 
-.ems-member-message-detail .ems-form {
+.ems-member-message-detail > .ems-form {
   max-width: none;
-  margin: 0 20px;
 }
 
-.ems-member-message-detail .ems-form-obj p {
-  margin: 0;
+.ems-member-message-detail > .ems-form .ems-form-label, .ems-member-message-detail > .ems-form [id$="divCaptcha"] [id$="lbfUYE_KONTROLKODU"], [id$="divCaptcha"] .ems-member-message-detail > .ems-form [id$="lbfUYE_KONTROLKODU"], .ems-member-message-detail > .ems-form .prmSehir, .ems-member-message-detail > .ems-form .tableSifremiUnuttum th, .tableSifremiUnuttum .ems-member-message-detail > .ems-form th,
+.ems-member-message-detail > .ems-form .tableUyeSifreReset th, .tableUyeSifreReset .ems-member-message-detail > .ems-form th, .ems-member-message-detail > .ems-form .tableOdemeBilgiKrediKarti th, .tableOdemeBilgiKrediKarti .ems-member-message-detail > .ems-form th, .ems-member-message-detail > .ems-form .tableTitleOdemeTaksit td, .tableTitleOdemeTaksit .ems-member-message-detail > .ems-form td, .ems-member-message-detail > .ems-form .kutuUyelikOneri_sifre > span {
+  font-weight: 700;
 }
 
-#plhMesajTitle {
+.ems-member-message-detail #mesajGonder {
+  margin-top: 50px;
+}
+
+.ems-member-message-detail #plhMesajTitle {
   display: none;
-}
-
-#plhBtnMesajCozuldu {
-  margin-top: 10px;
 }
 
 [id$="lblSistemMesaj"] {
@@ -8155,6 +7239,860 @@ ul.giftCardList li.selected > a {
   text-align: right;
 }
 
+.ems-page-order {
+  background: #f3f3f3;
+  min-height: calc(100vh - 60px);
+}
+
+.ems-page-order-grid {
+  padding-top: 20px;
+}
+
+.order-module-buttons {
+  padding: 15px 20px;
+  font-weight: 400;
+}
+
+.order-module-buttons .icon-triangle-b {
+  --color1: #000;
+}
+
+.ems-step0 .order-module-buttons {
+  background: #FFF;
+  padding-top: 0;
+  padding-bottom: 25px;
+}
+
+.bottom-step {
+  background: #FFF;
+  padding: 5px;
+}
+
+.bottom-step a {
+  width: 100%;
+}
+
+.bottom-step a ~ a {
+  margin-top: 5px;
+}
+
+.ems-step0 .bottom-step {
+  padding: 0;
+  background: none;
+  margin-top: 20px;
+}
+
+.ems-step0 .ems-grid-table-cart > .ems-grid-row,
+.guestCheckout .ems-grid-table-cart > .ems-grid-row {
+  grid-template-columns: 65px 1fr;
+}
+
+.ems-order-cart-grid .block1 {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.ems-order-cart-grid .block2 {
+  margin-top: 30px;
+  padding: 20px 20px 5px;
+  background: #FFF;
+}
+
+.ems-order-cart-grid .block2 > .page-top-title {
+  margin-bottom: 15px;
+}
+
+.cart-promotion-info .swiper-inner {
+  margin-left: -20px;
+}
+
+.cart-promotion-info .swiper-slide {
+  padding-left: 20px;
+  width: calc(100% / 1.25);
+  height: auto;
+}
+
+.cart-promotion-info .banner {
+  height: 100%;
+}
+
+.odemeCeki .baslik {
+  color: #A90534;
+}
+
+.pnlDipToplamTable {
+  font-weight: 400;
+}
+
+.pnlDipToplamTable tr th, .pnlDipToplamTable tr td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.pnlDipToplamTable tr th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.pnlDipToplamTable tr td {
+  width: 80px;
+  font-weight: 600;
+}
+
+.pnlDipToplamTable tr td > span {
+  justify-content: flex-end;
+}
+
+.pnlDipToplamTable tr td > span .d {
+  display: inline;
+}
+
+.pnlDipToplamTable .pnlDipToplam_indirimToplam th, .pnlDipToplamTable .pnlDipToplam_indirimToplam td {
+  color: #A90534;
+}
+
+.pnlDipToplamTable .pnlDipToplam_sipToplam th, .pnlDipToplamTable .pnlDipToplam_sipToplam td {
+  font-weight: 700;
+  padding-top: 15px;
+}
+
+.ems-cart-coupon {
+  position: relative;
+}
+
+[id$="lblHCK_HATA"]:not(:empty) {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.ems-cart-coupon-info {
+  position: relative;
+}
+
+[id$="lblKuponKodBilgi"]:not(:empty) {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.customer-support {
+  display: none;
+}
+
+.customer-support-b1 {
+  padding: 20px 0;
+}
+
+.customer-support-b1 li {
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.customer-support-b1 li svg {
+  display: block;
+  margin: 0 auto 5px;
+  font-size: 32px;
+}
+
+.customer-support-b1 li b {
+  font-weight: 400;
+}
+
+.customer-support .ems-section-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.customer-support .swiper-inner {
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid #666;
+  color: #666;
+}
+
+.customer-support .swiper-slide + .swiper-slide {
+  margin-top: 5px;
+}
+
+.customer-support-append .customer-support {
+  display: block;
+}
+
+.ems-extra-product {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.ems-extra-product-append .ems-extra-product {
+  display: block;
+}
+
+.basket-empty .ems-step0 .ems-order-cart-grid {
+  display: none;
+}
+
+.ems-order-delivery .ems-order-cart-grid > .ga1 {
+  display: none;
+}
+
+.ems-grid-table-address {
+  background: #FFF;
+  padding: 0 20px;
+}
+
+.ems-grid-table-address .ems-grid-row {
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+
+.delivery-gift-select {
+  padding: 20px 20px;
+  font-weight: 400;
+  border-radius: 4px;
+}
+
+.ems-delivery-tab {
+  position: relative;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.ems-gift-tab {
+  margin-top: 10px;
+}
+
+.ems-gift-tab .ems-delivery-tab-hdr {
+  position: relative;
+  background: #ffe0e6;
+}
+
+.ems-gift-tab .ems-delivery-tab-hdr::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  width: 80px;
+  height: 49px;
+  background: url(/images/frontend/gift-pack.svg) center top no-repeat;
+  transition: top 0.2s cubic-bezier(0.18, -0.54, 1, 0.74);
+}
+
+.ems-gift-tab .ems-delivery-tab-wrp {
+  background: #ffe0e6;
+  padding: 40px 20px 20px;
+  display: none;
+}
+
+.ems-gift-tab-opened .ems-delivery-tab-hdr::before {
+  top: -12px;
+  height: 127px;
+  background-position: center bottom;
+}
+
+.ems-gift-tab-opened .ems-delivery-tab-wrp {
+  display: block;
+}
+
+.ems-cargo-tab {
+  margin-top: 30px;
+  background: #FFF;
+  padding: 20px 20px;
+}
+
+.divTeslimatKargo li {
+  position: relative;
+  padding: 20px 20px 20px 129px;
+  border: 1px solid #A90534;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.divTeslimatKargo li + li {
+  margin-top: 15px;
+}
+
+.divTeslimatKargo img {
+  order: 1;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  max-width: 89px;
+}
+
+.divTeslimatKargo .kargoAdi {
+  order: 2;
+}
+
+.divTeslimatKargo .fiyat {
+  order: 3;
+}
+
+.divTeslimatKargo .fiyat::before {
+  content: "-";
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.divTeslimatKargo .kargoBilgi {
+  order: 4;
+  margin-top: 5px;
+  flex-basis: 100%;
+  font-family: aktiv-grotesk, arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.divTeslimatKargo .kargoAdi,
+.divTeslimatKargo .fiyat {
+  font-weight: 700;
+}
+
+.divTeslimatKargo .sStylerWrp_radio {
+  margin: 0;
+}
+
+.divTeslimatKargo .radioButton {
+  display: block !important;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.ems-new-address {
+  position: relative;
+}
+
+.ems-new-address .ems-message {
+  margin-top: 30px;
+}
+
+.ems-new-address .ems-form {
+  margin-top: 30px;
+}
+
+.ems-new-address #plhAdresTipi {
+  justify-content: flex-start;
+}
+
+.ems-new-address #plhTcDegilLabel {
+  margin-bottom: -1px;
+}
+
+.bireysel .vergNoCheck,
+.bireysel .vergCheck {
+  display: none;
+}
+
+.kurumsal .tcCheck,
+.kurumsal .tcCheck-2 {
+  display: none;
+}
+
+.ems-page-order .ems-new-address {
+  max-width: 850px;
+  background: #FFF;
+  padding: 20px 20px 40px;
+}
+
+.ems-order-payment .block1::after {
+  content: "";
+  background: linear-gradient(0deg, white, transparent);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+}
+
+.ems-order-payment .ems-grid-table-cart {
+  max-height: 300px;
+}
+
+.ems-order-payment .ems-grid-table-cart > .ems-grid-row {
+  grid-template-columns: 75px 1fr;
+  border-color: transparent;
+  padding: 10px 10px 10px 0;
+  grid-row-gap: 0;
+}
+
+.ems-order-payment .ems-grid-table-cart .ems-grid-name [id$="lblProm"] {
+  display: none;
+}
+
+.ems-order-payment .ems-grid-table-cart .qty-wrapper {
+  width: auto;
+  text-align: center;
+}
+
+.ems-order-payment .ems-grid-table-cart .ems-grid-price .price-wrapper {
+  justify-content: flex-end;
+}
+
+.ems-order-payment .ems-grid-table-cart .ems-grid-price .dvSepetKazancOran:not(:empty) {
+  text-align: right;
+}
+
+.ems-pay-type-list > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ems-pay-type-list a {
+  display: block;
+  background: #C9C9C9;
+  padding: 12px 14px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ems-pay-type-list a.emos_selected {
+  background: #FFF;
+}
+
+.ems-pay-type-content {
+  position: relative;
+  background: #FFF;
+  padding: 20px 20px;
+}
+
+[id$="pnlPesinDiger"] {
+  display: none;
+}
+
+.masterpassContent {
+  display: block !important;
+  margin-top: 15px;
+}
+
+.imgMasterpassLogo {
+  width: auto !important;
+}
+
+.masterPassForms {
+  position: relative;
+  margin-top: 20px;
+}
+
+.masterPassForms > div + div {
+  margin-top: 10px;
+}
+
+.masterpassAciklama {
+  font-size: 13px;
+}
+
+.dvAddCreditCard {
+  display: flex;
+}
+
+.dvMpCardAliasName {
+  flex: 1;
+  padding-right: 5px;
+}
+
+.masterpass_cardAddedSuccess {
+  margin-bottom: 30px;
+}
+
+.masterpass_linkCard {
+  margin-bottom: 30px;
+}
+
+.masterpass_cardList {
+  margin-bottom: 30px;
+}
+
+.masterpassLogo_cardList {
+  display: none;
+}
+
+.mpCreditCardSet {
+  font-size: 14px;
+  color: #FFF;
+  background: #EBEBEB;
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 15px 1fr -webkit-max-content;
+  grid-template-columns: 15px 1fr max-content;
+  grid-gap: 0 10px;
+  align-items: center;
+}
+
+.mpCreditCardSet + .mpCreditCardSet {
+  margin-top: 15px;
+}
+
+.lnkDeleteMasterPassCard {
+  text-decoration: underline;
+}
+
+.mpNewCreditCard {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.mpNewCreditCard input[type="radio"] {
+  margin-right: 7px;
+}
+
+.dvOtpForm > * {
+  margin-top: 10px;
+}
+
+.mpInfoText {
+  padding: 0 !important;
+}
+
+.resendCodePlace > * {
+  margin-top: 10px;
+}
+
+.validateOtp,
+.btnResendOtp {
+  cursor: pointer;
+}
+
+.pageOdemeBilgi_chkKrediKartiBonusPara {
+  margin-top: 20px;
+}
+
+[id$="ODM_ACIKLAMA"]:not(:empty) {
+  display: block;
+  margin-top: 20px;
+}
+
+.ems-card-wrapper {
+  display: none;
+  position: absolute;
+  right: 70px;
+  top: 0;
+  z-index: -1;
+}
+
+.tableTitleOdemeBilgiKrediKarti,
+.tableTitleOdemeBilgiHavale {
+  display: none;
+}
+
+.tableOdemeBilgiKrediKarti input {
+  width: 100% !important;
+  text-transform: uppercase;
+}
+
+.tableOdemeBilgiKrediKarti tbody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tableOdemeBilgiKrediKarti tr {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex-basis: 100%;
+}
+
+.tableOdemeBilgiKrediKarti tr + tr {
+  margin-top: 20px;
+}
+
+.tableOdemeBilgiKrediKarti tr:nth-child(2) {
+  flex-basis: 70%;
+}
+
+.tableOdemeBilgiKrediKarti tr:nth-child(3) {
+  flex-basis: 28%;
+}
+
+.tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID > span {
+  display: inline-block;
+  text-align: center;
+}
+
+.tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID > span:nth-child(1) {
+  width: 85px;
+  margin-right: 5px;
+}
+
+.tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID > span:nth-child(2) {
+  width: calc(100% - 90px);
+}
+
+.tableOdemeBilgiKrediKarti td.tableOdemeBilgiKrediKarti_tdtxtKKARTCVCNO {
+  font-size: 0;
+}
+
+.tableOdemeBilgiHavale .tableOdemeBilgiHavale_thlbfBNK_AD_HV {
+  display: none;
+}
+
+.tableOdemeBilgiHavale table {
+  margin-top: -10px;
+}
+
+.tableOdemeBilgiHavale table td {
+  padding: 10px 0;
+}
+
+.tableOdemeBilgiHavale .link {
+  text-align: right;
+  color: #fff;
+}
+
+.tableOdemeBilgiHavale .link > a {
+  min-width: 150px;
+}
+
+.pageDecOdemeBilgi {
+  margin-top: 10px;
+}
+
+.pageOdemeBilgi_chkBankaBonus {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.lnkOdemeTaksit {
+  display: block;
+}
+
+.pageOdemeBilgi_odemeTaksit {
+  margin-top: 20px;
+}
+
+.pageOdemeBilgi_odemeTaksit #imgBANKALOGO {
+  display: none;
+}
+
+.tableOdemeTaksit {
+  table-layout: fixed;
+}
+
+.tableOdemeTaksit td {
+  border: 1px solid #17181A;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.tableOdemeTaksit td:nth-child(1) {
+  width: 40px;
+}
+
+.ems-pay-address {
+  background: #FFF;
+  padding: 20px 20px 0;
+  margin-top: 30px;
+}
+
+.ems-pay-address .page-top-title {
+  margin-bottom: 0;
+}
+
+.ems-pay-address .ems-wrapper > div {
+  padding: 20px 0;
+}
+
+.ems-pay-address .ems-wrapper > div + div {
+  border-top: 1px solid #A90534;
+}
+
+.ems-pay-address-label {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.ems-pay-address-obj {
+  font-family: aktiv-grotesk, arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.tableTitleSiparisOnaySatisSozlesme,
+.tableTitleSiparisOnBilgilendirmeForm {
+  padding: 10px 0;
+  font-weight: 700;
+  line-height: 32px;
+  cursor: pointer;
+  display: none;
+}
+
+.pageSiparisOnay_lbfSatisSozlesme,
+.pageSiparisOnay_lbfOnBilgilendirmeForm {
+  background: #FFF;
+  padding: 0 20px;
+}
+
+.pageSiparisOnay_chkSatisSozlesme,
+.pageSiparisOnay_chkOnBilgilendirmeForm {
+  padding: 20px 0;
+}
+
+.pageSiparisOnay_chkSatisSozlesme a,
+.pageSiparisOnay_chkOnBilgilendirmeForm a {
+  text-decoration: underline;
+}
+
+.pageSiparisOnay_chkSatisSozlesme {
+  border-top: 1px solid #A90534;
+}
+
+.pageSiparisOnay_btnSatisSozlesmeOnizle,
+.pageSiparisOnay_btnOnBilgilendirmeFormOnizle {
+  display: none;
+}
+
+.siparisOnaySozlesmeMetin,
+.onBilgilendirmeFormMetin {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: calc(100vh - 100px);
+  max-width: 910px;
+  background: #FFF;
+}
+
+.siparisOnaySozlesmeMetin > span,
+.onBilgilendirmeFormMetin > span {
+  height: inherit !important;
+  padding: 0 20px;
+  overflow-x: hidden !important;
+}
+
+.siparisOnaySozlesmeMetin .a1,
+.onBilgilendirmeFormMetin .a1 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: 0 -20px;
+}
+
+.ems-form1-animate .agreement-overlay,
+.ems-form1-animate .onBilgilendirmeFormMetin {
+  display: block;
+}
+
+.ems-form2-animate .agreement-overlay,
+.ems-form2-animate .siparisOnaySozlesmeMetin {
+  display: block;
+}
+
+.ems-order-result {
+  padding: 30px 20px;
+  background: #000 url(/images/frontend/order-result-mobile.jpg) center top/cover no-repeat;
+  color: #FFF;
+}
+
+.ems-order-result br {
+  display: none;
+}
+
+.result-content .rlogo {
+  width: 50px;
+}
+
+.result-content .ricon {
+  margin-top: 80px;
+  font-size: 70px;
+  color: #000;
+  background: #FFF;
+}
+
+.result-content .icon-error {
+  color: #FFF;
+  background: #EFEFEF;
+}
+
+.result-content .rtitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.result-content .rdesc {
+  font-family: aktiv-grotesk, arial, sans-serif;
+  font-size: 16px;
+  color: #EBEBEB;
+  margin-top: 10px;
+}
+
+.result-content .rbtns {
+  margin-top: 50px;
+  width: calc(100% - 40px);
+  max-width: 330px;
+}
+
+.result-content .rbtns > a {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+[id$="lblSIP_BELIRLIERROR"]:not(:empty) {
+  display: block;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.kutuDefault.kutuUyelikOneri {
+  display: none;
+  margin-top: 30px;
+  text-align: left;
+  background: #252525;
+  color: #000;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.kutuUyelikOneri-append .kutuDefault.kutuUyelikOneri {
+  display: block;
+}
+
+.kutuHeaderUyelikOneri {
+  font-family: aktiv-grotesk, arial, sans-serif;
+  font-size: 15px;
+}
+
+.kutuBodyUyelikOneri {
+  margin-top: 10px;
+}
+
+.kutuUyelikOneri_sifre > span {
+  display: block;
+}
+
+.kutuUyelikOneri_onay {
+  margin-top: 10px;
+  font-family: aktiv-grotesk, arial, sans-serif;
+  font-size: 13px;
+}
+
+.kutuUyelikOneri_btnSend {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.guestCheckout .divTeslimatKargo {
+  margin-top: 0;
+}
+
+.guest-checkout-form {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 @supports (display: grid) {
   @media screen and (min-width: 1025px) {
     .obj-mobile {
@@ -8250,6 +8188,9 @@ ul.giftCardList li.selected > a {
     }
     .d-btn-primary:hover, .banner:hover .d-btn-primary {
       background: #252525;
+    }
+    .ems-field-mini {
+      max-width: 50%;
     }
     .ems-form-horizontal .ems-form-inner {
       margin-left: -10px;
@@ -9375,10 +9316,10 @@ ul.giftCardList li.selected > a {
       margin-top: 0;
     }
     .mod-service-list-grid {
-      grid-template-columns: 1fr 380px 20px minmax(auto, 780px) 1fr;
+      grid-template-columns: 1fr minmax(auto, 790px) 32px 380px 1fr;
       grid-template-rows: -webkit-max-content 1fr;
       grid-template-rows: max-content 1fr;
-      grid-template-areas: ". ga1 . ga2 ." ". ga3 . ga2 .";
+      grid-template-areas: ". ga2 . ga1 ." ". ga2 . ga3 .";
     }
     .mod-service-list-grid > .mod-service-list-header {
       grid-area: ga1;
@@ -9392,14 +9333,17 @@ ul.giftCardList li.selected > a {
     .dealer-stock-information {
       margin-top: 30px;
     }
-    .divServisListe_Koordinat {
+    .pServisListe.selected {
+      background-color: #dfdfdf;
+    }
+    .divServisListe_Koordinat a[rel] {
       display: block;
     }
     .address-detail {
       display: block;
     }
     #Map.map {
-      height: calc(100vh - 210px);
+      height: calc(100vh - 300px);
     }
     .ems-page-search.no-result {
       padding-top: 50px;
@@ -9468,171 +9412,6 @@ ul.giftCardList li.selected > a {
       max-width: none;
       right: 0;
     }
-    .ems-page-order .site-header {
-      position: relative;
-      z-index: auto;
-    }
-    .ems-page-order .site-header-grid > .ga1,
-    .ems-page-order .site-header-grid > .ga8 {
-      line-height: 80px;
-    }
-    .ems-page-order .mini-search-info > span {
-      cursor: default;
-    }
-    .ems-page-order .mini-search-info .icon-user {
-      --color2: #fff;
-    }
-    .ems-page-order .site-footer {
-      padding-bottom: 200px;
-      background-position-y: top;
-      background-size: 100% !important;
-    }
-    .ems-page-order .footer-menu {
-      margin: 0;
-      text-align: center;
-    }
-    .ems-page-order .footer-menu li svg {
-      font-size: 70px;
-    }
-    .ems-page-order-grid {
-      padding-top: 40px;
-      padding-bottom: 100px;
-    }
-    .bottom-step {
-      margin: 30px -20px 0 -20px;
-    }
-    .ems-step0 .ems-order-cart-grid,
-    .guestCheckout .ems-order-cart-grid {
-      grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
-      grid-template-areas: ". . ga1 . ga2 . .";
-    }
-    .ems-step0 .ems-order-cart-grid > .ga1,
-    .guestCheckout .ems-order-cart-grid > .ga1 {
-      grid-area: ga1;
-    }
-    .ems-step0 .ems-order-cart-grid > .ga2,
-    .guestCheckout .ems-order-cart-grid > .ga2 {
-      grid-area: ga2;
-    }
-    .ems-step0 .ems-grid-table-cart > .ems-grid-row,
-    .guestCheckout .ems-grid-table-cart > .ems-grid-row {
-      grid-template-columns: 90px 1fr 113px 1fr 20px;
-    }
-    .ems-order-cart-grid > .ga2 {
-      display: flex;
-      flex-direction: column;
-    }
-    .ems-order-cart-grid .block2 {
-      order: -1;
-      background: none;
-      margin-top: 0;
-      padding: 20px 30px;
-      border-top: 1px solid #17181A;
-    }
-    .cart-promotion-info {
-      margin-bottom: 40px;
-    }
-    .cart-promotion-info .swiper-inner {
-      margin-left: -20px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    .cart-promotion-info .swiper-slide {
-      padding-left: 20px;
-      width: calc(100% / 3);
-    }
-    .pnlDipToplamTable {
-      font-size: 16px;
-    }
-    .pnlDipToplamTable th {
-      text-align: left;
-    }
-    .pnlDipToplamTable .pnlDipToplam_sipToplam {
-      font-size: 18px;
-    }
-    .ems-cart-coupon {
-      margin-top: 0;
-    }
-    .ems-extra-product {
-      padding-left: 0;
-      padding-right: 0;
-    }
-    .ems-order-delivery-grid {
-      grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
-      grid-template-areas: ". . ga1 . ga2 . .";
-    }
-    .ems-order-delivery-grid > .ga1 {
-      grid-area: ga1;
-    }
-    .ems-order-delivery-grid > .ga2 {
-      grid-area: ga2;
-    }
-    .ems-grid-table-address .ems-grid-row {
-      grid-template-columns: 1fr 1fr;
-    }
-    a.btnAdresEkle {
-      padding: 10px 0;
-    }
-    .ems-delivery-tab {
-      width: 100%;
-    }
-    .ems-gift-tab::before {
-      right: 60px;
-    }
-    .ems-gift-tab .ems-delivery-tab-wrp {
-      padding: 20px 220px 20px 40px;
-      margin-top: -20px;
-    }
-    .ems-new-address {
-      padding-bottom: 0;
-    }
-    .ems-new-address .page-top-title {
-      font-size: 40px;
-      margin-top: 15px;
-      margin-left: -50px;
-      margin-right: -50px;
-    }
-    .ems-order-payment-grid {
-      grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
-      grid-template-areas: ". . ga1 . ga2 . .";
-    }
-    .ems-order-payment-grid > .ga1 {
-      grid-area: ga1;
-    }
-    .ems-order-payment-grid > .ga2 {
-      grid-area: ga2;
-    }
-    [id$="ODM_ACIKLAMA"]:not(:empty) {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    .ems-card-wrapper {
-      display: block;
-    }
-    [id$="pnlKrediKartiBilgi"] > * {
-      max-width: 330px;
-    }
-    .ems-billing-address,
-    .siparisOnaySozlesmeHolder {
-      margin-top: 0;
-      margin-left: 40px;
-    }
-    form[action*="siparisSonuc"] .ems-page-order-grid {
-      padding: 0;
-    }
-    .ems-order-result {
-      padding: 100px 30px;
-      background-image: url(/images/frontend/order-result.jpg);
-    }
-    .result-content .rlogo {
-      width: 100px;
-    }
-    .result-content .ricon {
-      margin-top: 70px;
-    }
-    .result-content .rtitle {
-      margin-top: 30px;
-    }
     .ems-page-member-grid {
       grid-template-columns: 300px 40px minmax(auto, 850px) 20px 1fr;
       grid-template-areas: "ga1 . ga2 . .";
@@ -9647,12 +9426,6 @@ ul.giftCardList li.selected > a {
       position: static;
       padding-bottom: 50px;
       min-height: 100vh;
-    }
-    .ems-page-member .ems-new-address {
-      margin-left: 0;
-    }
-    .ems-page-member .ems-new-address .page-top-title {
-      display: none;
     }
     .ems-member-order {
       padding-top: 40px;
@@ -9746,13 +9519,6 @@ ul.giftCardList li.selected > a {
     .ems-grid-table-message .newMessage .ems-grid-date {
       font-weight: 600;
     }
-    .ems-member-message-detail .ems-form {
-      margin: 0;
-    }
-    #plhBtnMesajCozuldu {
-      margin-top: 0;
-      margin-left: 20px;
-    }
     .ems-page-gift-card-grid {
       grid-template-columns: 1fr 710px 1fr;
       grid-template-areas: ". ga1 ." "ga2 ga2 ga2";
@@ -9786,6 +9552,162 @@ ul.giftCardList li.selected > a {
     }
     .odemeCekiEkleBtn {
       right: 38px;
+    }
+    .ems-page-order .site-header {
+      position: relative;
+      z-index: auto;
+    }
+    .ems-page-order .site-header-grid > .ga1,
+    .ems-page-order .site-header-grid > .ga8 {
+      line-height: 80px;
+    }
+    .ems-page-order .mini-search-info > span {
+      cursor: default;
+    }
+    .ems-page-order .mini-search-info .icon-user {
+      --color2: #fff;
+    }
+    .ems-page-order .site-footer {
+      padding-bottom: 200px;
+      background-position-y: top;
+      background-size: 100% !important;
+    }
+    .ems-page-order .footer-menu {
+      margin: 0;
+      text-align: center;
+    }
+    .ems-page-order .footer-menu li svg {
+      font-size: 70px;
+    }
+    .ems-page-order-grid {
+      padding-top: 40px;
+      padding-bottom: 100px;
+    }
+    .bottom-step {
+      margin: 30px -20px 0 -20px;
+    }
+    .ems-step0 .ems-order-cart-grid,
+    .guestCheckout .ems-order-cart-grid {
+      grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
+      grid-template-areas: ". . ga1 . ga2 . .";
+    }
+    .ems-step0 .ems-order-cart-grid > .ga1,
+    .guestCheckout .ems-order-cart-grid > .ga1 {
+      grid-area: ga1;
+    }
+    .ems-step0 .ems-order-cart-grid > .ga2,
+    .guestCheckout .ems-order-cart-grid > .ga2 {
+      grid-area: ga2;
+    }
+    .ems-step0 .ems-grid-table-cart > .ems-grid-row,
+    .guestCheckout .ems-grid-table-cart > .ems-grid-row {
+      grid-template-columns: 120px 1fr 180px;
+    }
+    .ems-order-cart-grid > .ga2 {
+      display: flex;
+      flex-direction: column;
+    }
+    .ems-order-cart-grid .block2 {
+      order: -1;
+      background: none;
+      margin-top: 0;
+      padding: 20px 30px;
+      border-top: 1px solid #17181A;
+    }
+    .cart-promotion-info {
+      margin-bottom: 40px;
+    }
+    .cart-promotion-info .swiper-inner {
+      margin-left: -20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .cart-promotion-info .swiper-slide {
+      padding-left: 20px;
+      width: calc(100% / 3);
+    }
+    .pnlDipToplamTable {
+      font-size: 16px;
+    }
+    .pnlDipToplamTable th {
+      text-align: left;
+    }
+    .pnlDipToplamTable .pnlDipToplam_sipToplam {
+      font-size: 18px;
+    }
+    .ems-cart-coupon {
+      margin-top: 0;
+    }
+    .ems-extra-product {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .ems-order-delivery-grid {
+      grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
+      grid-template-areas: ". . ga1 . ga2 . .";
+    }
+    .ems-order-delivery-grid > .ga1 {
+      grid-area: ga1;
+    }
+    .ems-order-delivery-grid > .ga2 {
+      grid-area: ga2;
+    }
+    .ems-grid-table-address .ems-grid-row {
+      grid-template-columns: 1fr 1fr;
+    }
+    a.btnAdresEkle {
+      padding: 10px 0;
+    }
+    .ems-delivery-tab {
+      width: 100%;
+    }
+    .ems-gift-tab::before {
+      right: 60px;
+    }
+    .ems-gift-tab .ems-delivery-tab-wrp {
+      padding: 20px 220px 20px 40px;
+      margin-top: -20px;
+    }
+    .ems-order-payment-grid {
+      grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
+      grid-template-areas: ". . ga1 . ga2 . .";
+    }
+    .ems-order-payment-grid > .ga1 {
+      grid-area: ga1;
+    }
+    .ems-order-payment-grid > .ga2 {
+      grid-area: ga2;
+    }
+    [id$="ODM_ACIKLAMA"]:not(:empty) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .ems-card-wrapper {
+      display: block;
+    }
+    [id$="pnlKrediKartiBilgi"] > * {
+      max-width: 330px;
+    }
+    .ems-billing-address,
+    .siparisOnaySozlesmeHolder {
+      margin-top: 0;
+      margin-left: 40px;
+    }
+    form[action*="siparisSonuc"] .ems-page-order-grid {
+      padding: 0;
+    }
+    .ems-order-result {
+      padding: 100px 30px;
+      background-image: url(/images/frontend/order-result.jpg);
+    }
+    .result-content .rlogo {
+      width: 100px;
+    }
+    .result-content .ricon {
+      margin-top: 70px;
+    }
+    .result-content .rtitle {
+      margin-top: 30px;
     }
   }
   @media screen and (min-width: 1025px) and (max-width: 1350px) {

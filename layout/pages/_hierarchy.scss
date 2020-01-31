@@ -5,7 +5,7 @@
             background: $color0;
             color: $color255;
             position: sticky;
-            top: 50px;
+            top: 60px;
             z-index: 1;
         }
         > .ga2 {
@@ -44,6 +44,10 @@
         + .html-content {
             margin-top: 30px;
         }
+    }
+    
+    .html-content {
+        line-height: 1.5;
     }
 }
 

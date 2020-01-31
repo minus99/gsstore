@@ -3,7 +3,8 @@
     position: relative;
     &-header {
         position: relative;
-        border-top: 1px solid $color6;
+        background: $color0;
+        border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
         padding: 15px 30px 15px 10px;
         margin-left: 10px;
@@ -184,6 +185,15 @@
 }
 .mb5 {
     margin-bottom: 50px;
+}
+.lh-1_5 {
+    line-height: 1.5;
+}
+.lh-1_8 {
+    line-height: 1.8;
+}
+.lh-2 {
+    line-height: 2;
 }
 
 //SECTION BG

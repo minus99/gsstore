@@ -84,7 +84,7 @@
     }
 }
 .pnlDipToplam_bankaKomisyon {
-    display: none !important;
+    @extend .ems-none;
 }
 
 .ems-cart-coupon {

@@ -19,7 +19,7 @@ ul.menu-mini-lang {
     .sub-close,
     .sub-header,
     .sub-footer {
-        display: none !important;
+        @extend .ems-none;
     }
 }
 

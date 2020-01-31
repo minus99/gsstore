@@ -1,4 +1,11 @@
 .ems-form {
+    @at-root {
+        .ems-field {
+            &-mini {
+                max-width: 50%;
+            }
+        }
+    }
     &-horizontal {
         $pl: 10px;
         $f: 50%;

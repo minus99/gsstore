@@ -3,6 +3,7 @@ $member-pages-module-bg: $color255;
 $member-pages-pt: 20px;
 $member-pages-pb: 40px;
 $member-pages-mt: 30px;
+$member-page-width: 850px;
 .ems-page-member {
     background: $member-pages-body-bg;
     min-height: calc(100vh - #{$site-header-height});

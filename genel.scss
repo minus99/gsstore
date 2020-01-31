@@ -51,12 +51,6 @@
 @import 'layout/pages/hierarchy';
 @import 'layout/pages/campaign';
 @import 'layout/pages/404';
-@import 'layout/pages/order-main';
-@import 'layout/pages/order-cart';
-@import 'layout/pages/order-delivery';
-@import 'layout/pages/order-payment';
-@import 'layout/pages/order-result';
-@import 'layout/pages/order-guest';
 @import 'layout/pages/member-main';
 @import 'layout/pages/member-order';
 @import 'layout/pages/member-refund';
@@ -67,6 +61,12 @@
 @import 'layout/pages/member-favorite';
 @import 'layout/pages/member-message';
 @import 'layout/pages/member-gift-card';
+@import 'layout/pages/order-main';
+@import 'layout/pages/order-cart';
+@import 'layout/pages/order-delivery';
+@import 'layout/pages/order-payment';
+@import 'layout/pages/order-result';
+@import 'layout/pages/order-guest';
 
 //DESKTOP
 @supports (display: grid) {
@@ -111,11 +111,6 @@
         @import 'layout/pages/hierarchy-desktop';
         @import 'layout/pages/campaign-desktop';
         @import 'layout/pages/404-desktop';
-        @import 'layout/pages/order-main-desktop';
-        @import 'layout/pages/order-cart-desktop';
-        @import 'layout/pages/order-delivery-desktop';
-        @import 'layout/pages/order-payment-desktop';
-        @import 'layout/pages/order-result-desktop';
         @import 'layout/pages/member-main-desktop';
         @import 'layout/pages/member-order-desktop';
         @import 'layout/pages/member-refund-desktop';
@@ -126,6 +121,11 @@
         @import 'layout/pages/member-favorite-desktop';
         @import 'layout/pages/member-message-desktop';
         @import 'layout/pages/member-gift-card-desktop';
+        @import 'layout/pages/order-main-desktop';
+        @import 'layout/pages/order-cart-desktop';
+        @import 'layout/pages/order-delivery-desktop';
+        @import 'layout/pages/order-payment-desktop';
+        @import 'layout/pages/order-result-desktop';
         
         //DESKTOP MINI
         @include setMediaScreen(max-width, $breakpoint-large) {

@@ -6,7 +6,7 @@
         .categories-append,
         .top-buttons,
         .ems-sort {
-            display: none !important;
+            @extend .ems-none;
         }
         .ems-message-product-list {
             margin-top: 30px;
@@ -84,7 +84,7 @@ $prd-pd-y: 18px;
     &-image {
         border: 1px solid $color9;
         padding: 25px 15px 10px;
-        &.ems-responsive-item {
+        .ems-responsive-item {
             @include aspect-ratio(450, 600);
         }
     }
@@ -97,7 +97,7 @@ $prd-pd-y: 18px;
             display: block !important;
         }
         i {
-            display: none !important;
+            @extend .ems-none;
         }
         a {
             &:not(:last-child) {
@@ -170,7 +170,7 @@ $prd-pd-y: 18px;
     display: block !important;
     color: $color1;
     &:empty {
-        display: none !important;
+        @extend .ems-none;
     }
 }
 

@@ -218,7 +218,7 @@
     }
     .div-cc-carttype,
     [id$="CVC_NEDIR"] {
-        display: none !important;
+        @extend .ems-none;
     }
 }
 

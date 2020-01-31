@@ -86,7 +86,7 @@
         }
 
         &:empty {
-            display: none !important;
+            @extend .ems-none;
         }
     }
 

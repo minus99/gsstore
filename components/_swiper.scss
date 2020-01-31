@@ -524,7 +524,7 @@ button.swiper-pagination-bullet {
   .swiper-pagination,
   .swiper-button-prev,
   .swiper-button-next {
-    display: none !important;
+    @extend .ems-none;
   }
 }
 

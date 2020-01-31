@@ -85,7 +85,7 @@ $filter-border: $color6;
         @extend %btn;
     }
     &:empty {
-        display: none !important;
+        @extend .ems-none;
     }
 }
 

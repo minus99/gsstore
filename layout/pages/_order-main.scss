@@ -1,4 +1,5 @@
 $order-pages-bg: $color9;
+$order-pages-module-bg: $color255;
 .ems-page-order {
     background: $order-pages-bg;
     min-height: calc(100vh - #{$site-header-height});
@@ -19,14 +20,18 @@ $order-pages-bg: $color9;
         @extend .ems-rotate-left;
     }
     .ems-step0 & {
-        background: $color255;
+        background: $order-pages-module-bg;
         padding-top: 0;
         padding-bottom: 25px;
+    }
+
+    &:empty {
+        @extend .ems-none;
     }
 }
 
 .bottom-step {
-    background: $color255;
+    background: $order-pages-module-bg;
     padding: 5px;
     a {
         width: 100%;

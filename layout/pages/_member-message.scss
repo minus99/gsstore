@@ -1,8 +1,6 @@
 //new message
 #mesajGonder {
-    .ems-form {
-        max-width: 330px;
-    }
+    position: relative;
 }
 
 //message list
@@ -25,21 +23,19 @@
 
 //message detail
 .ems-member-message-detail {
-    .ems-form {
+    > .ems-form {
         max-width: none;
-        margin: 0 20px;
-        &-obj {
-            p {
-                margin: 0;
-            }
+        .ems-form-label {
+            font-weight: 700;
         }
     }
-}
-#plhMesajTitle {
-    display: none;
-}
-#plhBtnMesajCozuldu {
-    margin-top: 10px;
+
+    #mesajGonder {
+        margin-top: 50px;
+    }
+    #plhMesajTitle {
+        display: none;
+    }
 }
 
 [id$="lblSistemMesaj"] {

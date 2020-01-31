@@ -18,19 +18,14 @@
 
     .or {
         font-family: $font2;
-        font-size: 13px;
-        color: $color6;
     }
 }
 
-.dealer-form {
-    .ems-field-css {
-        width: calc(50% - 5px);
-    }
-}
+.dealer-form {}
 
 .dealer-stock-information {
     margin-top: 50px;
+    background: $color4;
 }
 
 .servisIcerik {
@@ -42,7 +37,7 @@
 .servis_bilgi {
     font-family: $font2;
     font-size: 15px;
-    margin-top: 25px;
+    margin-top: 30px;
     margin-bottom: 15px;
 }
 .secIlce {
@@ -55,16 +50,23 @@
 
 .pServisListe  {
     position: relative;
-    border-top: 1px solid $color6;
-    padding: 15px 10px;
+    padding: 20px;
+    background: $color9;
     font-family: $font2;
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: 300;
     > * {
         display: none;
+    }
+    + .pServisListe {
+        margin-top: 20px;
     }
 }
 .divServisListe_FirmaAdi {
     display: block;
+    font-family: $font1;
+    font-size: 16px;
+    color: $color1;
     font-weight: 600;
 }
 .divServisListe_Adres {
@@ -74,15 +76,19 @@
 .divServisListe_Telefon {
     display: block;
     margin-top: 15px;
-    color: $color6;
 }
 .divServisListe_Koordinat {
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+    > a {
+        text-decoration: underline;
+    }
     a[rel] {
-        @include ems-cover;
-    }    
-}
-.show-map-btn {
-    display: none;
+        @extend %btn-full;
+        display: none;
+    }
+    .show-map-btn {}
 }
 
 .address-detail {

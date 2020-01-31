@@ -9,8 +9,9 @@
         #lblUrunAdet {
             order: 2;
             margin-left: 5px;
-            min-width: 17px;
-            text-align: center;
+            min-width: 16px;
+            display: flex;
+            justify-content: space-between;
             &::before {
                 content: "(";
             }
@@ -136,7 +137,7 @@
         }
     }
     &-url {
-        @include ems-cover;
+        @extend %btn-full;
     }
     &-page-url {
         > a {

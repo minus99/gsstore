@@ -205,7 +205,7 @@ $m: 5px;
     }
     [id$="txtURN_ADET"],
     [id$="lblURN_ADET"] {
-        display: none !important;
+        @extend .ems-none;
     }
 }
 .urunDetay_btnSepeteAt {

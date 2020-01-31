@@ -32,20 +32,6 @@
     }
 }
 
-//cover object
-@mixin ems-cover {
-	position: absolute;
-	left: 0;
-    top: 0;
-	width: 100%;
-    height: 100%;
-    background: none;
-    border: none;
-    > * {
-        display: none;
-    }
-}
-
 //curve
 @mixin setCurve($skewX, $translateX) {
     transform: skewX(#{$skewX}deg) translateX(#{$translateX}px);
