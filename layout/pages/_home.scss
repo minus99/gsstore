@@ -19,6 +19,18 @@
     .ems-responsive-item {
         @include aspect-ratio(375, 500);
     }
+
+    .content-here {
+        position: absolute;
+        bottom: 65px;
+        left: 50%;
+        z-index: 11;
+        transform: translateX(-50%);
+        color: #fff;
+    }
+    .icon-scroll {
+        font-size: 40px;
+    }
 }
 
 .primary-categories {
@@ -87,31 +99,5 @@
 
     .ems-responsive-item {
         @include aspect-ratio(335, 335);
-    }
-}
-
-.social-feed {
-    background: $color0;
-    color: $color255;
-    padding-top: 100px;
-    padding-bottom: 160px;
-
-    .ems-section-title {
-        margin-bottom: 75px;
-        .ems-link {
-            text-decoration: none;
-        }
-        svg {
-            font-size: 25px;
-        }
-    }
-
-    $pl:20px;
-    .swiper-inner {
-        margin-left: #{-$pl};
-    }
-    .swiper-slide {
-        padding-left: #{$pl};
-        width: calc(100% / 3.5);
     }
 }

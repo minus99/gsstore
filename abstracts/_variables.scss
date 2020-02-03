@@ -41,6 +41,13 @@ $breakpoint-medium: 1025px !default;
 $breakpoint-large: 1350px !default;
 $breakpoint-xlarge: 1600px !default;
 
+//PAGES
+$col-container-gap: minmax($container-gap, 1fr);
+$col1: minmax(auto, 790px);
+$col2: 380px;
+$col-gap: 30px;
+$grid-template-columns: $col-container-gap $col1 $col-gap $col2 $col-container-gap;
+
 //MISC
 $bg-loading: url(/images/frontend/loading.gif) center center/80px no-repeat #f9f9f9;
 $site-header-height: 60px;

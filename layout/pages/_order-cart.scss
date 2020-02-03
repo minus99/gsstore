@@ -3,7 +3,7 @@
     .ems-order-cart {}
     .ems-grid-table-cart {
         > .ems-grid-row {
-            grid-template-columns: 65px 1fr;
+            grid-template-columns: 90px 1fr;
         }
     }
 }
@@ -57,7 +57,7 @@
             padding-bottom: 5px;
         }
         th {
-            font-weight: 500;
+            font-weight: 400;
             text-align: left;
         }
         td {

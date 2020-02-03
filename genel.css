@@ -1774,11 +1774,10 @@ a.btnXMLFORM {
 
 .swiper-pagination {
   display: none;
-  position: static;
-  padding: 20px;
+  position: absolute;
+  padding: 50px 20px;
   font-size: 0;
   min-height: 47px;
-  text-align: center;
   transition: 300ms opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -1839,11 +1838,11 @@ a.btnXMLFORM {
 }
 
 .swiper-pagination-bullet {
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   display: inline-block;
   border-radius: 100%;
-  background: #EBEBEB;
+  background: #999;
   outline: none;
   transition: all 0.2s cubic-bezier(0.51, 0.35, 1, 0.01);
 }
@@ -1893,7 +1892,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 7.5px;
+  margin-right: 25px;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
@@ -2491,22 +2490,16 @@ button.swiper-pagination-bullet {
 }
 
 .banner07 .banner-body {
-  position: absolute;
-  top: auto;
-  bottom: 0;
+  padding-bottom: 110px;
 }
 
-.banner07 .prm-title i {
-  font-style: normal;
-  letter-spacing: .75em;
-}
-
-.banner07 .prm-title b {
-  letter-spacing: 1.5px;
+.banner07 .prm-title {
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .banner07 .prm-link {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .banner07 .prm-content {
@@ -4059,6 +4052,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
 
 .ems-grid-img {
   align-self: flex-start;
+  grid-row: 1 / 3;
 }
 
 .ems-grid-name {
@@ -4117,6 +4111,7 @@ tr + tr #dvUrunKiyaslamaOzellik {
 
 .ems-grid-price .price-wrapper {
   font-weight: 600;
+  margin-top: 12px;
 }
 
 .ems-grid-price .dvSepetKazancOran:not(:empty) {
@@ -5162,8 +5157,7 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 
 .cart-prd-proname:not(:empty) {
   margin-top: 5px;
-  font-size: 12px;
-  color: #2E9A32;
+  color: #A90534;
 }
 
 .cart-prd-remove {
@@ -5619,6 +5613,20 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   padding-top: 133.33333%;
 }
 
+.homepage-slider .content-here {
+  position: absolute;
+  bottom: 65px;
+  left: 50%;
+  z-index: 11;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+.homepage-slider .icon-scroll {
+  font-size: 40px;
+}
+
 .primary-categories {
   padding-top: 30px;
   padding-bottom: 50px;
@@ -5685,34 +5693,6 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 
 .campaigns .ems-responsive-item::before {
   padding-top: 100%;
-}
-
-.social-feed {
-  background: #000;
-  color: #FFF;
-  padding-top: 100px;
-  padding-bottom: 160px;
-}
-
-.social-feed .ems-section-title {
-  margin-bottom: 75px;
-}
-
-.social-feed .ems-section-title .ems-link {
-  text-decoration: none;
-}
-
-.social-feed .ems-section-title svg {
-  font-size: 25px;
-}
-
-.social-feed .swiper-inner {
-  margin-left: -20px;
-}
-
-.social-feed .swiper-slide {
-  padding-left: 20px;
-  width: calc(100% / 3.5);
 }
 
 .ems-member-login {
@@ -7284,7 +7264,7 @@ ul.giftCardList li.selected > a {
 
 .ems-step0 .ems-grid-table-cart > .ems-grid-row,
 .guestCheckout .ems-grid-table-cart > .ems-grid-row {
-  grid-template-columns: 65px 1fr;
+  grid-template-columns: 90px 1fr;
 }
 
 .ems-order-cart-grid .block1 {
@@ -7332,7 +7312,7 @@ ul.giftCardList li.selected > a {
 }
 
 .pnlDipToplamTable tr th {
-  font-weight: 500;
+  font-weight: 400;
   text-align: left;
 }
 
@@ -8177,6 +8157,9 @@ ul.giftCardList li.selected > a {
     .d-ems-text-right {
       text-align: right;
     }
+    .qty-wrapper {
+      width: 120px;
+    }
     .btn-page-top {
       right: 100px;
       bottom: auto;
@@ -8208,6 +8191,12 @@ ul.giftCardList li.selected > a {
     .ems-form-horizontal .ems-field-push {
       margin-right: 50%;
     }
+    .swiper-pagination {
+      padding: 85px 100px;
+    }
+    .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+      margin-right: 40px;
+    }
     .swiper-product .swiper-inner {
       margin-left: -20px;
     }
@@ -8237,6 +8226,17 @@ ul.giftCardList li.selected > a {
     }
     .banner04 .prm-link {
       margin-top: 70px;
+    }
+    .banner07 .banner-body {
+      padding: 100px;
+      position: absolute;
+      top: 50%;
+      bottom: auto;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .banner07 .prm-title {
+      font-size: 36px;
     }
     .design-uniform {
       min-height: 566px;
@@ -8512,13 +8512,14 @@ ul.giftCardList li.selected > a {
     .ems-grid-name {
       padding-right: 0;
     }
-    .ems-grid-price .dvSepetKazancOran:not(:empty) {
-      text-align: center;
+    .ems-grid-img {
+      grid-row: auto;
     }
     .ems-grid-remove {
       position: relative;
       right: 0;
       top: 0;
+      margin-top: 10px;
     }
     .ems-grid-select {
       position: relative;
@@ -9315,8 +9316,11 @@ ul.giftCardList li.selected > a {
     .ems-page-dealer .page-top-title {
       margin-top: 0;
     }
+    .mod-service-list {
+      padding: 0;
+    }
     .mod-service-list-grid {
-      grid-template-columns: 1fr minmax(auto, 790px) 32px 380px 1fr;
+      grid-template-columns: minmax(20px, 1fr) minmax(auto, 790px) 30px 380px minmax(20px, 1fr);
       grid-template-rows: -webkit-max-content 1fr;
       grid-template-rows: max-content 1fr;
       grid-template-areas: ". ga2 . ga1 ." ". ga2 . ga3 .";
@@ -9583,13 +9587,15 @@ ul.giftCardList li.selected > a {
       padding-top: 40px;
       padding-bottom: 100px;
     }
-    .bottom-step {
-      margin: 30px -20px 0 -20px;
+    .ems-step0 .order-module-buttons {
+      background: none;
+      padding: 0;
+      margin-top: 20px;
     }
     .ems-step0 .ems-order-cart-grid,
     .guestCheckout .ems-order-cart-grid {
-      grid-template-columns: 20px 1fr minmax(auto, 780px) 20px 380px 1fr 20px;
-      grid-template-areas: ". . ga1 . ga2 . .";
+      grid-template-columns: minmax(20px, 1fr) minmax(auto, 790px) 30px 380px minmax(20px, 1fr);
+      grid-template-areas: ". ga1 . ga2 .";
     }
     .ems-step0 .ems-order-cart-grid > .ga1,
     .guestCheckout .ems-order-cart-grid > .ga1 {
@@ -9607,20 +9613,24 @@ ul.giftCardList li.selected > a {
       display: flex;
       flex-direction: column;
     }
+    .ems-order-cart-grid .block1 {
+      margin-top: 0;
+    }
     .ems-order-cart-grid .block2 {
       order: -1;
-      background: none;
       margin-top: 0;
-      padding: 20px 30px;
-      border-top: 1px solid #17181A;
+      padding: 20px;
     }
     .cart-promotion-info {
       margin-bottom: 40px;
     }
+    .cart-promotion-info .swiper-container.ems-container-full-right {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0;
+    }
     .cart-promotion-info .swiper-inner {
       margin-left: -20px;
-      padding-left: 10px;
-      padding-right: 10px;
     }
     .cart-promotion-info .swiper-slide {
       padding-left: 20px;

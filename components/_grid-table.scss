@@ -34,6 +34,7 @@
     }
     &-img {
         align-self: flex-start;
+        grid-row: 1 / 3;
     }
     &-name {
         padding-right: 50px;
@@ -83,6 +84,7 @@
     &-price {
         .price-wrapper {
             font-weight: 600;
+            margin-top: 12px;
         }
         .dvSepetKazancOran:not(:empty) {
             display: block;

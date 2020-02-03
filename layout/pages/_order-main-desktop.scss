@@ -40,6 +40,10 @@
     }
 }
 
-.bottom-step {
-    margin: 30px -20px 0 -20px;
+.order-module-buttons {
+    .ems-step0 & {
+        background: none;
+        padding: 0;
+        margin-top: 20px;
+    }
 }

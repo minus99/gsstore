@@ -1,3 +1,10 @@
+.swiper-pagination {
+    padding: 85px $d-container-gap;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-right: 40px;
+}
+
 //CUSTOM CFG
 //product widget
 .swiper-product {

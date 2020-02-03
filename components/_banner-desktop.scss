@@ -16,4 +16,15 @@
             margin-top: 70px;
         }
     }
+
+    //banner type07 *home slider
+    &07 {
+        .banner-body {
+            padding: $d-container-gap;
+            @include banner-body-middle();
+        }
+        .prm-title {
+            font-size: 36px;
+        }
+    }
 }

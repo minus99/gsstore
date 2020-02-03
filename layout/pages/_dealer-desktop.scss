@@ -12,8 +12,9 @@
 }
 
 .mod-service-list {
+    padding: 0;
     &-grid {
-        grid-template-columns: 1fr minmax(auto, 790px) 32px 380px 1fr;
+        grid-template-columns: $grid-template-columns;
         grid-template-rows: max-content 1fr;
         grid-template-areas: ". ga2 . ga1 ." ". ga2 . ga3 .";
 
