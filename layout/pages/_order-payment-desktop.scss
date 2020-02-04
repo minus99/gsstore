@@ -18,8 +18,11 @@
     max-width: 330px;
 }
 
-.ems-billing-address,
-.siparisOnaySozlesmeHolder {
-    margin-top: 0;
-    margin-left: 40px;
+.ems-pay-block1 {
+    > div {
+        + div {
+            margin-top: 0;
+            margin-left: 30px;
+        }
+    }
 }

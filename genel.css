@@ -659,24 +659,31 @@ form[action*="adr=0"] #plhAciklama, .tableOdemeBilgiKrediKarti .div-cc-carttype,
   transform: scale(-1);
 }
 
-.ems-scrollbar, .kutuSepet_icerik, .ems-order-payment .ems-grid-table-cart {
+.ems-scrollbar, .kutuSepet_icerik, .ems-order-payment .ems-grid-table-cart, .ems-pay-type-list > ul {
   overflow: auto;
   max-height: 100vh;
   padding-right: 10px;
 }
 
-.ems-scrollbar::-webkit-scrollbar, .kutuSepet_icerik::-webkit-scrollbar, .ems-order-payment .ems-grid-table-cart::-webkit-scrollbar {
+.ems-scrollbar::-webkit-scrollbar, .kutuSepet_icerik::-webkit-scrollbar, .ems-order-payment .ems-grid-table-cart::-webkit-scrollbar, .ems-pay-type-list > ul::-webkit-scrollbar {
   width: 4px;
 }
 
-.ems-scrollbar::-webkit-scrollbar-track, .kutuSepet_icerik::-webkit-scrollbar-track, .ems-order-payment .ems-grid-table-cart::-webkit-scrollbar-track {
+.ems-scrollbar::-webkit-scrollbar-track, .kutuSepet_icerik::-webkit-scrollbar-track, .ems-order-payment .ems-grid-table-cart::-webkit-scrollbar-track, .ems-pay-type-list > ul::-webkit-scrollbar-track {
   background: #d8d8d8;
-  border-radius: 2px;
 }
 
-.ems-scrollbar::-webkit-scrollbar-thumb, .kutuSepet_icerik::-webkit-scrollbar-thumb, .ems-order-payment .ems-grid-table-cart::-webkit-scrollbar-thumb {
+.ems-scrollbar::-webkit-scrollbar-thumb, .kutuSepet_icerik::-webkit-scrollbar-thumb, .ems-order-payment .ems-grid-table-cart::-webkit-scrollbar-thumb, .ems-pay-type-list > ul::-webkit-scrollbar-thumb {
   background: #000;
-  border-radius: 2px;
+}
+
+.ems-scrollbar-horizontal, .ems-pay-type-list > ul {
+  padding-right: 0;
+}
+
+.ems-scrollbar-horizontal::-webkit-scrollbar, .ems-pay-type-list > ul::-webkit-scrollbar {
+  width: auto;
+  height: 4px;
 }
 
 .ems-scrollbar-hide::-webkit-scrollbar, .dropdown-header > ::-webkit-scrollbar, .dropdown > ul > li > a::-webkit-scrollbar, .ems-tab-header::-webkit-scrollbar {
@@ -7246,6 +7253,7 @@ ul.giftCardList li.selected > a {
 .bottom-step {
   background: #FFF;
   padding: 5px;
+  margin: 15px -20px -20px;
 }
 
 .bottom-step a {
@@ -7254,12 +7262,6 @@ ul.giftCardList li.selected > a {
 
 .bottom-step a ~ a {
   margin-top: 5px;
-}
-
-.ems-step0 .bottom-step {
-  padding: 0;
-  background: none;
-  margin-top: 20px;
 }
 
 .ems-step0 .ems-grid-table-cart > .ems-grid-row,
@@ -7276,7 +7278,7 @@ ul.giftCardList li.selected > a {
 
 .ems-order-cart-grid .block2 {
   margin-top: 30px;
-  padding: 20px 20px 5px;
+  padding: 20px;
   background: #FFF;
 }
 
@@ -7621,7 +7623,10 @@ ul.giftCardList li.selected > a {
 
 .ems-pay-type-list > ul {
   display: flex;
-  flex-wrap: wrap;
+}
+
+.ems-pay-type-list > ul > li {
+  flex-shrink: 0;
 }
 
 .ems-pay-type-list a {
@@ -7753,9 +7758,8 @@ ul.giftCardList li.selected > a {
 .ems-card-wrapper {
   display: none;
   position: absolute;
-  right: 70px;
-  top: 0;
-  z-index: -1;
+  right: 30px;
+  top: 30px;
 }
 
 .tableTitleOdemeBilgiKrediKarti,
@@ -7867,22 +7871,23 @@ ul.giftCardList li.selected > a {
   width: 40px;
 }
 
-.ems-pay-address {
-  background: #FFF;
-  padding: 20px 20px 0;
+.ems-pay-block1 {
   margin-top: 30px;
 }
 
-.ems-pay-address .page-top-title {
-  margin-bottom: 0;
+.ems-pay-block1 > div {
+  background: #FFF;
+  padding: 20px 20px;
 }
 
-.ems-pay-address .ems-wrapper > div {
-  padding: 20px 0;
+.ems-pay-block1 > div + div {
+  margin-top: 30px;
 }
 
 .ems-pay-address .ems-wrapper > div + div {
-  border-top: 1px solid #A90534;
+  border-top: 1px solid #EFEFEF;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .ems-pay-address-label {
@@ -7905,10 +7910,8 @@ ul.giftCardList li.selected > a {
   display: none;
 }
 
-.pageSiparisOnay_lbfSatisSozlesme,
 .pageSiparisOnay_lbfOnBilgilendirmeForm {
-  background: #FFF;
-  padding: 0 20px;
+  margin-top: 20px;
 }
 
 .pageSiparisOnay_chkSatisSozlesme,
@@ -7922,7 +7925,7 @@ ul.giftCardList li.selected > a {
 }
 
 .pageSiparisOnay_chkSatisSozlesme {
-  border-top: 1px solid #A90534;
+  border-top: 1px solid #EFEFEF;
 }
 
 .pageSiparisOnay_btnSatisSozlesmeOnizle,
@@ -8527,11 +8530,18 @@ ul.giftCardList li.selected > a {
       top: 0;
     }
     .ems-grid-address-name {
-      grid-column: span 2;
       padding-right: 0;
     }
     .ems-grid-address-buttons {
       position: static;
+      margin-top: 5px;
+    }
+    .ems-grid-address-select a > span {
+      justify-content: flex-start;
+    }
+    .ems-grid-address-select a + a {
+      margin-left: 0;
+      margin-top: 10px;
     }
     .ems-grid-option1 {
       grid-column: span 1;
@@ -8546,6 +8556,12 @@ ul.giftCardList li.selected > a {
     }
     .kutuSolMenuTree .mobi-dropdown > a {
       display: block;
+    }
+    .page-top-title-compact {
+      font-size: 16px;
+    }
+    .page-top-title-compact > * {
+      padding: 14px 20px;
     }
     .section-bg01 {
       background-size: 980px;
@@ -9565,23 +9581,8 @@ ul.giftCardList li.selected > a {
     .ems-page-order .site-header-grid > .ga8 {
       line-height: 80px;
     }
-    .ems-page-order .mini-search-info > span {
-      cursor: default;
-    }
-    .ems-page-order .mini-search-info .icon-user {
-      --color2: #fff;
-    }
-    .ems-page-order .site-footer {
-      padding-bottom: 200px;
-      background-position-y: top;
-      background-size: 100% !important;
-    }
-    .ems-page-order .footer-menu {
-      margin: 0;
-      text-align: center;
-    }
-    .ems-page-order .footer-menu li svg {
-      font-size: 70px;
+    .ems-page-order .mini-user-info {
+      background: none;
     }
     .ems-page-order-grid {
       padding-top: 40px;
@@ -9591,6 +9592,9 @@ ul.giftCardList li.selected > a {
       background: none;
       padding: 0;
       margin-top: 20px;
+    }
+    .bottom-step {
+      margin: 15px -5px -5px;
     }
     .ems-step0 .ems-order-cart-grid,
     .guestCheckout .ems-order-cart-grid {
@@ -9663,7 +9667,7 @@ ul.giftCardList li.selected > a {
       grid-area: ga2;
     }
     .ems-grid-table-address .ems-grid-row {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 120px 1fr 190px;
     }
     a.btnAdresEkle {
       padding: 10px 0;
@@ -9698,10 +9702,9 @@ ul.giftCardList li.selected > a {
     [id$="pnlKrediKartiBilgi"] > * {
       max-width: 330px;
     }
-    .ems-billing-address,
-    .siparisOnaySozlesmeHolder {
+    .ems-pay-block1 > div + div {
       margin-top: 0;
-      margin-left: 40px;
+      margin-left: 30px;
     }
     form[action*="siparisSonuc"] .ems-page-order-grid {
       padding: 0;

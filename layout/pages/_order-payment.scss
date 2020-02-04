@@ -44,7 +44,11 @@
     &-list {
         > ul {
             display: flex;
-            flex-wrap: wrap;
+            @extend .ems-scrollbar;
+            @extend .ems-scrollbar-horizontal;
+            > li {
+                flex-shrink: 0;
+            }
         }
         a {
             display: block;
@@ -161,9 +165,8 @@
 .ems-card-wrapper {
     display: none;
     position: absolute;
-    right: 70px;
-    top: 0;
-    z-index: -1;
+    right: 30px;
+    top: 30px;
 }
 
 .tableTitleOdemeBilgiKrediKarti,
@@ -274,18 +277,23 @@
     @extend .ems-form-label;
 }
 
-.ems-pay-address {
-    background: $color255;
-    padding: 20px $container-gap 0;
+.ems-pay-block1 {
     margin-top: 30px;
-    .page-top-title {
-        margin-bottom: 0;
+    > div {
+        background: $color255;
+        padding: 20px $container-gap;
+        + div {
+            margin-top: 30px;
+        }
     }
+}
+.ems-pay-address {
     .ems-wrapper {
         > div {
-            padding: 20px 0;
             + div {
-                border-top: 1px solid $color1;
+                border-top: 1px solid $color4;
+                margin-top: 20px;
+                padding-top: 20px;
             }
         }
     }
@@ -308,10 +316,8 @@
     cursor: pointer;
     display: none;
 }
-.pageSiparisOnay_lbfSatisSozlesme,
 .pageSiparisOnay_lbfOnBilgilendirmeForm {
-    background: $color255;
-    padding: 0 $container-gap;
+    margin-top: 20px;
 }
 .pageSiparisOnay_chkSatisSozlesme,
 .pageSiparisOnay_chkOnBilgilendirmeForm {
@@ -321,7 +327,7 @@
     }
 }
 .pageSiparisOnay_chkSatisSozlesme {
-    border-top: 1px solid $color1;
+    border-top: 1px solid $color4;
 }
 .pageSiparisOnay_btnSatisSozlesmeOnizle,
 .pageSiparisOnay_btnOnBilgilendirmeFormOnizle {

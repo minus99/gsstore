@@ -21,6 +21,16 @@
     }
 }
 
+//CONTENT UTILITY
+.page-top-title {
+    &-compact {
+        font-size: 16px;
+        > * {
+            padding: 14px 20px;
+        }
+    }
+}
+
 //SECTION BG
 .section-bg {
     &01 {

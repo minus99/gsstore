@@ -33,17 +33,12 @@ $order-pages-module-bg: $color255;
 .bottom-step {
     background: $order-pages-module-bg;
     padding: 5px;
+    margin: 15px #{-$container-gap} #{-$container-gap};
     a {
         width: 100%;
         @extend %btn-medium;
         ~ a {
             margin-top: 5px;
         }
-    }
-
-    .ems-step0 & {
-        padding: 0;
-        background: none;
-        margin-top: 20px;
     }
 }

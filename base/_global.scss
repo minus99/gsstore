@@ -356,19 +356,29 @@ iframe {
 
     //CUSTOM SCROLLBAR
     &-scrollbar {
+        $scrollbar-width: 4px;
+        $scrollbar-padding: 10px;
+        $scrollbar-height: 4px;
+
         overflow: auto;
         max-height: 100vh;
-        padding-right: 10px;
+        padding-right: $scrollbar-padding;
         &::-webkit-scrollbar {
-            width: 4px;
+            width: $scrollbar-width;
         }
         &::-webkit-scrollbar-track {
             background: #d8d8d8;
-            border-radius: 2px;
         }
         &::-webkit-scrollbar-thumb {
             background: #000;
-            border-radius: 2px;
+        }
+
+        &-horizontal {
+            padding-right: 0;
+            &::-webkit-scrollbar {
+                width: auto;
+                height: $scrollbar-height;
+            }
         }
 
         &-hide {

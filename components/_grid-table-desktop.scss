@@ -25,11 +25,22 @@
         top: 0;
     }
     &-address-name {
-        grid-column: span 2;
         padding-right: 0;
     }
     &-address-buttons {
         position: static;
+        margin-top: 5px;
+    }
+    &-address-select {
+        a {
+            > span {
+                justify-content: flex-start;
+            }
+            + a {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
     }
     &-option1 {
         grid-column: span 1;
