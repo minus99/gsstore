@@ -70,6 +70,18 @@
             margin-top: 15px;
         }
     }
+    &-name {
+        display: flex;
+        justify-content: center;
+        i {
+            width: 18px;
+            height: 20px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 -2px;
+        }
+    }
     &-arm {
         > img {
             position: absolute;

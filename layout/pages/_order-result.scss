@@ -1,7 +1,12 @@
+form[action*="siparisSonuc"] {
+    .ems-page-order-grid {
+        padding: 0;
+    }
+}
+
 .ems-order-result {
     padding: 30px 20px;
-    background: $color0 url(/images/frontend/order-result-mobile.jpg) center top / cover no-repeat;
-    color: $color255;
+    background: $order-pages-module-bg;
 
     br {
         display: none;
@@ -10,17 +15,17 @@
 
 .result-content {
     .rlogo {
-        width: 50px;
+        width: 50%;
+        max-width: 200px;
     }
     .ricon {
         margin-top: 80px;
         font-size: 70px;
-        color: $color0;
-        background: $color255;
+        color: $color255;
+        background: $color30;
     }
     .icon-error {
-        color: $color255;
-        background: $color4;
+        background: $color29;
     }
     .rtitle {
         font-size: 22px;
@@ -30,7 +35,6 @@
     .rdesc {
         font-family: $font2;
         font-size: 16px;
-        color: $color6;
         margin-top: 10px;
     }
     .rbtns {
@@ -38,17 +42,23 @@
         width: calc(100% - 40px);
         max-width: 330px;
         > a {
-            display: block;
+            width: 100%;
             margin-top: 10px;
-            font-size: 18px;
         }
     }
 }
 
-[id$="lblSIP_BELIRLIERROR"]:not(:empty) {
+[id$="lblSIP_BELIRLIERROR"] {
     display: block;
     margin-top: 40px;
     text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    @extend .ems-container;
+    @extend .ems-container-small;
+    &:empty {
+        @extend .ems-none;
+    }
 }
 
 //guest

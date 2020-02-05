@@ -47,6 +47,7 @@ $col1: minmax(auto, 790px);
 $col2: 380px;
 $col-gap: 30px;
 $grid-template-columns: $col-container-gap $col1 $col-gap $col2 $col-container-gap;
+$grid-template-columns2: $col-container-gap $col2 $col-gap $col1 $col-container-gap;
 
 //MISC
 $bg-loading: url(/images/frontend/loading.gif) center center/80px no-repeat #f9f9f9;

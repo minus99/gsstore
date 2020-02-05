@@ -2,7 +2,6 @@ $order-pages-bg: $color9;
 $order-pages-module-bg: $color255;
 .ems-page-order {
     background: $order-pages-bg;
-    min-height: calc(100vh - #{$site-header-height});
 
     &-grid {
         padding-top: 20px;

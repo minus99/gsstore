@@ -1,5 +1,6 @@
 .ems-order-payment {
     .block1 {
+        position: relative;
         &::after {
             content: "";
             background: linear-gradient(0deg, white, transparent);
@@ -12,12 +13,11 @@
     }
     .ems-grid-table-cart {
         @extend .ems-scrollbar;
-        max-height: 300px;
+        max-height: 314px;
 
         > .ems-grid-row {
-            grid-template-columns: 75px 1fr;
-            border-color: transparent;
-            padding: 10px 10px 10px 0;
+            grid-template-columns: 40px 2fr 1fr;
+            padding: 10px 0;
             grid-row-gap: 0;
         }
         .ems-grid-name {
@@ -160,6 +160,8 @@
 [id$="ODM_ACIKLAMA"]:not(:empty) {
     display: block;
     margin-top: 20px;
+    @extend .ems-scrollbar;
+    max-height: 300px;
 }
 
 .ems-card-wrapper {
@@ -167,6 +169,8 @@
     position: absolute;
     right: 30px;
     top: 30px;
+    max-width: 350px !important;
+    height: 200px;
 }
 
 .tableTitleOdemeBilgiKrediKarti,
@@ -203,15 +207,17 @@
     }
     td {
         &.tableOdemeBilgiKrediKarti_tddrpKSA_SPR_ID {
+            height: $form-element-height;
+            overflow: hidden;
             > span {
                 display: inline-block;
                 text-align: center;
                 &:nth-child(1) {
-                    width: 85px;
+                    width: calc(50% - 5px);
                     margin-right: 5px;
                 }
                 &:nth-child(2) {
-                    width: calc(100% - 90px);
+                    width: 50%;
                 }
             }
         }
@@ -262,7 +268,7 @@
         display: none;
     }
 }
-.tableOdemeTaksit {
+table.tableOdemeTaksit {
     table-layout: fixed;
     td {
         border: 1px solid $color5;
@@ -277,7 +283,7 @@
     @extend .ems-form-label;
 }
 
-.ems-pay-block1 {
+.ems-pay-summary {
     margin-top: 30px;
     > div {
         background: $color255;
@@ -308,66 +314,29 @@
     }
 }
 
-.tableTitleSiparisOnaySatisSozlesme,
-.tableTitleSiparisOnBilgilendirmeForm {
-    padding: 10px 0;
-    font-weight: 700;
-    line-height: 32px;
-    cursor: pointer;
-    display: none;
+.ems-pay-agreement {}
+
+.onBilgilendirmeForm,
+.siparisOnaySozlesme {
+    background: $order-pages-module-bg;
+    padding: 20px;
+    margin-top: 30px;
 }
-.pageSiparisOnay_lbfOnBilgilendirmeForm {
-    margin-top: 20px;
-}
-.pageSiparisOnay_chkSatisSozlesme,
-.pageSiparisOnay_chkOnBilgilendirmeForm {
-    padding: 20px 0;
-    a {
-        text-decoration: underline;
-    }
-}
-.pageSiparisOnay_chkSatisSozlesme {
-    border-top: 1px solid $color4;
-}
-.pageSiparisOnay_btnSatisSozlesmeOnizle,
-.pageSiparisOnay_btnOnBilgilendirmeFormOnizle {
-    display: none;
-}
-.siparisOnaySozlesmeMetin,
-.onBilgilendirmeFormMetin {
-    display: none;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 10;
-    width: 100%;
-    height: calc(100vh - 100px);
-    max-width: 910px;
-    background: $color255;
+.onBilgilendirmeFormMetin,
+.siparisOnaySozlesmeMetin {
     > span {
-        height: inherit !important;
-        padding: 0 20px;
-        overflow-x: hidden !important;
-        a.btnDefault {
-            @extend %btn-reset;
-        }
-    }
-    .a1 {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-        margin: 0 -20px;
+        @extend .ems-scrollbar;
     }
 }
-.ems-form1-animate {
-    .agreement-overlay,
-    .onBilgilendirmeFormMetin {
-        display: block;
-    }
+.pageSiparisOnay_lbfOnBilgilendirmeForm,
+.pageSiparisOnay_lbfSatisSozlesme {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    text-align: left;
 }
-.ems-form2-animate {
-    .agreement-overlay,
-    .siparisOnaySozlesmeMetin {
-        display: block;
-    }
+a.btnOnBilgilendirmeFormOnizle,
+a.btnSatisSozlesmeOnizle {
+    @extend %btn-reset;
+    font-weight: 400;
 }

@@ -12,6 +12,23 @@
         }
     }
 }
+//HIERARCHY MENU - SLIDE
+.mobi-slide {
+    .swiper-slide {
+        > a {
+            border-bottom: none;
+            border-top: 1px solid $color9;
+            padding: 15px 20px;
+        }
+        &.selected {
+            > a {
+                border-color: $color9;
+                font-weight: 600;
+                padding-left: 30px;
+            }
+        }
+    }
+}
 //SYSTEM MENU
 .kutuSolMenuTree {
     .mobi-dropdown {

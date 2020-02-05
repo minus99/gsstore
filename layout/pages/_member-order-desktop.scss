@@ -1,11 +1,11 @@
-.ems-member-order {
-    padding-top: 40px;
-}
+.ems-member-order {}
 
 .ems-grid-table-order {
     > .ems-grid-row {
-        grid-template-columns: 130px 80px 80px 1fr 1fr 1fr;
-        padding-right: 0;
+        grid-template-columns: 1.25fr 1fr 1fr .5fr;
+    }
+    .ems-grid-total {
+        align-self: center;
     }
 }
 

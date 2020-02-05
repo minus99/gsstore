@@ -87,8 +87,9 @@
     .swiper-slide {
         width: auto;
         > a {
+            display: block;
             padding: 12px 15px;
-            border-bottom: 2px solid $color27;            
+            border-bottom: 2px solid $color27;
         }
         &.selected {
             > a {

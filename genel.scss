@@ -131,6 +131,9 @@
         @include setMediaScreen(max-width, $breakpoint-large) {
             //HEADER
             @import 'layout/header/header-desktop-mini';
+
+            //PAGES
+            @import 'layout/pages/order-payment-mini';
         }
     }
 }

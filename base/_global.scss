@@ -360,7 +360,7 @@ iframe {
         $scrollbar-padding: 10px;
         $scrollbar-height: 4px;
 
-        overflow: auto;
+        overflow: auto !important;
         max-height: 100vh;
         padding-right: $scrollbar-padding;
         &::-webkit-scrollbar {

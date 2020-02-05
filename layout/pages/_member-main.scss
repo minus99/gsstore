@@ -6,7 +6,6 @@ $member-pages-mt: 30px;
 $member-page-width: 850px;
 .ems-page-member {
     background: $member-pages-body-bg;
-    min-height: calc(100vh - #{$site-header-height});
 
     &-grid {
         > .ga1 {
@@ -39,7 +38,7 @@ $member-page-width: 850px;
 }
 
 .member-top-info {
-    padding: 25px $container-gap;
+    padding: $container-gap;
     &-media {
         > img {
             width: 80px;
