@@ -183,9 +183,6 @@ iframe {
             color: $color30;
             border-color: currentColor;
         }
-        &:empty {
-            display: none;
-        }
 
         &-horizontal {
             font-family: $font2;
@@ -198,6 +195,10 @@ iframe {
                 font-size: 32px;
                 margin: 0 10px 0 0;
             }
+        }
+
+        &:empty {
+            @extend .ems-none;
         }
     }
 

@@ -72,10 +72,10 @@
 
 .ems-pagination-hide {
     .urunPaging {
-        display: none;
+        @extend .ems-none;
     }
 }
 
 .icerikListePagingUst {
-    display: none;
+    @extend .ems-none;
 }

@@ -11,12 +11,14 @@
 
 //order-detail
 .order-detail-info {
-    $ml: 20px;
     column-count: 2;
     column-gap: 0;
-    margin-left: -$ml;
-    > {
+    margin: 20px 0 0;
+    > div {
         break-inside: avoid;
+    }
+    .no {
+        column-span: all;
     }
 }
 
@@ -27,14 +29,11 @@
     }
 }
 
-
 .order-address {
-    margin-left: -20px;
-    margin-bottom: 30px;
-}
-
-.ems-step0 .ems-grid-table-order-products {
-    > .ems-grid-row {
-        grid-template-columns: 90px 1fr 113px 1fr;
+    margin-top: 0;
+    &-billing {
+        margin-left: 50px;
+        padding-left: 50px;
+        border-left: 1px solid $color9;
     }
 }

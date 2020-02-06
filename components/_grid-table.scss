@@ -18,10 +18,8 @@
     &.ems-grid-header {
         display: none;
         font-size: 13px;
-        color: $color6;
         font-weight: 600;
-        border-top: none;
-        padding-top: 5px;
+        padding-top: 0;
         padding-bottom: 5px;
     }
 }
@@ -94,10 +92,19 @@
         [id*="KDV"] {
             display: none;
         }
+
+        .price-wrapper-static {
+            @extend .ems-price;
+            > span[style*='block']:not(:empty) + span {
+                color: $color1;
+                margin-left: 12px;
+            }
+        }
     }
     &-address-name {
         padding-right: 50%;
         font-weight: 500;
+        align-self: flex-start;
         > span {
             display: block;
             margin-top: 5px;
@@ -106,8 +113,9 @@
         }
     }
     &-address {
-        line-height: 1.7;
-        font-weight: 400;
+        #plhAdres {
+            line-height: 1.7;
+        }
     }
     &-address-buttons {
         position: absolute;
@@ -115,7 +123,6 @@
         top: 20px;
         > a {
             @extend %btn-reset;
-            font-family: $font2;
             font-size: 11px;
             font-weight: 500;
             + a {
@@ -183,8 +190,8 @@
     }
     &-option {
         grid-column: span 2;
-        > div + div {
-            margin-top: 5px;
+        &1 ~ div {
+            margin-top: 10px;
         }
         .dropdown-header {
             $h: 38px;
@@ -192,11 +199,20 @@
             height: $h;
         }
     }
+    &-piece {
+        + .ems-grid-report {
+            margin-left: 10px;
+        }
+    }
     &-status {
         > a:empty {
             &::before {
                 content: "-";
             }
+        }
+
+        .status-wrapper {
+            margin-bottom: 10px;
         }
     }
 }

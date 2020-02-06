@@ -45,7 +45,12 @@
     &-title {
         grid-column: span 1;
     }
-    &-option1 {
+    &-option {
         grid-column: span 1;
+        .ems-grid-remove {
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: right;
+        }
     }
 }

@@ -216,9 +216,16 @@ a.btnsepeteAt {
     @extend %btn-primary;
     @extend %btn-large;
 }
+
+.tukendi {
+    .pnlSepetGrup {
+        display: none !important;
+    }
+}
 a.btnStokHaberci {
     width: 100%;
     pointer-events: none;
+    @extend .btn-large;
 }
 
 //added to cart

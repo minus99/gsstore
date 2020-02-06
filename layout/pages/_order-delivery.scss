@@ -9,7 +9,7 @@
 .ems-grid-table-address {
     background: $order-pages-module-bg;
     padding: 0 $container-gap;
-    .ems-grid-row {
+    > .ems-grid-row {
         grid-template-columns: 1fr;
         row-gap: 10px;
     }

@@ -9,7 +9,7 @@
 }
 .kutuHeaderMesaj,
 .kutuFooterMesaj {
-    display: none;
+    @extend .ems-none;
 }
 
 .ems-member-message {}
@@ -41,4 +41,8 @@
 [id$="lblSistemMesaj"] {
     display: block;
     margin-top: 30px;
+
+    &:empty {
+        @extend .ems-none;
+    }
 }

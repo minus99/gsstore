@@ -1,9 +1,8 @@
-.ems-member-favorite {
-    padding-top: 50px;
-}
+.ems-member-favorite {}
 
 .ems-grid-table-favorite {
     > .ems-grid-row {
-        grid-template-columns: 20px 100px 2.5fr 175px 113px 1fr;
+        grid-template-columns: 20px 100px 1fr minmax(300px, 1fr);
+        padding-left: 0;
     }
 }
