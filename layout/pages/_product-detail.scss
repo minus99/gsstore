@@ -101,7 +101,6 @@
 .tukendi {
     #plhStokUyari {
         display: block !important;
-        color: $color3;
     }
 }
 .urunDetay_promosyonListe {
@@ -164,10 +163,9 @@ $m: 5px;
         border: 1px solid $color4;
         margin: #{$m};
         font-size: 15px;
-        color: $color0;
         text-align: center;
         &.selectedOption {
-            background: $color0;
+            background: $color2;
             color: $color255;
         }
         &.stokYok {

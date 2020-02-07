@@ -50,7 +50,7 @@
 .qty-wrapper a[onclick*="ekle"]::before,
 .qty-wrapper a[onclick*="cikar"]::before,
 .qty-wrapper .bottom-btn::before,
-.qty-wrapper .top-btn::before, .mobi-dropdown-header::after, .popular-search-words .prm-link::before, .searchSuggestDivHolder .cat .suggest_link > span::before {
+.qty-wrapper .top-btn::before, .mobi-dropdown-header::after, .searchSuggestDivHolder .cat .suggest_link > span::before {
   content: "";
   border-width: 5px 4px;
   border-style: solid;
@@ -61,7 +61,7 @@
   border-color: transparent transparent currentColor transparent;
 }
 
-.popular-search-words .prm-link::before, .searchSuggestDivHolder .cat .suggest_link > span::before {
+.searchSuggestDivHolder .cat .suggest_link > span::before {
   border-color: transparent transparent transparent currentColor;
 }
 
@@ -449,7 +449,7 @@ form[action*="adr=0"] #plhAciklama, .tableOdemeBilgiKrediKarti .div-cc-carttype,
   position: relative;
   background: #FFF;
   font-size: 16px;
-  color: #252525;
+  color: #000;
   min-height: 212px;
   padding: 40px;
   border: 1px solid transparent;
@@ -989,12 +989,12 @@ span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, .act-btns 
 
 .btn-secondary, a.lnkSatinAl, .ems-new-address a.btnAdresIptal {
   background: #f3f3f3;
-  color: #252525;
+  color: #000;
 }
 
 .btn-secondary:hover, a.lnkSatinAl:hover, .ems-new-address a.btnAdresIptal:hover, .banner:hover .btn-secondary {
   background: #EBEBEB;
-  color: #252525;
+  color: #000;
 }
 
 .btn-transparent, a.btnFacebookLoginKutu, a.btnFacebookLogin, a.btnKutuLogout, .swiper-product-horizontal a.btnSepeteAt, .ems-prdd-block2 a.btnDefault, .act-btns a {
@@ -1564,7 +1564,6 @@ a.btnXMLFORM {
 .sub-header {
   position: relative;
   font-size: 21px;
-  color: #252525;
   font-weight: 600;
   margin-top: auto;
 }
@@ -2303,7 +2302,6 @@ button.swiper-pagination-bullet {
   display: none;
   border: 1px solid #EBEBEB;
   background: #FFF;
-  color: #000;
 }
 
 .ems-tab-checkbox.opened .ems-tab-checkbox-content {
@@ -2430,7 +2428,6 @@ button.swiper-pagination-bullet {
 
 .banner01 .prm-link {
   display: block;
-  color: #252525;
   border-color: currentColor;
 }
 
@@ -3652,7 +3649,6 @@ ul.menuKategori b {
   width: 100%;
   height: 100%;
   background: #f3f3f3;
-  color: #000;
 }
 
 .kutuHeaderOzellikFiltre {
@@ -3903,7 +3899,6 @@ tr + tr #dvUrunKiyaslamaOzellik {
   margin-top: 45px;
   font-family: aktiv-grotesk, arial, sans-serif;
   font-weight: 300;
-  color: #252525;
 }
 
 .urunPaging td[align="left"],
@@ -4841,7 +4836,6 @@ tr + tr #dvUrunKiyaslamaOzellik {
   background: #FFF;
   font-family: aktiv-grotesk, arial, sans-serif;
   font-size: 14px;
-  color: #252525;
   font-weight: 400;
   opacity: 0;
   -webkit-transform: translateX(200px);
@@ -5210,8 +5204,7 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   height: 100%;
   overflow: auto;
   background: #FFF;
-  color: #000;
-  padding-bottom: 30px;
+  padding: 30px 20px;
   opacity: 0;
   -webkit-transform: translateX(50%);
   transform: translateX(50%);
@@ -5220,10 +5213,14 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 }
 
 .mini-search .sub-close {
-  position: absolute;
   right: auto;
-  left: 10px;
-  top: 26px;
+  left: 30px;
+  top: 43px;
+}
+
+.mini-search .ems-form {
+  max-width: none;
+  margin-top: -20px;
 }
 
 .mini-search .f-input {
@@ -5235,15 +5232,18 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 
 .mini-search .search-input > input {
   padding-right: 50px;
-  color: #EBEBEB;
-  margin-left: 55px;
-  width: calc(100% - 75px);
+  padding-left: 45px;
+  color: #999;
 }
 
 .mini-search a[id$="btnArama"] {
   position: absolute;
-  right: 27px;
-  top: 6px;
+  right: 10px;
+  top: 10px;
+}
+
+.mini-search a[id$="btnArama"] svg {
+  font-size: 30px;
 }
 
 .mini-search .no-result {
@@ -5269,7 +5269,7 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   /* easeOutExpo */
 }
 
-.mini-search-focused .search-input input {
+.mini-search-focused .search-input > input {
   color: #000;
 }
 
@@ -5287,30 +5287,16 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 
 .popular-search-words {
   display: none;
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 15px;
-  margin: 0 20px;
+  text-align: center;
+  margin-top: 175px;
 }
 
 .popular-search-words .ems-section-title {
-  font-size: inherit;
-  font-weight: 600;
-  margin-bottom: 10px;
-  text-align: left;
+  font-size: 14px;
 }
 
-.popular-search-words .swiper-inner {
-  margin-left: -30px;
-}
-
-.popular-search-words .swiper-slide {
-  padding-left: 30px;
-}
-
-.popular-search-words .prm-link::before {
-  display: inline-block;
-  vertical-align: 1px;
-  margin-right: 5px;
+.popular-search-words .swiper-slide + .swiper-slide {
+  padding-top: 15px;
 }
 
 .popular-search-words-append .popular-search-words {
@@ -5324,7 +5310,6 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 }
 
 .searchSuggestDivHolder {
-  margin: 0 20px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "ga3" "ga1" "ga2" "ga4";
@@ -5341,9 +5326,7 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 .searchSuggestDivHolder .prd .sHolder {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1px;
-  margin-left: -20px;
-  margin-right: -20px;
+  grid-gap: 18px 15px;
 }
 
 .searchSuggestDivHolder .prd .sHolder > div {
@@ -5363,31 +5346,19 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   display: none;
 }
 
-.searchSuggestDivHolder .prd table tr td {
-  padding-left: 20px;
-  padding-right: 20px;
-  background: #EFEFEF;
-}
-
 .searchSuggestDivHolder .prd table tr td > .emos_invisible {
   display: block;
 }
 
 .searchSuggestDivHolder .prd .suggest_urnsmallimg_con {
   grid-row: 1;
-  padding-left: 0;
-  padding-right: 0;
-  background: none;
-}
-
-.searchSuggestDivHolder .prd .suggest_urnsmallimg_con > img {
-  min-height: 218px;
+  border: 1px solid #f3f3f3;
+  padding: 25px 15px 10px;
 }
 
 .searchSuggestDivHolder .prd .suggest_urnsname_con {
   grid-row: 2;
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 16px;
+  font-weight: 500;
   padding-top: 15px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -5396,9 +5367,7 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 
 .searchSuggestDivHolder .prd .suggest_urnprice_con {
   grid-row: 3;
-  padding-top: 5px;
-  font-size: 18px;
-  font-weight: 700;
+  padding-top: 8px;
   padding-bottom: 15px;
 }
 
@@ -5430,11 +5399,11 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 .searchSuggestDivHolder .cat .suggest_link > span {
   position: relative;
   display: block;
-  padding: 6px 15px 6px 15px;
+  padding: 6px 15px;
   font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 20px;
-  color: #EBEBEB;
+  color: #999;
 }
 
 .searchSuggestDivHolder .cat .suggest_link > span span {
@@ -5466,9 +5435,7 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 .searchSuggestDivHolder .prdCount {
   grid-area: ga1;
   display: block;
-  padding: 20px 0;
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 15px;
+  padding: 25px 0 10px;
 }
 
 .searchSuggestDivHolder .prdCount h3 {
@@ -5609,7 +5576,7 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   margin-top: 20px;
   background: #FFF;
   font-size: 12px;
-  color: #252525;
+  color: #000;
   padding: 15px 20px;
 }
 
@@ -5895,7 +5862,6 @@ ul.product-list-grid:empty {
 
 .tukendi .urunListe_urunStokUyari {
   display: block !important;
-  color: #252525;
 }
 
 .urunListe_promosyonListe {
@@ -6100,7 +6066,6 @@ ul.product-list-grid:empty {
 
 .tukendi #plhStokUyari {
   display: block !important;
-  color: #252525;
 }
 
 .urunDetay_promosyonListe {
@@ -6171,12 +6136,11 @@ ul.product-list-grid:empty {
   border: 1px solid #EFEFEF;
   margin: 5px;
   font-size: 15px;
-  color: #000;
   text-align: center;
 }
 
 .dropdown-options > a.selectedOption {
-  background: #000;
+  background: #FFAB00;
   color: #FFF;
 }
 
@@ -8021,7 +7985,7 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
   margin-top: 30px;
   text-align: left;
   background: #252525;
-  color: #000;
+  color: #FFF;
   padding: 20px;
   border-radius: 5px;
 }
@@ -8160,7 +8124,8 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
       color: #000;
     }
     .d-btn-primary:hover, .banner:hover .d-btn-primary {
-      background: #252525;
+      background: #000;
+      color: #FFF;
     }
     .ems-field-mini {
       max-width: 50%;
@@ -8343,7 +8308,6 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
     .kutuOzellikFiltre {
       position: static;
       background-color: transparent;
-      color: inherit;
       padding: 30px 60px;
       border: 1px solid #f3f3f3;
       height: auto;
@@ -8489,6 +8453,7 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
     .tabloTabBtnAdim {
       z-index: 2;
       margin-top: -80px;
+      margin-left: 33%;
       max-width: 50%;
     }
     .ems-grid-row {
@@ -8704,7 +8669,6 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
       width: 100%;
       height: 100%;
       background-color: #FFF;
-      color: #252525;
       line-height: normal;
       -webkit-user-select: none;
       -moz-user-select: none;
@@ -8747,7 +8711,6 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
       background: none;
       font-family: gilroy, arial, sans-serif;
       font-size: 13px;
-      color: #000;
       font-weight: 500;
       opacity: 1;
       -webkit-transform: none !important;
@@ -8948,8 +8911,7 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
       top: 56px;
     }
     .mini-search .search-input > input {
-      margin-left: 0;
-      width: calc(100% - 55px);
+      padding-left: 0;
     }
     .mini-search a[id$="btnArama"] {
       right: 65px;
@@ -9576,9 +9538,15 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
       position: relative;
       z-index: auto;
     }
+    .ems-page-order .site-header-grid {
+      grid-template-columns: 330px 1fr 115px;
+      grid-template-areas: "ga1 ga7 ga5";
+    }
     .ems-page-order .site-header-grid > .ga1,
-    .ems-page-order .site-header-grid > .ga8 {
+    .ems-page-order .site-header-grid > .ga5,
+    .ems-page-order .site-header-grid > .ga7 {
       line-height: 80px;
+      border: none;
     }
     .ems-page-order .mini-user-info {
       background: none;
@@ -9628,9 +9596,9 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
       margin-bottom: 40px;
     }
     .cart-promotion-info .swiper-container.ems-container-full-right {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 0;
+      padding-right: 20px;
     }
     .cart-promotion-info .swiper-inner {
       margin-left: -20px;
@@ -9717,34 +9685,30 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
   }
   @media screen and (min-width: 1025px) and (max-width: 1350px) {
     .site-header-grid {
-      grid-template-areas: "ga1 . ga2 ga3 ga4 ga5" "ga6 ga6 ga6 ga6 ga8 ga8" "ga7 ga7 ga7 ga7 ga7 ga7";
+      grid-template-columns: 330px 1fr auto auto 115px 115px 20px;
+      grid-template-areas: "ga1 ga6 ga2 ga3 ga4 ga5 ga9" "ga7 ga7 ga7 ga7 ga8 ga8 ga10";
     }
-    .menu::before, .menu::after {
-      display: none;
+    .site-header-grid > .ga1 {
+      border-bottom: 1px solid #EFEFEF;
+    }
+    .site-header-grid > .ga1,
+    .site-header-grid > .ga2,
+    .site-header-grid > .ga3,
+    .site-header-grid > .ga4,
+    .site-header-grid > .ga5,
+    .site-header-grid > .ga6,
+    .site-header-grid > .ga9 {
+      line-height: 60px;
+    }
+    .site-header-grid > .ga7 {
+      line-height: 49px;
     }
     .menu .sub {
-      width: 100%;
-      height: auto;
       left: 0;
-    }
-    .menu .sub .r1 {
-      display: none;
-    }
-    .menu .skew-object {
-      display: none;
-    }
-    .menu .img2 {
-      display: none;
-    }
-    .menu .img2 + .lvl-2 {
-      padding: 30px;
+      width: calc(100% + 250px);
     }
     .menu .lvl-2 {
-      justify-content: center;
-      overflow: auto;
-    }
-    .menu .lvl-2 > li {
-      flex: none;
+      padding: 30px;
     }
     .ems-card-wrapper {
       display: none;

@@ -41,10 +41,10 @@ $btn-cursor: 10px;
 
     &-secondary {
         background: $color9;
-        color: $color3;
+        color: $color0;
         &-hover {
             background: $color6;
-            color: $color3;
+            color: $color0;
         }
         &:hover {
             @extend %btn-secondary-hover;

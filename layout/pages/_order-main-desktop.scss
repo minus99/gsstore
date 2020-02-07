@@ -3,9 +3,14 @@
         position: relative;
         z-index: auto;
         &-grid {
+            grid-template-columns: $header-col1 1fr $header-col6;
+            grid-template-areas:
+                "ga1 ga7 ga5";
             > .ga1,
-            > .ga8 {
-                line-height: $d-order-site-header-height;
+            > .ga5,
+            > .ga7 {
+                line-height: $order-header;
+                border: none;
             }
         }
     }

@@ -19,8 +19,7 @@
     }
 
     .search-input > input {
-        margin-left: 0;
-        width: calc(100% - #{$ml});
+        padding-left: 0;
     }
     a[id$="btnArama"] {
         right: 65px;

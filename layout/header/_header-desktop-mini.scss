@@ -1,37 +1,32 @@
 .site-header-grid {
-    grid-template-areas: "ga1 . ga2 ga3 ga4 ga5" "ga6 ga6 ga6 ga6 ga8 ga8" "ga7 ga7 ga7 ga7 ga7 ga7";
+    $header-col7: 20px;
+    grid-template-columns: $header-col1 $header-col2 $header-col3 $header-col4 $header-col5 $header-col6 $header-col7;
+    grid-template-areas: "ga1 ga6 ga2 ga3 ga4 ga5 ga9" "ga7 ga7 ga7 ga7 ga8 ga8 ga10";
+    > .ga1 {
+        border-bottom: 1px solid $header-border-color;
+    }
+    > .ga1,
+    > .ga2,
+    > .ga3,
+    > .ga4,
+    > .ga5,
+    > .ga6,
+    > .ga9 {
+        line-height: 60px;
+    }
+    
+    > .ga7 {
+        line-height: 49px;
+    }
 }
 
 .menu {
-    &::before,
-    &::after {
-        display: none;
-    }
     .sub {
-        width: 100%;
-        height: auto;
         left: 0;
-        .r1 {
-            display: none;
-        }
-    }
-
-    .skew-object {
-        display: none;
-    }
-
-    .img2 {
-        display: none;
-        + .lvl-2 {
-            padding: 30px;
-        }
+        width: calc(100% + #{$header-col5 + $header-col6 + $header-col7});
     }
 
     .lvl-2 {
-        justify-content: center;
-        overflow: auto;
-        > li {
-            flex: none;
-        }
+        padding: 30px;
     }
 }

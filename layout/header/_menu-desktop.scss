@@ -8,7 +8,6 @@
     background: none;
     font-family: $font1;
     font-size: 13px;
-    color: $color0;
     font-weight: 500;
 
     opacity: 1;
@@ -82,10 +81,10 @@
     .sub {
         display: none;
         position: absolute;
-        left: #{-$subGapL};
+        left: #{-$header-col1};
         top: 100%;
         z-index: 2;
-        width: calc(100% + #{$subGapL * 2});
+        width: calc(100% + #{$header-col1 * 2});
         height: 305px;
         background: #fdfdfd;
         font-family: $font2;
@@ -96,7 +95,7 @@
             overflow: hidden;
         }
         .r1 {
-            flex-basis: #{$subGapL + 30px};
+            flex-basis: #{$header-col1 + 30px};
             + .r2 {
                 flex: none;
                 margin-left: 0;

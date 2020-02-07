@@ -39,9 +39,9 @@
     $p: 20px;
     .swiper-container {
         &.ems-container-full-right {
-            max-width: 1200px;
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 0;
+            padding-right: #{$container-gap};
         }
     }
     .swiper-inner {

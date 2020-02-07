@@ -1,8 +1,15 @@
-$subGapL: 330px;
+$header-border-color: $color4;
+$header-col1: 330px;
+$header-col2: 1fr;
+$header-col3: auto;
+$header-col4: auto;
+$header-col5: 115px;
+$header-col6: 115px;
+$header-col7: #{$d-container-gap};
 .site-header {
     &-grid {
         position: relative;
-        grid-template-columns: #{$subGapL} 1fr auto auto 115px 115px #{$d-container-gap};
+        grid-template-columns: $header-col1 $header-col2 $header-col3 $header-col4 $header-col5 $header-col6 $header-col7;
         grid-template-areas: "ga1 ga6 ga2 ga3 ga4 ga5 ga9" "ga1 ga7 ga7 ga7 ga8 ga8 ga10";
         @include setGridArea(1,10);
         > .ga2,
@@ -12,7 +19,7 @@ $subGapL: 330px;
         > .ga6,
         > .ga9 {
             line-height: 40px;
-            border-bottom: 1px solid $color4;
+            border-bottom: 1px solid $header-border-color;
         }
         > .ga7,
         > .ga8 {
@@ -21,7 +28,7 @@ $subGapL: 330px;
     
         > .ga1 {
             line-height: $d-site-header-height;
-            border-right: 1px solid $color4;
+            border-right: 1px solid $header-border-color;
         }
         
         > .ga8 {
@@ -61,7 +68,6 @@ $subGapL: 330px;
     width: 100%;
     height: 100%;
     background-color: $color255;
-    color: $color3;
     line-height: normal;
     user-select: none;
     

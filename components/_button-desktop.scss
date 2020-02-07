@@ -11,7 +11,8 @@
         background: $color255;
         color: $color0;
         &-hover {
-            background: $color3;
+            background: $color0;
+            color: $color255;
         }
         &:hover {
             @extend %d-btn-primary-hover;

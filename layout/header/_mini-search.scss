@@ -1,5 +1,3 @@
-$ml: 55px;
-$mr: 20px;
 .mini-search {
     &-sub {
         position: fixed;
@@ -10,18 +8,21 @@ $mr: 20px;
         height: 100%;
         overflow: auto;
         background: $color255;
-        color: $color0;
-        padding-bottom: 30px;
+        padding: 30px $container-gap;
         
         opacity: 0;
         transform: translateX(50%);
         transition: all .12s cubic-bezier(0.950, 0.050, 0.795, 0.035); /* easeInExpo */
     }
     .sub-close {
-        position: absolute;
         right: auto;
-        left: 10px;
-        top: 26px;
+        left: 30px;
+        top: 43px;
+    }
+
+    .ems-form {
+        max-width: none;
+        margin-top: -20px;
     }
 
     .f-input {
@@ -33,15 +34,17 @@ $mr: 20px;
 
     .search-input > input {
         padding-right: 50px;
-        color: $color6;
-        margin-left: $ml;
-        width: calc(100% - #{$ml + $mr});
+        padding-left: 45px;
+        color: $color8;
     }
     a[id$="btnArama"] {
         @extend %btn-reset;
         position: absolute;
-        right: $mr + 7px;
-        top: 6px;
+        right: 10px;
+        top: 10px;
+        svg {
+            font-size: 30px;
+        }
     }
 
     .no-result {
@@ -69,7 +72,7 @@ $mr: 20px;
     }
 
     &-focused {
-        .search-input input {
+        .search-input > input {
             color: $color0;
         }
     }
@@ -92,30 +95,15 @@ $mr: 20px;
 
 .popular-search-words {
     display: none;
-    font-family: $font2;
-    font-size: 15px;
-    margin: 0 20px;
+    text-align: center;
+    margin-top: 175px;
     .ems-section-title {
-        font-size: inherit;
-        font-weight: 600;
-        margin-bottom: 10px;
-        text-align: left;
+        font-size: 14px;
     }
 
-    $p: 30px;
-    .swiper-inner {
-        margin-left: #{-$p};
-    }
     .swiper-slide {
-        padding-left: #{$p};
-    }
-    .prm-link {
-        &::before {
-            @extend %triangle;
-            @extend %triangle-r;
-            display: inline-block;
-            vertical-align: 1px;
-            margin-right: 5px;
+        + .swiper-slide {
+            padding-top: 15px;            
         }
     }
 
@@ -130,7 +118,6 @@ $mr: 20px;
     display: none;
 }
 .searchSuggestDivHolder {
-    margin: 0 20px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "ga3" "ga1" "ga2" "ga4";
@@ -143,9 +130,7 @@ $mr: 20px;
         .sHolder {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 1px;
-            margin-left: -$mr;
-            margin-right: -$mr;
+            grid-gap: 18px 15px;
             > div {
                 display: none;
                 cursor: pointer !important;
@@ -166,9 +151,6 @@ $mr: 20px;
                     display: none;
                 }
                 td {
-                    padding-left: 20px;
-                    padding-right: 20px;
-                    background: $color4;
                     > .emos_invisible {
                         display: block;
                     }
@@ -177,17 +159,12 @@ $mr: 20px;
         }
         .suggest_urnsmallimg_con {
             grid-row: 1;
-            padding-left: 0;
-            padding-right: 0;
-            background: none;
-            > img {
-                min-height: 218px;
-            }
+            border: 1px solid $color9;
+            padding: 25px 15px 10px;
         }
         .suggest_urnsname_con {
             grid-row: 2;
-            font-family: $font2;
-            font-size: 16px;
+            font-weight: 500;
             padding-top: 15px;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -195,9 +172,7 @@ $mr: 20px;
         }
         .suggest_urnprice_con {
             grid-row: 3;
-            padding-top: 5px;
-            font-size: 18px;
-            font-weight: 700;
+            padding-top: 8px;
             padding-bottom: 15px;
             .suggest_urnprice {
                 display: flex;
@@ -224,11 +199,11 @@ $mr: 20px;
             > span {
                 position: relative;
                 display: block;
-                padding: 6px 15px 6px 15px;
+                padding: 6px 15px;
                 font-family: $font2;
-                font-size: 13px;
+                font-size: 12px;
                 line-height: 20px;
-                color: $color6;
+                color: $color8;
                 span {
                     display: none;
                 }
@@ -257,9 +232,7 @@ $mr: 20px;
     .prdCount {
         grid-area: ga1;
         display: block;
-        padding: 20px 0;
-        font-family: $font2;
-        font-size: 15px;
+        padding: 25px 0 10px;
         h3 {
             display: none;
         }

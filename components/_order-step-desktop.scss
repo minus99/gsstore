@@ -1,5 +1,7 @@
+$order-header: 80px;
 .tabloTabBtnAdim {
     z-index: 2;
-    margin-top: -80px;
+    margin-top: -$order-header;
+    margin-left: 33%;
     max-width: 50%;
 }
