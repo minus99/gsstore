@@ -84,7 +84,8 @@ $prd-pd-y: 18px;
     &-image {
         border: 1px solid $color9;
         padding: 25px 15px 10px;
-        .ems-responsive-item {
+        > a {
+            @extend %ems-responsive-item;
             @include aspect-ratio(450, 600);
         }
     }

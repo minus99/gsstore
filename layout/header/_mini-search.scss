@@ -120,7 +120,7 @@
 .searchSuggestDivHolder {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "ga3" "ga1" "ga2" "ga4";
+    grid-template-areas: "ga1" "ga2" "ga3" "ga4";
 
     .prd {
         grid-area: ga2;
@@ -147,6 +147,7 @@
         table {
             tr {
                 display: grid;
+                font-weight: 400;
                 th {
                     display: none;
                 }
@@ -165,7 +166,7 @@
         .suggest_urnsname_con {
             grid-row: 2;
             font-weight: 500;
-            padding-top: 15px;
+            padding-top: 18px;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -173,7 +174,7 @@
         .suggest_urnprice_con {
             grid-row: 3;
             padding-top: 8px;
-            padding-bottom: 15px;
+            padding-bottom: 18px;
             .suggest_urnprice {
                 display: flex;
             }
@@ -188,9 +189,8 @@
     }
     .cat {
         grid-area: ga3;
-        margin-top: 14px;
         h3 {
-            margin: 0 0 10px;
+            padding: 15px 0 10px;
         }
         .suggest_link {
             > a {
@@ -233,6 +233,8 @@
         grid-area: ga1;
         display: block;
         padding: 25px 0 10px;
+        font-family: $font2;
+        font-size: 12px;
         h3 {
             display: none;
         }
