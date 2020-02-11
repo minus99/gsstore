@@ -1,7 +1,7 @@
+/*
 .design-uniform {
-    $skew: 73px;
     min-height: 566px;
-    padding-left: calc(((100% - #{$container-large}) / 2) - #{$skew});
+    padding-left: calc(((100% - #{$container-large}) / 2) - 73px);
     > .ga1 {
         flex-basis: 750px;
     }
@@ -89,3 +89,4 @@
         margin-bottom: 0;
     }
 }
+*/

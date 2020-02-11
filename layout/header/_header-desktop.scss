@@ -1,6 +1,6 @@
 $header-border-color: $color4;
 $header-col1: 330px;
-$header-col2: 1fr;
+$header-col2: minmax(auto, 100%);
 $header-col3: auto;
 $header-col4: auto;
 $header-col5: 115px;

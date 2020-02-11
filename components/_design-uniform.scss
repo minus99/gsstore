@@ -5,17 +5,11 @@ $uniform-padding-x: 20px;
     color: $color255;
     padding: 20px $uniform-padding-x 0;
 
-    a {
-        .icon-radio-active {
-            font-size: 18px;
-            margin-right: 5px;
-            --check: none;
-        }
-    }
-    a.selected {
-        .icon-radio-active {
-            --check: block;
-        }
+    .sub-close {
+        right: auto;
+        left: 20px;
+        top: 10px;
+        animation: animation-01 .32s ease;
     }
 
     .ems-section-title {
@@ -26,7 +20,7 @@ $uniform-padding-x: 20px;
         background: $color3;
         color: $color255;
         padding: 5px;
-        margin: 35px #{-$uniform-padding-x} 0;
+        margin: 50px #{-$uniform-padding-x} 0;
     }
 
     &[data-rel="step0"] {
@@ -61,6 +55,11 @@ $uniform-padding-x: 20px;
     }
 
     &[data-rel="step5"] {
+        .uniform {
+            &-preview {
+                display: none;
+            }
+        }
         .step-next {
             opacity: .25;
             pointer-events: none;
@@ -68,10 +67,11 @@ $uniform-padding-x: 20px;
     }
 }
 .uniform {
+    $fs: (320px - 40px - 30px) / 4; //((en küçük ekran - container padding toplamı - itemler arasındaki margin toplamı) / adım sayısı)
     &-steps {
         $ml: 10px;
+        margin-top: 30px;
         margin-left: -$ml;
-        max-width: 335px;
         overflow: auto;
         > a {
             position: relative;
@@ -82,11 +82,12 @@ $uniform-padding-x: 20px;
                 display: block;
             }
             > svg {
-                font-size: #{(320 - 40 - 40) / 5}px; //((en küçük ekran - container padding - itemler arasındaki margin) / adım sayısı)
+                font-size: $fs;
                 padding: 12px;
                 border: 1px solid #393b3f;
                 border-radius: 100%;
                 margin-bottom: 9px;
+                transition: all .25s ease;
             }
             &.selected {
                 > svg {
@@ -99,13 +100,19 @@ $uniform-padding-x: 20px;
                 &::before {
                     content: "";
                     position: absolute;
-                    top: 24px;
+                    top: #{$fs / 2};
                     left: -10px;
                     border-top: 1px solid #393b3f;
                     width: 10px;
                 }
             }
         }
+    }
+    &-step-title {
+        font-size: 16px;
+        color: $color2;
+        font-weight: 500;
+        margin-bottom: 15px;
     }
     &-preview {
         position: relative;
@@ -179,7 +186,6 @@ $uniform-padding-x: 20px;
         > div {
             position: relative;
             overflow: auto;
-            max-width: 450px;
             animation: animation-01 .32s ease;
             &:not(.selected) {
                 display: none;
@@ -220,6 +226,9 @@ $uniform-padding-x: 20px;
         }
     }
 
+    &-color-container {
+        margin-top: 65px;
+    }
     &-color {
         $mt: 10px;
         $ml: 10px;
@@ -240,18 +249,40 @@ $uniform-padding-x: 20px;
         }
     }
 
+    &-select-size-container {
+        margin-top: 30px;
+    }
+    &-select-size {
+        $mt: 10px;
+        $ml: 10px;
+        margin-top: -$mt;
+        margin-left: -$ml;
+        a {
+            font-size: 15px;
+            font-weight: 400;
+            border: 1px solid #424242;
+            padding: 15px;
+            margin-top: $mt;
+            margin-left: $ml;
+            min-width: 60px;
+            max-width: 60px;
+            transition: border-color .32s ease;
+            &.selected {
+                border-color: $color255;
+            }
+        }
+    }
+
     &-tab {
         overflow: visible !important;
         .ems-tab-header {
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-            overflow: auto;
-            margin-bottom: 0;
+            margin-bottom: 25px;
             > * {
-                white-space: nowrap;
-                border-width: 0 0 5px 0;
+                font-size: 15px;
+                font-weight: 400;
                 &.selected {
-                    border-color: inherit;
+                    color: inherit;
+                    text-decoration: underline;
                 }
             }
         }
@@ -267,6 +298,10 @@ $uniform-padding-x: 20px;
                 text-transform: none;
             }
         }
+    }
+
+    &-font-select {
+        margin-top: 20px;
     }
 
     &-emblem {
@@ -306,22 +341,48 @@ $uniform-padding-x: 20px;
         }
     }
 
-    &-add-to-cart {}
-    &-select-qty {
-        .sStylerWrp_select {
-            max-width: 80px;
-            border-color: transparent;
-            border-radius: 2px 0 0 2px;
+    &-summary-container {
+        margin: 55px 0 100px;
+    }
+    &-summary {
+        font-size: 15px;
+        font-weight: 400;
+        li {
+            display: flex;
+            align-items: center;
+            > b {
+                font-weight: 500;
+                margin-right: 18px;
+            }
         }
     }
+    &-summary-image {
+        margin-left: auto;
+    }
+
+    &-btn-add-to-cart {
+        margin-top: 50px;
+        width: 100%;
+    }
+    &-select-qty {}
     &-price {
         font-size: 26px;
-        font-weight: 700;
-        margin-bottom: 20px;
+        color: $color2;
+        font-weight: 400;
+        padding-left: 25px;
     }
 }
 
 .ems-forma-popup-ready {
+    .design-uniform {
+        position: fixed;
+        top: $site-header-height;
+        left: 0;
+        z-index: 8;
+        width: 100%;
+        height: calc(100% - #{$site-header-height});
+        overflow: auto;
+    }
     .uniform {
         &-start-obj {
             display: none;
@@ -330,15 +391,14 @@ $uniform-padding-x: 20px;
             padding-top: 30px;
             padding-bottom: 30px;
         }
-        &-image-container {
-            max-width: none;
-        }
         &-360 {
             visibility: visible;
         }
     }
 }
-.ems-forma-popup-animate {}
+.ems-forma-popup-animate {
+    overflow: hidden;
+}
 
 
 
@@ -423,7 +483,6 @@ $uniform-padding-x: 20px;
             min-height: auto;
         }
         &-image-container {
-            max-width: none;
             > * {
                 visibility: hidden;
             }

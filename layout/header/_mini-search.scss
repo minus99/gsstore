@@ -61,7 +61,7 @@
     }
     
     &-animate {
-        position: fixed;
+        overflow: hidden;
         .mini-search {
             &-sub {
                 opacity: 1;

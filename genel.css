@@ -947,7 +947,7 @@ span[class^="pb"] {
 
 .btn,
 a.btnDefault,
-span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, .act-btns a, a.lnkSorgula, a.lnkSatinAl, .validateOtp,
+span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, .act-btns a, .validateOtp,
 .btnResendOtp {
   position: relative;
   display: inline-block;
@@ -965,7 +965,7 @@ span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, .act-btns a, a.lnkSorg
   cursor: pointer;
 }
 
-.btn > span, a.btnDefault > span, span.lnkDefault > span, .urunKiyaslamaOzellik_tumunuTemizle > a > span, .act-btns a > span, a.lnkSorgula > span, a.lnkSatinAl > span, .validateOtp > span, .btnResendOtp > span {
+.btn > span, a.btnDefault > span, span.lnkDefault > span, .urunKiyaslamaOzellik_tumunuTemizle > a > span, .act-btns a > span, .validateOtp > span, .btnResendOtp > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -974,12 +974,12 @@ span.lnkDefault, .urunKiyaslamaOzellik_tumunuTemizle > a, .act-btns a, a.lnkSorg
 
 .btn:hover,
 a.btnDefault:hover,
-span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, .act-btns a:hover, a.lnkSorgula:hover, a.lnkSatinAl:hover, .validateOtp:hover,
+span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, .act-btns a:hover, .validateOtp:hover,
 .btnResendOtp:hover, .banner:hover .btn {
   background: #FFAB00;
 }
 
-.btn-primary, a.btnsepeteAt, .ems-member-gift-card-list a.btnsepeteAt {
+.btn-primary, a.btnsepeteAt {
   background: #FFAB00;
 }
 
@@ -987,12 +987,12 @@ span.lnkDefault:hover, .urunKiyaslamaOzellik_tumunuTemizle > a:hover, .act-btns 
   background: #A90534;
 }
 
-.btn-secondary, a.lnkSatinAl, .ems-new-address a.btnAdresIptal {
+.btn-secondary, .ems-new-address a.btnAdresIptal {
   background: #f3f3f3;
   color: #000;
 }
 
-.btn-secondary:hover, a.lnkSatinAl:hover, .ems-new-address a.btnAdresIptal:hover, .banner:hover .btn-secondary {
+.btn-secondary:hover, .ems-new-address a.btnAdresIptal:hover, .banner:hover .btn-secondary {
   background: #EBEBEB;
   color: #000;
 }
@@ -1032,7 +1032,7 @@ a.btnSifreResetGuncelle, a.btnGuestCheckoutSave {
 
 .btn-medium, [class$="-sub"] a.btnDefault,
 [class$="-sub"] span.lnkDefault, a.btnLogin,
-a.btnYeniUyeKaydet, a.btnFacebookLogin, a.btnOdemeCekiEkle, .bottom-step a, a.btnHediyeCekiKullan {
+a.btnYeniUyeKaydet, a.btnFacebookLogin, .bottom-step a, a.btnHediyeCekiKullan {
   line-height: 48px;
 }
 
@@ -3058,14 +3058,12 @@ button.toast-close-button {
   padding: 20px 20px 0;
 }
 
-.design-uniform a .icon-radio-active {
-  font-size: 18px;
-  margin-right: 5px;
-  --check: none;
-}
-
-.design-uniform a.selected .icon-radio-active {
-  --check: block;
+.design-uniform .sub-close {
+  right: auto;
+  left: 20px;
+  top: 10px;
+  -webkit-animation: animation-01 .32s ease;
+  animation: animation-01 .32s ease;
 }
 
 .design-uniform .ems-section-title {
@@ -3076,7 +3074,7 @@ button.toast-close-button {
   background: #252525;
   color: #FFF;
   padding: 5px;
-  margin: 35px -20px 0;
+  margin: 50px -20px 0;
 }
 
 .design-uniform[data-rel="step0"] {
@@ -3105,14 +3103,18 @@ button.toast-close-button {
   display: none;
 }
 
+.design-uniform[data-rel="step5"] .uniform-preview {
+  display: none;
+}
+
 .design-uniform[data-rel="step5"] .step-next {
   opacity: .25;
   pointer-events: none;
 }
 
 .uniform-steps {
+  margin-top: 30px;
   margin-left: -10px;
-  max-width: 335px;
   overflow: auto;
 }
 
@@ -3128,11 +3130,12 @@ button.toast-close-button {
 }
 
 .uniform-steps > a > svg {
-  font-size: 48px;
+  font-size: 62.5px;
   padding: 12px;
   border: 1px solid #393b3f;
   border-radius: 100%;
   margin-bottom: 9px;
+  transition: all .25s ease;
 }
 
 .uniform-steps > a.selected > svg {
@@ -3143,10 +3146,17 @@ button.toast-close-button {
 .uniform-steps > a + a::before {
   content: "";
   position: absolute;
-  top: 24px;
+  top: 31.25px;
   left: -10px;
   border-top: 1px solid #393b3f;
   width: 10px;
+}
+
+.uniform-step-title {
+  font-size: 16px;
+  color: #FFAB00;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
 
 .uniform-preview {
@@ -3232,7 +3242,6 @@ button.toast-close-button {
 .uniform-options > div {
   position: relative;
   overflow: auto;
-  max-width: 450px;
   -webkit-animation: animation-01 .32s ease;
   animation: animation-01 .32s ease;
 }
@@ -3275,6 +3284,10 @@ button.toast-close-button {
   display: none;
 }
 
+.uniform-color-container {
+  margin-top: 65px;
+}
+
 .uniform-color {
   margin-top: -10px;
   margin-left: -10px;
@@ -3295,24 +3308,47 @@ button.toast-close-button {
   border-color: #FFF;
 }
 
+.uniform-select-size-container {
+  margin-top: 30px;
+}
+
+.uniform-select-size {
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.uniform-select-size a {
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid #424242;
+  padding: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+  min-width: 60px;
+  max-width: 60px;
+  transition: border-color .32s ease;
+}
+
+.uniform-select-size a.selected {
+  border-color: #FFF;
+}
+
 .uniform-tab {
   overflow: visible !important;
 }
 
 .uniform-tab .ems-tab-header {
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  overflow: auto;
-  margin-bottom: 0;
+  margin-bottom: 25px;
 }
 
 .uniform-tab .ems-tab-header > * {
-  white-space: nowrap;
-  border-width: 0 0 5px 0;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .uniform-tab .ems-tab-header > *.selected {
-  border-color: inherit;
+  color: inherit;
+  text-decoration: underline;
 }
 
 .uniform-tab .dropdown ul {
@@ -3338,6 +3374,10 @@ button.toast-close-button {
 
 .uniform-tab .unique-name::placeholder {
   text-transform: none;
+}
+
+.uniform-font-select {
+  margin-top: 20px;
 }
 
 .uniform-emblem {
@@ -3385,16 +3425,49 @@ button.toast-close-button {
   font-size: 17px;
 }
 
-.uniform-select-qty .sStylerWrp_select {
-  max-width: 80px;
-  border-color: transparent;
-  border-radius: 2px 0 0 2px;
+.uniform-summary-container {
+  margin: 55px 0 100px;
+}
+
+.uniform-summary {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.uniform-summary li {
+  display: flex;
+  align-items: center;
+}
+
+.uniform-summary li > b {
+  font-weight: 500;
+  margin-right: 18px;
+}
+
+.uniform-summary-image {
+  margin-left: auto;
+}
+
+.uniform-btn-add-to-cart {
+  margin-top: 50px;
+  width: 100%;
 }
 
 .uniform-price {
   font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  color: #FFAB00;
+  font-weight: 400;
+  padding-left: 25px;
+}
+
+.ems-forma-popup-ready .design-uniform {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: 8;
+  width: 100%;
+  height: calc(100% - 60px);
+  overflow: auto;
 }
 
 .ems-forma-popup-ready .uniform-start-obj {
@@ -3406,12 +3479,12 @@ button.toast-close-button {
   padding-bottom: 30px;
 }
 
-.ems-forma-popup-ready .uniform-image-container {
-  max-width: none;
-}
-
 .ems-forma-popup-ready .uniform-360 {
   visibility: visible;
+}
+
+.ems-forma-popup-animate {
+  overflow: hidden;
 }
 
 .uniform-design-wrapper {
@@ -3487,10 +3560,6 @@ button.toast-close-button {
   height: 100%;
   padding: 0;
   min-height: auto;
-}
-
-.ems-prdd-gallery .uniform-image-container {
-  max-width: none;
 }
 
 .ems-prdd-gallery .uniform-image-container > * {
@@ -5279,7 +5348,7 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 }
 
 .mini-search-animate {
-  position: fixed;
+  overflow: hidden;
 }
 
 .mini-search-animate .mini-search-sub {
@@ -7138,106 +7207,6 @@ a.btnSepeteAtFavori {
   margin-top: 30px;
 }
 
-.ems-page-gift-card {
-  background: #000 url(/images/frontend/bg01.png) left top/100% no-repeat;
-  color: #FFF;
-  padding: 70px 20px 0;
-}
-
-.ems-page-gift-card .social-feed {
-  padding-top: 120px;
-}
-
-.ems-member-gift-card-list {
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 16px;
-}
-
-.ems-member-gift-card-list .urunDetay_btnSepeteAt {
-  margin-top: 0;
-}
-
-ul.giftCardList {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-ul.giftCardList li > a {
-  display: block;
-  padding: 10px 20px;
-  border: 1px solid transparent;
-  font-size: 16px;
-}
-
-ul.giftCardList li.selected > a {
-  border: 1px solid #FFF;
-}
-
-.gift-card-send {
-  margin-top: 40px;
-  -webkit-animation: show .5s ease;
-  animation: show .5s ease;
-}
-
-.giftCardInfoContainer {
-  margin-top: 40px;
-}
-
-.gift-card-control > .ga1,
-.gift-card-control > .ga2 {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.pageOdemeBilgi_odemeCekiGiris {
-  display: block !important;
-  background: #FFF;
-  padding: 0 20px;
-}
-
-.odemeCekiKullanim,
-.odemeCekiKullanimOzet > div {
-  position: relative;
-  border-top: 1px solid #A90534;
-  padding: 20px 0;
-}
-
-.odemeCekiEkleBtn {
-  position: absolute;
-  right: 0;
-  bottom: 20px;
-}
-
-.odemeCekiKullanimOzet {
-  font-family: aktiv-grotesk, arial, sans-serif;
-  font-size: 16px;
-}
-
-.ulOdemeCekiKullanim > li {
-  display: flex;
-  align-items: center;
-}
-
-.ulOdemeCekiKullanim > li + li {
-  margin-top: 10px;
-}
-
-.odemeCekiKaldir {
-  order: -1;
-}
-
-.odemeCekiTutar {
-  margin-left: auto;
-  font-weight: 700;
-}
-
-.odemeCekiKalan {
-  font-weight: 700;
-  text-align: right;
-}
-
 .ems-page-order {
   background: #f3f3f3;
 }
@@ -8216,96 +8185,98 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
     .banner07 .prm-title {
       font-size: 36px;
     }
-    .design-uniform {
-      min-height: 566px;
-      padding-left: calc(((100% - 1280px) / 2) - 73px);
+    /*
+.design-uniform {
+    min-height: 566px;
+    padding-left: calc(((100% - 1280px) / 2) - 73px);
+    > .ga1 {
+        flex-basis: 750px;
     }
-    .design-uniform > .ga1 {
-      flex-basis: 750px;
+    > .ga2 {
+        display: block;
+        margin-top: 0;
     }
-    .design-uniform > .ga2 {
-      display: block;
-      margin-top: 0;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        width: calc((100% - 1280px) / 2);
+        height: 100%;
+        background: $color4;
+        @include setCurve(-7, -35);
     }
-    .design-uniform::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 2;
-      width: calc((100% - 1280px) / 2);
-      height: 100%;
-      background: #EFEFEF;
-      -webkit-transform: skewX(-7deg) translateX(-35px);
-      transform: skewX(-7deg) translateX(-35px);
+}
+.uniform {
+    &-preview {
+        min-height: 100%;
+        padding: 100px 20px 20px;
     }
-    .uniform-preview {
-      min-height: 100%;
-      padding: 100px 20px 20px;
+    &-image-container {
+        max-width: 350px;
     }
-    .uniform-image-container {
-      max-width: 350px;
+    &-360 {
+        visibility: visible;
+        background-size: 342px;
+        height: 98px;
+        padding-top: 60px;
+        &:hover {
+            background-position: center -98px;
+        }
     }
-    .uniform-360 {
-      visibility: visible;
-      background-size: 342px;
-      height: 98px;
-      padding-top: 60px;
+    &-options {
+        min-height: 100%;
+        padding: 20px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25%;
+            height: 100%;
+            background: inherit;
+            @include setCurve(-7, -60);
+        }
+        > div {
+            padding: 0;
+            &:not(.selected) {
+                display: block;
+            }
+            &.ems-flex {
+                display: flex;
+            }
+        }
     }
-    .uniform-360:hover {
-      background-position: center -98px;
+    &-gender {
+        min-height: 19px;
+        margin-top: 20px;
+        a {
+            padding: 0;
+            border: none;
+        }
+        a + a {
+            margin-left: 40px;
+        }
     }
-    .uniform-options {
-      min-height: 100%;
-      padding: 20px;
+    &-color {
+        min-height: 80px;
+        margin-top: 30px;
     }
-    .uniform-options::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 25%;
-      height: 100%;
-      background: inherit;
-      -webkit-transform: skewX(-7deg) translateX(-60px);
-      transform: skewX(-7deg) translateX(-60px);
+    &-select-size {
+        margin-top: 20px;
     }
-    .uniform-options > div {
-      padding: 0;
+    &-tab {
+        margin-top: 20px;
     }
-    .uniform-options > div:not(.selected) {
-      display: block;
+    &-add-to-cart {
+        margin-top: 25px;
     }
-    .uniform-options > div.ems-flex {
-      display: flex;
+    &-price {
+        margin-bottom: 0;
     }
-    .uniform-gender {
-      min-height: 19px;
-      margin-top: 20px;
-    }
-    .uniform-gender a {
-      padding: 0;
-      border: none;
-    }
-    .uniform-gender a + a {
-      margin-left: 40px;
-    }
-    .uniform-color {
-      min-height: 80px;
-      margin-top: 30px;
-    }
-    .uniform-select-size {
-      margin-top: 20px;
-    }
-    .uniform-tab {
-      margin-top: 20px;
-    }
-    .uniform-add-to-cart {
-      margin-top: 25px;
-    }
-    .uniform-price {
-      margin-bottom: 0;
-    }
+}
+*/
     .navigasyon {
       background-color: transparent;
     }
@@ -8614,7 +8585,7 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
     }
     .site-header-grid {
       position: relative;
-      grid-template-columns: 330px 1fr auto auto 115px 115px 100px;
+      grid-template-columns: 330px minmax(auto, 100%) auto auto 115px 115px 100px;
       grid-template-areas: "ga1 ga6 ga2 ga3 ga4 ga5 ga9" "ga1 ga7 ga7 ga7 ga8 ga8 ga10";
     }
     .site-header-grid > .ga1 {
@@ -9523,40 +9494,6 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
     .ems-grid-table-message .newMessage .ems-grid-date {
       font-weight: 600;
     }
-    .ems-page-gift-card-grid {
-      grid-template-columns: 1fr 710px 1fr;
-      grid-template-areas: ". ga1 ." "ga2 ga2 ga2";
-    }
-    .ems-page-gift-card-grid > .ga1 {
-      grid-area: ga1;
-    }
-    .ems-page-gift-card-grid > .ga2 {
-      grid-area: ga2;
-    }
-    .ems-page-gift-card-grid > .ga1 {
-      min-height: 900px;
-    }
-    .ems-member-gift-card-list a.btnsepeteAt {
-      width: auto;
-      min-width: 370px;
-    }
-    .giftCardInfoContainer {
-      margin-top: 20px;
-    }
-    .gift-card-control > .ga1 {
-      padding-left: 0;
-    }
-    .gift-card-control > .ga2 {
-      padding-right: 0;
-    }
-    .odemeCekiKullanim,
-    .odemeCekiKullanimOzet > div {
-      margin: 0 -30px;
-      padding: 20px 30px;
-    }
-    .odemeCekiEkleBtn {
-      right: 38px;
-    }
     .ems-page-order .site-header {
       position: relative;
       z-index: auto;
@@ -9708,7 +9645,7 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
   }
   @media screen and (min-width: 1025px) and (max-width: 1350px) {
     .site-header-grid {
-      grid-template-columns: 330px 1fr auto auto 115px 115px 20px;
+      grid-template-columns: 330px minmax(auto, 100%) auto auto 115px 115px 20px;
       grid-template-areas: "ga1 ga6 ga2 ga3 ga4 ga5 ga9" "ga7 ga7 ga7 ga7 ga8 ga8 ga10";
     }
     .site-header-grid > .ga1 {
