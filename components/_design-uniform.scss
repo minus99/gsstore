@@ -3,9 +3,10 @@ $uniform-padding-x: 20px;
     position: relative;
     background: $color0 center top / cover no-repeat;
     color: $color255;
-    padding: 20px $uniform-padding-x 0;
+    padding: 70px 40px 60px;
+    transition: all .32s ease;
 
-    .sub-close {
+    > .sub-close {
         right: auto;
         left: 20px;
         top: 10px;
@@ -20,17 +21,18 @@ $uniform-padding-x: 20px;
         background: $color3;
         color: $color255;
         padding: 5px;
-        margin: 50px #{-$uniform-padding-x} 0;
+        margin-left: #{-$uniform-padding-x};
+        margin-right: #{-$uniform-padding-x};
+    }
+
+    .ems-form {
+        max-width: none;
     }
 
     &[data-rel="step0"] {
-        padding: 70px 40px 60px;
         .uniform {
             &-step-obj {
                 display: none;
-            }
-            &-image-container {
-                padding-bottom: 0;
             }
             &-image {
                 max-height: 306px;
@@ -70,9 +72,8 @@ $uniform-padding-x: 20px;
     $fs: (320px - 40px - 30px) / 4; //((en küçük ekran - container padding toplamı - itemler arasındaki margin toplamı) / adım sayısı)
     &-steps {
         $ml: 10px;
-        margin-top: 30px;
+        margin-top: 20px;
         margin-left: -$ml;
-        overflow: auto;
         > a {
             position: relative;
             font-size: 12px;
@@ -120,7 +121,6 @@ $uniform-padding-x: 20px;
     }
     &-image-container {
         position: relative;
-        padding-bottom: 25px;
     }
     &-name-number {
         position: absolute;
@@ -183,6 +183,7 @@ $uniform-padding-x: 20px;
     &-options {
         position: relative;
         z-index: 1;
+        padding-bottom: 50px;
         > div {
             position: relative;
             overflow: auto;
@@ -352,7 +353,7 @@ $uniform-padding-x: 20px;
             align-items: center;
             > b {
                 font-weight: 500;
-                margin-right: 18px;
+                margin-right: 5px;
             }
         }
     }
@@ -378,9 +379,10 @@ $uniform-padding-x: 20px;
         position: fixed;
         top: $site-header-height;
         left: 0;
-        z-index: 8;
+        z-index: 2;
         width: 100%;
         height: calc(100% - #{$site-header-height});
+        padding: 20px $uniform-padding-x 0;
         overflow: auto;
     }
     .uniform {
@@ -389,7 +391,10 @@ $uniform-padding-x: 20px;
         }
         &-preview {
             padding-top: 30px;
-            padding-bottom: 30px;
+            padding-bottom: 25px;
+        }
+        &-image-container {
+            padding-bottom: 25px;
         }
         &-360 {
             visibility: visible;

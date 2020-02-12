@@ -20,6 +20,7 @@
         margin-top: 5px;
     }
     &-price {
+        font-family: $font1;
         font-size: 20px;
         margin-top: 15px;
         [id*="KDVDAHILSATIS"] {
@@ -230,9 +231,14 @@ a.btnStokHaberci {
 .mini-product-info {
     display: none;
     $p: 20px;
+    $py: 28px;
     &-sub {
         @extend %footer-mods-sub;
-        padding: $p;
+        padding: $py $p;
+    }
+    .sub-close {
+        right: 20px;
+        top: 20px;
     }
     .sub-header {
         margin: #{-$p} #{-$p} #{$p};
@@ -257,24 +263,28 @@ a.btnStokHaberci {
     }
 }
 .added-prd {
-    grid-template-columns: 100px 15px 1fr; 
+    grid-template-columns: 110px 20px 1fr; 
     grid-template-rows: max-content 1fr;
     grid-template-areas: "ga1 . ga2" "ga3 ga3 ga3";
     @include setGridArea(1,3);
     .prm-media-holder {
         position: relative;
+        background: #eee;
         svg {
             position: absolute;
-            right: -5px;
-            top: -5px;
-            font-size: 18px;
+            top: 9px;
+            left: 9px;
+            font-size: 22px;
             animation: message .5s ease;
+            background: $color255;
+            border-radius: 100%;
         }
     }
     .prm-title {
-        font-size: 21px;
-        font-weight: 700;
+        font-size: 16px;
+        font-weight: 600;
         word-break: break-word;
+        padding-right: 30px;
     }
     .prm-desc {
         font-family: $font2;

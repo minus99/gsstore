@@ -1311,6 +1311,11 @@ input[id$="UYE_CEPTELEFON"] {
   color: #FFF;
 }
 
+.dropdown > ul > li.selected > a {
+  background-color: #004CA5;
+  color: #FFF;
+}
+
 .dropdown.opened > ul {
   display: block;
 }
@@ -3055,10 +3060,11 @@ button.toast-close-button {
   position: relative;
   background: #000 center top/cover no-repeat;
   color: #FFF;
-  padding: 20px 20px 0;
+  padding: 70px 40px 60px;
+  transition: all .32s ease;
 }
 
-.design-uniform .sub-close {
+.design-uniform > .sub-close {
   right: auto;
   left: 20px;
   top: 10px;
@@ -3074,19 +3080,16 @@ button.toast-close-button {
   background: #252525;
   color: #FFF;
   padding: 5px;
-  margin: 50px -20px 0;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
-.design-uniform[data-rel="step0"] {
-  padding: 70px 40px 60px;
+.design-uniform .ems-form {
+  max-width: none;
 }
 
 .design-uniform[data-rel="step0"] .uniform-step-obj {
   display: none;
-}
-
-.design-uniform[data-rel="step0"] .uniform-image-container {
-  padding-bottom: 0;
 }
 
 .design-uniform[data-rel="step0"] .uniform-image {
@@ -3113,9 +3116,8 @@ button.toast-close-button {
 }
 
 .uniform-steps {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: -10px;
-  overflow: auto;
 }
 
 .uniform-steps > a {
@@ -3166,7 +3168,6 @@ button.toast-close-button {
 
 .uniform-image-container {
   position: relative;
-  padding-bottom: 25px;
 }
 
 .uniform-name-number {
@@ -3237,6 +3238,7 @@ button.toast-close-button {
 .uniform-options {
   position: relative;
   z-index: 1;
+  padding-bottom: 50px;
 }
 
 .uniform-options > div {
@@ -3441,7 +3443,7 @@ button.toast-close-button {
 
 .uniform-summary li > b {
   font-weight: 500;
-  margin-right: 18px;
+  margin-right: 5px;
 }
 
 .uniform-summary-image {
@@ -3464,9 +3466,10 @@ button.toast-close-button {
   position: fixed;
   top: 60px;
   left: 0;
-  z-index: 8;
+  z-index: 2;
   width: 100%;
   height: calc(100% - 60px);
+  padding: 20px 20px 0;
   overflow: auto;
 }
 
@@ -3476,7 +3479,11 @@ button.toast-close-button {
 
 .ems-forma-popup-ready .uniform-preview {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
+}
+
+.ems-forma-popup-ready .uniform-image-container {
+  padding-bottom: 25px;
 }
 
 .ems-forma-popup-ready .uniform-360 {
@@ -4857,8 +4864,8 @@ tr + tr #dvUrunKiyaslamaOzellik {
   height: auto;
   max-height: 100%;
   overflow: auto;
-  background: #FFAB00;
-  color: #A90534;
+  background: #FFF;
+  color: #000;
   opacity: 0;
   -webkit-transform: translateY(50%);
   transform: translateY(50%);
@@ -6071,6 +6078,7 @@ ul.product-list-grid:empty {
 }
 
 .ems-prdd-price {
+  font-family: gilroy, arial, sans-serif;
   font-size: 20px;
   margin-top: 15px;
 }
@@ -6293,7 +6301,12 @@ a.btnStokHaberci {
 }
 
 .mini-product-info-sub {
-  padding: 20px;
+  padding: 28px 20px;
+}
+
+.mini-product-info .sub-close {
+  right: 20px;
+  top: 20px;
 }
 
 .mini-product-info .sub-header {
@@ -6301,7 +6314,7 @@ a.btnStokHaberci {
 }
 
 .added-prd {
-  grid-template-columns: 100px 15px 1fr;
+  grid-template-columns: 110px 20px 1fr;
   grid-template-rows: -webkit-max-content 1fr;
   grid-template-rows: max-content 1fr;
   grid-template-areas: "ga1 . ga2" "ga3 ga3 ga3";
@@ -6321,21 +6334,25 @@ a.btnStokHaberci {
 
 .added-prd .prm-media-holder {
   position: relative;
+  background: #eee;
 }
 
 .added-prd .prm-media-holder svg {
   position: absolute;
-  right: -5px;
-  top: -5px;
-  font-size: 18px;
+  top: 9px;
+  left: 9px;
+  font-size: 22px;
   -webkit-animation: message .5s ease;
   animation: message .5s ease;
+  background: #FFF;
+  border-radius: 100%;
 }
 
 .added-prd .prm-title {
-  font-size: 21px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   word-break: break-word;
+  padding-right: 30px;
 }
 
 .added-prd .prm-desc {

@@ -180,6 +180,12 @@ input[id$="UYE_CEPTELEFON"] {
                     color: $color255;
                 }
             }
+            &.selected {
+                > a {
+                    background-color: $color28;
+                    color: $color255;
+                }
+            }
         }
     }
     &.opened {
