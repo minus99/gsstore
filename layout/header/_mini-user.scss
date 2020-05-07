@@ -4,6 +4,7 @@
         background: $color4;
         > span {
             @extend %header-mods-title;
+            .lg2{display: none;}
         }
     }
 
@@ -75,5 +76,12 @@ a.btnKutuLogout {
         .kutuUyeGiris_lbfUyeMesajSayi {
             margin-left: 5px;
         }
+    }
+}
+
+.ems-login{
+    .mini-user-info > span {
+        .lg1{ display: none;}
+        .lg2{ display: inline-block;}
     }
 }

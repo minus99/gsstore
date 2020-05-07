@@ -1,9 +1,12 @@
 .ems-step0,
 .guestCheckout {
-    .ems-order-cart {}
     .ems-grid-table-cart {
         > .ems-grid-row {
             grid-template-columns: 90px 1fr;
+            border-bottom-color:#e72f2f;
+            &:last-child{
+                border-bottom-color: transparent;
+            }
         }
     }
 }
@@ -89,6 +92,9 @@
 
 .ems-cart-coupon {
     position: relative;
+    input{
+        border-color: #ddd !important;
+    }
 }
 a.btnHediyeCekiKullan {
     @extend %btn-medium;

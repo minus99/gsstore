@@ -37,3 +37,12 @@
         transform: translateX(0);
     }
 }
+
+@keyframes animation-05 {
+    0% {
+        top: -220px;
+    }
+      100% {
+        top: 110px;
+    }
+}

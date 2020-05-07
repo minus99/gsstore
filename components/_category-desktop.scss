@@ -1,3 +1,8 @@
 .kutuKategori {
     display: block;
 }
+ul.menuKategori li.s2.act{
+    > a{
+        text-decoration: underline;
+    }
+}

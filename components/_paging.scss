@@ -3,7 +3,13 @@
     margin-top: 45px;
     font-family: $font2;
     font-weight: 300;
-
+    tr{
+        display: flex;
+        align-items: center;
+        border-top: 1px solid $color4;
+        border-bottom: 1px solid $color4;
+        line-height: 68px;
+    }
     td[align="left"],
     td[align="right"] {
         display: none;
@@ -12,14 +18,16 @@
         width: 100% !important;
     }
 }
+.urunPaging_paging{
+    > span,
+    select{display: none;}
+}
 
 .urunPaging_pageNavigation {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 1px solid $color4;
-    border-bottom: 1px solid $color4;
-    line-height: 68px;
+    
     [id$="lblPaging"] {
         display: flex;
         margin-left: auto;

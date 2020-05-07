@@ -29,6 +29,19 @@
     }
 }
 
+// header kampanya
+.header-campaign{
+    .swiper-slide {
+        font-family: $font1;
+        font-weight: 400;
+        font-size: 16px;
+        background-color: $color1;
+        color: #fff;
+        text-align: center;
+        padding:10px 5px 10px 5px;
+    }
+}
+
 //footer mods extend obj
 %footer-mods-sub {
     display: none;

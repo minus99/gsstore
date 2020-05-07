@@ -22,7 +22,12 @@
 
     .ems-form {
         max-width: none;
-        margin-top: -20px;
+        &-label{
+            margin-bottom: 100px;
+            img{
+                max-width: 150px;
+            }
+        }
     }
 
     .f-input {
@@ -91,22 +96,30 @@
             display: block;
         }
     }
+    svg.icon-search0{
+        font-size: 86px;
+    }
 }
 
-.popular-search-words {
+.popular-search-words{
+    margin-top: 175px;
+}
+.popular-last-search{
+    margin-top: 50px;
+}
+.popular-search-words,
+.popular-last-search{
     display: none;
     text-align: center;
-    margin-top: 175px;
     .ems-section-title {
         font-size: 14px;
+        font-weight: 500;
     }
-
     .swiper-slide {
         + .swiper-slide {
             padding-top: 15px;            
         }
     }
-
     &-append & {
         display: block;
     }
@@ -199,7 +212,7 @@
             > span {
                 position: relative;
                 display: block;
-                padding: 6px 15px;
+                padding: 6px 15px 6px 0;
                 font-family: $font2;
                 font-size: 12px;
                 line-height: 20px;
@@ -211,7 +224,8 @@
                     @extend %triangle;
                     @extend %triangle-r;
                     position: absolute;
-                    left: 0;
+                    left: auto;
+                    right: 0;
                     top: 50%;
                     transform: translateY(-50%);
                 }

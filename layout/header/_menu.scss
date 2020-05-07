@@ -90,6 +90,20 @@
     .lvl-1 {
         overflow: auto;
         border-bottom: 1px solid $color6;
+        > li{
+            &.nike-football{
+                margin-left: -35px;
+                background: url(/images/frontend/logo-nike.svg) center left no-repeat;
+                background-size: 29px;
+                padding-left: 35px;
+            }
+            &.nike-football.selected{
+                margin-left: 0;
+                padding-left: 0;
+                background: #fff;
+                background-size: inherit;
+            } 
+        }
     }
 
     .sub {

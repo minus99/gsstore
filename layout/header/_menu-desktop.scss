@@ -4,7 +4,7 @@
     z-index: 1;
     width: 100%;
     max-width: none;
-    padding: 0 30px;
+    padding: 0 2px;
     background: none;
     font-family: $font1;
     font-size: 13px;
@@ -67,12 +67,50 @@
         border: none;
         > li {
             > a {
-                margin: 0 5px;
+                margin: 0 3px;
                 padding: 0 5px;
             }
             &.selected {
                 .sub {
                     display: flex;
+                }
+            }
+            &.nike-football{
+                margin-left: 0;
+                background: none;
+                padding-left: 0;
+                > a{
+                    background: url(/images/frontend/logo-nike.svg) center left no-repeat;
+                    background-size: 20px;
+                    padding-left: 25px;
+                }
+                .r1{
+                    display: none;
+                }
+                .r2{
+                    margin: 0 auto;
+                }
+                .lvl-2{
+                    column-count: 5;
+                    grid-gap: 20px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    > li{
+                        .r2-img{
+                            margin-bottom: 10px;
+                            overflow: hidden;
+                        }
+                        &.banner-obj{
+                            > a{
+                                flex-direction: column;
+                            }
+                        }
+                        &.lvl-link{
+                            &:last-child{
+                                display: none;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -102,7 +140,7 @@
             }
         }
         .r2 {
-            flex: 1;
+            /*flex: 1;*/
             margin-left: auto;
             margin-right: auto;
         }

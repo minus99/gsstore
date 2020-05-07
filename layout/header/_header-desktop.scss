@@ -44,6 +44,16 @@ $header-col7: #{$d-container-gap};
     }
 }
 
+// header kampanya
+.header-campaign{
+    .swiper-slide {
+        font-weight: 600;
+        font-size: 22px;
+        padding:15px 5px 14px 5px;
+    }
+}
+
+
 //header mods extend obj
 %header-mods-title {
     display: flex;

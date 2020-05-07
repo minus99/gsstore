@@ -8,27 +8,56 @@
     }
     &-sub {
         @extend %header-mods-sub;
-        max-width: 910px;
-        max-height: 95vh;
-        padding: 10px 30px 30px;
+        max-width: calc(100% - 330px);
+        max-height: 100%;
+        padding: 40px 100px 30px;
     }
     .sub-close {
         left: auto;
-        right: 30px;
-        top: 56px;
+        right: 45px;
+        top: 44px;
     }
-
+    .ems-form{
+        &-inner{
+            display: grid;
+            grid-template-columns: minmax(0,1fr) minmax(0,50px) minmax(0,auto);
+            grid-template-areas: "ga0 ga0 ga0" "ga1 . ga2" "ga3 . .";
+        }
+        .ga0{
+            grid-area: ga0;
+        }
+        .ga1{
+            grid-area: ga1;
+        }
+        .ga2{
+            grid-area: ga2;
+        }
+        .ga3{
+            grid-area: ga3;
+        }
+    }
     .search-input > input {
         padding-left: 0;
+        font-size: 30px;
+        border: none;
+        border-bottom: 1px solid #efefef;
     }
     a[id$="btnArama"] {
-        right: 65px;
+        right: 15px;
     }
 
     .no-result {
         margin: 20px 0 0 0;
     }
-    
+
+    &-result-found {
+        .ems-form{
+            &-inner{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
     &-ready {
         .mini-search {
             &-sub {
@@ -38,7 +67,6 @@
     }
 
     &-animate {
-        @extend %header-mods-animate;
         .mini-search {
             &-overlay {
                 @extend %header-mods-sub-overlay;
@@ -50,29 +78,47 @@
     }
 }
 
-.popular-search-words {
+.popular-search-words{
     margin: 0;
+}
+.popular-search-words,
+.popular-last-search{
+    text-align: left;
     .ems-section-title {
-        margin-bottom: 0;
-    }
-    
-    .swiper-inner {
-        margin-left: 0;
+        font-size: 12px;
     }
     .swiper-container {
         flex: 1;
     }
-
+    .swiper-wrapper{
+        flex-direction: row !important;
+    }
     &-append & {
         display: flex;
+    }
+    .swiper-slide{
+        + .swiper-slide {
+            padding-top: 0;   
+            margin-left: 10px; 
+        }
+    }
+    .prm-link{
+        min-width: 60px;
+        border-radius: 12px;
+        background: #EFEFEF;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-align: center;
     }
 }
 
 .searchSuggestDivHolder {
     margin: 0;
-    grid-template-columns: 1fr 56px 160px;
-    grid-template-areas: "ga1 ga1 ga1" "ga2 . ga3" "ga4 . .";
-
+    grid-template-columns: 1fr 70px 200px;
+    grid-template-areas: "ga1 . ." "ga2 . ga3" "ga4 . .";
+    .prdCount{
+        text-align: right;
+    }
     .prd {
         .sHolder {
             grid-template-columns: repeat(3, 1fr);

@@ -18,6 +18,8 @@ $color27: #C9C9C9; //form elements disabled color
 $color28: #004CA5; //dropdown list elements hover color
 $color29: #CC0303; //error color
 $color30: #2E9A32; //success color
+$color31: #e2e2e2;
+$color32: #fdfdfd;
 $color255: #FFF;
 
 //FONTS
@@ -51,6 +53,7 @@ $grid-template-columns2: $col-container-gap $col2 $col-gap $col1 $col-container-
 
 //MISC
 $bg-loading: url(/images/frontend/loading.gif) center center/80px no-repeat #f9f9f9;
+$bg-small-loading: url(/images/frontend/loadingSmall.gif) center center/80px no-repeat;
 $site-header-height: 60px;
 $d-site-header-height: 110px;
 $d-order-site-header-height: 80px;

@@ -21,8 +21,6 @@
     }
 }
 
-.dealer-form {}
-
 .dealer-stock-information {
     margin-top: 50px;
     background: $color4;
@@ -88,7 +86,6 @@
         @extend %btn-full;
         display: none;
     }
-    .show-map-btn {}
 }
 
 .address-detail {

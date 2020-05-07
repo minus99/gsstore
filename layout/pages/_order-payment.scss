@@ -1,7 +1,19 @@
+%pls-gry{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPHRleHQgZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBmb250LWZhbWlseT0iR2lscm95LVJlZ3VsYXIsIEdpbHJveSIgZm9udC1zaXplPSIyMiI+ICAgICAgICA8dHNwYW4geD0iMTAiIHk9IjI0Ij4rPC90c3Bhbj4gICAgPC90ZXh0Pjwvc3ZnPg==);
+    background-repeat: no-repeat;
+    background-position: 100% center;
+}
+%mns-gry{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gICAgPHRleHQgZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBmb250LWZhbWlseT0iR2lscm95LVJlZ3VsYXIsIEdpbHJveSIgZm9udC1zaXplPSIyMiI+ICAgICAgICA8dHNwYW4geD0iMTAiIHk9IjI0Ij4tPC90c3Bhbj4gICAgPC90ZXh0Pjwvc3ZnPg==);
+    background-repeat: no-repeat;
+    background-position: 100% center;
+}
+
 .ems-order-payment {
     .block1 {
         position: relative;
         &::after {
+            display: none;
             content: "";
             background: linear-gradient(0deg, white, transparent);
             position: absolute;
@@ -10,11 +22,24 @@
             height: 100px;
             z-index: 1;
         }
+        .page-top-title{
+            margin: 0;
+            @extend %pls-gry;
+        }
+        &.open{
+            .page-top-title{
+                @extend %mns-gry;
+            }
+            &::after {
+                display: block;
+            }
+        }
     }
     .ems-grid-table-cart {
         @extend .ems-scrollbar;
         max-height: 314px;
-
+        display: none;
+        margin-top: 20px;
         > .ems-grid-row {
             grid-template-columns: 40px 2fr 1fr;
             padding: 10px 0;
@@ -36,6 +61,9 @@
             .dvSepetKazancOran:not(:empty) {
                 text-align: right;
             }
+        }
+        &.open{
+            display: block;
         }
     }
 }
@@ -294,14 +322,20 @@ table.tableOdemeTaksit {
     }
 }
 .ems-pay-address {
+    .page-top-title{
+        margin: 0;
+        @extend %pls-gry;
+    }
     .ems-wrapper {
+        display: none;
+        margin-top: 20px;
         > div {
             + div {
                 border-top: 1px solid $color4;
                 margin-top: 20px;
                 padding-top: 20px;
             }
-        }
+        }        
     }
     &-label {
         font-weight: 600;
@@ -312,20 +346,44 @@ table.tableOdemeTaksit {
         font-size: 12px;
         line-height: 1.5;
     }
+    &.open{
+        .page-top-title{
+            @extend %mns-gry;
+        }
+        .ems-wrapper {
+            display: block;
+        }
+    }
 }
-
-.ems-pay-agreement {}
 
 .onBilgilendirmeForm,
 .siparisOnaySozlesme {
     background: $order-pages-module-bg;
     padding: 20px;
     margin-top: 30px;
+    .page-top-title{
+        margin: 0;
+        @extend %pls-gry;
+    }
+    &.open{
+        .page-top-title{
+            @extend %mns-gry;
+        }   
+        .onBilgilendirmeFormMetin,
+        .siparisOnaySozlesmeMetin{
+            display: block;
+        }        
+    }
 }
 .onBilgilendirmeFormMetin,
 .siparisOnaySozlesmeMetin {
+    margin-top: 20px;
+    display: none;
     > span {
         @extend .ems-scrollbar;
+    }
+    &.open{
+        display: block;
     }
 }
 .pageSiparisOnay_lbfOnBilgilendirmeForm,

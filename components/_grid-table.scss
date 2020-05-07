@@ -51,8 +51,8 @@
             font-weight: 300;
         }
         [id$="lblProm"] {
-            font-size: 12px;
-            color: $color4;
+            font-size: 14px;
+            color: $color3;
             ul:not(:empty) {
                 margin-top: 5px;
             }
@@ -99,6 +99,11 @@
                 color: $color1;
                 margin-left: 12px;
             }
+        }
+    }
+    &-price-old{
+        [id*="ILKKDV"] {
+            display: none;
         }
     }
     &-address-name {
@@ -244,4 +249,8 @@
 }
 .gridHeaderSepetStok {
     display: none;
+}
+
+.gridTaksitBanka{
+    width: 100%;
 }

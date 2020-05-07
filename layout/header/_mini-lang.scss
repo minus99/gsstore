@@ -24,6 +24,7 @@ ul.menu-mini-lang {
 }
 
 .mini-lang {
+    display: none;
     &-info {
         position: relative;
         > span {

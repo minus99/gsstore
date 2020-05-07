@@ -26,3 +26,239 @@
         @include setGridArea(1,1);
     }
 }
+
+.ems-page-story{
+    [id$="lblICR_METIN_TEMPLATE"]{
+        align-items: center;
+    }
+}
+.story-btn-fixed{
+    top: 40px;
+}
+.story-share-btn{
+    right: 100px;
+}
+.story-home-btn{
+    left: 100px;
+}
+
+.story-slider{
+    height: auto;
+    .swiper-container{
+        padding: 5%;
+    }
+    .swiper-slide{
+        width: auto;
+        padding: 0 10px;
+        transform: scale(0.9);
+        transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        &:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: #252525;
+            opacity: 0.75;
+            transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        img{
+            max-width: 380px;
+        }
+    }
+    .swiper-slide-active{
+        transform: scale(1);
+        &:after{
+            opacity: 0;
+        }
+    }
+    .swiper-pagination{
+        top: inherit;
+        bottom: 1%;
+        &-bullet{
+            width: 50px;
+        }
+    }
+    .banner15{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        .prm-media{
+            height: auto;
+        }
+        .banner-body{
+            padding:5%;
+        }
+    }
+}
+
+//players list page
+.players-widgets{
+    $m:20px;
+    $p:20px;
+
+    padding-top: 85px;
+    padding-bottom: 85px;
+    
+    .swiper-container:not(:first-child){
+        margin-top: 80px;
+    }
+    .swiper-inner{
+        margin-left: #{-$m};
+    }
+    .swiper-slide{
+        width: calc(25% - 20px);
+        margin-left: #{$m};
+        margin-bottom: #{$m};
+    }
+}
+
+.ems-grid-players-info{
+    display: grid;
+    grid-template-areas:". ga1 ga2 ga4 ." ". ga3 ga2 ga4 ." ". ga5 ga5 ga5 ga5";
+    grid-template-rows: max-content 1fr;
+    grid-template-columns:minmax(0,100px) minmax(0,250px) minmax(0,auto) minmax(0,250px) minmax(0,100px); 
+    padding: 35px 0 70px 0;
+    .number{
+        font-size: 60px;
+    }
+    .name, .name strong{
+        font-size: 24px;
+    }
+    .lbl {
+        font-size: 16px;
+    }
+    .obj {
+        font-size: 26px;
+    }
+    .ga1{
+        grid-area: ga1;
+        position: inherit;
+        top: inherit;
+        left: inherit;
+        padding-top: 50px;
+        > div{
+            max-width: 180px;
+        }
+    }
+    .ga2{
+        grid-area: ga2;
+        background: none;
+        max-height: inherit;
+        overflow: visible;
+        padding: 0 20px;
+    }
+    .ga3{
+        grid-area: ga3;
+        padding: 0;
+    }
+    .ga4{
+        grid-area: ga4;
+        padding-top: 70px;
+    }
+    .ga5{
+        grid-area: ga5;
+        padding-top: 70px;
+    }
+}
+
+.banner-body.banner-body-cover{
+    &-players{
+        padding: 10px 20px;
+        .prm-title{
+            font-size: 72px;
+        }
+        .prm-desc{
+            font-size: 17px;
+            strong{
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+.swiper-container-players{
+    .swiper-wrapper{
+        flex-direction: column;
+        height: auto;
+    }
+    .swiper-slide{
+        margin-top: 25px;
+        width: 100%;
+        padding: 0;
+        img{
+            max-width: 20px;
+        }
+    }
+}
+.swiper-container-playerlist{
+    padding-top: 0;
+    .swiper-slide{
+        padding:10px 12.5px;
+        width: calc(100% / 4.2);
+    }
+    .mx-center{
+        max-width: calc(100% - 200px);
+        .all-view{
+            top: 50%;
+            left: inherit;
+            right: 0;
+        }
+    }
+}
+.swiper-container-ply{
+    .swiper-slide{
+        .inner{
+            background: #ffffff;
+            padding: 60px 20px 30px 20px;
+            border: 1px solid #e2e2e2;
+        }
+        &:not(:first-child){
+            display: block;
+        }
+    }
+    .ems-prd-add-cart{
+        a{
+            width: 100%;
+            padding: 16px 5px;
+            margin-top: 15px;
+        }
+    }
+}
+.hero-sky{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    min-height: 500px;
+    transform: skewY(-8deg);
+    transform-origin: 0 0;
+    background: #f7f7f7;
+}
+
+//site map
+.pageSitemap{
+    width: calc(100% - 160px);
+    margin: 0 auto;
+    .urunKategoriListe{
+        > ul {
+            grid-template-columns: repeat(5,1fr);
+            justify-items: flex-start;
+        }
+    }
+    ul.seviye1{
+        > li{
+            > a:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+//sticky product
+.detail-sticky{
+    .ems-prdd{
+        &-grid{
+            > .ga1{
+                grid-template-columns:minmax(0,100px) minmax(0,30px) minmax(0,15px) minmax(0,auto) minmax(0,250px) minmax(0,250px) minmax(0,170px) minmax(0,20px);
+            }
+        }
+    }
+}

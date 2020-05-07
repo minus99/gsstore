@@ -1,9 +1,10 @@
 .site-header-grid {
     $header-col7: 20px;
-    grid-template-columns: $header-col1 $header-col2 $header-col3 $header-col4 $header-col5 $header-col6 $header-col7;
+    grid-template-columns: 265px minmax(auto, 10%) $header-col3 $header-col4 $header-col5 $header-col6 $header-col7;
     grid-template-areas: "ga1 ga6 ga2 ga3 ga4 ga5 ga9" "ga7 ga7 ga7 ga7 ga8 ga8 ga10";
     > .ga1 {
         border-bottom: 1px solid $header-border-color;
+        padding-right: 10px;
     }
     > .ga1,
     > .ga2,
@@ -14,7 +15,13 @@
     > .ga9 {
         line-height: 60px;
     }
-    
+    > .ga3{
+        .top-menu{
+            .swiper-wrapper {
+                justify-content: flex-end !important;
+            }
+        }
+    }
     > .ga7 {
         line-height: 49px;
     }

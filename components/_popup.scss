@@ -123,3 +123,59 @@ $p: 20px;
         @extend %btn-medium;
     }
 }
+
+.tableUyeGiris{
+    width: 100%;
+    border-collapse: collapse;
+    table{
+        width: 100%;
+    }
+    > tbody{
+        > tr{
+            $wdt: 120px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            &:first-child{
+                margin-top: 0;
+            }
+            &.trpopupUyeGiris_beniHatirla,
+            &.socialConnect{
+                display: none;
+            }
+            > th{
+                width: #{$wdt};
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 1;
+            }
+            > td{
+                width: calc(100% - #{$wdt});
+                &:empty{
+                    display: none;
+                }
+                .btnPopupLogin{
+                    width: 100%;
+                }
+            }
+            &:nth-child(5){
+                > td{
+                    &:last-child{
+                        width: 100%;
+                    }
+                }
+            }
+            &:nth-child(5),
+            &:last-child{
+                padding-left: #{$wdt};
+            }
+            &:last-child{
+                > td{
+                    &:first-child{width: #{$wdt};}
+                    &:last-child{text-align: right;}
+                }
+            }
+        }
+    }
+}

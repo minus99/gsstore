@@ -1,20 +1,26 @@
 .ems-page-product-detail {
     padding-bottom: 140px;
+    overflow-x: hidden;
+    span[id$="lbfURN_ACIKLAMA"]{
+        display: none;
+    }
 }
 
 .ems-prdd {
     &-grid {
         position: relative;
     
-        grid-template-columns: minmax(auto, 675px) 93px 375px minmax(20px, 1fr);
+        grid-template-columns:1fr minmax(auto, 600px) 90px 375px 1fr;
         grid-template-rows: max-content 1fr;
-        grid-template-areas: "ga2 . ga1 .";
+        grid-template-areas: ". ga2 . ga1 .";
         @include setGridArea(1,2);
         > .ga1 {
             padding: 40px 0;
         }
+        >.ga2{
+            overflow: visible;
+        }
     }
-
     &-code {
         font-size: 13px;
     }    
@@ -30,6 +36,7 @@
     }
     &-gallery {
         margin-bottom: 0;
+        position: relative;
     }
     &-add-to-cart {
         position: static;
@@ -43,8 +50,96 @@
         }
         svg {
             font-size: 24px;
-            padding: 3px;
+            padding: 2px;
         }
+    }
+}
+
+//sticky product
+.detail-sticky{
+    .ems-prdd{
+        &-grid{
+            > .ga1{
+                display: grid;
+                grid-template-columns:minmax(0,100px) minmax(0,50px) minmax(0,15px) minmax(0,auto) minmax(0,250px) minmax(0,250px) minmax(0,170px) minmax(0,100px);
+                grid-template-areas:". ga1 . ga2 ga3 ga4 ga5 ." ". ga1 . ga6 ga3 ga4 ga5 .";
+                grid-template-rows: max-content 1fr;
+                align-items: center;
+                position: fixed;
+                top: -220px;
+                width: 100%;
+                z-index: 7;
+                background: #ffffff;
+                padding: 13px 0;
+                border-bottom: 1px solid #f0f0f0;
+                animation: .5s ease .1s animation-05;
+                animation-fill-mode: both;
+                > div{
+                    margin-top: 0 !important;
+                }
+            }
+        }
+
+        &-size-btns,
+        &-badge,
+        &-detail-code,
+        &-detail-fav,
+        .uniform-design-wrapper{
+            display: none;
+        }
+        &-small-img{
+            display: block;
+            max-width: 50px;
+        }
+        &-block1{
+            grid-area: ga1;
+        }
+        &-block2{
+            grid-area: ga6;
+        }
+        &-name{
+            grid-area: ga2;
+            font-size: 16px;
+            margin-right: auto;
+        }
+        &-price{
+            grid-area: ga3;
+        }
+        &-size{
+            grid-area: ga4;
+        }
+        &-add-to-cart{
+            grid-area: ga5;
+        }
+        &-code{
+            margin-top: 0;
+            margin-right: auto;
+            color: $color1 !important;
+            font-size: 12px;
+        }
+    }
+    .urunDetay_urunAdet,
+    .UrunListeGrup_listeUrunDetayGrup,
+    a.btnFiyatDus{
+        display: none;
+    }
+    a.btnsepeteAt{
+        background: $color2;
+        &:hover{
+            background: $color1;
+        }
+    }
+    .dropdown-options > a{
+        min-width: calc((100% / 5) - 5px);
+    }
+}
+//social popup
+.ems-social-popup{
+    margin-top: 10px;
+}
+.ems-social-popup-span{
+    svg{
+        font-size: 24px;
     }
 }
 
@@ -72,24 +167,44 @@
 
 .open-size-guide {
     font-size: 12px;
-    margin-top: 12px;
 }
 
 //add to cart
 .urunDetay_urunAdet {
+    width: 170px;
     margin-right: 20px;
+    height: 50px;
+    background: $color31;
+    .sStylerWrp_select{
+        line-height: 50px;
+        color: $color0;
+    }
+    select{
+        cursor: pointer;
+    }
 }
-
+a.btnsepeteAt{
+    line-height: 48px;
+    background: $color3;
+}
 //added to cart
 .mini-product-info {
+    $pn:0;
     $p: 30px;
+    $pt: 120px;
+    $px: 65px;
+    $pb: 50px;
     &-sub {
         @extend %header-mods-sub;
-        max-width: 600px;
-        padding: $p;
+        max-width: 480px;
+        padding: $pt $px $pb $px;
+    }
+    .sub-close {
+        right: 65px;
+        top: 40px;
     }
     .sub-header {
-        margin: #{-$p} #{-$p} #{$p};
+        margin: #{$pn} #{$pn} #{$p} #{$pn};
     }
 
     &-ready {
@@ -110,8 +225,12 @@
     }
 }
 .added-prd {
-    grid-template-columns: 140px 30px 1fr;
-    grid-template-areas: "ga1 . ga2" "ga1 . ga3";
+    grid-template-columns: 140px 20px 1fr;
+    grid-template-areas: "ga1 . ga2" "ga3 . ga3";
+    height: 100%;
+    .prm-title{
+        font-weight: 500;
+    }
     .prm-btns {
         margin-top: 30px;
     }
@@ -121,10 +240,45 @@
 }
 
 //size guide
+.bedenBilgiWrp{
+    .head{
+        width: calc(100% - 40px);
+        .title{
+            margin-bottom: 45px;
+            font-size: 32px;
+            display: block;
+        }
+    }
+    .cont{
+        flex-wrap: nowrap;
+    }
+    .group{
+        margin: 0 20px;
+        width: calc(100% - 20px);
+    }
+    .group:not(:last-child){
+        margin-bottom: 0;
+    }
+}
+//size guide popup
 .mini-size-guide {
+    .sub-close{
+        top: 60px;
+        right: 60px;
+    }
     &-sub {
         @extend %header-mods-sub;
-        max-width: 910px;
+        background-color: #fff;
+        background-blend-mode: inherit;
+    }
+    .sub-header {
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+    &-tab{
+        width: calc(100% - 100px);
+        margin-top: 60px;
     }
 
     &-ready {
@@ -137,6 +291,7 @@
 
     &-animate {
         @extend %header-mods-animate;
+        overflow: hidden;
         .mini-size-guide {
             &-sub {
                 @extend %header-mods-sub-animate;
@@ -149,20 +304,35 @@
 .ems-find-store {
     &-sub {
         @extend %header-mods-sub;
-        max-width: 910px;
     }
-
+    .sub-header{
+        margin:30px 100px 50px;   
+        padding: 0;
+        border: 0;
+        font-size: 21px;
+        .sub-close{
+            right: 0;
+        }
+    }
     .mod-service-list-grid {
         max-height: calc(100vh - 150px);
         overflow: auto;
+        grid-template-columns:minmax(auto, 100px) 380px 30px minmax(auto, 1fr) minmax(auto, 100px);
         grid-template-areas: ". ga1 ga1 ga1 ." ". ga3 . ga2 .";
     }
     .mod-service-list-header {
         margin-bottom: 30px;
     }
-    .dealer-form {
+    .dealer-form {  
+        max-width: 100%;
         .ems-field-css {
-            width: calc((100% / 3) - 5px);
+            width: calc((100% / 3) - 30px);
+            margin-right: 30px;
+            max-width: 380px;
+            &:last-child{
+                margin-left: auto;
+                max-width: 170px;
+            }
         }
     }
     .mod-service-list-body {
@@ -175,7 +345,6 @@
         height: calc(100vh - 300px);
         max-height: 450px;
     }
-
     &.ems-no-result {
         .mod-service-list-grid {
             grid-template-areas: ". ga1 ga1 ga1 ." ". ga3 ga3 ga3 .";
@@ -192,6 +361,7 @@
     
     &-animate {
         @extend %header-mods-animate;
+        overflow: hidden;
         .ems-find-store {
             &-sub {
                 @extend %header-mods-sub-animate;

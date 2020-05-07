@@ -1,8 +1,11 @@
 .btn {
     &-page-top {
-        right: $d-container-gap;
-        bottom: auto;
-        top: 90px;
+        position: fixed;
+        //right: $d-container-gap;
+        right: 45px;
+        bottom: 50%;
+        z-index: 5;
+        opacity: 0;
     }
 }
 
@@ -22,4 +25,9 @@
 
 .d-btn-primary {
     @extend %d-btn-primary;
+}
+
+//animation
+.btn-page-top-show{
+    .btn-page-top{opacity: 1;}
 }

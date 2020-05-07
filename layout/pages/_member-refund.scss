@@ -53,6 +53,15 @@ ul.rtnPrdInf {
     }
 }
 
+//member stock
+.stock-report{
+    .page-top-title{
+        border-top: 1px solid $color4;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+}
+
 [id$="lbfSIP_IPTALBASLIK"],
 [id$="lbfSIP_IADEBASLIK"] {
     display: block;

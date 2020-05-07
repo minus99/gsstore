@@ -4,6 +4,17 @@
     margin-top: 110px;
     width: auto;
     font-size: 13px;
+    td[align="center"]{
+        width: auto !important;
+        flex: 1;
+        padding-left: 20px;
+    }
+    td[align="right"]{
+        display: inline-flex;
+        order: -1;
+        width: auto !important;
+        color: #898989;
+    }
 }
 
 .urunPaging_pageNavigation {

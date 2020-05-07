@@ -3,7 +3,7 @@
         position: relative;
         z-index: auto;
         &-grid {
-            grid-template-columns: $header-col1 1fr $header-col6;
+            grid-template-columns: $header-col1 1fr $header-col1;
             grid-template-areas:
                 "ga1 ga7 ga5";
             > .ga1,
@@ -17,6 +17,10 @@
     .mini-user {
         &-info {
             background: none;
+            > span{
+                padding-right: 100px;
+                justify-content: flex-end;
+            }
         }
     }
 
