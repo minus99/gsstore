@@ -2608,7 +2608,7 @@ button.swiper-pagination-bullet {
   z-index: 4;
   width: 100%;
   height: 340px;
-  background-image: linear-gradient(0, rgba(0, 0, 0, 0.75), transparent);
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.5), transparent);
 }
 
 .banner07.v2 .prm-media-custom {
@@ -5477,13 +5477,14 @@ tr + tr #dvUrunKiyaslamaOzellik {
   display: block !important;
 }
 
-.top-menu .swiper-slide.siparis a:before, .top-menu .swiper-slide.favori a:before {
+.top-menu .swiper-slide a:before {
   content: '';
   width: 24px;
   height: 24px;
   display: inline-block;
   vertical-align: middle;
   background-size: 24px;
+  background-position: center center;
   position: relative;
   top: -1px;
 }
@@ -5493,7 +5494,8 @@ tr + tr #dvUrunKiyaslamaOzellik {
 }
 
 .top-menu .swiper-slide.siparis a:before {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiI+ICAgIDxkZWZzPiAgICAgICAgPHBhdGggaWQ9ImEiIGQ9Ik0wIDBoMTcuNnYxNS42SDB6Ii8+ICAgIDwvZGVmcz4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3IDgpIj4gICAgICAgIDxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj4gICAgICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNhIi8+ICAgICAgICA8L21hc2s+ICAgICAgICA8cGF0aCBmaWxsPSIjMDAwIiBkPSJNMTYuOCA0LjM5NXY3LjEzOGwtNy42IDMuMDc1VjcuNDdsNy42LTMuMDc1em0tMTYgMEw4LjQgNy40N3Y3LjEzOEwuOCAxMS41MzNWNC4zOTV6bTgtMy41NjJMMTYuMTMxIDMuOCA4LjggNi43NjQgMS40NjkgMy44MDEgOC44LjgzM3pNOC43NTYgMGEuNDAzLjQwMyAwIDAgMC0uMTA2LjAzMmwtOC40IDMuNGEuNC40IDAgMCAwLS4yNS4zNjl2OGEuNC40IDAgMCAwIC4yNS4zNjhsOC40IDMuNGEuNDAxLjQwMSAwIDAgMCAuMyAwbDguNC0zLjRhLjQuNCAwIDAgMCAuMjUtLjM2OHYtOGEuNC40IDAgMCAwLS4yNS0uMzdsLTguNC0zLjRhLjQuNCAwIDAgMC0uMTk0LS4wM3oiIG1hc2s9InVybCgjYikiLz4gICAgPC9nPjwvc3ZnPg==");
+  background-image: url("data:image/svg+xml,%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Artboard' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='noun_Box_3021592' transform='translate(4.000000, 5.000000)' fill='%23AD002E' fill-rule='nonzero'%3E%3Cpath d='M7.98403194,14 C7.94251497,14 7.900998,13.9916 7.86267465,13.9776 L0.198003992,11.1776 C0.0766467066,11.1356 0,11.032 0,10.92 L0,3.08 C0,2.9876 0.0542914172,2.898 0.143712575,2.8476 C0.233133733,2.7944 0.34491018,2.786 0.443912176,2.8224 L7.98403194,5.5776 L15.5273453,2.8224 C15.6263473,2.786 15.7381238,2.7972 15.8275449,2.8476 C15.9169661,2.9008 15.9712575,2.9876 15.9712575,3.08 L15.9712575,10.92 C15.9712575,11.032 15.8946108,11.1356 15.7732535,11.1776 L8.10858283,13.9776 C8.06706587,13.9916 8.0255489,14 7.98403194,14 Z M0.638722555,10.7324 L7.98403194,13.4148 L15.3293413,10.7324 L15.3293413,3.5 L8.10538922,6.1376 C8.0255489,6.1656 7.93932136,6.1656 7.85948104,6.1376 L0.638722555,3.5 L0.638722555,10.7324 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M7.98403194,6.16 C7.94251497,6.16 7.900998,6.1516 7.86267465,6.1376 L0.198003992,3.3376 C0.0766467066,3.2956 0,3.192 0,3.08 C0,2.968 0.0766467066,2.8644 0.198003992,2.8224 L7.86267465,0.0224 C7.94251497,-0.0056 8.02874251,-0.0056 8.10858283,0.0224 L15.7732535,2.8224 C15.8914172,2.8672 15.9712575,2.968 15.9712575,3.08 C15.9712575,3.192 15.8946108,3.2956 15.7732535,3.3376 L8.10858283,6.1376 C8.06706587,6.1516 8.0255489,6.16 7.98403194,6.16 Z M1.1497006,3.08 L7.98403194,5.5776 L14.8183633,3.08 L7.98403194,0.5824 L1.1497006,3.08 Z' id='Shape'%3E%3C/path%3E%3Cpath d='M7.98403193,14 C7.80838323,14 7.66467066,13.874 7.66467066,13.72 L7.66467066,5.88 C7.66467066,5.726 7.80838323,5.6 7.98403193,5.6 C8.15968064,5.6 8.30339321,5.726 8.30339321,5.88 L8.30339321,13.72 C8.30339321,13.874 8.15968064,14 7.98403193,14 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 20px;
 }
 
 ul.menu-mini-lang {
@@ -5672,9 +5674,16 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   margin-top: 25px;
 }
 
-.basket-empty .kutuSepet_icerik,
-.basket-empty .mini-cart .sub-footer {
+.basket-empty .kutuSepet_icerik {
   display: none;
+}
+
+.basket-empty .cart-prd-page-url {
+  display: none;
+}
+
+.basket-empty .cart-prd-page-url-home {
+  display: block;
 }
 
 .kutuSepet_icerik {
@@ -5737,6 +5746,10 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   color: #A90534;
 }
 
+.cart-prd-page-url-home {
+  display: none;
+}
+
 .cart-prd-remove {
   text-align: center;
 }
@@ -5745,11 +5758,11 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   display: block;
 }
 
-.cart-prd-page-url > a {
+.cart-prd-page-url > a, .cart-prd-page-url-home > a {
   width: 100%;
 }
 
-.cart-prd-page-url > a > span {
+.cart-prd-page-url > a > span, .cart-prd-page-url-home > a > span {
   width: 100%;
 }
 
@@ -6049,7 +6062,9 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
 
 .site-footer {
   position: relative;
-  background: #252525;
+  background-image: url(/images/frontend/footer-bg.jpg);
+  background-position: center top;
+  background-size: 100%;
   font-family: aktiv-grotesk, arial, sans-serif;
   color: #EBEBEB;
   font-weight: 300;
@@ -6217,6 +6232,10 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   padding-top: 133.33333%;
 }
 
+.homepage-slider .icon-scroll {
+  display: none;
+}
+
 .homepage-slider .content-here {
   position: absolute;
   bottom: 65px;
@@ -6302,8 +6321,18 @@ a.btnFacebookLoginKutu, a.btnFacebookLogin {
   padding-top: 100%;
 }
 
+.ems-page-login .ems-tab-header {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
 .ems-member-login {
   padding: 40px 20px;
+}
+
+.ems-member-login .ems-form-label, .ems-member-login [id$="divCaptcha"] [id$="lbfUYE_KONTROLKODU"], [id$="divCaptcha"] .ems-member-login [id$="lbfUYE_KONTROLKODU"], .ems-member-login .prmSehir, .ems-member-login .tableSifremiUnuttum th, .tableSifremiUnuttum .ems-member-login th,
+.ems-member-login .tableUyeSifreReset th, .tableUyeSifreReset .ems-member-login th, .ems-member-login .tableOdemeBilgiKrediKarti th, .tableOdemeBilgiKrediKarti .ems-member-login th, .ems-member-login .tableTitleOdemeTaksit td, .tableTitleOdemeTaksit .ems-member-login td, .ems-member-login .kutuUyelikOneri_sifre > span {
+  font-size: 11px;
 }
 
 a.btnLogin,
@@ -6503,6 +6532,8 @@ ul.product-list-grid:empty {
 
 .tukendi .urunListe_urunStokUyari {
   display: block !important;
+  width: 100%;
+  color: #A90534;
 }
 
 .urunListe_yeniUrun {
@@ -10549,7 +10580,7 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
       padding-bottom: 0;
     }
     .homepage-slider .ems-responsive-item::before {
-      padding-top: 47.91667%;
+      padding-top: 35.9375%;
     }
     .homepage-slider .swiper-button-prev {
       left: 100px;
@@ -10589,11 +10620,8 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
       padding-top: 133.89831%;
     }
     .historical-moments {
-      margin-top: 70px;
-      margin-bottom: 100px;
-      padding-top: 100px;
-      padding-bottom: 100px;
-      background: #f3f3f3;
+      padding-top: 0;
+      padding-bottom: 0;
     }
     .historical-moments .swiper-slide {
       width: calc(100% / 3.25);
@@ -10605,14 +10633,12 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
       position: relative;
     }
     .collections-grid {
-      grid-template-columns: minmax(auto, 600px) 1fr;
+      grid-template-columns: minmax(auto, 500px) 1fr;
       grid-template-rows: -webkit-max-content;
       grid-template-rows: max-content;
       grid-template-areas: "ga1 ga2";
-      background: #f3f3f3;
-      margin-top: 100px;
-      padding-top: 100px;
-      padding-bottom: 100px;
+      padding-top: 70px;
+      padding-bottom: 70px;
     }
     .collections-grid > .ga1 {
       grid-area: ga1;
@@ -10678,9 +10704,12 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
     .collection-big .banner-body {
       padding-left: 100px;
     }
+    .collection-big .swiper-slide {
+      width: 100% !important;
+    }
     .campaigns {
-      padding-top: 100px;
-      padding-bottom: 100px;
+      padding-top: 70px;
+      padding-bottom: 70px;
     }
     .campaigns .swiper-inner {
       margin-top: 0;
@@ -10717,7 +10746,7 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
       background: linear-gradient(45deg, #ffab00 50%, #a90534 50%);
     }
     .ems-member-login {
-      padding: 55px 0;
+      padding: 35px 0;
     }
     .ems-signin {
       max-width: 350px;
@@ -11147,10 +11176,14 @@ form[action*="siparisSonuc"] .ems-page-order-grid {
       left: 100px;
     }
     .story-slider {
+      width: 100%;
       height: auto;
     }
     .story-slider .swiper-container {
       padding: 5%;
+    }
+    .story-slider .swiper-container.no-controls .swiper-wrapper {
+      justify-content: center;
     }
     .story-slider .swiper-slide {
       width: auto;

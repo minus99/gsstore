@@ -1,6 +1,9 @@
 .site-footer {
     position: relative;
-    background: $color3;
+    //background: $color3;
+    background-image: url(/images/frontend/footer-bg.jpg);
+    background-position: center top;
+    background-size: 100%;
     font-family: $font2;
     color: $color6;
     font-weight: 300;

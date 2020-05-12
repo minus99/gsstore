@@ -72,11 +72,12 @@
         display: block !important;
         margin-top: 25px;
     }
-    
-    .kutuSepet_icerik,
-    .mini-cart .sub-footer {
+    .kutuSepet_icerik{
         display: none;
     }
+    
+    .cart-prd-page-url{display: none;}
+    .cart-prd-page-url-home{display: block;}
 }
 
 .kutuSepet_icerik {
@@ -129,6 +130,9 @@
         margin-top: 5px;
         color: $color1;
     }
+    &-page-url-home{
+        display: none;
+    }
     &-remove {
         text-align: center;
         a {
@@ -138,7 +142,8 @@
     &-url {
         @extend %btn-full;
     }
-    &-page-url {
+    &-page-url,
+    &-page-url-home{
         > a {
             width: 100%;
             > span {

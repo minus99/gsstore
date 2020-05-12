@@ -43,9 +43,15 @@
 }
 
 .story-slider{
+    width: 100%;
     height: auto;
     .swiper-container{
         padding: 5%;
+        &.no-controls{
+            .swiper-wrapper{
+                justify-content: center;
+            }
+        }
     }
     .swiper-slide{
         width: auto;

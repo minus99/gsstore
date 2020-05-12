@@ -19,7 +19,7 @@
     .ems-responsive-item {
         @include aspect-ratio(375, 500);
     }
-
+    .icon-scroll{display: none;}
     .content-here {
         position: absolute;
         bottom: 65px;
@@ -70,7 +70,6 @@
 
 .collections {
     padding: 30px 20px;
-    
     $pt: 25px;
 
     .ems-section-title{

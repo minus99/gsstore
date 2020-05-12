@@ -1,7 +1,15 @@
-.ems-page-login {}
+.ems-page-login {
+    .ems-tab-header{
+        margin-bottom: 0;
+        padding-bottom: 20px;
+    }
+}
 
 .ems-member-login {
     padding: 40px $container-gap;
+    .ems-form-label{
+        font-size: 11px;
+    }
 }
 
 a.btnLogin,
