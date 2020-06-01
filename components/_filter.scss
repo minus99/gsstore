@@ -56,6 +56,7 @@ $filter-border: $color6;
 }
 .urunKiyaslamaOzellik_ozellikIcerik {
     padding: 0 0 15px;
+    @extend .ems-scrollbar;
 }
 .urunKiyaslamaOzellik {
     @extend .base64;
