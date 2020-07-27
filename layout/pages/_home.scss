@@ -16,10 +16,21 @@
 
 .homepage-slider {
     background: $color0;
+    
+    .banner07{
+        .banner-body{
+            padding-bottom: 75px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .prm-link{
+            margin-top: auto;
+        }
+    }
     .ems-responsive-item {
         @include aspect-ratio(375, 500);
     }
-    .icon-scroll{display: none;}
     .content-here {
         position: absolute;
         bottom: 65px;
@@ -29,6 +40,7 @@
         color: #fff;
     }
     .icon-scroll {
+        display: none;
         font-size: 40px;
     }
 }
@@ -47,6 +59,9 @@
         padding-left: #{$pl};
         padding-top: #{$pt};
         width: calc(100% / 2);
+        .btn{
+            padding: 0;
+        }
     }
 }
 
@@ -61,11 +76,15 @@
     .swiper-slide {
         padding-left: #{$p};
         width: calc(100% / 1.25);
+        .prm-link{
+            margin-top: auto;
+        }
     }
 
     .ems-responsive-item {
         @include aspect-ratio(300, 375);
     }
+
 }
 
 .collections {
@@ -91,7 +110,6 @@
 }
 
 .campaigns {
-    padding-top: 30px;
     padding-bottom: 30px;
 
     $pt: 15px;
@@ -103,6 +121,7 @@
     }
 
     .ems-responsive-item {
-        @include aspect-ratio(335, 335);
+        @include aspect-ratio(375, 375);
     }
+
 }

@@ -44,6 +44,21 @@
     padding: 0;
     max-height: 250px;
 }
+.urunKiyaslamaOzellik_ozellik{
+    &.color{
+        .urunKiyaslamaOzellik_ozellik{
+            width: 16px;
+            height: 16px;
+        }
+        .urunKiyaslamaOzellik_ozellikIcerik{
+            > table{
+                > tbody{
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+}
 .kutuFooterOzellikFiltre {
     justify-content: flex-end;
     > * {

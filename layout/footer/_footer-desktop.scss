@@ -38,6 +38,12 @@ $fcg: 100px;
     margin-top: 80px;
     border-top: none;
     padding-top: 0;
+    ul.swiper-wrapper{
+        flex-wrap: row;
+    }
+    .swiper-slide {
+        margin-bottom: 0;
+    }
 }
 
 //other platforms

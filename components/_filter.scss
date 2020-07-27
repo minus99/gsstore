@@ -54,6 +54,36 @@ $filter-border: $color6;
 .urunKiyaslamaOzellik_temizle {
     display: none;
 }
+.urunKiyaslamaOzellik_ozellik{
+    &.color{
+        .urunKiyaslamaOzellik_ozellik.img-hidden{
+            display: none;
+        }
+        .urunKiyaslamaOzellik_ozellik{
+            width: 26px;
+            height: 26px;
+            margin-right: 12px;
+            margin-bottom: 7px;
+        }
+        .urunKiyaslamaOzellik_ozellikIcerik{
+            > table{
+                > tbody{
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+        .urunKiyaslamaOzellik{
+            background-image: none;
+            padding: 0;
+            img{
+                display: inline-flex;
+                border: 1px solid #f2ebeb;
+            }
+        }
+        .urunKiyaslamaOzellik_ozellikImgAd{display: none;}
+    }
+}
 .urunKiyaslamaOzellik_ozellikIcerik {
     padding: 0 0 15px;
     @extend .ems-scrollbar;
@@ -67,6 +97,12 @@ $filter-border: $color6;
     background-position: left center;
     &.link_selected {
         @extend .base64-check-active;
+    }
+}
+.urunKiyaslamaOzellik{
+    img{
+        display: none;
+        border-radius: 100%;
     }
 }
 .kutuFooterOzellikFiltre {
@@ -209,9 +245,6 @@ $filter-border: $color6;
     }
 }
 
-.ems-filter-ready {
-    
-}
 .ems-filter-animate {
     overflow: hidden;
 

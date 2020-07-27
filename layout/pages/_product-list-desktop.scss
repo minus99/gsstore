@@ -25,12 +25,24 @@ ul.product-list-grid {
     }
 }
 
+.ems-page-product-list{
+    .ems-prd{
+        margin-bottom: 20px;
+    }
+}
 .ems-prd {
-    &-image {
-        padding: 40px 25px 30px;
+    &-inner{
+        padding: 40px 25px 20px;
     }
     &-badge {
         font-size: 14px;
+    }
+    &-name {
+        font-size: 14px;
+        > a {
+            min-height: 37px;
+            max-height: 37px;
+        }
     }
 }
 

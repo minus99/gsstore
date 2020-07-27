@@ -4,7 +4,7 @@
 
 .homepage-slider {
     .ems-responsive-item {
-        @include aspect-ratio(1920, 690);
+        @include aspect-ratio(2160, 690);
     }
     .swiper-button-prev{
         left: 100px;
@@ -18,11 +18,11 @@
     }
     .banner07 .banner-body{
         width: calc(100% - 400px);
+        height: calc(100% - 125px);
         left: 0;
         right: 0;
         margin: 0 auto;
-        padding-right: 10px;
-        padding-left: 10px;
+        padding: 10px 10px 10px 10px;
     }
 }
 
@@ -53,10 +53,17 @@
 
 .historical-moments {
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 70px;
+    
+    .ems-container-full-right{
+        max-width: calc(100% - 80px);
+    }
 
     .swiper-slide {
         width: calc(100% / 3.25);
+        .prm-link{
+            margin-top: 0;
+        }
     }
 }
 
@@ -93,7 +100,7 @@
     }
     .swiper-container{
         position: initial;
-        max-width: 330px;
+        max-width: 365px;
     }
     .swiper-container,
     .swiper-inner{
@@ -128,7 +135,7 @@
         left: inherit;
     }
     .ems-responsive-item {
-        @include aspect-ratio(300, 375);
+        @include aspect-ratio(345, 360);
     }
 }
 .collection-big{
@@ -141,10 +148,15 @@
     .swiper-slide{
         width: 100% !important;
     }
+    .swiper-slide:last-child{
+        display: none;
+    }
+    .ems-responsive-item {
+        @include aspect-ratio(690, 720);
+    }
 }
 
 .campaigns {
-    padding-top: 70px;
     padding-bottom: 70px;
 
     $pt: 0;

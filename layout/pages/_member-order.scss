@@ -15,6 +15,13 @@
     }
 }
 
+.ems-message-order {
+    .btn{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
 .ems-grid-table-order {
     > .ems-grid-row {
         grid-template-columns: 1fr auto;

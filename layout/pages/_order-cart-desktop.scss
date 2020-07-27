@@ -15,6 +15,12 @@
     }
 }
 
+span[id$="lbfSPT_SEPETBOS"]{
+    > .ems-message{
+        margin-top: 0;
+    }
+}
+
 .ems-order-cart {
     &-grid {
         > .ga2 {
@@ -71,4 +77,11 @@
 .ems-extra-product {
     padding-left: 0;
     padding-right: 0;
+}
+
+.customer-support{
+    .swiper-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

@@ -1,11 +1,25 @@
-.ems-member-order {}
-
 .ems-grid-table-order {
     > .ems-grid-row {
         grid-template-columns: 1.25fr 1fr 1fr .5fr;
     }
     .ems-grid-total {
         align-self: center;
+    }
+}
+
+.ems-message-order {
+    div.ems-flex{
+        width: 100%;
+        max-width: 500px;
+    }
+    .btn{
+        width: calc(50% - 20px);
+        &:first-child{
+            margin-right: 10px;
+        }
+        &:last-child{
+            margin-left: 10px;
+        }
     }
 }
 

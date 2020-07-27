@@ -69,6 +69,9 @@
             > a {
                 margin: 0 3px;
                 padding: 0 5px;
+                background-image: none !important;
+                background-position: inherit;
+                background-size: inherit;
             }
             &.selected {
                 .sub {
@@ -76,20 +79,20 @@
                 }
             }
             &.nike-football{
-                margin-left: 0;
-                background: none;
-                padding-left: 0;
+                margin-left: 0 !important;
+                background: none !important;
+                padding-left: 0 !important;
                 > a{
-                    background: url(/images/frontend/logo-nike.svg) center left no-repeat;
-                    background-size: 20px;
+                    background: url(/images/frontend/logo-nike.svg) center left no-repeat !important;
+                    background-size: 20px !important;
                     padding-left: 25px;
                 }
-                .r1{
+                /*.r1{
                     display: none;
                 }
                 .r2{
                     margin: 0 auto;
-                }
+                }*/
                 .lvl-2{
                     column-count: 5;
                     grid-gap: 20px;
@@ -112,6 +115,19 @@
                         }
                     }
                 }
+            }
+            &:not(.nike-football){
+                .col-skip{
+                    display: inherit;
+                }
+            }
+        }
+    }
+    .lvl-1,
+    .lvl-2{
+        > li{
+            > a{
+                border-bottom: none;
             }
         }
     }

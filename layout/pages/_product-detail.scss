@@ -53,6 +53,16 @@
     }
     &-gallery {
         margin-bottom: 30px;
+        .swiper-left-column{
+            display: none;
+        }
+        .swiper-pagination {
+            position: relative;
+            min-height: auto;
+            padding:5px 10px;
+            text-align: center;
+            &:empty{display: none;}
+        }
     }
     &-size-btns{
         > * > *{
@@ -451,7 +461,7 @@ a.btnStokHaberci {
         background-image: url(/images/frontend/size_chart_bg.jpg);
         background-color: hsla(0,0%,100%,0.75);
         background-blend-mode: overlay;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
     }
@@ -637,6 +647,9 @@ a.btnStokHaberci {
     .zoom-gallery-header {
         position: relative;
         z-index: 2;
+        .icon-close{
+            color: #fff;
+        }
     }
 
     .thumbs-wrapper {

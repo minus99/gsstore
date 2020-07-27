@@ -18,8 +18,9 @@
     margin-bottom: 40px;
 
     .ems-responsive-item {
-        @include aspect-ratio(1440, 305);
+        @include aspect-ratio(1920, 305);
     }
+    .banner-body{display: none;}
 }
 
 .ems-prd-list-count {
@@ -72,9 +73,12 @@ $prd-body-bg: $color255;
 $prd-pd-x: 0;
 $prd-pd-y: 18px;
 .ems-prd {
+    
     &-inner {
         position: relative;
         font-weight: 400;
+        border: 1px solid $color9;
+        padding: 25px 15px 10px;
     }
     &-body {
         //background: $prd-body-bg;
@@ -82,8 +86,7 @@ $prd-pd-y: 18px;
         padding: $prd-pd-y $prd-pd-x;
     }
     &-image {
-        border: 1px solid $color9;
-        padding: 25px 15px 10px;
+
         > a {
             @extend %ems-responsive-item;
             @include aspect-ratio(450, 600);
@@ -111,25 +114,26 @@ $prd-pd-y: 18px;
         top: 1px;
         right: 1px;
         z-index: 1;
-        width: 36px;
-        height: 36px;
+        width: 30px;
+        height: 30px;
         a.btnDefault {
-            background: url(/images/frontend/favoriteBtn.png) center center #fff no-repeat;
+            background: url(/images/frontend/favoriteBtn.png) center center no-repeat;
             border: 0;
-            width: 36px;
-            height: 36px;
+            width: 30px;
+            height: 30px;
             padding: 0;
             &:hover, &.selected{
-                background: url(/images/frontend/favoriteBtnFull.png) center center #fff no-repeat;
+                background: url(/images/frontend/favoriteBtnFull.png) center center no-repeat;
             }
         }
     }
     &-name {
         margin-top: 3px;
         font-weight: 500;
+        font-size: 13px;
         > a {
             display: block;
-            white-space: nowrap;
+            white-space: pre-wrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -194,11 +198,12 @@ $prd-pd-y: 18px;
     left: 1px;
     background:#fff;
     z-index: 1;
-    padding:9px 12px;
+    padding:5px 10px 0 10px;
     width: auto;
     text-align: center;
     color: $color2;
     font-weight: 700;
+    font-size: 13px;
 }
 .urunListe_promosyonListe {
     position: absolute !important;

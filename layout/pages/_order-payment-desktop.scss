@@ -30,3 +30,16 @@
         }
     }
 }
+.tableOdemeBilgiHavale_tddrpBNK_KOD_HV{
+    table{
+        tbody{
+            tr{
+                td{
+                    &:nth-child(1){
+                        display: inline-flex;
+                    }
+                }
+            }
+        }
+    }
+}

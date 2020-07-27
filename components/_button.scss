@@ -140,7 +140,7 @@ $btn-cursor: 10px;
     &-page-top {
         position: absolute;
         right: 20px;
-        bottom: 0;
+        bottom: 50%;
         background-color: #252525;
         border-radius:100%;
         svg {
@@ -148,6 +148,7 @@ $btn-cursor: 10px;
             padding: 14.5px;
             border: 1px solid lighten($color: $color3, $amount: 8);
             border-radius: 100%;
+            transform: rotate(180deg);
         }
     }
 }

@@ -224,6 +224,20 @@ input[id$="UYE_CEPTELEFON"] {
                 padding-top: 20px;
                 border-top: $form-element-border;
             }
+            &-eyes{
+                .ems-form-obj{
+                    a{
+                        background: url(/images/frontend/eye.png) center center no-repeat;
+                        background-size: 18px;
+                        width: 24px;
+                        height: 24px;
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
         }
     }
     &-label {

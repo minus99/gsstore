@@ -71,6 +71,9 @@
             overflow: auto;
             > a {
                 @extend %menu-header;
+                border-bottom: none !important;
+                background-image: none;
+                background-size: inherit;
                 &::before {
                     @extend .base64-arrow1;
                 }
@@ -91,18 +94,43 @@
         overflow: auto;
         border-bottom: 1px solid $color6;
         > li{
-            &.nike-football{
+            &.nike-football:not(.selected){
                 margin-left: -35px;
                 background: url(/images/frontend/logo-nike.svg) center left no-repeat;
                 background-size: 29px;
                 padding-left: 35px;
+                margin: 0 0 0 -35px;
             }
-            &.nike-football.selected{
-                margin-left: 0;
-                padding-left: 0;
-                background: #fff;
-                background-size: inherit;
-            } 
+            &.nike-football{
+                .col-skip-1{display: none;}
+                &.selected{
+                    margin-left: 0;
+                    padding-left: 0;
+                    background: #fff;
+                    background-size: inherit;
+                }
+            }
+            &:not(.nike-football){
+                .col-skip{
+                    display: none;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            > a{
+                @extend .base64-right;
+                background-repeat: no-repeat;
+                background-position: center right;
+                background-size: 19px;
+            }
+        }
+    }
+    .lvl-1,
+    .lvl-2{
+        > li{
+            > a{
+                border-bottom: 1px solid #EBEBEB;
+            }
         }
     }
 
@@ -128,6 +156,7 @@
 
     .btn-menu-title {
         @extend %menu-header;
+        text-decoration:underline;
         &::before {
             @extend .base64-user;
         }
@@ -154,6 +183,23 @@
             &::before {
                 display: none;
             }
+        }
+    }
+
+    .close-mobile-menu{
+        position: fixed !important;
+        top: 10px !important;
+        right: 10px !important;
+        z-index: 10 !important;
+        width: 37px !important;
+        height: 37px !important;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center; 
+        padding:0 !important;
+        color: #000 !important;
+        &:before{
+            display: none;
         }
     }
 

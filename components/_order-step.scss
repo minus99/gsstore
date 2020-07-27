@@ -10,6 +10,21 @@
             position: relative;
             flex: 1;
             text-align: center;
+            &.selected{
+                a {
+                    > span{
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            top:0;
+                            right: 15px;
+                            width: 14px;
+                            height: 14px;
+                            background:url(/images/frontend/order-step-active.svg) center center no-repeat;
+                        }
+                    }
+                }
+            }
             a {
                 padding: 6px;
                 &::after {
@@ -23,6 +38,7 @@
                     display: flex;
                     align-items: center;
                     flex-direction: column;
+                    position: relative;
                 }
             }
             &.tabBtnSelectedDefault {

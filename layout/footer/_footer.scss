@@ -3,7 +3,9 @@
     //background: $color3;
     background-image: url(/images/frontend/footer-bg.jpg);
     background-position: center top;
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% !important;
+    background-color: #000;
     font-family: $font2;
     color: $color6;
     font-weight: 300;
@@ -43,6 +45,7 @@
         > a{
             border-bottom: 1px solid #fff;
             margin-bottom: 10px;
+            pointer-events: none;
         }
     }
     a:not([href="javascript:void(0);"]) {
@@ -58,11 +61,15 @@
     margin-top: 35px;
     padding-top: 35px;
     border-top: 1px solid #404040;
+    ul.swiper-wrapper{
+        flex-wrap: wrap;
+    }
     .swiper-inner {
         margin-left: #{-$pl};
     }
     .swiper-slide {
         padding-left: #{$pl};
+        margin-bottom: 10px;
     }
     svg {
         font-size: 40px;
@@ -78,6 +85,11 @@
     
     .prm-link {
         font-weight: 400;
+        &:nth-child(1){
+            background: url(/images/frontend/call_25x25.png) center left no-repeat;
+            background-size: 20px;
+            padding: 1px 0 1px 25px;
+        }
     }
     .prm-desc {
         margin-top: 10px;
@@ -93,13 +105,19 @@
         border-color: transparent;
         padding-left: 25px;
     }
+    .data-Privacy{
+        margin-right: 5px;
+    }
+    span[id$="lbfPrivacyNotice"]{
+        vertical-align: middle;
+    }
     a.btnBultenGonder {
         padding: 0 25px;
     }
-    #plhPrivacyNotice {
+    /*#plhPrivacyNotice {
         opacity: 0;
         transition: opacity .2s ease;
-    }
+    }*/
     &-message {
         > span {
             &:not(:empty) {
@@ -128,17 +146,17 @@
     justify-content: center;
     .sprt{    
         display: inline-flex;
-        &:before{
+        /*&:before{
             content:'';
             width: 1px;
             height: 50px;
             background: #d8d8d8;
             margin-right: 10px;
-        }
+        }*/
     }
     img{
         width: 100%;
-        max-width: 100px;
+        max-width: 126px;
         margin-right: 15px;
     }
 }
